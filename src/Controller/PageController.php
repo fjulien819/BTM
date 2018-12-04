@@ -2,48 +2,46 @@
 
 namespace App\Controller;
 
+use App\Entity\Page;
+use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PageController extends AbstractController
 {
+
+
     /**
-     * @Route("/{id}", name="page")
+     * @Route("/", name="homepage")
      */
-    public function index($id)
+    public function homepage(PageRepository $repository)
     {
-        return $this->render('page/index.html.twig', [
+        $pages = $repository->findAll();
+        $page = 'homepage';
+
+        return $this->render('page/showPage.html.twig', [
             'controller_name' => 'PageController',
+            'pages' => $pages,
+            'page' => $page
+
         ]);
     }
 
     /**
-     * @Route("/addPage", name="addPage")
+     * @Route("/{id}", name="showPage")
+     * @param Page $page
+     * @param PageRepository $repository
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function add()
+    public function showPage(Page $page, PageRepository $repository)
     {
-        return $this->render('page/index.html.twig', [
-            'controller_name' => 'PageController',
-        ]);
-    }
+        $pages = $repository->findAll();
 
-    /**
-     * @Route("/updatePage", name="updatePage")
-     */
-    public function update()
-    {
-        return $this->render('page/index.html.twig', [
+        return $this->render('page/showPage.html.twig', [
             'controller_name' => 'PageController',
-        ]);
-    }
+            'pages' => $pages,
+            'page' => $page
 
-    /**
-     * @Route("/deletePage", name="deletePage")
-     */
-    public function delete()
-    {
-        return $this->render('page/index.html.twig', [
-            'controller_name' => 'PageController',
         ]);
     }
 

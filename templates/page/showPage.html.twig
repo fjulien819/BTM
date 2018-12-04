@@ -14,7 +14,13 @@
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href="{{ 'src/Controller/PageController.php'|file_link(0) }}">src/Controller/PageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/page/index.html.twig'|file_link(0) }}">templates/page/index.html.twig</a></code></li>
+        <li>Your template at <code><a href="{{ 'templates/page/showPage.html.twig'|file_link(0) }}">templates/page/index.html.twig</a></code></li>
     </ul>
 </div>
+
+
+
+    {{ dump(page) }}
+    {{ dump(pages) }}
+
 {% endblock %}
