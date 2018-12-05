@@ -1,0 +1,13 @@
+
+{{ form_start(formPage) }}
+
+{{ form_rest(formPage) }}
+
+{% if editMode %}
+    <input type="submit" value="MODIFIER">
+{% else %}
+    <input type="submit" value="AJOUTER">
+{% endif %}
+
+{{ form_end(formPage) }}
+

@@ -20,7 +20,6 @@ class PageController extends AbstractController
         $page = 'homepage';
 
         return $this->render('page/showPage.html.twig', [
-            'controller_name' => 'PageController',
             'pages' => $pages,
             'page' => $page
 
@@ -38,7 +37,6 @@ class PageController extends AbstractController
         $pages = $repository->findAll();
 
         return $this->render('page/showPage.html.twig', [
-            'controller_name' => 'PageController',
             'pages' => $pages,
             'page' => $page
 
