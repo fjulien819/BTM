@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block title %} {{ parent() }}{{ page.title }} {% endblock %}
+{% block metaDescription %}{{ page.metaDescription }}{% endblock %}
 {% block stylesheets %}{% endblock %}
 
 {% block body %} {{ page.content|raw }} {% endblock %}

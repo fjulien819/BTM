@@ -43,6 +43,11 @@ class Page
      */
     private $lastUpdate;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $metaDescription;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +109,18 @@ class Page
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getMetaDescription(): ?string
+    {
+        return $this->metaDescription;
+    }
+
+    public function setMetaDescription(string $metaDescription): self
+    {
+        $this->metaDescription = $metaDescription;
 
         return $this;
     }
