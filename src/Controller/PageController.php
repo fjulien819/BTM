@@ -17,11 +17,10 @@ class PageController extends AbstractController
     public function homepage(PageRepository $repository)
     {
         $pages = $repository->findAll();
-        $page = 'homepage';
 
         return $this->render('page/showPage.html.twig', [
             'pages' => $pages,
-            'page' => $page
+            'page' => $repository->findOneBy(['slug' => "homepage"]),
 
         ]);
     }
