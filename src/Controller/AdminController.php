@@ -25,8 +25,8 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("admin/newPage", name="newPage")
-     * @Route("admin/updatePage/{slug}", name="updatePage")
+     * @Route("admin/page/new", name="newPage")
+     * @Route("admin/page/update/{slug}", name="updatePage")
      */
     public function Page(Page $page = null, Request $request)
     {
@@ -66,7 +66,7 @@ class AdminController extends AbstractController
 
 
     /**
-     * @Route("admin/deletePage/{slug}", name="deletePage")
+     * @Route("admin/page/delete/{slug}", name="deletePage")
      */
     public function deletePage(Page $page)
     {
