@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Article;
 use App\Entity\Page;
+use App\Repository\ArticleRepository;
 use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -38,6 +40,20 @@ class PageController extends AbstractController
         return $this->render('page/showPage.html.twig', [
             'pages' => $pages,
             'page' => $page
+
+        ]);
+    }
+
+    /**
+     * @Route("/article/{slug}", name="showArticle")
+     * @param Page $page
+     * @param PageRepository $repository
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function showArticle(Article $article, ArticleRepository $repository)
+    {
+        return $this->render('article/showArticle.html.twig', [
+        'article' => $article,
 
         ]);
     }
