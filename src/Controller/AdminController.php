@@ -6,7 +6,6 @@ use App\Entity\Article;
 use App\Entity\Page;
 use App\Form\ArticleType;
 use App\Form\PageType;
-use App\Repository\ArticleRepository;
 use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -93,7 +92,7 @@ class AdminController extends AbstractController
         $entityManager->remove($page);
         $entityManager->flush();
 
-        return $this->redirectToRoute('adminHomepage');
+        return $this->redirectToRoute('adminPages');
     }
 
     /**
@@ -147,6 +146,18 @@ class AdminController extends AbstractController
             'editMode' => $article->getId() !== null
         ]);
 
+    }
+
+    /**
+     * @Route("admin/article/delete/{slug}", name="deleteArticle")
+     */
+    public function deleteArticle(Article $article)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($article);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('adminArticles');
     }
 
 }

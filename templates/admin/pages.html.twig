@@ -1,7 +1,8 @@
 <h1>Les pages</h1>
 {% for page in pages %}
-    <li>{{ page.title }}</li>
+    <li>{{ page.title }}
     <a href="{{ path('showPage', {'slug': page.slug}) }}">Afficher</a>
     <a href="{{ path('updatePage', {'slug': page.slug}) }}">Modifier</a>
     <a href="{{ path('deletePage', {'slug': page.slug}) }}">Supprimer</a>
+    </li>
 {% endfor %}

@@ -1,4 +1,8 @@
 <h1>Les Articles</h1>
 {% for article in articles %}
-    <li>{{ article.title }}</li>
+    <li>{{ article.title }}
+        <a href="{{ path('updateArticle', {'slug': article.slug}) }}">Modifier</a>
+        <a href="{{ path('deleteArticle', {'slug': article.slug}) }}">Supprimer</a>
+    </li>
+
 {% endfor %}
