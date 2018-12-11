@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Article;
 use App\Entity\Page;
+use App\Form\ArticleType;
 use App\Form\PageType;
 use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -23,7 +25,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("admin/pages", name="adminHomepage")
+     * @Route("admin/pages", name="adminPages")
      */
     public function adminPages()
     {
@@ -39,7 +41,7 @@ class AdminController extends AbstractController
      * @Route("admin/page/new", name="newPage")
      * @Route("admin/page/update/{slug}", name="updatePage")
      */
-    public function Page(Page $page = null, Request $request, PageRepository $pageRepository)
+    public function page(Page $page = null, Request $request, PageRepository $pageRepository)
     {
         if(!$page)
         {
@@ -92,4 +94,46 @@ class AdminController extends AbstractController
 
         return $this->redirectToRoute('adminHomepage');
     }
+
+
+    /**
+     * @Route("admin/article/new", name="newArticle")
+     * @Route("admin/article/update/{slug}", name="updateArticle")
+     */
+    public function article(Article $article = null, Request $request)
+    {
+        if(!$article)
+        {
+            $article = new Article;
+        }
+
+        $form = $this->createForm(ArticleType::class, $article);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $article = $form->getData();
+
+            if (!$article->getId())
+            {
+                $article->setCreatedAt(new \DateTime());
+            }
+
+            $article->setLastUpdate(new \DateTime());
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($article);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('adminHomepage');
+
+        }
+        return $this->render('admin/article.html.twig', [
+            'formArticle' => $form->createView(),
+            'editMode' => $article->getId() !== null
+        ]);
+
+    }
+
 }
