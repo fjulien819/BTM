@@ -17,10 +17,20 @@ class AdminController extends AbstractController
      */
     public function adminHomepage()
     {
+
+        return $this->render('admin/index.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("admin/pages", name="adminHomepage")
+     */
+    public function adminPages()
+    {
         $repository = $this->getDoctrine()->getRepository(Page::class);
         $pages = $repository->findAll();
 
-        return $this->render('admin/index.html.twig', [
+        return $this->render('admin/pages.html.twig', [
             'pages' => $pages,
         ]);
     }
