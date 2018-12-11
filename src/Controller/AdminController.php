@@ -60,8 +60,11 @@ class AdminController extends AbstractController
             {
                 $page->setCreatedAt(new \DateTime());
             }
+            else
+            {
+                $page->setLastUpdate(new \DateTime());
+            }
 
-            $page->setLastUpdate(new \DateTime());
 
             if (!$pageRepository->findBy(array('slug' => Page::SLUG_HOMEPAGE )))
             {
@@ -131,8 +134,10 @@ class AdminController extends AbstractController
             {
                 $article->setCreatedAt(new \DateTime());
             }
-
-            $article->setLastUpdate(new \DateTime());
+            else
+            {
+                $article->setLastUpdate(new \DateTime());
+            }
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($article);
