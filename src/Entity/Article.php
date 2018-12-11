@@ -18,7 +18,7 @@ class Article
     private $id;
 
     /**
-     * @Gedmo\Slug(fields={"title"})
+     * @Gedmo\Slug(fields={"title"}, updatable=false)
      * @ORM\Column(length=255, unique=true)
      */
     private $slug;

@@ -10,6 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  */
 class Page
 {
+    const SLUG_HOMEPAGE = 'homepage';
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -18,7 +19,7 @@ class Page
     private $id;
 
     /**
-     * @Gedmo\Slug(fields={"title"})
+     * @Gedmo\Slug(fields={"title"}, updatable=false)
      * @ORM\Column(length=255, unique=true)
      */
     private $slug;

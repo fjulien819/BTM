@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Page;
 use App\Form\PageType;
+use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,7 +29,7 @@ class AdminController extends AbstractController
      * @Route("admin/page/new", name="newPage")
      * @Route("admin/page/update/{slug}", name="updatePage")
      */
-    public function Page(Page $page = null, Request $request)
+    public function Page(Page $page = null, Request $request, PageRepository $pageRepository)
     {
         if(!$page)
         {
@@ -49,6 +50,11 @@ class AdminController extends AbstractController
             }
 
             $page->setLastUpdate(new \DateTime());
+
+            if (!$pageRepository->findBy(array('slug' => Page::SLUG_HOMEPAGE )))
+            {
+                $page->setSlug(page::SLUG_HOMEPAGE);
+            }
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($page);

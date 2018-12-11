@@ -20,7 +20,7 @@ class PageController extends AbstractController
 
         return $this->render('page/showPage.html.twig', [
             'pages' => $pages,
-            'page' => $repository->findOneBy(['slug' => "homepage"]),
+            'page' => $repository->findOneBy(['slug' => Page::SLUG_HOMEPAGE]),
 
         ]);
     }
