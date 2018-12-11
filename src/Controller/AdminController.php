@@ -6,6 +6,7 @@ use App\Entity\Article;
 use App\Entity\Page;
 use App\Form\ArticleType;
 use App\Form\PageType;
+use App\Repository\ArticleRepository;
 use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -95,6 +96,18 @@ class AdminController extends AbstractController
         return $this->redirectToRoute('adminHomepage');
     }
 
+    /**
+     * @Route("admin/articles", name="adminArticles")
+     */
+    public function adminArticles()
+    {
+        $repository = $this->getDoctrine()->getRepository(Article::class);
+        $articles = $repository->findAll();
+
+        return $this->render('admin/articles.html.twig', [
+            'articles' => $articles,
+        ]);
+    }
 
     /**
      * @Route("admin/article/new", name="newArticle")
