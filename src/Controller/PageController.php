@@ -12,6 +12,19 @@ use Symfony\Component\Routing\Annotation\Route;
 class PageController extends AbstractController
 {
 
+    /**
+     * @Route("/articles", name="allArticles")
+     * @param ArticleRepository $repository
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function allArticle(ArticleRepository $repository)
+    {
+        return $this->render('article/all_articles.html.twig',
+            [
+                'articles' => $repository->findAll()
+            ]);
+    }
+
 
     /**
      * @Route("/", name="homepage")
