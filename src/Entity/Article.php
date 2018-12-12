@@ -34,6 +34,11 @@ class Article
     private $content;
 
     /**
+     * @ORM\ManyToOne(targetEntity="User")
+     */
+    private $author;
+
+    /**
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
