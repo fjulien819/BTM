@@ -45,7 +45,7 @@ class PageController extends AbstractController
     }
 
     /**
-     * @Route("/article/{slug}", name="showArticle")
+     * @Route("/articles/{slug}", name="showArticle")
      * @param Page $page
      * @param PageRepository $repository
      * @return \Symfony\Component\HttpFoundation\Response

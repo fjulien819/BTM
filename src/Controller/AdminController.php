@@ -32,14 +32,14 @@ class AdminController extends AbstractController
         $repository = $this->getDoctrine()->getRepository(Page::class);
         $pages = $repository->findAll();
 
-        return $this->render('admin/pages.html.twig', [
+        return $this->render('admin/all_pages.html.twig', [
             'pages' => $pages,
         ]);
     }
 
     /**
-     * @Route("admin/page/new", name="newPage")
-     * @Route("admin/page/update/{slug}", name="updatePage")
+     * @Route("admin/pages/new", name="newPage")
+     * @Route("admin/pages/update/{slug}", name="updatePage")
      */
     public function page(Page $page = null, Request $request, PageRepository $pageRepository)
     {
@@ -78,7 +78,7 @@ class AdminController extends AbstractController
             return $this->redirectToRoute('adminHomepage');
 
         }
-            return $this->render('admin/page.html.twig', [
+            return $this->render('admin/new_update_page.html.twig', [
                 'formPage' => $form->createView(),
                 'editMode' => $page->getId() !== null
             ]);
@@ -87,7 +87,7 @@ class AdminController extends AbstractController
 
 
     /**
-     * @Route("admin/page/delete/{slug}", name="deletePage")
+     * @Route("admin/pages/delete/{slug}", name="deletePage")
      */
     public function deletePage(Page $page)
     {
@@ -106,14 +106,14 @@ class AdminController extends AbstractController
         $repository = $this->getDoctrine()->getRepository(Article::class);
         $articles = $repository->findAll();
 
-        return $this->render('admin/articles.html.twig', [
+        return $this->render('admin/all_articles.html.twig', [
             'articles' => $articles,
         ]);
     }
 
     /**
-     * @Route("admin/article/new", name="newArticle")
-     * @Route("admin/article/update/{slug}", name="updateArticle")
+     * @Route("admin/articles/new", name="newArticle")
+     * @Route("admin/articles/update/{slug}", name="updateArticle")
      */
     public function article(Article $article = null, Request $request)
     {
@@ -146,7 +146,7 @@ class AdminController extends AbstractController
             return $this->redirectToRoute('adminHomepage');
 
         }
-        return $this->render('admin/article.html.twig', [
+        return $this->render('admin/new_update_article.html.twig', [
             'formArticle' => $form->createView(),
             'editMode' => $article->getId() !== null
         ]);
@@ -154,7 +154,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("admin/article/delete/{slug}", name="deleteArticle")
+     * @Route("admin/articles/delete/{slug}", name="deleteArticle")
      */
     public function deleteArticle(Article $article)
     {
