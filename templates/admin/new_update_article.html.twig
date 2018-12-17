@@ -1,11 +1,18 @@
-{{ form_start(formArticle) }}
 
-{{ form_rest(formArticle) }}
 
-{% if editMode %}
-    <input type="submit" value="MODIFIER">
-{% else %}
-    <input type="submit" value="AJOUTER">
-{% endif %}
+    {{ form_start(formArticle) }}
 
-{{ form_end(formArticle) }}
+    {{ form_row(formArticle.title) }}
+    {{ form_row(formArticle.content) }}
+    {{ form_row(formArticle.tags) }}
+
+
+
+    {{ form_rest(formArticle) }}
+
+    {% if editMode %}
+        <input type="submit" value="MODIFIER">
+    {% else %}
+        <input type="submit" value="AJOUTER">
+    {% endif %}
+    {{ form_end(formArticle) }}

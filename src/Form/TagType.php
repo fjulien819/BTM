@@ -2,32 +2,24 @@
 
 namespace App\Form;
 
-use App\Entity\Article;
-use App\Form\Type\TagsInputType;
+use App\Entity\Tag;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ArticleType extends AbstractType
+class TagType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('content')
-            ->add('tags', TagsInputType::class,
-        [
-            'required' => false,
-            'help' => 'Les tags doivent être séparés par des virgules',
-
-        ])
+            ->add('name')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Article::class,
+            'data_class' => Tag::class,
         ]);
     }
 }

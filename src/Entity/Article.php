@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -39,14 +41,21 @@ class Article
     private $author;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="articles", cascade={"persist"})
      */
+    private $tags;
+
     private $createdAt;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $lastUpdate;
+
+    public function __construct()
+    {
+        $this->tags = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -109,6 +118,44 @@ class Article
     public function setLastUpdate(?\DateTimeInterface $lastUpdate): self
     {
         $this->lastUpdate = $lastUpdate;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?User $author): self
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|tag[]
+     */
+    public function getTags(): Collection
+    {
+        return $this->tags;
+    }
+
+    public function addTag(tag $tag): self
+    {
+        if (!$this->tags->contains($tag)) {
+            $this->tags[] = $tag;
+        }
+
+        return $this;
+    }
+
+    public function removeTag(tag $tag): self
+    {
+        if ($this->tags->contains($tag)) {
+            $this->tags->removeElement($tag);
+        }
 
         return $this;
     }
