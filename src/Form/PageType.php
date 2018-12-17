@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Page;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -14,8 +15,9 @@ class PageType extends AbstractType
         $builder
             ->add('title')
             ->add('metaDescription')
-            ->add('content')
-
+            ->add('content', ckeditorType::class, array(
+                'config' => array('toolbar' => 'standard')
+))
         ;
     }
 
