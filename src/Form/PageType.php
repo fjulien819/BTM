@@ -15,9 +15,7 @@ class PageType extends AbstractType
         $builder
             ->add('title')
             ->add('metaDescription')
-            ->add('content', ckeditorType::class, array(
-                'config' => array('toolbar' => 'standard')
-))
+            ->add('content', ckeditorType::class)
         ;
     }
 

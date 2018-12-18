@@ -15,8 +15,7 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('content', ckeditorType::class, array(
-                'config' => array('toolbar' => 'standard')))
+            ->add('content', ckeditorType::class)
             ->add('tags', TagsInputType::class,
         [
             'required' => false,
