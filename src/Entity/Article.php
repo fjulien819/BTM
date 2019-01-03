@@ -31,6 +31,11 @@ class Article
     private $title;
 
     /**
+     * @ORM\OneToOne(targetEntity="ImgArticle")
+     */
+    private $img;
+
+    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $content;
@@ -156,6 +161,18 @@ class Article
         if ($this->tags->contains($tag)) {
             $this->tags->removeElement($tag);
         }
+
+        return $this;
+    }
+
+    public function getImg(): ?ImgArticle
+    {
+        return $this->img;
+    }
+
+    public function setImg(?ImgArticle $img): self
+    {
+        $this->img = $img;
 
         return $this;
     }
