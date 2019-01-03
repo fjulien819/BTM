@@ -50,6 +50,11 @@ class Article
      */
     private $tags;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Category", inversedBy="articles")
+     */
+    private $categories;
+
     private $createdAt;
 
     /**
@@ -60,6 +65,7 @@ class Article
     public function __construct()
     {
         $this->tags = new ArrayCollection();
+        $this->categories = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -173,6 +179,32 @@ class Article
     public function setImg(?ImgArticle $img): self
     {
         $this->img = $img;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Category[]
+     */
+    public function getCategories(): Collection
+    {
+        return $this->categories;
+    }
+
+    public function addCategory(Category $category): self
+    {
+        if (!$this->categories->contains($category)) {
+            $this->categories[] = $category;
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(Category $category): self
+    {
+        if ($this->categories->contains($category)) {
+            $this->categories->removeElement($category);
+        }
 
         return $this;
     }
