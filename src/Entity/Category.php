@@ -24,7 +24,7 @@ class Category
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Article", mappedBy="categories")
+     * @ORM\ManyToMany(targetEntity="Post", mappedBy="category")
      */
     private $articles;
 
@@ -51,14 +51,14 @@ class Category
     }
 
     /**
-     * @return Collection|Article[]
+     * @return Collection|Post[]
      */
     public function getArticles(): Collection
     {
         return $this->articles;
     }
 
-    public function addArticle(Article $article): self
+    public function addArticle(Post $article): self
     {
         if (!$this->articles->contains($article)) {
             $this->articles[] = $article;
@@ -68,7 +68,7 @@ class Category
         return $this;
     }
 
-    public function removeArticle(Article $article): self
+    public function removeArticle(Post $article): self
     {
         if ($this->articles->contains($article)) {
             $this->articles->removeElement($article);

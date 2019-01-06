@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Article;
+use App\Entity\Post;
 use App\Entity\Page;
 use App\Form\ArticleType;
 use App\Form\PageType;
@@ -103,7 +103,7 @@ class AdminController extends AbstractController
      */
     public function adminArticles()
     {
-        $repository = $this->getDoctrine()->getRepository(Article::class);
+        $repository = $this->getDoctrine()->getRepository(Post::class);
         $articles = $repository->findAll();
 
         return $this->render('admin/all_articles.html.twig', [
@@ -115,11 +115,11 @@ class AdminController extends AbstractController
      * @Route("admin/articles/new", name="newArticle")
      * @Route("admin/articles/update/{slug}", name="updateArticle")
      */
-    public function article(Article $article = null, Request $request)
+    public function article(Post $article = null, Request $request)
     {
         if(!$article)
         {
-            $article = new Article;
+            $article = new Post;
         }
 
         $form = $this->createForm(ArticleType::class, $article);
@@ -156,7 +156,7 @@ class AdminController extends AbstractController
     /**
      * @Route("admin/articles/delete/{slug}", name="deleteArticle")
      */
-    public function deleteArticle(Article $article)
+    public function deleteArticle(Post $article)
     {
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->remove($article);

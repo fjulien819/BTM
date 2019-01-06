@@ -10,7 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
  */
-class Article
+class Post
 {
     /**
      * @ORM\Id()
@@ -31,7 +31,7 @@ class Article
     private $title;
 
     /**
-     * @ORM\OneToOne(targetEntity="ImgArticle")
+     * @ORM\OneToOne(targetEntity="ImgPost")
      */
     private $img;
 
@@ -53,7 +53,7 @@ class Article
     /**
      * @ORM\ManyToMany(targetEntity="Category", inversedBy="articles")
      */
-    private $categories;
+    private $category;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
@@ -65,10 +65,16 @@ class Article
      */
     private $lastUpdate;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $metaDescription;
+
     public function __construct()
     {
         $this->tags = new ArrayCollection();
         $this->categories = new ArrayCollection();
+        $this->category = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -174,12 +180,12 @@ class Article
         return $this;
     }
 
-    public function getImg(): ?ImgArticle
+    public function getImg(): ?ImgPost
     {
         return $this->img;
     }
 
-    public function setImg(?ImgArticle $img): self
+    public function setImg(?ImgPost $img): self
     {
         $this->img = $img;
 
@@ -210,5 +216,25 @@ class Article
         }
 
         return $this;
+    }
+
+    public function getMetaDescription(): ?string
+    {
+        return $this->metaDescription;
+    }
+
+    public function setMetaDescription(string $metaDescription): self
+    {
+        $this->metaDescription = $metaDescription;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Category[]
+     */
+    public function getCategory(): Collection
+    {
+        return $this->category;
     }
 }

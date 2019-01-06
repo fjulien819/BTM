@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Article;
+use App\Entity\Post;
 use App\Entity\Page;
 use App\Repository\ArticleRepository;
 use App\Repository\PageRepository;
@@ -63,7 +63,7 @@ class PageController extends AbstractController
      * @param PageRepository $repository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function showArticle(Article $article, ArticleRepository $repository)
+    public function showArticle(Post $article, ArticleRepository $repository)
     {
         return $this->render('article/showArticle.html.twig', [
         'article' => $article,

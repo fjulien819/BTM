@@ -10,7 +10,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  * @ORM\Entity(repositoryClass="App\Repository\ImgArticleRepository")
  * @Vich\Uploadable
  */
-class ImgArticle
+class ImgPost
 {
     /**
      * @ORM\Id()

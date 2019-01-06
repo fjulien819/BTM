@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\ImgArticle;
+use App\Entity\ImgPost;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method ImgArticle|null find($id, $lockMode = null, $lockVersion = null)
- * @method ImgArticle|null findOneBy(array $criteria, array $orderBy = null)
- * @method ImgArticle[]    findAll()
- * @method ImgArticle[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method ImgPost|null find($id, $lockMode = null, $lockVersion = null)
+ * @method ImgPost|null findOneBy(array $criteria, array $orderBy = null)
+ * @method ImgPost[]    findAll()
+ * @method ImgPost[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class ImgArticleRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, ImgArticle::class);
+        parent::__construct($registry, ImgPost::class);
     }
 
     // /**
-    //  * @return ImgArticle[] Returns an array of ImgArticle objects
+    //  * @return ImgPost[] Returns an array of ImgPost objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ImgArticleRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?ImgArticle
+    public function findOneBySomeField($value): ?ImgPost
     {
         return $this->createQueryBuilder('i')
             ->andWhere('i.exampleField = :val')

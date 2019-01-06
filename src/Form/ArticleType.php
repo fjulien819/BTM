@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Article;
+use App\Entity\Post;
 use App\Form\Type\TagsInputType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
@@ -28,7 +28,7 @@ class ArticleType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Article::class,
+            'data_class' => Post::class,
         ]);
     }
 }
