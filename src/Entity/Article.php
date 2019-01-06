@@ -55,6 +55,9 @@ class Article
      */
     private $categories;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
     private $createdAt;
 
     /**
