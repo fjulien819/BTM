@@ -7,6 +7,7 @@ use App\Entity\Page;
 use App\Form\ArticleType;
 use App\Form\PageType;
 use App\Repository\PageRepository;
+use App\Service\HomepageManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -41,7 +42,7 @@ class AdminController extends AbstractController
      * @Route("admin/pages/new", name="newPage")
      * @Route("admin/pages/update/{slug}", name="updatePage")
      */
-    public function page(Page $page = null, Request $request, PageRepository $pageRepository)
+    public function page(Page $page = null, Request $request, PageRepository $pageRepository, HomepageManager $homepageManager)
     {
         if(!$page)
         {
@@ -65,11 +66,7 @@ class AdminController extends AbstractController
                 $page->setLastUpdate(new \DateTime());
             }
 
-
-            if (!$pageRepository->findBy(array('slug' => Page::SLUG_HOMEPAGE )))
-            {
-                $page->setSlug(page::SLUG_HOMEPAGE);
-            }
+            $homepageManager->checkHomepage($page);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($page);
