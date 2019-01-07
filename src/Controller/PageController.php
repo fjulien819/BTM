@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PageController extends AbstractController
 {
 
+
     /**
      * @Route("/articles", name="allArticles")
      * @param ArticleRepository $repository
@@ -39,13 +40,14 @@ class PageController extends AbstractController
 
         ]);
     }
-
+/*
     /**
      * @Route("/{slug}", name="showPage")
      * @param Page $page
      * @param PageRepository $repository
      * @return \Symfony\Component\HttpFoundation\Response
      */
+/*
     public function showPage(Page $page, PageRepository $repository)
     {
         $pages = $repository->findAll();
@@ -56,7 +58,7 @@ class PageController extends AbstractController
 
         ]);
     }
-
+*/
     /**
      * @Route("/articles/{slug}", name="showArticle")
      * @param Page $page
@@ -70,6 +72,7 @@ class PageController extends AbstractController
 
         ]);
     }
+
 
 
 }
