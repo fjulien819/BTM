@@ -3,5 +3,17 @@ easy_admin:
     entities:
         Post:
             class: App\Entity\Post
+
+            list:
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.post_images%' }
+
+            show:
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.post_images%' }
+
+            form:
+                fields:
+                    - { property: 'imageFile', type: 'vich_image' }
         User:
             class: App\Entity\User

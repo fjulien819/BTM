@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Post;
 use App\Entity\Page;
-use App\Repository\ArticleRepository;
+use App\Repository\PostRepository;
 use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,10 +15,10 @@ class PageController extends AbstractController
 
     /**
      * @Route("/articles", name="allArticles")
-     * @param ArticleRepository $repository
+     * @param PostRepository $repository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function allArticle(ArticleRepository $repository)
+    public function allArticle(PostRepository $repository)
     {
         return $this->render('article/all_articles.html.twig',
             [
@@ -65,7 +65,7 @@ class PageController extends AbstractController
      * @param PageRepository $repository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function showArticle(Post $article, ArticleRepository $repository)
+    public function showArticle(Post $article, PostRepository $repository)
     {
         return $this->render('article/showArticle.html.twig', [
         'article' => $article,
