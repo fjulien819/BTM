@@ -18,7 +18,7 @@ easy_admin:
             list:
                 title: 'Post'
                 fields:
-
+                    - { property: 'published', label: 'Visible'}
                     - { property: 'image', type: 'image', base_path: '%app.path.post_images%'}
                     - { property: 'title', label: 'Titre' }
                     - { property: 'Author', label: 'Auteur'}
@@ -36,8 +36,8 @@ easy_admin:
                     - { property: 'imageFile',label: 'Image', type: 'vich_image' }
 
                     - { type: 'group', columns: 8, label: 'Visibilité', icon: 'eye' }
-
-                    - { property: 'Author'}
+                    - { property: 'published', label: 'Publier ce post'}
+                    - { property: 'author'}
 
 
 

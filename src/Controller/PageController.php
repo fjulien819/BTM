@@ -22,7 +22,7 @@ class PageController extends AbstractController
     {
         return $this->render('article/all_articles.html.twig',
             [
-                'articles' => $repository->findAll()
+                'articles' => $repository->findBy(['published' => true])
             ]);
     }
 

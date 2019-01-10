@@ -25,6 +25,11 @@ class Post
     private $id;
 
     /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $published;
+
+    /**
      * @Gedmo\Slug(fields={"title"}, updatable=false)
      * @ORM\Column(length=255, unique=true)
      */
@@ -297,6 +302,18 @@ class Post
     public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getPublished(): ?bool
+    {
+        return $this->published;
+    }
+
+    public function setPublished(?bool $published): self
+    {
+        $this->published = $published;
 
         return $this;
     }
