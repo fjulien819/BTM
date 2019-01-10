@@ -1,19 +1,75 @@
 easy_admin:
     site_name: '<img src="https://symfony.com/logos/symfony_white_01.png" />'
+    formats:
+        date: 'd/m/Y'
+        time: 'H:i'
+        datetime: 'd/m/Y H:i'
+
+    design:
+            menu:
+                - { entity: 'Post', icon: 'file' }
+                - { entity: 'Category', icon: 'archive' }
+                - { entity: 'User', icon: 'user' }
     entities:
         Post:
             class: App\Entity\Post
+            label: 'Post'
 
             list:
+                title: 'Post'
                 fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.post_images%' }
 
-            show:
-                fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.post_images%' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.post_images%'}
+                    - { property: 'title', label: 'Titre' }
+                    - { property: 'Author', label: 'Auteur'}
+                    - { property: 'createdAt', label: 'Date de création'}
+
 
             form:
                 fields:
-                    - { property: 'imageFile', type: 'vich_image' }
+                    - { type: 'group', columns: 8, label: 'Basic information', icon: 'edit' }
+                    - { property: 'title', label: 'titre'}
+                    - { property: 'metaDescription', label: 'Description'}
+                    - { property: 'content', label: 'Contenu'}
+
+                    - { type: 'group', columns: 4, label: 'Illustration', icon: 'image' }
+                    - { property: 'imageFile',label: 'Image', type: 'vich_image' }
+
+                    - { type: 'group', columns: 8, label: 'Visibilité', icon: 'eye' }
+                    - { property: 'slug'}
+                    - { property: 'Author'}
+                    - { property: 'createdAt'}
+                    - { property: 'lastUpdate'}
+
+                    - { type: 'group', columns: 4, label: 'Classement', icon: 'archive' }
+                    - { property: 'tags', type_options: {help: 'help message'}}
+                    - { type: 'section' }
+                    - { property: 'category', label: 'Catégorie', type: 'entity', type_options: {expanded: true}}
+
+        Category:
+            class: App\Entity\Category
+            label: 'Catégorie'
+
+            list:
+                title: 'Catégorie'
+                fields:
+                    - { property: 'name', label: 'Nom'}
+
+            edit:
+                title: 'Modifier %%entity_label%%  (#%%entity_id%%)'
+                fields:
+                    - { property: 'name', label: 'Nom'}
+
+            new:
+                title: 'Nouvelle %%entity_label%%'
+                fields:
+                     - { property: 'name', label: 'Nom'}
+
         User:
             class: App\Entity\User
+            label: 'Utilisateur'
+
+
+
+
+
