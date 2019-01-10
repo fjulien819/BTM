@@ -8,22 +8,22 @@ use App\Form\ArticleType;
 use App\Form\PageType;
 use App\Repository\PageRepository;
 use App\Service\HomepageManager;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AdminController as BaseAdminController;
 
-
-class AdminController extends AbstractController
+class AdminController extends BaseAdminController
 {
-    /**
-     * @Route("admin", name="adminHomepage")
-     */
-    public function adminHomepage()
-    {
 
-        return $this->render('admin/index.html.twig', [
-        ]);
+    public function updateEntity($entity)
+    {
+        if (method_exists($entity, 'setLastUpdate')) {
+            $entity->setLastUpdate(new \DateTime('now', new \DateTimeZone(POST::DATE_TIME_ZONE)));
+        }
+
+        parent::updateEntity($entity);
     }
+
 
     /**
      * @Route("admin/pages", name="adminPages")
@@ -95,71 +95,7 @@ class AdminController extends AbstractController
         return $this->redirectToRoute('adminPages');
     }
 
-    /**
-     * @Route("admin/articles", name="adminArticles")
-     */
-    public function adminArticles()
-    {
-        $repository = $this->getDoctrine()->getRepository(Post::class);
-        $articles = $repository->findAll();
 
-        return $this->render('admin/all_articles.html.twig', [
-            'articles' => $articles,
-        ]);
-    }
 
-    /**
-     * @Route("admin/articles/new", name="newArticle")
-     * @Route("admin/articles/update/{slug}", name="updateArticle")
-     */
-    public function article(Post $article = null, Request $request)
-    {
-        if(!$article)
-        {
-            $article = new Post;
-        }
-
-        $form = $this->createForm(ArticleType::class, $article);
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $article = $form->getData();
-
-            if (!$article->getId())
-            {
-                $article->setCreatedAt(new \DateTime());
-            }
-            else
-            {
-                $article->setLastUpdate(new \DateTime());
-            }
-
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($article);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('adminHomepage');
-
-        }
-        return $this->render('admin/new_update_article.html.twig', [
-            'formArticle' => $form->createView(),
-            'editMode' => $article->getId() !== null
-        ]);
-
-    }
-
-    /**
-     * @Route("admin/articles/delete/{slug}", name="deleteArticle")
-     */
-    public function deleteArticle(Post $article)
-    {
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->remove($article);
-        $entityManager->flush();
-
-        return $this->redirectToRoute('adminArticles');
-    }
 
 }

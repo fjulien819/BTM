@@ -36,10 +36,10 @@ easy_admin:
                     - { property: 'imageFile',label: 'Image', type: 'vich_image' }
 
                     - { type: 'group', columns: 8, label: 'Visibilité', icon: 'eye' }
-                    - { property: 'slug'}
+
                     - { property: 'Author'}
-                    - { property: 'createdAt'}
-                    - { property: 'lastUpdate'}
+
+
 
                     - { type: 'group', columns: 4, label: 'Classement', icon: 'archive' }
                     - { property: 'tags', type_options: {help: 'help message'}}

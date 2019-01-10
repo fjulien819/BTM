@@ -15,6 +15,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class Post
 {
+    const DATE_TIME_ZONE = 'Europe/Paris';
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -55,7 +57,7 @@ class Post
     private $category;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="datetime")
      */
     private $createdAt;
 
@@ -74,6 +76,7 @@ class Post
         $this->tags = new ArrayCollection();
         $this->categories = new ArrayCollection();
         $this->category = new ArrayCollection();
+        $this->createdAt = new \DateTime('now', new \DateTimeZone(self::DATE_TIME_ZONE));
     }
 
     public function getId(): ?int
@@ -227,7 +230,7 @@ class Post
 
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable = true)
      * @var string
      */
     private $image;
@@ -239,7 +242,7 @@ class Post
     private $imageFile;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable = true)
      * @var \DateTime
      */
     private $updatedAt;
@@ -255,7 +258,7 @@ class Post
         // otherwise the event listeners won't be called and the file is lost
         if ($image) {
             // if 'updatedAt' is not defined in your entity, use another property
-            $this->updatedAt = new \DateTime('now');
+            $this->updatedAt = new \DateTime('now', new \DateTimeZone(self::DATE_TIME_ZONE));
         }
     }
 
