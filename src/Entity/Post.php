@@ -72,7 +72,7 @@ class Post
     private $lastUpdate;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", nullable=false)
      */
     private $metaDescription;
 
