@@ -9,7 +9,7 @@ easy_admin:
             menu:
                 - { entity: 'Post', icon: 'file' }
                 - { entity: 'Category', icon: 'archive' }
-                - { entity: 'User', icon: 'user' }
+
     entities:
         Post:
             class: App\Entity\Post
@@ -37,7 +37,7 @@ easy_admin:
 
                     - { type: 'group', columns: 8, label: 'Visibilité', icon: 'eye' }
                     - { property: 'published', label: 'Publier ce post'}
-                    - { property: 'author'}
+
 
 
 
@@ -65,9 +65,7 @@ easy_admin:
                 fields:
                      - { property: 'name', label: 'Nom'}
 
-        User:
-            class: App\Entity\User
-            label: 'Utilisateur'
+
 
 
 

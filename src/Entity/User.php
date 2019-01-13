@@ -3,38 +3,28 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use FOS\UserBundle\Model\User as BaseUser;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class User
+class User extends BaseUser
 {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 
-    /**
-     * @ORM\Column(type="string", nullable=false)
-     */
-    private $name;
-
+    public function __construct()
+    {
+        parent::__construct();
+        $this->roles = array('ROLE_ADMIN');
+    }
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
 
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }
 }

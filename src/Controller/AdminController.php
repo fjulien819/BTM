@@ -20,8 +20,15 @@ class AdminController extends BaseAdminController
         if (method_exists($entity, 'setLastUpdate')) {
             $entity->setLastUpdate(new \DateTime('now', new \DateTimeZone(POST::DATE_TIME_ZONE)));
         }
-
         parent::updateEntity($entity);
+    }
+
+    public function persistEntity($entity)
+    {
+        if (method_exists($entity, 'setAuthor')) {
+            $entity->setAuthor($this->getUser());
+        }
+        parent::persistEntity($entity);
     }
 
 

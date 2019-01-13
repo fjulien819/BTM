@@ -6,6 +6,7 @@
 parameters:
     locale: 'fr'
     app.path.post_images: /uploads/images/post
+    mailer_user: 'test@test.com'
 
 services:
     # default configuration for services in *this* file
