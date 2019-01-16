@@ -29,7 +29,7 @@ class TagArrayToStringTransformer implements DataTransformerInterface
         // Symfony\Bridge\Doctrine\Form\DataTransformer\CollectionToArrayTransformer::transform()
         // The value returned is a string that concatenates the string representation of those objects
         /* @var Tag[] $tags */
-        return implode(',', $tags);
+        return implode(', ', $tags);
     }
     /**
      * {@inheritdoc}

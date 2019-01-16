@@ -6,9 +6,11 @@ easy_admin:
         datetime: 'd/m/Y H:i'
 
     design:
-            menu:
-                - { entity: 'Post', icon: 'file' }
-                - { entity: 'Category', icon: 'archive' }
+
+
+        menu:
+            - { entity: 'Post', icon: 'file' }
+            - { entity: 'Category', icon: 'archive' }
 
     entities:
         Post:
@@ -42,7 +44,7 @@ easy_admin:
 
 
                     - { type: 'group', columns: 4, label: 'Classement', icon: 'archive' }
-                    - { property: 'tags', type_options: {help: 'help message'}}
+                    - { property: 'tags',type: 'App\Form\Type\TagsInputType', type_options: { help: 'Les tags doivent etres séparé par des virgules'}}
                     - { type: 'section' }
                     - { property: 'category', label: 'Catégorie', type: 'entity', type_options: {expanded: true}}
 
