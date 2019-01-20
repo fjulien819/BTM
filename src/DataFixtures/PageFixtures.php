@@ -13,8 +13,8 @@ class PageFixtures extends Fixture
         for ($i = 1; $i < 10; $i++)
         {
             $page = new Page();
-            $page->setTitle("Titre de la page");
-            $page->setContent("Contenu de la page");
+            $page->setTitle("Titre de la post");
+            $page->setContent("Contenu de la post");
             $page->setCreatedAt(new \DateTime());
 
             $manager->persist($page);

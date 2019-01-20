@@ -16,7 +16,7 @@ final class Version20181206093023 extends AbstractMigration
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('CREATE TABLE article (id INT AUTO_INCREMENT NOT NULL, slug VARCHAR(255) NOT NULL, title VARCHAR(255) NOT NULL, content LONGTEXT DEFAULT NULL, created_at DATETIME NOT NULL, last_update DATETIME DEFAULT NULL, UNIQUE INDEX UNIQ_23A0E66989D9B62 (slug), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
-        $this->addSql('CREATE UNIQUE INDEX UNIQ_140AB620989D9B62 ON page (slug)');
+        $this->addSql('CREATE UNIQUE INDEX UNIQ_140AB620989D9B62 ON post (slug)');
     }
 
     public function down(Schema $schema) : void
@@ -25,6 +25,6 @@ final class Version20181206093023 extends AbstractMigration
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('DROP TABLE article');
-        $this->addSql('DROP INDEX UNIQ_140AB620989D9B62 ON page');
+        $this->addSql('DROP INDEX UNIQ_140AB620989D9B62 ON post');
     }
 }

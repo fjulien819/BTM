@@ -15,6 +15,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class Post
 {
+    const URL_PAGE_POST = 'blog';
     const DATE_TIME_ZONE = 'Europe/Paris';
 
     /**

@@ -7,7 +7,6 @@ use App\Entity\Page;
 use App\Entity\Search;
 use App\Form\SearchType;
 use App\Repository\PostRepository;
-use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -39,64 +38,70 @@ class defaultController extends AbstractController
             $results = $postRepository->searchPostByTerm($search->getSearchTerm());
 
 
-            return $this->render('page/searchResultView.html.twig', ['searchResults' => $results]);
+            return $this->render('post/searchResultView.html.twig', ['searchResults' => $results]);
         }
-        return $this->render('form/searchForm.html.twig', ['searchForm' => $form->createView()]);
+        return $this->render('post/form/searchForm.html.twig', ['searchForm' => $form->createView()]);
     }
 
     /**
-     * @Route("/articles", name="allArticles")
+     * @Route("/{url_page_post}", name="allPosts", requirements={"url_page_post"=Post::URL_PAGE_POST})
      * @param PostRepository $repository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function allArticle(PostRepository $repository)
+    public function allPosts(PostRepository $repository)
     {
-        return $this->render('article/all_articles.html.twig',
+        return $this->render('post/allPosts.html.twig',
             [
-                'articles' => $repository->findBy(['published' => true])
+                'posts' => $repository->findBy(['published' => true])
             ]);
     }
 
+    /**
+     * @Route("/{url_page_post}/{slug}", name="showPost",  requirements={"url_page_post"=Post::URL_PAGE_POST})
+     * @param Page $page
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function showPost(Post $post)
+    {
+        return $this->render('post/showPost.html.twig', [
+            'post' => $post,
+
+        ]);
+    }
 
     /**
      * @Route("/", name="homepage")
      */
-    public function homepage(Request $request)
+    public function homepage()
     {
         return $this->render('base.html.twig');
     }
+
+
+
+
+
+
     /*
         /**
          * @Route("/{slug}", name="showPage")
-         * @param Page $page
+         * @param Page $post
          * @param PageRepository $repository
          * @return \Symfony\Component\HttpFoundation\Response
          */
     /*
-        public function showPage(Page $page, PageRepository $repository)
+        public function showPage(Page $post, PageRepository $repository)
         {
             $pages = $repository->findAll();
 
-            return $this->render('page/showPage.html.twig', [
+            return $this->render('post/showPage.html.twig', [
                 'pages' => $pages,
-                'page' => $page
+                'post' => $post
 
             ]);
         }
     */
-    /**
-     * @Route("/articles/{slug}", name="showArticle")
-     * @param Page $page
-     * @param PageRepository $repository
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function showArticle(Post $article, PostRepository $repository)
-    {
-        return $this->render('article/showArticle.html.twig', [
-            'article' => $article,
 
-        ]);
-    }
 
 
 }
