@@ -252,7 +252,6 @@ class Post
      */
     private $updatedAt;
 
-    // ...
 
     public function setImageFile(File $image = null)
     {
