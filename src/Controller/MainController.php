@@ -31,10 +31,6 @@ class MainController extends AbstractController
 
             $form->getData();
 
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($search);
-            $entityManager->flush();
-
             $results = $postRepository->searchPostByTerm($search->getSearchTerm());
 
 
