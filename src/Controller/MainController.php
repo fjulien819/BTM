@@ -5,8 +5,10 @@ namespace App\Controller;
 use App\Entity\Post;
 use App\Entity\Page;
 use App\Entity\Search;
+use App\Form\ContactType;
 use App\Form\SearchType;
 use App\Repository\PostRepository;
+use App\Service\ContactNotification;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -32,7 +34,6 @@ class MainController extends AbstractController
             $form->getData();
 
             $results = $postRepository->searchPostByTerm($search->getSearchTerm());
-
 
             return $this->render('post/searchResultView.html.twig', ['searchResults' => $results]);
         }
@@ -71,6 +72,31 @@ class MainController extends AbstractController
     public function homepage()
     {
         return $this->render('base.html.twig');
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact(Request $request, ContactNotification $contactNotification)
+    {
+        $form = $this->createForm(ContactType::class);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            if ($contactNotification->notify($form->getData()))
+            {
+                $this->addFlash("notice", "Votre message a bien été envoyé");
+                return $this->redirectToRoute('contact');
+
+            }
+
+            $this->addFlash("notice", "Votre message n'a pas pu être envoyé");
+            return $this->redirectToRoute('contact');
+
+        }
+
+        return $this->render('contact.html.twig', ['formContact' => $form->createView()]);
     }
 
 

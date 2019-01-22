@@ -1,0 +1,26 @@
+<body></body>
+<!-- Message flash -->
+{% for message in app.flashes('notice') %}
+        {{ message }}
+{% endfor %}
+<br><br>
+<!---- Formulaire de contact ---->
+{{ form_start(formContact) }}
+
+    {{ form_row(formContact.name) }}
+
+    {{ form_row(formContact.lastName) }}
+
+    {{ form_row(formContact.email) }}
+
+    {{ form_row(formContact.object) }}
+
+    {{ form_row(formContact.message) }}
+
+
+    {{ form_widget(formContact.rgpd) }}
+    {{ form_label(formContact.rgpd) }}
+
+    <input type="submit">
+{{ form_end(formContact) }}
+
