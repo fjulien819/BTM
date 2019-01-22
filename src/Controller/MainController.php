@@ -35,9 +35,9 @@ class MainController extends AbstractController
 
             $results = $postRepository->searchPostByTerm($search->getSearchTerm());
 
-            return $this->render('post/searchResultView.html.twig', ['searchResults' => $results]);
+            return $this->render('pages/posts.html.twig', ['posts' => $results]);
         }
-        return $this->render('post/form/searchForm.html.twig', ['searchForm' => $form->createView()]);
+        return $this->render('form/_search_form.html.twig', ['searchForm' => $form->createView()]);
     }
 
     /**
@@ -47,7 +47,7 @@ class MainController extends AbstractController
      */
     public function allPosts(PostRepository $repository)
     {
-        return $this->render('post/allPosts.html.twig',
+        return $this->render('pages/posts.html.twig',
             [
                 'posts' => $repository->findBy(['published' => true])
             ]);
@@ -60,7 +60,7 @@ class MainController extends AbstractController
      */
     public function showPost(Post $post)
     {
-        return $this->render('post/showPost.html.twig', [
+        return $this->render('pages/post.html.twig', [
             'post' => $post,
 
         ]);
@@ -96,7 +96,7 @@ class MainController extends AbstractController
 
         }
 
-        return $this->render('contact.html.twig', ['formContact' => $form->createView()]);
+        return $this->render('pages/contact.html.twig', ['formContact' => $form->createView()]);
     }
 
 

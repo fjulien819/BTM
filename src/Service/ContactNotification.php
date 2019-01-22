@@ -45,7 +45,7 @@ class ContactNotification
             ->setFrom("noreply@BackToMobile.fr")
             ->setTo(ContactNotification::NOTIFICATION_EMAIL_DELIVERY)
             ->setReplyTo($contact->getEmail())
-            ->setBody($this->renderer->render('emails/contactNotify.html.twig', [
+            ->setBody($this->renderer->render('emails/contact_notification.html.twig', [
                 'message' => $contact->getMessage(),
                 'prenom' => $contact->getName(),
                 'nom' => $contact->getLastName()

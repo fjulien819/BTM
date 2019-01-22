@@ -1,0 +1,4 @@
+{{ dump(posts) }}
+
+<!-- Formulaire de recherche -->
+{{ render(controller('App\\Controller\\MainController::searchForm', {request: app.request})) }}
