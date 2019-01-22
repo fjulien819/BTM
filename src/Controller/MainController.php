@@ -6,7 +6,7 @@ use App\Entity\Post;
 use App\Entity\Page;
 use App\Entity\Search;
 use App\Form\ContactType;
-use App\Form\SearchType;
+use App\Form\SearchPostType;
 use App\Repository\PostRepository;
 use App\Service\ContactNotification;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -26,7 +26,7 @@ class MainController extends AbstractController
     {
 
         $search = new Search();
-        $form = $this->createForm(SearchType::class, $search);
+        $form = $this->createForm(SearchPostType::class, $search);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

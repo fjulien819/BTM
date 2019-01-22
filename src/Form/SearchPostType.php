@@ -4,16 +4,16 @@ namespace App\Form;
 
 use App\Entity\Search;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SearchType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class SearchType extends AbstractType
+class SearchPostType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('searchTerm', TextType::class, array(
+            ->add('searchTerm', SearchType::class, array(
                 'label' => false
             ))
 
