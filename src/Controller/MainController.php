@@ -3,12 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Post;
-use App\Entity\Page;
-use App\Entity\Search;
 use App\Form\ContactType;
-use App\Form\SearchPostType;
 use App\Repository\PostRepository;
 use App\Service\ContactNotification;
+use App\Service\FormSearch;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,34 +17,34 @@ class MainController extends AbstractController
 
 
     /**
-     * @param Request $request
-     * @param PostRepository $postRepository
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/search", name="handleSearchForm")
+     * @Method({"POST"})
      */
-    public function searchForm(Request $request, PostRepository $postRepository)
+    public function handleSearchForm(FormSearch $formSearch, Request $request,PostRepository $postRepository)
     {
 
-        $search = new Search();
-        $form = $this->createForm(SearchPostType::class, $search);
-        $form->handleRequest($request);
+       $form = $formSearch->getForm();
+
+       $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $form->getData();
+           $search = $form->getData();
 
-            $results = $postRepository->searchPostByTerm($search->getSearchTerm());
+           $results = $postRepository->searchPostByTerm($search->getSearchTerm());
 
             return $this->render('pages/posts.html.twig', ['posts' => $results]);
         }
-        return $this->render('form/_search_form.html.twig', ['searchForm' => $form->createView()]);
+
+        return $this->redirectToRoute("posts", ['url_page_post' => Post::URL_PAGE_POST ]);
     }
 
     /**
-     * @Route("/{url_page_post}", name="allPosts", requirements={"url_page_post"=Post::URL_PAGE_POST})
+     * @Route("/{url_page_post}", name="posts", requirements={"url_page_post"=Post::URL_PAGE_POST})
      * @param PostRepository $repository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function allPosts(PostRepository $repository)
+    public function posts(PostRepository $repository)
     {
         return $this->render('pages/posts.html.twig',
             [
@@ -54,11 +53,10 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/{url_page_post}/{slug}", name="showPost",  requirements={"url_page_post"=Post::URL_PAGE_POST})
-     * @param Page $page
+     * @Route("/{url_page_post}/{slug}", name="post",  requirements={"url_page_post"=Post::URL_PAGE_POST})
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function showPost(Post $post)
+    public function post(Post $post)
     {
         return $this->render('pages/post.html.twig', [
             'post' => $post,

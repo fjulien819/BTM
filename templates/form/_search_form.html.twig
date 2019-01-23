@@ -1,4 +1,6 @@
-{{ form_start(searchForm) }}
-{{ form_rest(searchForm) }}
-<input type="submit" value="Rechercher">
-{{ form_end(searchForm) }}
+{% set formSearch = form_search.getForm().createView() %}
+
+{{ form_start(formSearch) }}
+{{ form_rest(formSearch) }}
+<input type="submit">
+{{ form_end(formSearch) }}
