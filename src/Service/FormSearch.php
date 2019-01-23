@@ -8,6 +8,7 @@
 
 namespace App\Service;
 
+use App\Entity\Post;
 use App\Form\SearchPostType;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -26,7 +27,7 @@ class FormSearch
         $this->formFactory = $formFactory;
 
         $this->form = $this->formFactory->create(SearchPostType::class, null, [
-            'attr' => ['action' => $this->router->generate('handleSearchForm')]
+            'attr' => ['action' => $this->router->generate('handleSearchForm', ['url_page_post' => Post::URL_PAGE_POST])]
         ]);
     }
 

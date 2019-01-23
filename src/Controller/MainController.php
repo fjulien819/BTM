@@ -17,8 +17,12 @@ class MainController extends AbstractController
 
 
     /**
-     * @Route("/search", name="handleSearchForm")
+     * @Route("/{url_page_post}/results", name="handleSearchForm", requirements={"url_page_post"=Post::URL_PAGE_POST})
      * @Method({"POST"})
+     * @param FormSearch $formSearch
+     * @param Request $request
+     * @param PostRepository $postRepository
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function handleSearchForm(FormSearch $formSearch, Request $request,PostRepository $postRepository)
     {
@@ -54,6 +58,7 @@ class MainController extends AbstractController
 
     /**
      * @Route("/{url_page_post}/{slug}", name="post",  requirements={"url_page_post"=Post::URL_PAGE_POST})
+     * @param Post $post
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function post(Post $post)
@@ -74,6 +79,12 @@ class MainController extends AbstractController
 
     /**
      * @Route("/contact", name="contact")
+     * @param Request $request
+     * @param ContactNotification $contactNotification
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
      */
     public function contact(Request $request, ContactNotification $contactNotification)
     {
