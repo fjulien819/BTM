@@ -9,7 +9,6 @@ use App\Repository\PostRepository;
 use App\Service\ContactNotification;
 use App\Service\FormSearch;
 use Knp\Component\Pager\PaginatorInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,10 +20,10 @@ class MainController extends AbstractController
 
     /**
      * @Route("/{url_page_post}/results", name="handleSearchForm", requirements={"url_page_post"=Post::URL_PAGE_POST})
-     * @Method({"POST"})
      * @param FormSearch $formSearch
      * @param Request $request
      * @param PostRepository $postRepository
+     * @param PaginatorInterface $paginator
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function handleSearchForm(FormSearch $formSearch, Request $request,PostRepository $postRepository, PaginatorInterface $paginator)
@@ -49,7 +48,9 @@ class MainController extends AbstractController
 
     /**
      * @Route("/{url_page_post}", name="posts", requirements={"url_page_post"=Post::URL_PAGE_POST})
-     * @param PostRepository $repository
+     * @param PaginatorInterface $paginator
+     * @param PostRepository $postRepository
+     * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function posts(PaginatorInterface $paginator, PostRepository $postRepository, Request $request)
@@ -64,6 +65,11 @@ class MainController extends AbstractController
     /**
      * @Route("/{url_page_post}/categorie/{category_name}", name="postsByCategory", requirements={"url_page_post"=Post::URL_PAGE_POST})
      * @ParamConverter("category", options={"mapping"={"category_name"="name"}})
+     * @param PaginatorInterface $paginator
+     * @param Category $category
+     * @param PostRepository $postRepository
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function postsByCategory(PaginatorInterface $paginator, Category $category, PostRepository $postRepository, Request $request)
     {
