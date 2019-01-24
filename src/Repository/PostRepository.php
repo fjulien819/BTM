@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Category;
 use App\Entity\Post;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
@@ -19,16 +20,34 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
-    public function searchPostByTerm($term)
+    public function getQuerySearchPostByTerm($term)
     {
         return $this->createQueryBuilder('p')
             ->Where('p.published = 1')
             ->andwhere('p.title LIKE :term')
             ->setParameter('term', '%' . $term . '%')
             ->getQuery()
-            ->getResult()
             ;
     }
+    public function getQueryAllPostsVisible()
+    {
+        return $this->createQueryBuilder('p')
+            ->Where('p.published = 1')
+            ->getQuery()
+            ;
+    }
+
+    public function getQueryPostByCategory(Category $category)
+    {
+        return $this->createQueryBuilder('p')
+            ->leftJoin('p.category', 'c')
+            ->where('c = :category')
+            ->setParameter('category', $category)
+            ->andWhere('p.published = 1')
+            ->getQuery()
+            ;
+    }
+
 
     // /**
     //  * @return Post[] Returns an array of Post objects

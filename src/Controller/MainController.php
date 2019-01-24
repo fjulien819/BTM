@@ -2,12 +2,15 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Entity\Post;
 use App\Form\ContactType;
 use App\Repository\PostRepository;
 use App\Service\ContactNotification;
 use App\Service\FormSearch;
+use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -24,7 +27,7 @@ class MainController extends AbstractController
      * @param PostRepository $postRepository
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function handleSearchForm(FormSearch $formSearch, Request $request,PostRepository $postRepository)
+    public function handleSearchForm(FormSearch $formSearch, Request $request,PostRepository $postRepository, PaginatorInterface $paginator)
     {
 
        $form = $formSearch->getForm();
@@ -35,7 +38,7 @@ class MainController extends AbstractController
 
            $search = $form->getData();
 
-           $results = $postRepository->searchPostByTerm($search->getSearchTerm());
+           $results = $paginator->paginate($postRepository->getQuerySearchPostByTerm($search->getSearchTerm()), $request->query->getInt('page', 1), 6 );
 
             return $this->render('pages/posts.html.twig', ['posts' => $results]);
         }
@@ -43,16 +46,31 @@ class MainController extends AbstractController
         return $this->redirectToRoute("posts", ['url_page_post' => Post::URL_PAGE_POST ]);
     }
 
+
     /**
      * @Route("/{url_page_post}", name="posts", requirements={"url_page_post"=Post::URL_PAGE_POST})
      * @param PostRepository $repository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function posts(PostRepository $repository)
+    public function posts(PaginatorInterface $paginator, PostRepository $postRepository, Request $request)
     {
+        $posts = $paginator->paginate($postRepository->getQueryAllPostsVisible(), $request->query->getInt('page', 1), 6 );
         return $this->render('pages/posts.html.twig',
             [
-                'posts' => $repository->findBy(['published' => true])
+                'posts' => $posts
+            ]);
+    }
+
+    /**
+     * @Route("/{url_page_post}/categorie/{category_name}", name="postsByCategory", requirements={"url_page_post"=Post::URL_PAGE_POST})
+     * @ParamConverter("category", options={"mapping"={"category_name"="name"}})
+     */
+    public function postsByCategory(PaginatorInterface $paginator, Category $category, PostRepository $postRepository, Request $request)
+    {
+        $posts = $paginator->paginate($postRepository->getQueryPostByCategory($category), $request->query->getInt('page', 1), 6 );
+        return $this->render('pages/posts.html.twig',
+            [
+                'posts' => $posts,
             ]);
     }
 
@@ -107,32 +125,5 @@ class MainController extends AbstractController
 
         return $this->render('pages/contact.html.twig', ['formContact' => $form->createView()]);
     }
-
-
-
-
-
-
-    /*
-        /**
-         * @Route("/{slug}", name="showPage")
-         * @param Page $post
-         * @param PageRepository $repository
-         * @return \Symfony\Component\HttpFoundation\Response
-         */
-    /*
-        public function showPage(Page $post, PageRepository $repository)
-        {
-            $pages = $repository->findAll();
-
-            return $this->render('post/showPage.html.twig', [
-                'pages' => $pages,
-                'post' => $post
-
-            ]);
-        }
-    */
-
-
 
 }
