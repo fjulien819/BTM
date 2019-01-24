@@ -2,6 +2,8 @@
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.*.local
+/.env
+/.env.test
 /public/bundles/
 /var/
 /vendor/
