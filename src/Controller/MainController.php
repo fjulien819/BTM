@@ -126,4 +126,20 @@ class MainController extends AbstractController
         return $this->render('pages/contact.html.twig', ['formContact' => $form->createView()]);
     }
 
+    /**
+     * @Route("/service", name="service")
+     */
+    public function service()
+    {
+        return $this->render('pages/service.html.twig');
+    }
+
+    /**
+     * @Route("/expertise", name="expertise")
+     */
+    public function expertise()
+    {
+        return $this->render('pages/expertise.html.twig');
+    }
+
 }
