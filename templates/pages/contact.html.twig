@@ -1,11 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ parent() }} {% endblock %}
+{% block stylesheets %}{{ parent() }}{% endblock %}
+{% block body %}
 
-<!-- Message flash -->
-{% for message in app.flashes('notice') %}
+    <!-- Message flash -->
+    {% for message in app.flashes('notice') %}
         {{ message }}
-{% endfor %}
+    {% endfor %}
 
-<!---- Formulaire de contact ---->
-{{ form_start(formContact) }}
+    <!---- Formulaire de contact ---->
+    {{ form_start(formContact) }}
 
     {{ form_row(formContact.name) }}
 
@@ -22,5 +26,11 @@
     {{ form_label(formContact.rgpd) }}
 
     <input type="submit">
-{{ form_end(formContact) }}
+    {{ form_end(formContact) }}
+
+
+{% endblock %}
+ {% block javascripts %}
+     {{ parent() }}
+ {% endblock %}
 

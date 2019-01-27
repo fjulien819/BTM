@@ -1,25 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ parent() }} {% endblock %}
+{% block stylesheets %}{{ parent() }}{% endblock %}
+{% block body %}
+
+    <!--- Formulaire de recherche ---->
+    {% include "form/_search_form.html.twig" %}
 
 
 
-<!--- Formulaire de recherche ---->
-{% include "form/_search_form.html.twig" %}
+    {% if posts.getTotalItemCount %}
+
+        {% for post in posts %}
+            {{ dump(post) }}
+        {% endfor %}
+
+    {% else %}
+
+        Aucun post
+
+    {% endif %}
 
 
 
-{% if posts.getTotalItemCount %}
+    <!--- Pagination -->
+    {{ knp_pagination_render(posts) }}
 
-    {% for post in posts %}
-        {{ dump(post) }}
-    {% endfor %}
-
-{% else %}
-
-Aucun post
-
-{% endif %}
+{% endblock %}
+ {% block javascripts %}
+     {{ parent() }}
+ {% endblock %}
 
 
 
-<!--- Pagination -->
-{{ knp_pagination_render(posts) }}
+
 
