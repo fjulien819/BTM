@@ -1,25 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ parent() }} {% endblock %}
+{% block stylesheets %}{{ parent() }}{% endblock %}
+{% block body %}
+    <div class="container d-flex">
+
+
+        {% include "_list_posts.html.twig" %}
+        {% include "_sidebar.html.twig" %}
+
+
+    </div>
+
+{% endblock %}
+ {% block javascripts %}
+     {{ parent() }}
+ {% endblock %}
 
 
 
-<!--- Formulaire de recherche ---->
-{% include "form/_search_form.html.twig" %}
 
-
-
-{% if posts.getTotalItemCount %}
-
-    {% for post in posts %}
-        {{ dump(post) }}
-    {% endfor %}
-
-{% else %}
-
-Aucun post
-
-{% endif %}
-
-
-
-<!--- Pagination -->
-{{ knp_pagination_render(posts) }}
 
