@@ -2,28 +2,14 @@
 {% block title %} {{ parent() }} {% endblock %}
 {% block stylesheets %}{{ parent() }}{% endblock %}
 {% block body %}
-
-    <!--- Formulaire de recherche ---->
-    {% include "form/_search_form.html.twig" %}
+    <div class="container d-flex">
 
 
-
-    {% if posts.getTotalItemCount %}
-
-        {% for post in posts %}
-            {{ dump(post) }}
-        {% endfor %}
-
-    {% else %}
-
-        Aucun post
-
-    {% endif %}
+        {% include "_list_posts.html.twig" %}
+        {% include "_sidebar.html.twig" %}
 
 
-
-    <!--- Pagination -->
-    {{ knp_pagination_render(posts) }}
+    </div>
 
 {% endblock %}
  {% block javascripts %}
