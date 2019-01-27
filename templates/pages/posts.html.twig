@@ -1,4 +1,4 @@
-
+{% set categories = categories_posts.getCategories %}
 
 
 <!--- Formulaire de recherche ---->
@@ -18,6 +18,8 @@ Aucun post
 
 {% endif %}
 
+<!--- Categories-->
+{{ dump(categories) }}
 
 
 <!--- Pagination -->

@@ -4,5 +4,6 @@ twig:
     strict_variables: '%kernel.debug%'
     globals:
         form_search: '@App\Service\FormSearch'
+        categories_posts: '@App\Service\categoriesPosts'
 
 
