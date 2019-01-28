@@ -148,4 +148,12 @@ class MainController extends AbstractController
         return $this->render('pages/expertise.html.twig');
     }
 
+    /**
+     * @Route("/mentions-legales", name="legalNotice")
+     */
+    public function legalNotice()
+    {
+        return $this->render('pages/mentions_legales.html.twig');
+    }
+
 }
