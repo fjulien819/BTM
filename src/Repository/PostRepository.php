@@ -33,6 +33,7 @@ class PostRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('p')
             ->Where('p.published = 1')
+            ->orderBy('p.createdAt', 'DESC')
             ->getQuery()
             ;
     }
@@ -44,6 +45,7 @@ class PostRepository extends ServiceEntityRepository
             ->where('c = :category')
             ->setParameter('category', $category)
             ->andWhere('p.published = 1')
+            ->orderBy('p.createdAt', 'DESC')
             ->getQuery()
             ;
     }
