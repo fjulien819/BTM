@@ -32,6 +32,8 @@ class PostRepository extends ServiceEntityRepository
     public function getQueryAllPostsVisible()
     {
         return $this->createQueryBuilder('p')
+            ->leftJoin('p.category', 'c')
+            ->addSelect('c')
             ->Where('p.published = 1')
             ->orderBy('p.createdAt', 'DESC')
             ->getQuery()
@@ -42,6 +44,7 @@ class PostRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('p')
             ->leftJoin('p.category', 'c')
+            ->addSelect('c')
             ->where('c = :category')
             ->setParameter('category', $category)
             ->andWhere('p.published = 1')
