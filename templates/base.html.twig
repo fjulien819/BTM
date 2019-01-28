@@ -2,23 +2,195 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome! - {% endblock %}</title>
-        <meta name="description" content="{% block metaDescription %}{% endblock %}" />
-        <!-- Bootstrap CSS -->
+        <html lang="fr">
+
+        <!-- Title -->
+        <title>{% block title %}Back to Mobile - {% endblock %}</title>
+
+        <!-- Meta -->
+        <meta name="description" content="{% block metaDescription %} Site vitrine de l'agence de communication web Back To Mobile {% endblock %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Bootstrap & Fontawesome CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+        crossorigin="anonymous">
+
+        <!-- Stylesheets Voir comment mettre le CSS de base et les fonts -->
         {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+
+        <!-- Chat script. Ne pas oublier mais il faut adresse site en ligne pour ça -->
     </head>
+
+
     <body>
-        {% block body %}
 
-
-
+        {% block header %}
+        <header>
+        <!-- Navbar and button -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="col-8 offset-2 brandpart d-flex justify-content-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/brandlogo.png" alt="logo" style="max-width:5.625rem">
+                </a>
+            </div>
+            <div class="col-2 d-flex flex-column aroundbrand">
+                <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal' type='button'
+                    style="padding-bottom: 0; background: none;">
+                    <span class='sr-only'>Ouvre la navigation</span>
+                    <img src="img/menusquaresblanc50.png" alt="logo" style="max-width:2.4rem">
+                </button>
+                <p class="menutext mx-auto">Menu</p>
+            </div>
+        </nav>
+        <!-- Modal menu -->
+        <div class="modal" id="modalNavigation" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-full" role="document">
+                <div class="modal-content">
+                    <!-- Header part -->
+                    <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                        <div class="col-8 offset-2 brandpart d-flex justify-content-center">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="img/brandlogo.png" alt="logo" style="max-width:5.625rem">
+                            </a>
+                        </div>
+                        <div class="col-2 d-flex flex-column aroundbrand">
+                            <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal'
+                                type='button' style="padding-bottom: 0; background: none;">
+                                <span class='sr-only'>Ouvre la navigation</span>
+                                <img src="img/xcloseblanc50.png" alt="logo" style="max-width:1.6rem">
+                            </button>
+                            <p class="menutext mx-auto">Menu</p>
+                        </div>
+                    </div>
+                    <div class="modal-body d-flex flex-row">
+                        <!-- Left column -->
+                        <div class="col-lg-4 leftgroup d-flex flex-column">
+                            <div class="col-12 blocks d-flex justify-content-center" style="background: darkgrey; max-height: 50%">
+                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Les
+                                    pwa</a>
+                            </div>
+                            <div class="col-12 blocks d-flex justify-content-center" style="background: lightgrey; max-height: 50%;">
+                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Dernières
+                                    <br>actualités</a>
+                            </div>
+                        </div>
+                        <!-- Central column -->
+                        <div class="col-lg-4 middlegroup d-flex flex-column">
+                            <div class="col-12 blocks d-flex justify-content-center" style="background: lightgrey; max-height: 50%">
+                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Nos
+                                    <br>formations</a>
+                            </div>
+                            <div class="col-12 blocks d-flex justify-content-center" style="background: darkgrey; max-height: 50%">
+                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Les
+                                    entreprises qui <br>nous font confiance</a>
+                            </div>
+                        </div>
+                        <!-- Right column -->
+                        <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
+                        <div class="col-12 col-sm-8 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
+                            <div class="col-12 blocks d-flex justify-content-center" style="max-height: 77%">
+                                <ul class="navbar-nav navmenu justify-content-center text-uppercase text-center col-10"
+                                    style="padding-right:0">
+                                    <li class="nav-item">
+                                        <a class="nav-link indexlink" href="index.html">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link servicelink" href="service.html">A votre service</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link expertiseslink" href="expertises.html">Notre expertise</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bloglink" href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link contactlink" href="Contact.html">Contact / Devis</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-10 offset-1 blocks d-flex justify-content-between" style=" max-height: 23%">
+                                <ul class="col-12 navbar-nav navicons d-flex flex-row align-items-center" style="padding-right: 0">
+                                    <li class="col-3">
+                                        <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
+                                    </li>
+                                    <li class="col-3">
+                                        <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
+                                    </li>
+                                    <li class="col-3">
+                                        <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
+                                    </li>
+                                    <li class="col-3">
+                                        <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </header>
         {% endblock %}
+
+
+        {% block body %} {% endblock %}
+
+
+        {% block footer %}
+        
+        {% endblock %}
+
+
+        {% block complements %}
+            <!-- Cookie alert message changer le lien pour celui page légale -->
+            <div class="alert alert-dismissible text-center cookiealert" role="alert">
+                <div class="cookiealert-container">
+                    <b>Aimez vous les cookies ?</b> &#x1F36A; Nous utilisons des cookies pour vous assurer la meilleure
+                    expérience sur notre site.
+                    <a href="https://www.google.fr" target="_blank">En savoir plus</a>
+                    <button type="button" class="btn btn-sm acceptcookies" aria-label="Close">
+                        J'accepte
+                    </button>
+                </div>
+            </div>
+            <!-- Up button -->
+            <div class="cRetour"></div>
+        {% endblock %}
+
+
+        <!-- JS block  -->
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
             {{ encore_entry_script_tags('app') }}
+
+            <!-- changer ce lien cookie pour la version encore -->
+            <script src="js/cookiealert.js"></script>
+
+            <!-- Up button script -->
+            <script>
+                jQuery(document).ready(function () {
+                    var duration = 500;
+                    jQuery(window).scroll(function () {
+                        if (jQuery(this).scrollTop() > 100) {
+                            jQuery('.cRetour').fadeIn(duration);
+                        } else {
+                            jQuery('.cRetour').fadeOut(duration);
+                        }
+                    });
+                    jQuery('.cRetour').click(function (event) {
+                        event.preventDefault();
+                        jQuery('html, body').animate({
+                            scrollTop: 0
+                        }, duration);
+                        return false;
+                    })
+                });
+            </script>
         {% endblock %}
+
     </body>
 </html>

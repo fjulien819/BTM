@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
-{% block title %} {{ parent() }} {% endblock %}
+
+{% block title %} {{ parent() }} Contact{% endblock %}
+
 {% block stylesheets %}{{ parent() }}{% endblock %}
+
 {% block body %}
 
     <!-- Message flash -->
@@ -30,7 +33,8 @@
 
 
 {% endblock %}
- {% block javascripts %}
-     {{ parent() }}
- {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
 
