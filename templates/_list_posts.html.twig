@@ -1,8 +1,20 @@
 <div class="container col-10">
     {% if posts.getTotalItemCount %}
 
+
+
+        {{ dump(posts) }}
         {% for post in posts %}
-            {{ dump(post) }}
+            <div class="card mt-2">
+                <div class="card-body d-flex ">
+                    <img class="blog-img-list card-img-left" src="{{ asset('uploads/images/post/') }}{{ post.image }} " alt="{{ post.title }}">
+                    <div class="ml-4">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Publié le {{ post.createdAt|date("d M Y", "Europe/Paris") }} par {{ post.author }} pour Back To Mobile{% for category in post.category %}, {{ category.name }}{% endfor %}</h6>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
 
     {% else %}
@@ -11,6 +23,7 @@
 
     {% endif %}
     <!--- Pagination -->
-    {{ knp_pagination_render(posts) }}
-
+        <div class="d-flex justify-content-center">
+            {{ knp_pagination_render(posts) }}
+        </div>
 </div>
