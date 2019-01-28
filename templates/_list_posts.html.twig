@@ -1,0 +1,16 @@
+<div class="container col-10">
+    {% if posts.getTotalItemCount %}
+
+        {% for post in posts %}
+            {{ dump(post) }}
+        {% endfor %}
+
+    {% else %}
+
+        Aucun post
+
+    {% endif %}
+    <!--- Pagination -->
+    {{ knp_pagination_render(posts) }}
+
+</div>
