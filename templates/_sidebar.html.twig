@@ -1,4 +1,42 @@
-<div class="container col-2">
+{% set categories = categories_posts.getCategories %}
+<div class="col-3 border border-primary">
     <!--- Formulaire de recherche ---->
     {% include "form/_search_form.html.twig" %}
+
+    <div class="card rounded-0 mt-1">
+        <div class="card-body">
+            <h5 class="card-title text-center">Categories</h5>
+            <div class="list-group">
+                {% for category in categories %}
+                    <a href="{{ path('postsByCategory', {'url_page_post': 'blog', 'category_name': category.name }) }}"
+                       class="list-group-item border-0">{{ category.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="card rounded-0 mt-1">
+        <div class="card-body">
+            <h5 class="card-title text-center">Derniers articles consultés</h5>
+        </div>
+    </div>
+    <div class="card rounded-0 mt-1">
+        <div class="card-body">
+            <h5 class="card-title text-center">Abonnez-vous</h5>
+            <p class="card-text">
+                réseaux sociaux
+            </p>
+            <hr>
+            <h5 class="card-title text-center">Vous avez un projet?</h5>
+            <p class="card-text text-center">
+                <a class="btn btn-secondary" href="{{ path('contact') }}" role="button">CONTACTEZ-NOUS</a>
+            </p>
+            <hr>
+            <h5 class="card-title text-center">Back to te newsletter</h5>
+
+        </div>
+    </div>
+
+
 </div>
+
+

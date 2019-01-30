@@ -1,5 +1,5 @@
 easy_admin:
-    site_name: '<img src="https://symfony.com/logos/symfony_white_01.png" />'
+    site_name: 'BTM DASHBOARD'
     formats:
         date: 'd/m/Y'
         time: 'H:i'

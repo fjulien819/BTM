@@ -1,6 +1,11 @@
 {% set formSearch = form_search.getForm().createView() %}
 
 {{ form_start(formSearch) }}
-{{ form_rest(formSearch) }}
-<input type="submit">
+	<div class="input-group bg-white">
+		{{ form_widget(formSearch.searchTerm, {'attr': {'class': 'form-control border-white'}}) }}
+		<div class="input-group-prepend">
+			<button type="submit" class="btn btn-link"><i class="fas fa-search text-secondary"></i></button>
+		</div>
+	</div>
 {{ form_end(formSearch) }}
+
