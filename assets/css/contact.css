@@ -1,0 +1,296 @@
+/* General */
+
+
+body {
+    background: #444444;
+}
+
+label {
+    font-family: 'robotoregular', Arial, sans-serif;
+}
+
+
+
+/* Contact form */
+
+.contactcontainer {
+    margin-bottom: 6.5rem;
+}
+
+.contactzone {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    font-family: 'ethnocentricregular';
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.livingline {
+    border-top: rgb(173, 79, 72) 2px solid;
+}
+
+.contactzone,
+.text {
+    background: #6f6f6f;
+}
+
+.rightcolumn {
+    border-left: 1px #ffffff solid;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.form-control {
+    background: #6f6f6f;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    color: white;
+    border-bottom: 1px #c0c0c0 solid;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+input::-moz-placeholder {
+    color: #ffffff !important;
+}
+
+input:-moz-placeholder {
+    color: #ffffff !important;
+}
+
+input:-ms-input-placeholder {
+    color: #ffffff !important;
+}
+
+label {
+    color: #ffffff;
+}
+
+.namerow,
+.emailrow {
+    margin-bottom: 1.5rem;
+}
+
+.custom-select {
+    margin-bottom: 1.875rem;
+}
+
+.form-control {
+    padding-left: 0;
+}
+
+body>div>div>div>div:nth-child(1)>form>label {
+    font-size: 0.97rem;
+}
+
+.custom-control-label::after {
+    position: absolute;
+    top: .25rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    border-radius: none;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.form-check-label {
+    margin-left: 0.625rem;
+    font-size: 0.97rem;
+}
+
+.check2 {
+    margin-bottom: 2rem;
+}
+
+.text {
+    border: none;
+}
+
+.underformcheck {
+    background: rgb(173, 79, 72);
+    height: 2px;
+    width: 90%;
+    margin-top: 1.25rem;
+    display: none !important;
+}
+
+.messzone {
+    margin-top: 5%;
+    margin-left: 4%;
+}
+
+textarea.form-control {
+    height: auto;
+    padding-left: 0.625rem;
+    font-size: 0.97rem;
+}
+
+.btn {
+    border-radius: 0;
+    color: #ffffff;
+    background-color: #FA7268;
+    /* height: 3.125rem; */
+}
+
+.btn:hover {
+    font-weight: bold;
+}
+
+
+
+
+/* MEDIA QUERIES
+------------------------------------------------  */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+
+    .container,
+    .contactzone {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contactzone {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .livingline {
+        -ms-flex: 0 0 58%;
+        flex: 0 0 58%;
+        max-width: 58%;
+    }
+
+    .underformcheck {
+        display: block !important;
+    }
+
+    .rightcolumn {
+        border: none;
+    }
+
+    .messzone {
+        margin-top: 0;
+    }
+
+    textarea.form-control {
+        width: 96%;
+    }
+
+    .submitline {
+        margin-right: 0.9375rem;
+        margin-left: 0px;
+    }
+
+    .submitbutton {
+        margin-bottom: 3.75rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .container,
+    .contactzone {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contactzone {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .livingline {
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+
+    .underformcheck {
+        display: block !important;
+    }
+
+    .leftcolumn {
+        max-height: 22rem;
+    }
+
+    .rightcolumn {
+        border: none;
+    }
+
+    .messzone {
+        margin-top: 0;
+    }
+
+    textarea.form-control {
+        width: 96%;
+    }
+
+    .submitline {
+        margin-right: 0.9375rem;
+        margin-left: 0px;
+    }
+
+    .submitbutton {
+        margin-bottom: 3.75rem;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .livingline {
+        -ms-flex: 0 0 79%;
+        flex: 0 0 79%;
+        max-width: 79%;
+    }
+
+    .checkpart {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    textarea.form-control {
+        width: 100%;
+    }
+
+    .text {
+        margin-bottom: 3.6rem;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .contactcontainer {
+        margin-bottom: 8.5rem;
+    }
+
+    .livingline {
+        -ms-flex: 0 0 58%;
+        flex: 0 0 58%;
+        max-width: 58%;
+    }
+}

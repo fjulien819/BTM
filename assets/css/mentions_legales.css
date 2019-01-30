@@ -1,0 +1,41 @@
+h2 {
+    font-family: 'ethnocentricregular', sans-serif;
+    font-size: 1.3rem;
+    color: #000000;
+    padding-bottom: 1.5rem;
+}
+
+h3 {
+    font-family: 'Roboto', 'Times New Roman', sans-serif;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.legal p {
+    font-family: 'Roboto', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.container {
+    padding-top: 7.125rem;
+    margin-bottom: 13.125rem
+}
+
+
+/* MEDIA QUERIES
+------------------------------------------------  */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        margin-bottom: 19.125rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        margin-bottom: 17.125rem;
+    }
+}
