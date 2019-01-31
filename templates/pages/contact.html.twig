@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ parent() }} Contact{% endblock %}
+{% block title %} {{ parent() }}Contact / Devis{% endblock %}
 
-{% block stylesheets %}{{ parent() }}{% endblock %}
+{% block stylesheets %}{{ parent() }}
+<!-- rajouter le lien actif -->
+{% endblock %}
 
 {% block body %}
 
@@ -11,7 +13,10 @@
         {{ message }}
     {% endfor %}
 
-    <!---- Formulaire de contact ---->
+ 
+    
+    <!-- Contact form-->
+    
     {{ form_start(formContact) }}
 
     {{ form_row(formContact.name) }}
@@ -30,6 +35,10 @@
 
     <input type="submit">
     {{ form_end(formContact) }}
+
+
+
+
 
 
 {% endblock %}
