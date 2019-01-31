@@ -4,13 +4,59 @@ import Typed from 'typed.js';
 
 //https://github.com/mattboldt/typed.js/
 
-var options = {
-    strings: ["Page not found", "try again", "nothin' here"],
-    typeSpeed: 50,
-    backSpeed: 10,
-    backDelay: 2000,
-    showCursor: true,
-    loop: true
-}
+// var options = {
+//     strings: ["Page not found", "try again", "nothin' here"],
+//     typeSpeed: 50,
+//     backSpeed: 10,
+//     backDelay: 2000,
+//     showCursor: true,
+//     loop: true
+// }
 
-var typed = new Typed(".p2", options);
+// var typed = new Typed(".p2", options);
+
+
+
+
+// Ce JS vient directement du pen, j'ai donc mis l'autre en standby en attendant
+
+$(function () {
+    $(".p2").typed({
+        strings: ["Page non trouvée", "Back to ailleurs"],
+        typeSpeed: 50,
+        backSpeed: 10,
+        backDelay: 2000,
+        showCursor: true,
+        loop: true
+    });
+});
+
+$('.hero-down').mousedown(function () {
+    TweenMax.fromTo('.btn-react', 0.25, {
+        opacity: 0,
+        scale: 0
+    }, {
+        opacity: 0.25,
+        scale: 1,
+        onComplete: function () {
+            TweenMax.to('.btn-react', 0.25, {
+                opacity: 0,
+                scale: 0
+            });
+        }
+    });
+});
+
+$('a[href*=#]:not([href=#])').click(function () {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname ==
+        this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});

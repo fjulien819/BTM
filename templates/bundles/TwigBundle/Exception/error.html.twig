@@ -6,23 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    {{ encore_entry_link_tags('fonts') }}
     {{ encore_entry_link_tags('error') }}
 
-    <title>Hello, world!</title>
+    <title>BTM - Erreur</title>
 </head>
 <body>
 
 <div class="hero">
-    <div class="inner-text">
-        <p class="p1">{{ status_code }}:</p>
-        <p class="p2">Error</p>
+        <div class="inner-text">
+            <p class="p1">404:</p>
+            <p class="p2">Error</p>
+            <div class="col-12 col-sm-12 col-md-6 offset-md-3 d-flex btnligne justify-content-center">
+                <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/">Back to Accueil</a>
+            </div>    
+        </div>
     </div>
-</div>
 
 <!---{{ status_code }} {{ status_text }} --->
 
 
 {{ encore_entry_script_tags('error') }}
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
