@@ -20,7 +20,6 @@ Encore
     .addEntry('app', './assets/js/app.js')
     .addEntry('error', './assets/js/error.js')
     .addEntry('login_content', './assets/js/login_content.js')
-    .addEntry('fonts', './assets/js/fonts.js')
     .addEntry('contact', './assets/js/contact.js')
     .addEntry('base', './assets/js/base.js')
     .addEntry('mentions_legales', './assets/js/mentions_legales.js')
