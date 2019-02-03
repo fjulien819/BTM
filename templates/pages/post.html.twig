@@ -2,12 +2,11 @@
 {% block title %} {{ parent() }} {% endblock %}
 {% block stylesheets %}{{ parent() }}{% endblock %}
 {% block body %}
-
-    {{ dump(post) }}
-
-    <!--- Formulaire de recherche ---->
-    {% include "form/_search_form.html.twig" %}
-
+    <h2>Le blog Back To Mobile</h2>
+<div class="row d-flex justify-content-center">
+    {% include "_show_post.html.twig" %}
+    {% include "_sidebar.html.twig" %}
+</div>
 {% endblock %}
  {% block javascripts %}
      {{ parent() }}

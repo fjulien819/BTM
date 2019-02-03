@@ -1,0 +1,33 @@
+
+
+        <!-- Post Content Column -->
+        <div class="col-lg-9 bg-white">
+
+
+            <a class="btn btn-link position-absolute mt-4 d-none d-lg-block" href="{{ path('posts', {'url_page_post': 'blog'})}}" role="button"><i class="fas fa-arrow-left"></i> Retour Accueil Blog</a>
+
+            <!-- Title -->
+            <h3 class="mt-4 text-center">{{ post.title }}</h3>
+
+            <!-- Author -->
+            <p class="lead text-center">
+                Publié le {{ post.createdAt|localizeddate('none', 'none', null, null, 'd MMMM Y') }} par {{ post.author }} pour Back To Mobile{% for category in post.category %}, {{ category.name }}{% endfor %}
+            </p>
+
+            <!-- Preview Image -->
+            <img class="img-fluid col-12 " src="http://placehold.it/900x300" alt="">
+
+
+            <!-- Post Content -->
+            <div class="p-3">
+                {{ post.content|raw  }}
+            </div>
+
+
+
+
+        </div>
+
+
+
+
