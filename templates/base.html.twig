@@ -17,10 +17,12 @@
         crossorigin="anonymous">
 
         <!-- Favicon -->
-        <link rel="icon" href="{{ asset('build/favicon.png') }}" type="image/png">
+        <link rel="icon" href="{{ asset('build/img/favicon.png') }}" type="image/png">
 
         <!-- Stylesheets Voir comment mettre le CSS de base et les fonts -->
-        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
 
         <!-- Chat script. Ne pas oublier mais il faut adresse site en ligne pour ça -->
     </head>
@@ -29,235 +31,147 @@
     <body>
 
         {% block header %}
-        <header>
-        <!-- Navbar and button -->
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-            <div class="col-8 offset-2 brandpart d-flex justify-content-center">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/brandlogo.png" alt="logo" style="max-width:5.625rem">
-                </a>
-            </div>
-            <div class="col-2 d-flex flex-column aroundbrand">
-                <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal' type='button'
-                    style="padding-bottom: 0; background: none;">
-                    <span class='sr-only'>Ouvre la navigation</span>
-                    <img src="img/menusquaresblanc50.png" alt="logo" style="max-width:2.4rem">
-                </button>
-                <p class="menutext mx-auto">Menu</p>
-            </div>
-        </nav>
-        <!-- Modal menu -->
-        <div class="modal" id="modalNavigation" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-full" role="document">
-                <div class="modal-content">
-                    <!-- Header part -->
-                    <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-                        <div class="col-8 offset-2 brandpart d-flex justify-content-center">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="img/brandlogo.png" alt="logo" style="max-width:5.625rem">
-                            </a>
-                        </div>
-                        <div class="col-2 d-flex flex-column aroundbrand">
-                            <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal'
-                                type='button' style="padding-bottom: 0; background: none;">
-                                <span class='sr-only'>Ouvre la navigation</span>
-                                <img src="img/xcloseblanc50.png" alt="logo" style="max-width:1.6rem">
-                            </button>
-                            <p class="menutext mx-auto">Menu</p>
-                        </div>
-                    </div>
-                    <div class="modal-body d-flex flex-row">
-                        <!-- Left column -->
-                        <div class="col-lg-4 leftgroup d-flex flex-column">
-                            <div class="col-12 blocks d-flex justify-content-center" style="background: darkgrey; max-height: 50%">
-                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Les
-                                    pwa</a>
+            <header>
+            <!-- Navbar and button -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <div class="col-8 offset-2 brandpart d-flex justify-content-center">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:5.625rem">
+                    </a>
+                </div>
+                <div class="col-2 d-flex flex-column aroundbrand">
+                    <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal' type='button'
+                        style="padding-bottom: 0; background: none;">
+                        <span class='sr-only'>Ouvre la navigation</span>
+                        <img src="{{ asset('build/img/menusquaresblanc50.png') }}" alt="logo" style="max-width:2.4rem">
+                    </button>
+                    <p class="menutext mx-auto">Menu</p>
+                </div>
+            </nav>
+            <!-- Modal menu -->
+            <div class="modal" id="modalNavigation" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-full" role="document">
+                    <div class="modal-content">
+                        <!-- Header part -->
+                        <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                            <div class="col-8 offset-2 brandpart d-flex justify-content-center">
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:5.625rem">
+                                </a>
                             </div>
-                            <div class="col-12 blocks d-flex justify-content-center" style="background: lightgrey; max-height: 50%;">
-                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Dernières
-                                    <br>actualités</a>
+                            <div class="col-2 d-flex flex-column aroundbrand">
+                                <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal'
+                                    type='button' style="padding-bottom: 0; background: none;">
+                                    <span class='sr-only'>Ouvre la navigation</span>
+                                    <img src="{{ asset('build/img/xcloseblanc50.png') }}" alt="logo" style="max-width:1.6rem">
+                                </button>
+                                <p class="menutext mx-auto">Menu</p>
                             </div>
                         </div>
-                        <!-- Central column -->
-                        <div class="col-lg-4 middlegroup d-flex flex-column">
-                            <div class="col-12 blocks d-flex justify-content-center" style="background: lightgrey; max-height: 50%">
-                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Nos
-                                    <br>formations</a>
+                        <div class="modal-body d-flex flex-row">
+                            <!-- Left column -->
+                            <div class="col-lg-4 leftgroup d-flex flex-column">
+                                <div class="col-12 blocks d-flex justify-content-center" style="background: darkgrey; max-height: 50%">
+                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Les
+                                        pwa</a>
+                                </div>
+                                <div class="col-12 blocks d-flex justify-content-center" style="background: lightgrey; max-height: 50%;">
+                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Dernières
+                                        <br>actualités</a>
+                                </div>
                             </div>
-                            <div class="col-12 blocks d-flex justify-content-center" style="background: darkgrey; max-height: 50%">
-                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Les
-                                    entreprises qui <br>nous font confiance</a>
+                            <!-- Central column -->
+                            <div class="col-lg-4 middlegroup d-flex flex-column">
+                                <div class="col-12 blocks d-flex justify-content-center" style="background: lightgrey; max-height: 50%">
+                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Nos
+                                        <br>formations</a>
+                                </div>
+                                <div class="col-12 blocks d-flex justify-content-center" style="background: darkgrey; max-height: 50%">
+                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Les
+                                        entreprises qui <br>nous font confiance</a>
+                                </div>
                             </div>
+                            <!-- Right column -->
+                            <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
+                            <div class="col-12 col-sm-8 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
+                                <div class="col-12 blocks d-flex justify-content-center" style="max-height: 77%">
+                                    <ul class="navbar-nav navmenu justify-content-center text-uppercase text-center col-10"
+                                        style="padding-right:0">
+                                        <li class="nav-item">
+                                            <a class="nav-link indexlink" href="index.html">Accueil</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link servicelink" href="service.html">A votre service</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link expertiseslink" href="expertises.html">Notre expertise</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link bloglink" href="blog.html">Blog</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link contactlink" href="Contact.html">Contact / Devis</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-10 offset-1 blocks d-flex justify-content-between" style=" max-height: 23%">
+                                    <ul class="col-12 navbar-nav navicons d-flex flex-row align-items-center" style="padding-right: 0">
+                                        <li class="col-3">
+                                            <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
+                                        </li>
+                                        <li class="col-3">
+                                            <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
+                                        </li>
+                                        <li class="col-3">
+                                            <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
+                                        </li>
+                                        <li class="col-3">
+                                            <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
                         </div>
-                        <!-- Right column -->
-                        <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
-                        <div class="col-12 col-sm-8 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
-                            <div class="col-12 blocks d-flex justify-content-center" style="max-height: 77%">
-                                <ul class="navbar-nav navmenu justify-content-center text-uppercase text-center col-10"
-                                    style="padding-right:0">
-                                    <li class="nav-item">
-                                        <a class="nav-link indexlink" href="index.html">Accueil</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link servicelink" href="service.html">A votre service</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link expertiseslink" href="expertises.html">Notre expertise</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link bloglink" href="blog.html">Blog</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link contactlink" href="Contact.html">Contact / Devis</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-10 offset-1 blocks d-flex justify-content-between" style=" max-height: 23%">
-                                <ul class="col-12 navbar-nav navicons d-flex flex-row align-items-center" style="padding-right: 0">
-                                    <li class="col-3">
-                                        <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
-                                    </li>
-                                    <li class="col-3">
-                                        <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
-                                    </li>
-                                    <li class="col-3">
-                                        <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
-                                    </li>
-                                    <li class="col-3">
-                                        <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
                     </div>
                 </div>
             </div>
-        </div>
-        </header>
+            </header>
         {% endblock %}
+
 
         <div class="container mt-container-body">
 
-
             {% block body %}
-
+            
             {% endblock %}
 
         </div>
 
 
-
         {% block footer %}
-        <!-- Footer for large screens -->
-        <footer class="footer d-none d-md-block d-lg-block d-xl-block">
-            <div class="container-fluid footerzone">
-                <div class="d-flex flex-row align-items-center">
-                    <!-- 1. Address -->
-                    <div class="col-2 addressblock d-flex align-items-center flex-column">
-                        <p class="text-left" style="margin-bottom: 0.5rem">
-                            Back to Mobile
-                            <br>
-                            BP 238 <img class="align-self-start arrowimage" alt="fleche" src="img/flechedroite.png">
-                            <br>
-                            56130 Théhillac- Cedex 9
-                        </p>
-                        <p class="text-left bottomtext" style="margin-bottom: 0">
-                            Tél : +33 5 54 67 81 42
-                            <br>
-                            contact@backtomobile.fr
-                        </p>
-                    </div>
-                    <!-- 2. Navigation -->
-                    <div class="col-2 navigation d-flex justify-content-center">
-                        <ul class="navbar-nav text-uppercase nav navmenu" style="padding-left: 1rem; border:none">
-                            <li class="nav-item">
-                                <a class="nav-link-footer" href="index.html">Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link-footer" href="service.html">A votre service</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link-footer" href="expertises.html">Notre expertise</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link-footer" href="blog.html">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link-footer" href="Contact.html">Contact/Devis</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 3. Legal part -->
-                    <div class="col-4 legalpart d-flex flex-wrap align-content-around">
-                        <div class="col-12 d-flex flex-wrap align-items-center" style="min-height: 80%; padding-top: 1.25rem; padding-left: 0; padding-right: 0">
-                            <div class="col-12 text-center logoline" style="margin-bottom: 0.8rem">
-                                <a class="navbar-brand" href="index.html">
-                                    <img src="img/brandlogo.png" alt="logo" style="max-width:6.875rem">
-                                </a>
-                            </div>
-                            <div class="col-9 condiline">
-                                <a href="index.html" style="color: #000000">
-                                    <p class="conditions" style="margin-bottom: 0.5rem;">Conditions générales
-                                        d'utilisation</p>
-                                </a>
-                            </div>
-                            <div class="col-3 rgpdline text-center" style="padding-left: 0; margin-bottom: 0.5rem;">
-                                <a href="index.html" style="color: #000000">
-                                    <p class="rg" style="margin-bottom: 0">RGPD</p>
-                                </a>
-                            </div>
+            <!-- Footer for large screens -->
+            <footer class="footer d-none d-md-block d-lg-block d-xl-block">
+                <div class="container-fluid footerzone">
+                    <div class="d-flex flex-row align-items-center">
+                        <!-- 1. Address -->
+                        <div class="col-2 addressblock d-flex align-items-center flex-column">
+                            <p class="text-left" style="margin-bottom: 0.5rem">
+                                Back to Mobile
+                                <br>
+                                BP 238 <img class="align-self-start arrowimage" alt="fleche" src="{{ asset('build/img/flechedroite.png') }}">
+                                <br>
+                                56130 Théhillac- Cedex 9
+                            </p>
+                            <p class="text-left bottomtext" style="margin-bottom: 0">
+                                Tél : +33 5 54 67 81 42
+                                <br>
+                                contact@backtomobile.fr
+                            </p>
                         </div>
-                        <div class="col-12 d-flex align-items-end text-center" style="padding-left:0; padding-right: 0; min-height: 20%">
-                            <p class="copyright text-center">&copy;2019 Copyright Back To
-                                Mobile - Tous droits réservés</p>
-                        </div>
-                    </div>
-                    <!-- 4. Call to action -->
-                    <div class="col-2 d-flex align-items-center callblock">
-                        <div class="cta-button">
-                            <a class="btn btn-lg btn-block text-uppercase ctbtn rounded-0" href="https://www.google.fr/"
-                                style="background: #666666; font-size: 1rem">Contactez-nous</a>
-                        </div>
-                    </div>
-                    <!-- 5. Social icons -->
-                    <div class="col-2 socialpart" style="align-self: center">
-                        <ul class="navbar-nav footernavico d-flex flex-row justify-content-center">
-                            <li class="col-4 navlines">
-                                <a href="https://www.google.fr" target="_blank">
-                                    <i class="fab fa-facebook-square fa-lg"></i>
-                                </a>
-                            </li>
-                            <li class="col-4 navlines">
-                                <a href="s://www.google.fr" target="_blank">
-                                    <i class="fab fa-instagram fa-lg"></i>
-                                </a>
-                            </li>
-                            <li class="col-4 navlines">
-                                <a href="https://www.google.fr" target="_blank">
-                                    <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
-                                </a>
-                            </li>
-                            <li class="col-4 navlines">
-                                <a href="https://www.google.fr" target="_blank">
-                                    <i class="fab fa-twitter fa-lg"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer> 
-
-        <!-- Footer for small screens -->
-        <footer class="footer d-block d-sm-block d-md-none">
-            <div class="container-fluid">
-                <!-- First row -->
-                <div class="row firstrow">
-                    <!-- 1. Navigation -->
-                    <div class="col-6 footercol" style="margin-top: 0.5rem">
-                        <div class="d-flex">
-                            <ul class="navbar-nav text-uppercase nav navmenu" style="border:none">
+                        <!-- 2. Navigation -->
+                        <div class="col-2 navigation d-flex justify-content-center">
+                            <ul class="navbar-nav text-uppercase nav navmenu" style="padding-left: 1rem; border:none">
                                 <li class="nav-item">
                                     <a class="nav-link-footer" href="index.html">Accueil</a>
                                 </li>
@@ -275,16 +189,40 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <!-- 2. Call to action & social icons -->
-                    <div class="col-6 footercol d-flex align-items-center" style="flex-direction: column">
-                        <div class="col-9 offset-3 offpart d-flex align-items-center justify-content-center">
-                            <div>
-                                <a class="btn ctbtn rounded-0" href="https://www.google.fr/" style="background: #666666">Contactez-nous</a>
+                        <!-- 3. Legal part -->
+                        <div class="col-4 legalpart d-flex flex-wrap align-content-around">
+                            <div class="col-12 d-flex flex-wrap align-items-center" style="min-height: 80%; padding-top: 1.25rem; padding-left: 0; padding-right: 0">
+                                <div class="col-12 text-center logoline" style="margin-bottom: 0.8rem">
+                                    <a class="navbar-brand" href="index.html">
+                                        <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:6.875rem">
+                                    </a>
+                                </div>
+                                <div class="col-9 condiline">
+                                    <a href="index.html" style="color: #000000">
+                                        <p class="conditions" style="margin-bottom: 0.5rem;">Conditions générales
+                                            d'utilisation</p>
+                                    </a>
+                                </div>
+                                <div class="col-3 rgpdline text-center" style="padding-left: 0; margin-bottom: 0.5rem;">
+                                    <a href="index.html" style="color: #000000">
+                                        <p class="rg" style="margin-bottom: 0">RGPD</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex align-items-end text-center" style="padding-left:0; padding-right: 0; min-height: 20%">
+                                <p class="copyright text-center">&copy;2019 Copyright Back To
+                                    Mobile - Tous droits réservés</p>
                             </div>
                         </div>
-
-                        <div class="col-9 offset-3 navoff" style="align-self:center">
+                        <!-- 4. Call to action -->
+                        <div class="col-2 d-flex align-items-center callblock">
+                            <div class="cta-button">
+                                <a class="btn btn-lg btn-block text-uppercase ctbtn rounded-0" href="https://www.google.fr/"
+                                    style="background: #666666; font-size: 1rem">Contactez-nous</a>
+                            </div>
+                        </div>
+                        <!-- 5. Social icons -->
+                        <div class="col-2 socialpart" style="align-self: center">
                             <ul class="navbar-nav footernavico d-flex flex-row justify-content-center">
                                 <li class="col-4 navlines">
                                     <a href="https://www.google.fr" target="_blank">
@@ -298,7 +236,7 @@
                                 </li>
                                 <li class="col-4 navlines">
                                     <a href="https://www.google.fr" target="_blank">
-                                        <i class="fab fa-linkedin fa-lg"></i>
+                                        <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
                                     </a>
                                 </li>
                                 <li class="col-4 navlines">
@@ -310,44 +248,107 @@
                         </div>
                     </div>
                 </div>
-                <hr class="separation" style="border:1px solid rgb(250, 114, 104); margin-bottom: 0.5rem; margin-top: 0.5rem">
-                <!-- Second row -->
-                <div class="row secondrow">
-                    <!-- 3. Address -->
-                    <div class="col-6 footercol">
-                        <div class="col-12 rightcolu">
-                            <p class="text-left" style="margin-bottom: 0.5rem">
-                                Back to Mobile
-                                <br>
-                                BP 238
-                                <br>
-                                56130 Théhillac- Cedex 9
-                                <br>
-                                Tél : +33 5 54 67 81 42
-                                <br>
-                                contact@backtomobile.fr
-                            </p>
+            </footer> 
+
+            <!-- Footer for small screens -->
+            <footer class="footer d-block d-sm-block d-md-none">
+                <div class="container-fluid">
+                    <!-- First row -->
+                    <div class="row firstrow">
+                        <!-- 1. Navigation -->
+                        <div class="col-6 footercol" style="margin-top: 0.5rem">
+                            <div class="d-flex">
+                                <ul class="navbar-nav text-uppercase nav navmenu" style="border:none">
+                                    <li class="nav-item">
+                                        <a class="nav-link-footer" href="index.html">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link-footer" href="service.html">A votre service</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link-footer" href="expertises.html">Notre expertise</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link-footer" href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link-footer" href="Contact.html">Contact/Devis</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 2. Call to action & social icons -->
+                        <div class="col-6 footercol d-flex align-items-center" style="flex-direction: column">
+                            <div class="col-9 offset-3 offpart d-flex align-items-center justify-content-center">
+                                <div>
+                                    <a class="btn ctbtn rounded-0" href="https://www.google.fr/" style="background: #666666">Contactez-nous</a>
+                                </div>
+                            </div>
+
+                            <div class="col-9 offset-3 navoff" style="align-self:center">
+                                <ul class="navbar-nav footernavico d-flex flex-row justify-content-center">
+                                    <li class="col-4 navlines">
+                                        <a href="https://www.google.fr" target="_blank">
+                                            <i class="fab fa-facebook-square fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-4 navlines">
+                                        <a href="s://www.google.fr" target="_blank">
+                                            <i class="fab fa-instagram fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-4 navlines">
+                                        <a href="https://www.google.fr" target="_blank">
+                                            <i class="fab fa-linkedin fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-4 navlines">
+                                        <a href="https://www.google.fr" target="_blank">
+                                            <i class="fab fa-twitter fa-lg"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <!-- 3. Legal part -->
-                    <div class="col-6 footercol">
-                        <a class="col-12 text-right rightcolu" href="index.html">
-                            <p class="conditions">Conditions générales
-                                d'utilisation</p>
-                        </a>
-                        <a class="col-12 text-right rightcolu" href="index.html">
-                            <p style="margin-bottom: 0.5rem">RGPD</p>
-                        </a>
-                        <div class="col-12 text-right rightcolu">
-                            <p style="margin-bottom: 0.5rem"><strong>&copy;2019 Copyright Back To Mobile</strong>
-                                <br>
-                                Tous droits réservés
-                            </p>
+                    <hr class="separation" style="border:1px solid rgb(250, 114, 104); margin-bottom: 0.5rem; margin-top: 0.5rem">
+                    <!-- Second row -->
+                    <div class="row secondrow">
+                        <!-- 3. Address -->
+                        <div class="col-6 footercol">
+                            <div class="col-12 rightcolu">
+                                <p class="text-left" style="margin-bottom: 0.5rem">
+                                    Back to Mobile
+                                    <br>
+                                    BP 238
+                                    <br>
+                                    56130 Théhillac- Cedex 9
+                                    <br>
+                                    Tél : +33 5 54 67 81 42
+                                    <br>
+                                    contact@backtomobile.fr
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3. Legal part -->
+                        <div class="col-6 footercol">
+                            <a class="col-12 text-right rightcolu" href="index.html">
+                                <p class="conditions">Conditions générales
+                                    d'utilisation</p>
+                            </a>
+                            <a class="col-12 text-right rightcolu" href="index.html">
+                                <p style="margin-bottom: 0.5rem">RGPD</p>
+                            </a>
+                            <div class="col-12 text-right rightcolu">
+                                <p style="margin-bottom: 0.5rem"><strong>&copy;2019 Copyright Back To Mobile</strong>
+                                    <br>
+                                    Tous droits réservés
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
         {% endblock %}
 
 
@@ -373,11 +374,11 @@
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            {# {{ encore_entry_script_tags('app') }}
-            {{ encore_entry_script_tags('cookie') }} #}
+            {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('cookie') }} 
 
             <!-- Up button script -->
-            <script>
+            {# <script>
                 jQuery(document).ready(function () {
                     var duration = 500;
                     jQuery(window).scroll(function () {
@@ -395,7 +396,7 @@
                         return false;
                     })
                 });
-            </script>
+            </script> #}
         {% endblock %}
 
     </body>

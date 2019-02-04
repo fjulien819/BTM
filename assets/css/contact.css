@@ -1,5 +1,3 @@
-/* General */
-
 
 body {
     background: #444444;
@@ -9,9 +7,6 @@ label {
     font-family: 'robotoregular', Arial, sans-serif;
 }
 
-
-
-/* Contact form */
 
 .contactcontainer {
     margin-bottom: 6.5rem;

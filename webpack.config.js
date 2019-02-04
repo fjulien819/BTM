@@ -21,6 +21,9 @@ Encore
     .addEntry('error', './assets/js/error.js')
     .addEntry('mentions_legales', './assets/js/mentions_legales.js')
     .addEntry('cookie', './assets/js/cookiealert.js')
+    .addEntry('contact', './assets/js/contact.js')
+    .addEntry('expertise', './assets/js/expertise.js')
+    .addEntry('service', './assets/js/service.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

@@ -3,7 +3,7 @@
 {% block title %} {{ parent() }}Contact / Devis{% endblock %}
 
 {% block stylesheets %}{{ parent() }}
-<!-- rajouter le lien actif -->
+    {# {{ encore_entry_link_tags('contact') }} #}
 {% endblock %}
 
 {% block body %}
@@ -13,8 +13,8 @@
         {{ message }}
     {% endfor %}
 
- 
-    
+
+
     <!-- Contact form-->
     
     {{ form_start(formContact) }}
@@ -35,9 +35,6 @@
 
     <input type="submit">
     {{ form_end(formContact) }}
-
-<img src="{{ asset('build/img/delorean-time-machine.png') }}"> 
-
 
 
 {% endblock %}
