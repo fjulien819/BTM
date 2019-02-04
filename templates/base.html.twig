@@ -16,6 +16,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
         crossorigin="anonymous">
 
+        <!-- Favicon -->
+        <link rel="icon" href="{{ asset('build/favicon.png') }}" type="image/png">
+
         <!-- Stylesheets Voir comment mettre le CSS de base et les fonts -->
         {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
 
@@ -370,8 +373,8 @@
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            {{ encore_entry_script_tags('app') }}
-            {{ encore_entry_script_tags('cookie') }}
+            {# {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('cookie') }} #}
 
             <!-- Up button script -->
             <script>
