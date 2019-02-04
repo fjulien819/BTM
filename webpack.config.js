@@ -19,6 +19,7 @@ Encore
      */
     .addEntry('app', './assets/js/app.js')
     .addEntry('error', './assets/js/error.js')
+    .addEntry('mentions_legales', './assets/js/mentions_legales.js')
     .addEntry('cookie', './assets/js/cookiealert.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
