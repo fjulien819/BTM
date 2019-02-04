@@ -2,13 +2,82 @@
 
 {% block title %} {{ parent() }}Nos services{% endblock %}
 
-{% block stylesheets %}{{ parent() }}{% endblock %}
+{% block stylesheets %}{{ parent() }}
+    {# {{ encore_entry_link_tags('service') }} #}
+{% endblock %}
 
 {% block body %}
+
+<!-- Nos services -->
+    <div class="container-fluid services">
+
+        <!-- Intro row -->
+        <div class="row tags d-flex align-items-center">
+            <div class="col-12 col-md-6 imagetag order-1 order-md-2">
+                <img class="img-fluid imgtag" alt="nuage de tags" src="img/tagcloud.png">
+            </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 texttag">
+                <h1 class="text-uppercase">Back to mobile vous accompagne au plus près de vos besoins</h1>
+                <p class="servtext text-left">
+                    Depuis l’avènement de la révolution numérique, le temps semble s’être accéléré.
+                    <br>
+                    Une innovation en chasse une autre avec chaque jour davantage de rapidité.
+                    <br>
+                    Entreprendre à une époque faite de profonds bouleversements a de quoi dérouter, sinon dissuader.
+                    <br> <br>
+                    Chez Back To Mobile, nous sommes convaincus qu’une méthodologie de travail agile et rigoureuse
+                    conjuguée à l’acquisition de clés de compréhension des principaux enjeux technologiques sont de
+                    précieux atouts pour mener à bien vos projets.</p>
+            </div>
+        </div>
+        <hr class="d-block d-sm-block d-md-none sepline" style="border:2px solid rgb(250, 114, 104)">
+
+        <!-- Méthode row -->
+        <div class="row methode">
+            <div class="col-12 titremethode">
+                <h2 class="secondarytitle secondtit text-left" style="margin-top:1rem; margin-bottom: 1.5rem">Notre
+                    méthode de
+                    travail</h2>
+            </div>
+            <div class="col-12 imgmethode">
+                <img class="img-fluid d-none d-md-block d-lg-block d-xl-block" style="max-height: 1074px; margin-bottom: 3.75rem"
+                    alt="méthodologie" src="{{ asset('build/img/methododesk.png') }}">
+                <img class="img-fluid d-block d-sm-block d-md-none" style="margin-bottom: 3.9375rem" alt="méthodologie"
+                    src="{{ asset('build/img/methodomobile.png') }}">
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 offset-md-4 d-flex btnligne justify-content-center">
+                <a class="btn btn-lg actionbtn btn-block text-uppercase rounded-0" href="https://www.google.fr/">L'équipe
+                    de BTM</a>
+            </div>
+        </div>
+
+        <hr class="sepline" style="border:2px solid rgb(250, 114, 104); margin-bottom: 2.5rem; margin-top: 2.5rem">
+
+        <!-- Formation row -->
+        <div class="row formation d-flex align-items-center" id="formation" style="margin-bottom: 16rem;">
+            <div class="col-12 titleforma d-flex justify-content-center">
+                <h2 class="secondarytitle text-center">FORMATION <br>
+                    Vous former dans un monde en constante évolution</h2>
+            </div>
+            <div class="col-12 col-md-8 mx-auto textform d-flex flex-column align-items-stretch">
+                <p class="col-12 formatext text-left">Notre époque, faite de profondes mutations, exige de sans cesse
+                    s’adapter, de mettre régulièrement à
+                    jour ses connaissances, d’acquérir de nouvelles compétences, d’apprendre à utiliser de nouveaux
+                    outils.
+                    <br> <br>
+                    Pour répondre à cet enjeu capital qu’est l’apprentissage tout au long de la vie, nous élaborons
+                    pour vous des cours sur-mesure sur les fondamentaux de la communication numérique. </p>
+                <div class="col-12 col-sm-12 col-md-4 offset-md-4 btnligne d-flex justify-content-center buttonforma">
+                    <a class="btn btn-lg btnform act2 btn-block text-uppercase rounded-0" href="https://www.google.fr/">Je
+                        suis intéressé(e)</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 {% endblock %}
 
- {% block javascripts %}
-     {{ parent() }}
- {% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

@@ -12,6 +12,8 @@ require('../css/login_content.css');
 require('../css/contact.css');
 require('../css/base.css');
 require('../css/mentions_legales.css');
+require('../css/expertise.css');
+require('../css/service.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // const $ = require('jquery');
