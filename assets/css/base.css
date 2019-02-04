@@ -17,7 +17,7 @@
 }
 
 .cRetour:before {
-    content: url("../img/chevron-bl-16.png");
+    content: url("/build/img/favicon.png");
 }
 
 .cRetour:hover {

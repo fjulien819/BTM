@@ -15,7 +15,7 @@ body {
 }
 
 .hero {
-    background: url("../img/delorean-machine.jpg") no-repeat center;
+    background: url("/build/img/favicon.png") no-repeat center;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;

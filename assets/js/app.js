@@ -8,6 +8,10 @@
 // any CSS you require will output into a single css file (app.css in this case)
 require('../css/app.css');
 require('../css/fonts.css');
+require('../css/login_content.css');
+require('../css/contact.css');
+require('../css/base.css');
+require('../css/mentions_legales.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // const $ = require('jquery');

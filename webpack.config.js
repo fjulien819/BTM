@@ -19,12 +19,15 @@ Encore
      */
     .addEntry('app', './assets/js/app.js')
     .addEntry('error', './assets/js/error.js')
-    .addEntry('login_content', './assets/js/login_content.js')
-    .addEntry('contact', './assets/js/contact.js')
-    .addEntry('base', './assets/js/base.js')
-    .addEntry('mentions_legales', './assets/js/mentions_legales.js')
+    .addEntry('cookie', './assets/js/cookiealert.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
+
+    .copyFiles({from: './assets/img', to: 'img/[path][name].[hash:8].[ext]'})
+    
+
+
+
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
