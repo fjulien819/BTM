@@ -9,21 +9,28 @@
     {{ encore_entry_link_tags('app') }}
     {{ encore_entry_link_tags('error') }}
 
-    <title>BTM - Erreur</title>
+    <title>BTM - Erreur {{ status_code }}</title>
 </head>
 <body>
+{% block body %}
+<div class="hero ">
 
-<div class="hero">
-        <div class="inner-text">
+    <div class="inner-text">
+        <p class="p1"><span id="status_code">{{ status_code }}</span>:</p>
+        <p class="p2"></p>
+        <div class="col-12 col-sm-12 col-md-6 offset-md-3 d-flex btnligne justify-content-center">
+            <a class="btn actionbtn text-uppercase rounded-0" href="{{ path('homepage') }}">Back to Accueil</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!---{{ status_code }} <div class="inner-text">
             <p class="p1">404:</p>
             <p class="p2">Error</p>
             <div class="col-12 col-sm-12 col-md-6 offset-md-3 d-flex btnligne justify-content-center">
                 <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/">Back to Accueil</a>
-            </div>    
-        </div>
-    </div>
-
-<!---{{ status_code }} {{ status_text }} --->
+            </div>
+        </div> {{ status_text }} --->
 
 
 {{ encore_entry_script_tags('error') }}
