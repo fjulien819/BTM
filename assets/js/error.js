@@ -14,7 +14,7 @@ function getTexte()
     }
     else
     {
-        return ["Une erreur s'est produite", "Back to ailleurs"];
+        return ["Oops erreur !", "Back to ailleurs"];
     }
 }
 
