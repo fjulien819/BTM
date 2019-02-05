@@ -2,13 +2,432 @@
 
 {% block title %} {{ parent() }} Notre expertise{% endblock %}
 
-{% block stylesheets %}{{ parent() }}{% endblock %}
+{% block stylesheets %}{{ parent() }}
+    {{ encore_entry_link_tags('expertise') }} 
+{% endblock %}
+
 
 {% block body %}
+    <!-- Nos services -->
+    <div class="container-fluid expertise">
+
+        <!-- manque le h1 -->
+
+        <!-- Intro row -->
+        <div class="row tags d-flex align-items-center" id="equipebtm"> 
+            <div class="col-12 col-md-6 imagetag order-1 order-md-2">
+                <img class="img-fluid imgtag" alt="nuage de tags" src="img/tagcloud.png">
+            </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 texttag">
+                <h2 class="secondarytitle text-left">Une équipe
+                    pluridisciplinaire de passionnés</h2>
+                <hr class="sepline" style="border:1px solid rgb(250, 114, 104)">
+                <br>
+                <p class="conjug servtext uppserv text-left">Qui conjugue ses talents pour répondre à l’ensemble de vos
+                    besoins</p>
+                <p class="servtext text-left">
+                    Nous aimons partager notre expertise afin de les aider à répondre au mieux aux attentes de leurs
+                    clients et prospects, nous sommes convaincus que le succès d’une marque dépend avant tout de
+                    l’expérience de ses utilisateurs.
+                    <br> <br>
+                    Ainsi, nous mettons tout notre savoir-faire en œuvre afin d’accroître la visibilité de votre
+                    entreprise ou de votre marque, améliorer la qualité de votre audience et développer vos ventes.
+            </div>
+        </div>
+
+        <hr class="sepline2" style="border:2px solid rgb(250, 114, 104)">
+
+        <!-- Specialities row -->
+        <div class="row specialrow">
+            <div class="col-12 col-md-8 row mx-auto">
+                <div class="col-12 mx-auto panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <!-- Développement accordion-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading1">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1"
+                                    aria-expanded="false" aria-controls="collapse1">
+                                    Développement
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                            <!-- Céline -->
+                            <div class="panel-body uppanel d-flex flex-row" style="border-top : 2px solid rgb(250, 114, 104)">
+                                <div class="col-6 memberphoto d-flex justify-content-center">
+                                    <img src="{{ asset('build/img/Celine.JPG') }}" alt="Céline Ollagnier" style="max-height: 200px">
+                                </div>
+                                <div class="col-6 membertext">
+                                    <p class="membername font-weight-bold">Céline OLLAGNIER</p>
+                                    <p class="memberjob">Chef de projet</p>
+                                    <p class="memberjob">Développeur front-office</p>
+                                    <p class="membertel">06 24 38 37 54</p>
+                                    <p class="membermail">celine@backtomobile.fr</p>
+                                    <ul class="navbar-nav nav2 d-flex flex-row mx-auto">
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="s://www.google.fr" target="_blank">
+                                                <i class="fab fa-instagram fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="https://www.google.fr" target="_blank">
+                                                <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
+                                            </a>
+                                        </li>
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="https://www.google.fr" target="_blank">
+                                                <i class="fab fa-twitter fa-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body textpart text-left">
+                                <i class="fas fa-quote-left d-flex justify-content-center"></i>
+                                <blockquote>Passer du dessin au pixel et surtout rendre chacune des pages de votre site
+                                    facilement utilisable. Voici comment je pourrais résumer mon intervention à vos
+                                    côtés. En étroite collaboration avec chacun des membres de Back to Mobile, et plus
+                                    particulièrement Julien, notre développeur back end, je vais donner son apparence
+                                    finale à votre outil de communication.</blockquote>
+                                <i class="fas fa-quote-right d-flex justify-content-center"></i>
+                            </div>
+                            <!-- Julien -->
+                            <div class="panel-body uppanel d-flex flex-row">
+                                <div class="col-6 memberphoto d-flex justify-content-center">
+                                    <img src="{{ asset('build/img/Julien.jpg') }}" alt="Julien Fracchiolla" style="max-height: 200px">
+                                </div>
+                                <div class="col-6 membertext">
+                                    <p class="membername font-weight-bold">Julien FRACCHIOLLA</p>
+                                    <p class="memberjob">Développeur BackOffice</p>
+                                    <p class="membertel">06 12 22 67 76</p>
+                                    <p class="membermail">julien@backtomobile.fr</p>
+                                    <ul class="navbar-nav nav2 d-flex flex-row mx-auto">
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="s://www.google.fr" target="_blank">
+                                                <i class="fab fa-instagram fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="https://www.google.fr" target="_blank">
+                                                <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
+                                            </a>
+                                        </li>
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="https://www.google.fr" target="_blank">
+                                                <i class="fab fa-twitter fa-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body textpart text-left">
+                                <i class="fas fa-quote-left d-flex justify-content-center"></i>
+                                <blockquote>Chargé de faire en sorte que la mécanique de votre site soit fluide et
+                                    qu’aucun
+                                    grain de sable ne vienne l’enrayer, je suis en quelque sorte un horloger du web.
+                                    J’élabore toute son architecture informatique et créé l’ensemble de ses fonctions
+                                    de façon à offrir aux utilisateurs de votre outil une navigation optimale.</blockquote>
+                                <i class="fas fa-quote-right d-flex justify-content-center"></i>
+                            </div>
+                            <!-- Prices -->
+                            <div class="panel-body" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
+                                <div class="pricing-table" style="margin-top: 1rem; margin-bottom: 1rem">
+                                    <div class="col-4 table free">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Basic</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent">Rédaction de contenus</li>
+                                            <li class="pricecontent">1 retouche logo/réation</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #000000">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 table active">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Standard</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent">Rédaction de contenus</li>
+                                            <li class="pricecontent">5 retouches logo/création</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #7a7070">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 table premium">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Premium</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">PWA</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent beforelio">Rédaction de contenus</li>
+                                            <li class="littleinfo text-right">Retouches illimitées</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #fa7268">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Webdesign accordion -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading2">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2"
+                                    aria-expanded="false" aria-controls="collapse2">
+                                    Webdesign
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                            <div class="panel-body uppanel d-flex flex-row" style="border-top : 2px solid rgb(250, 114, 104)">
+                                <div class="col-6 memberphoto d-flex justify-content-center">
+                                    <img src="{{ asset('build/img/andy.jpg') }}" alt="Andy Lau Tak Wing" style="max-height: 200px">
+                                </div>
+                                <div class="col-6 membertext">
+                                    <p class="membername font-weight-bold">Andy LAU TAK WING</p>
+                                    <p class="memberjob">UX designer - Graphiste</p>
+                                    <p class="membertel">06 47 13 24 99</p>
+                                    <p class="membermail">andy@backtomobile.fr</p>
+                                    <ul class="navbar-nav nav2 d-flex flex-row mx-auto">
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="s://www.google.fr" target="_blank">
+                                                <i class="fab fa-instagram fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="https://www.google.fr" target="_blank">
+                                                <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
+                                            </a>
+                                        </li>
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="https://www.google.fr" target="_blank">
+                                                <i class="fab fa-twitter fa-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body textpart text-left">
+                                <i class="fas fa-quote-left d-flex justify-content-center"></i>
+                                <blockquote>Un site est un vecteur d’émotions. Pour être efficace et amener un
+                                    utilisateur à
+                                    recourir à votre ou vos services, votre interface doit être en mesure de lui
+                                    procurer une expérience positive à même de susciter une réaction de confiance. Pour
+                                    ce faire, j’aurai à cœur de concevoir des maquettes et visuels esthétiques et
+                                    uniques qui vous différencieront de la concurrence</blockquote>
+                                <i class="fas fa-quote-right d-flex justify-content-center"></i>
+                            </div>
+                            <!-- Prices -->
+                            <div class="panel-body" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
+                                <div class="pricing-table" style="margin-bottom: 1rem">
+                                    <div class="col-4 table free">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Basic</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent">Rédaction de contenus</li>
+                                            <li class="pricecontent">1 retouche logo/réation</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #000000">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 table active">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Standard</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent">Rédaction de contenus</li>
+                                            <li class="pricecontent">5 retouches logo/création</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #7a7070">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 table premium">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Premium</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">PWA</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent beforelio">Rédaction de contenus</li>
+                                            <li class="littleinfo text-right">Retouches illimitées</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #fa7268">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Webmarketing accordion -->
+                    <div class=" panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading3">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Webmarketing
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                            <div class="panel-body uppanel d-flex flex-row" style="border-top : 2px solid rgb(250, 114, 104)">
+                                <div class="col-6 memberphoto d-flex justify-content-center">
+                                    <img src="{{ asset('build/img/maxime.jpg') }}" alt="Maxime Letertre" style="max-height: 200px">
+                                </div>
+                                <div class="col-6 membertext">
+                                    <p class="membername font-weight-bold">Maxime LETRETRE</p>
+                                    <p class="memberjob">Rédacteur web</p>
+                                    <p class="membertel">06 08 12 19 37</p>
+                                    <p class="membermail">maxime@backtomobile.fr</p>
+                                    <ul class="navbar-nav nav2 d-flex flex-row mx-auto">
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="s://www.google.fr" target="_blank">
+                                                <i class="fab fa-instagram fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="https://www.google.fr" target="_blank">
+                                                <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
+                                            </a>
+                                        </li>
+                                        <li class="col-4 navlines navl2 d-flex justify-content-center">
+                                            <a href="https://www.google.fr" target="_blank">
+                                                <i class="fab fa-twitter fa-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body textpart text-left">
+                                <i class="fas fa-quote-left d-flex justify-content-center"></i>
+                                <blockquote>Fasciné par l’efervescence créative qui s’exprime sur le web, je vous
+                                    accompagne dans la
+                                    création de vos contenus mobiles. Qu’ils soient de nature rédactionnelle,
+                                    audiovisuelle ou
+                                    photographique, je veillerai à élaborer une ofre éditoriale perinente et engageante
+                                    de façon à
+                                    vous permetre d’ateindre vos objectifs commerciaux.</blockquote>
+                                <i class="fas fa-quote-right d-flex justify-content-center"></i>
+                            </div>
+                            <!-- Prices -->
+                            <div class="panel-body" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
+                                <div class="pricing-table" style="margin-bottom: 1rem">
+                                    <div class="col-4 table free">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Basic</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent">Rédaction de contenus</li>
+                                            <li class="pricecontent">1 retouche logo/réation</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #000000">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 table active">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Standard</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent">Rédaction de contenus</li>
+                                            <li class="pricecontent">5 retouches logo/création</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #7a7070">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 table premium">
+                                        <ul class="priceul mx-auto">
+                                            <li class="titleli">Premium</li>
+                                            <li class="pricecontent">Création/refonte de site</li>
+                                            <li class="pricecontent">PWA</li>
+                                            <li class="pricecontent">Logo</li>
+                                            <li class="pricecontent beforelio">Rédaction de contenus</li>
+                                            <li class="littleinfo text-right">Retouches illimitées</li>
+                                            <li class="text-center partir">A partir de</li>
+                                            <li class="text-center font-weight-bold theprice">1000 €</li>
+                                        </ul>
+                                        <div class="d-flex btnligne justify-content-center">
+                                            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="https://www.google.fr/"
+                                                style="background: #fa7268">
+                                                Demander un devis</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="d-none d-md-block d-lg-block d-xl-block" src="img/carre1.jpg" alt="illustration">
+            </div>
+        </div>
+
+        <hr class="sepline2" style="border:2px solid rgb(250, 114, 104)">
+
+        <!-- PWA row -->
+        <div class="row" id="pwa">
+            <h2 class="col-12 secondarytitle text-center">LES PWA
+                <br>
+                (Progressive Web Apps)
+            </h2>
+            <p style="margin-top: 1rem; margin-top: 1rem; color: white">La progressive web app (PWA) a vu le jour en 2015 à l’initiative de Google. Solution hybride entre le
+                site internet classique et l’application mobile, elle ofre aux mobinautes une meilleure expérience
+                de navigation tout en permetant à son propriétaire d’ateindre plus facilement ses objectifs
+                commerciaux.</p>
+        </div>
+    </div>
 
 
 {% endblock %}
 
- {% block javascripts %}
-     {{ parent() }}
- {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

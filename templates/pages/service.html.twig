@@ -3,7 +3,7 @@
 {% block title %} {{ parent() }}Nos services{% endblock %}
 
 {% block stylesheets %}{{ parent() }}
-    {# {{ encore_entry_link_tags('service') }} #}
+    {{ encore_entry_link_tags('service') }}
 {% endblock %}
 
 {% block body %}
@@ -46,7 +46,7 @@
                     src="{{ asset('build/img/methodomobile.png') }}">
             </div>
             <div class="col-12 col-sm-12 col-md-4 offset-md-4 d-flex btnligne justify-content-center">
-                <a class="btn btn-lg actionbtn btn-block text-uppercase rounded-0" href="https://www.google.fr/">L'équipe
+                <a class="btn btn-lg actionbtn btn-block text-uppercase rounded-0" href="{{path('expertise')}}#equipebtm">L'équipe
                     de BTM</a>
             </div>
         </div>
@@ -68,7 +68,7 @@
                     Pour répondre à cet enjeu capital qu’est l’apprentissage tout au long de la vie, nous élaborons
                     pour vous des cours sur-mesure sur les fondamentaux de la communication numérique. </p>
                 <div class="col-12 col-sm-12 col-md-4 offset-md-4 btnligne d-flex justify-content-center buttonforma">
-                    <a class="btn btn-lg btnform act2 btn-block text-uppercase rounded-0" href="https://www.google.fr/">Je
+                    <a class="btn btn-lg btnform act2 btn-block text-uppercase rounded-0" href="{{path('contact')}}">Je
                         suis intéressé(e)</a>
                 </div>
             </div>
