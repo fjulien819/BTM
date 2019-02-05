@@ -37,7 +37,7 @@ class MainController extends AbstractController
 
            $search = $form->getData();
 
-           $results = $paginator->paginate($postRepository->getQuerySearchPostByTerm($search->getSearchTerm()), $request->query->getInt('page', 1), 6 );
+           $results = $paginator->paginate($postRepository->getQuerySearchPostByTerm($search->getSearchTerm()), $request->query->getInt('page', 1), 3 );
 
             return $this->render('pages/posts.html.twig', ['posts' => $results]);
         }
@@ -55,7 +55,7 @@ class MainController extends AbstractController
      */
     public function posts(PaginatorInterface $paginator, PostRepository $postRepository, Request $request)
     {
-        $posts = $paginator->paginate($postRepository->getQueryAllPostsVisible(), $request->query->getInt('page', 1), 6 );
+        $posts = $paginator->paginate($postRepository->getQueryAllPostsVisible(), $request->query->getInt('page', 1), 3 );
         return $this->render('pages/posts.html.twig',
             [
                 'posts' => $posts
@@ -73,7 +73,7 @@ class MainController extends AbstractController
      */
     public function postsByCategory(PaginatorInterface $paginator, Category $category, PostRepository $postRepository, Request $request)
     {
-        $posts = $paginator->paginate($postRepository->getQueryPostByCategory($category), $request->query->getInt('page', 1), 6 );
+        $posts = $paginator->paginate($postRepository->getQueryPostByCategory($category), $request->query->getInt('page', 1), 3 );
         return $this->render('pages/posts.html.twig',
             [
                 'posts' => $posts,
@@ -98,7 +98,7 @@ class MainController extends AbstractController
      */
     public function homepage()
     {
-        return $this->render('base.html.twig');
+        return $this->render('pages/homepage.html.twig');
     }
 
     /**
