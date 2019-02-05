@@ -1,3 +1,8 @@
+.mt-container-body {
+    margin-left: 0 !important ;
+    margin-right: 0 !important;
+}
+
 .expertise {
     padding: 7.4rem 1.875rem 30rem 1.875rem;
 }

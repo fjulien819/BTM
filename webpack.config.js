@@ -24,7 +24,9 @@ Encore
     .addEntry('contact', './assets/js/contact.js')
     .addEntry('expertise', './assets/js/expertise.js')
     .addEntry('service', './assets/js/service.js')
+    .addEntry('login_content', './assets/js/login_content.js')
     .addEntry('blog', './assets/js/blog.js')
+    .addEntry('homepage', './assets/js/homepage.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

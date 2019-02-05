@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    {{ encore_entry_link_tags('app') }}
+    {{ encore_entry_link_tags('base') }}
     {{ encore_entry_link_tags('error') }}
 
     <title>BTM - Erreur {{ status_code }}</title>
@@ -16,7 +16,7 @@
 <div class="hero ">
 
     <div class="inner-text">
-        <p class="p1"><span id="status_code">{{ status_code }}</span>:</p>
+        <p class="p1"><span id="status_code">{{ status_code }}</span> :</p>
         <p class="p2"></p>
         <div class="col-12 col-sm-12 col-md-6 offset-md-3 d-flex btnligne justify-content-center">
             <a class="btn actionbtn text-uppercase rounded-0" href="{{ path('homepage') }}">Back to Accueil</a>
@@ -34,7 +34,7 @@
 
 
 {{ encore_entry_script_tags('error') }}
-{{ encore_entry_script_tags('app') }}
+{{ encore_entry_script_tags('base') }}
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

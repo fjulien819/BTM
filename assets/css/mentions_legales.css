@@ -25,8 +25,12 @@ h3 {
 .actionbtn {
     font-size: 1.2rem;
     color: #F2F2F2;
-    background: #828282;
+    background: rgb(250, 114, 104);
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.actionbtn a :hover {
+    color: green !important;
 }
 
 
