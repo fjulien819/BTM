@@ -1,16 +1,31 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_blog.html.twig' %}
+
 {% block title %} {{ parent() }} {% endblock %}
-{% block stylesheets %}{{ parent() }}{% endblock %}
+
+{% block stylesheets %} {{ parent() }}  {% endblock %}
+
+{% block header %}{{ parent() }}{% endblock %}
+
 {% block body %}
-    <h2>Le blog Back To Mobile</h2>
-<div class="row d-flex justify-content-center">
-    {% include "_show_post.html.twig" %}
-    {% include "_sidebar.html.twig" %}
-</div>
+    {{ parent() }}
 {% endblock %}
- {% block javascripts %}
-     {{ parent() }}
- {% endblock %}
+
+    {% block blog_content %}
+        <div class="row d-flex justify-content-center">
+            {% include "_show_post.html.twig" %}
+            {% include "_sidebar.html.twig" %}
+        </div>
+    {% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
 
 
 
