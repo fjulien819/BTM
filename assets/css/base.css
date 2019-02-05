@@ -121,7 +121,7 @@ body {
 .formaimg>a:hover,
 .pwaimg>a:hover,
 .actuimg>a:hover,
-.confimg>a:hover {
+.confiancemg>a:hover {
     color: #68faa5;
     text-decoration: none;
 }
@@ -129,7 +129,7 @@ body {
 .pwaimg,
 .actuimg,
 .formaimg,
-.confimg {
+.confiancemg {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.65);
     background-blend-mode: multiply;
@@ -149,7 +149,7 @@ body {
     background-image: url("/build/img/solution.jpg") no-repeat center;
 }
 
-.confimg {
+.confiancemg {
     background-image: url("/build/img/building.jpg") no-repeat center;
 }
 
