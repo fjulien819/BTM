@@ -72,62 +72,53 @@
                                 <!-- Left column -->
                                 <div class="col-lg-4 leftgroup d-flex flex-column">
                                     <div class="col-12 blocks pwaimg d-flex justify-content-center" style="max-height: 50%">
-                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('expertise')}}#pwa./expertises.html#pwa">Les
+                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('expertise')}}#pwa">Les
                                             pwa</a>
                                     </div>
                                     <div class="col-12 blocks actuimg d-flex justify-content-center" style="max-height: 50%;">
-                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('blog')}}">Dernières
+                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('posts', {'url_page_post': 'blog'})}}">Dernières
                                             <br>actualités</a>
                                     </div>
                                 </div>
-
                                 <!-- Central column -->
                                 <div class="col-lg-4 middlegroup d-flex flex-column">
-                                    <div class="col-12 blocks d-flex justify-content-center" style="background: lightgrey; max-height: 50%">
-                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Nos
+                                    <div class="col-12 blocks formaimg d-flex justify-content-center" style="max-height: 50%">
+                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('service')}}#formation">Nos
                                             <br>formations</a>
                                     </div>
-                                    <div class="col-12 blocks d-flex justify-content-center" style="background: darkgrey; max-height: 50%">
-                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="https://www.google.fr">Les
+                                    <div class="col-12 blocks confimg d-flex justify-content-center" style="max-height: 50%">
+                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('homepage')}}#faitconfiance">Les
                                             entreprises qui <br>nous font confiance</a>
                                     </div>
                                 </div>
                                 <!-- Right column -->
-                                <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
+                                <div class="col-sm-2 d-none d-sm-block d-md-none around"></div>
                                 <div class="col-12 col-sm-8 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
-                                    <div class="col-12 blocks d-flex justify-content-center" style="max-height: 77%">
-                                        <ul class="navbar-nav navmenu justify-content-center text-uppercase text-center col-10"
-                                            style="padding-right:0">
-                                            <li class="nav-item">
-                                                <a class="nav-link indexlink" href="index.html">Accueil</a>
+                                    <div class="col-12 blocks groupblock d-flex flex-column justify-content-center">
+                                        <ul class="navbar-nav navmenu justify-content-center text-uppercase text-right">
+                                            <li class="nav-item itemheader">
+                                                <a class="nav-link indexlink" href="{{path('homepage')}}">Accueil</a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link servicelink" href="service.html">A votre service</a>
+                                            <li class="nav-item itemheader">
+                                                <a class="nav-link servicelink" href="{{path('service')}}">A votre service</a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link expertiseslink" href="expertises.html">Notre expertise</a>
+                                            <li class="nav-item itemheader">
+                                                <a class="nav-link expertiseslink" href="{{path('expertise')}}">Notre expertise</a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link bloglink" href="blog.html">Blog</a>
+                                            <li class="nav-item itemheader">
+                                                <a class="nav-link bloglink" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link contactlink" href="Contact.html">Contact / Devis</a>
+                                            <li class="nav-item itemheader">
+                                                <a class="nav-link contactlink" href="{{path('contact')}}">Contact / Devis</a>
                                             </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-10 offset-1 blocks d-flex justify-content-between" style=" max-height: 23%">
-                                        <ul class="col-12 navbar-nav navicons d-flex flex-row align-items-center" style="padding-right: 0">
-                                            <li class="col-3">
-                                                <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
-                                            </li>
-                                            <li class="col-3">
-                                                <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
-                                            </li>
-                                            <li class="col-3">
-                                                <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
-                                            </li>
-                                            <li class="col-3">
-                                                <a href="https://www.google.fr" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
+                                            <br>
+                                            <hr style="border:3px solid#68faa5; width: 80%">
+                                            <li class="navbar-nav navicons mx-auto d-flex flex-row align-items-center justify-content-between"
+                                                style="width: 80%">
+                                                <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
+                                                <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
+                                                <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
+                                                <a href="https://twitter.com/" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -155,7 +146,7 @@
                 <div class="container-fluid footerzone">
                     <div class="d-flex flex-row align-items-center">
                         <!-- 1. Address -->
-                        <div class="col-2 addressblock d-flex align-items-center flex-column">
+                        {# <div class="col-2 addressblock d-flex align-items-center flex-column">
                             <p class="text-left" style="margin-bottom: 0.5rem">
                                 Back to Mobile
                                 <br>
@@ -168,42 +159,54 @@
                                 <br>
                                 contact@backtomobile.fr
                             </p>
-                        </div>
+                        </div> #}
+                        <address class="col-2 addressblock flex-column d-flex align-items-stretch">
+                            <!-- <p class="text-left" style="margin-bottom: 0.5rem; color: #000000"> -->
+                            <p class="agencename" style="margin-bottom: 0">Back to Mobile</p>
+                            <p style="margin-bottom: 0"> BP 238</p>
+                            <p style="margin-bottom: 0"> 56130 Théhillac- Cedex 9</p>
+                            <a href="tel:+33 5 54 67 81 42" style="color: #000000">Tél : +33 5 54 67 81 42</a>
+                            <a href="mailto:http://www.cerbermail.com/?DPi8TdYNEU?Subject=Contact/Devis" style="color: #000000">contact@backtomobile.fr</a>
+                        </address>
+
+
                         <!-- 2. Navigation -->
-                        <div class="col-2 navigation d-flex justify-content-center">
-                            <ul class="navbar-nav text-uppercase nav navmenu" style="padding-left: 1rem; border:none">
+                        <div class="col-2 navigation d-flex align-content-stretch justify-content-center">
+                            <ul class="navbar-nav text-uppercase nav navmenu" style="padding-left: 1rem">
                                 <li class="nav-item">
-                                    <a class="nav-link-footer" href="index.html">Accueil</a>
+                                    <a class="nav-link-footer" href="{{path('homepage')}}">Accueil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link-footer" href="service.html">A votre service</a>
+                                    <a class="nav-link-footer" href="{{path('service')}}">A votre service</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link-footer" href="expertises.html">Notre expertise</a>
+                                    <a class="nav-link-footer" href="{{path('expertise')}}">Notre expertise</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link-footer" href="blog.html">Blog</a>
+                                    <a class="nav-link-footer" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link-footer" href="Contact.html">Contact/Devis</a>
+                                    <a class="nav-link-footer" href="{{path('contact')}}">Contact/Devis</a>
                                 </li>
                             </ul>
                         </div>
+
+                        
                         <!-- 3. Legal part -->
                         <div class="col-4 legalpart d-flex flex-wrap align-content-around">
                             <div class="col-12 d-flex flex-wrap align-items-center" style="min-height: 80%; padding-top: 1.25rem; padding-left: 0; padding-right: 0">
                                 <div class="col-12 text-center logoline" style="margin-bottom: 0.8rem">
-                                    <a class="navbar-brand" href="index.html">
-                                        <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:6.875rem">
+                                    <a class="navbar-brand" href="{{path('homepage')}} ">
+                                        <!-- <img src="img/delorean-time-machine.png" alt="logo" style="max-width:6.875rem"> -->
+                                        <img src="{{ asset('build/img/delorean-time-machine.png') }}" alt="Delorean" style="max-height:6.875rem">
                                     </a>
                                 </div>
-                                <div class="col-9 condiline">
+                                <div class="col-6 condiline d-flex justify-content-end">
                                     <a href="index.html" style="color: #000000">
-                                        <p class="conditions" style="margin-bottom: 0.5rem;">Conditions générales
-                                            d'utilisation</p>
+                                        <p class="conditions" style="margin-bottom: 0.5rem">Mentions légales</p>
                                     </a>
                                 </div>
-                                <div class="col-3 rgpdline text-center" style="padding-left: 0; margin-bottom: 0.5rem;">
+                                <div class="col-6 rgpdline d-flex" style="margin-bottom: 0.5rem;">
                                     <a href="index.html" style="color: #000000">
                                         <p class="rg" style="margin-bottom: 0">RGPD</p>
                                     </a>
@@ -217,30 +220,29 @@
                         <!-- 4. Call to action -->
                         <div class="col-2 d-flex align-items-center callblock">
                             <div class="cta-button">
-                                <a class="btn btn-lg btn-block text-uppercase ctbtn rounded-0" href="https://www.google.fr/"
-                                    style="background: #666666; font-size: 1rem">Contactez-nous</a>
+                                <a class="btn btn-lg btn-block text-uppercase ctbtn rounded-0" href="./Contact.html" style="background: #fa7268; font-size: 1rem">Contactez-nous</a>
                             </div>
                         </div>
                         <!-- 5. Social icons -->
                         <div class="col-2 socialpart" style="align-self: center">
                             <ul class="navbar-nav footernavico d-flex flex-row justify-content-center">
                                 <li class="col-4 navlines">
-                                    <a href="https://www.google.fr" target="_blank">
+                                    <a href="https://fr-fr.facebook.com/" target="_blank">
                                         <i class="fab fa-facebook-square fa-lg"></i>
                                     </a>
                                 </li>
                                 <li class="col-4 navlines">
-                                    <a href="s://www.google.fr" target="_blank">
+                                    <a href="https://www.instagram.com/?hl=fr" target="_blank">
                                         <i class="fab fa-instagram fa-lg"></i>
                                     </a>
                                 </li>
                                 <li class="col-4 navlines">
-                                    <a href="https://www.google.fr" target="_blank">
+                                    <a href="https://fr.linkedin.com/" target="_blank">
                                         <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
                                     </a>
                                 </li>
                                 <li class="col-4 navlines">
-                                    <a href="https://www.google.fr" target="_blank">
+                                    <a href="https://twitter.com/" target="_blank">
                                         <i class="fab fa-twitter fa-lg"></i>
                                     </a>
                                 </li>
@@ -249,6 +251,7 @@
                     </div>
                 </div>
             </footer> 
+
 
             <!-- Footer for small screens -->
             <footer class="footer d-block d-sm-block d-md-none">
@@ -260,19 +263,19 @@
                             <div class="d-flex">
                                 <ul class="navbar-nav text-uppercase nav navmenu" style="border:none">
                                     <li class="nav-item">
-                                        <a class="nav-link-footer" href="index.html">Accueil</a>
+                                        <a class="nav-link-footer" href="{{path('homepage')}}">Accueil</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link-footer" href="service.html">A votre service</a>
+                                        <a class="nav-link-footer" href="{{path('service')}}">A votre service</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link-footer" href="expertises.html">Notre expertise</a>
+                                        <a class="nav-link-footer" href="{{path('expertise')}}">Notre expertise</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link-footer" href="blog.html">Blog</a>
+                                        <a class="nav-link-footer" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link-footer" href="Contact.html">Contact/Devis</a>
+                                        <a class="nav-link-footer" href="{{path('contact')}}">Contact/Devis</a>
                                     </li>
                                 </ul>
                             </div>
@@ -288,22 +291,22 @@
                             <div class="col-9 offset-3 navoff" style="align-self:center">
                                 <ul class="navbar-nav footernavico d-flex flex-row justify-content-center">
                                     <li class="col-4 navlines">
-                                        <a href="https://www.google.fr" target="_blank">
+                                        <a href="https://fr-fr.facebook.com/" target="_blank">
                                             <i class="fab fa-facebook-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li class="col-4 navlines">
-                                        <a href="s://www.google.fr" target="_blank">
+                                        <a href="https://www.instagram.com/?hl=fr" target="_blank">
                                             <i class="fab fa-instagram fa-lg"></i>
                                         </a>
                                     </li>
                                     <li class="col-4 navlines">
-                                        <a href="https://www.google.fr" target="_blank">
+                                        <a href="https://fr.linkedin.com/" target="_blank">
                                             <i class="fab fa-linkedin fa-lg"></i>
                                         </a>
                                     </li>
                                     <li class="col-4 navlines">
-                                        <a href="https://www.google.fr" target="_blank">
+                                        <a href="https://twitter.com/" target="_blank">
                                             <i class="fab fa-twitter fa-lg"></i>
                                         </a>
                                     </li>
@@ -340,7 +343,7 @@
                                 <p style="margin-bottom: 0.5rem">RGPD</p>
                             </a>
                             <div class="col-12 text-right rightcolu">
-                                <p style="margin-bottom: 0.5rem"><strong>&copy;2019 Copyright Back To Mobile</strong>
+                                <p style="margin-bottom: 0.5rem"><strong>{{'&'}}copy;2019 Copyright Back To Mobile</strong>
                                     <br>
                                     Tous droits réservés
                                 </p>
