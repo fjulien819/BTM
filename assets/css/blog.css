@@ -21,11 +21,20 @@
     font-size: 16px !important;
     text-decoration: none !important;
 }
+.blog-sidebar-newsletter-form
+{
+    margin-top: 38px !important;
+}
 .blog-button
 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
+/* title list posts */
+h3
+{
+    font-family: 'ethnocentricregular';
+    font-size: 18px !important;
+}
 /* title sidebar */
 h4
 {
