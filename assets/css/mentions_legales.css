@@ -1,6 +1,6 @@
 .mentionsleg {
     margin-top: 8.4rem;
-    margin-bottom: 14rem;
+    margin-bottom: 12rem;
 }
 
 h1 {
@@ -29,7 +29,7 @@ h3 {
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
-.actionbtn a :hover {
+a .actionbtn:hover {
     color: green !important;
 }
 
@@ -40,20 +40,23 @@ h3 {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .mentionsleg {
-        margin-bottom: 16.5rem;
-    }
+        margin-bottom: 13.5rem;
+    } 
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .mentionsleg {
+    /* .mentionsleg {
         margin-bottom: 16.5rem;
-    }
+    } */
 }
 
 /* Medium devices (tablets, less than 992px) */
-@media (min-width: 768px) and (max-width: 991.98px) {}
-
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mentionsleg {
+        margin-bottom: 10rem;
+    }
+}
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {

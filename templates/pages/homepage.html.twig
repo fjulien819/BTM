@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent() }}Accueil{% endblock %}
+
+{% block stylesheets %}{{ parent() }}
+    {{ encore_entry_link_tags('homepage') }}
+{% endblock %}
+
+{% block body %}
+
+    <!-- Introduction video -->
+    <section>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="{{ asset('build/video/mock.mp4') }}" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h2 class="videotitle display-3">Back To Mobile</h2>
+                    <p class="lead mb-0">Aujourd'hui, mobiles comme jamais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid home">
+
+        <!-- Infography row -->
+        <div class="row infography">
+            <div class="col-12">
+                <h1 class="text-uppercase mobileh1">
+                    Votre communication mobile avec Back to Mobile
+                </h1>
+            </div>
+            <div class="col-12 col-md-8 firstblock">
+                <p>
+                    Nous accompagnons les entreprises dans leur volonté de créer de la valeur dans une économie
+                    numérique où le mobile s’impose comme le premier point d’accès au web.
+                </p>
+            </div>
+            <div class="col-12 col-md-6 order-1 d-flex justify-content-center">
+                <img class="img-fluid imgtag" alt="nuage de tags" src="{{ asset('build/img/carre1.jpg') }}">
+            </div>
+            <div class="col-12 col-md-6 order-3 order-md-2 d-flex justify-content-center">
+                <img class="img-fluid imgtag" alt="nuage de tags" src="{{ asset('build/img/carre2.jpg') }}">
+            </div>
+            <div class="col-12 col-md-6 textin intop order-2 order-md-3 d-flex flex-column justify-content-center">
+                <p class="uppart text-center">Nous consultons en moyenne 80 fois par jour notre smartphone </p>
+                <p class="bottompart text-center">Étude du cabinet Deloitte réalisée en 2016</p>
+            </div>
+            <div class="col-12 col-md-6 textin order-4 d-flex flex-column justify-content-center">
+                <p class="uppart text-center">Conversions sur mobile 13% plus rapides que d’ordinateur à ordinateur</p>
+                <p class="bottompart text-center">Étude réalisée en 2016 aux États-Unis par Facebook</p>
+            </div>
+        </div>
+        <hr class="seplinehaute" style="border:2px solid rgb(250, 114, 104)">
+
+        <!-- Approche row -->
+        <div class="row approche">
+            <h2 class="col-12 secondarytitle appro">
+                Notre approche
+            </h2>
+            <div class="col-12 col-md-4 approchetext order-1 order-md-3">
+                <p style="color: #ffffff">
+                    Experts en Progressive Web Apps <span style="color: #000000">(PWA)</span> , nous aimons avant tout
+                    créer des expériences de navigation
+                    sur mobile innovantes qui font appel aux dernières avancées technologiques. Notre équipe vous
+                    accompagnera au quotidien dans l’élaboration d’outils de communication et de solutions adaptés à
+                    vos besoins.
+                </p>
+            </div>
+            <div class="col-12 col-md-4 approchimg1 order-2 order-md-1">
+                <img class="img-fluid imgtag2" alt="nuage de tags" src="{{ asset('build/img/info1.jpg') }}">
+            </div>
+            <div class="col-12 col-md-4 approchimg2 order-3 order-md-2">
+                <img class="img-fluid imgtag2" alt="nuage de tags" src="{{ asset('build/img/info2.jpg') }}">
+            </div>
+        </div>
+
+        <!-- Savoir plus row -->
+        <div class="row savoirplusbutton">
+            <div class="col-12 col-sm-12 col-md-4 offset-md-4 d-flex btnligne justify-content-center">
+                <a class="btn btn-lg actionbtn btn-block text-uppercase rounded-0" href="{{path('expertise')}}#pwa">En
+                    savoir plus</a>
+            </div>
+        </div>
+        <hr class="sepline" style="border:2px solid rgb(250, 114, 104)">
+
+
+        <!-- Confiance row -->
+        <div class="row confiance" id="faitconfiance">
+            <h2 class="col-12 secondarytitle confi">
+                Ils nous ont fait confiance
+            </h2>
+            <div class="col-6 col-md-3 confimg">
+                <a href="https://www.parisaeroport.fr/groupe/rse/fondation#" target="_blank">
+                    <img class="img-fluid imgtag tag1" alt="nuage de tags" src="{{ asset('build/img/fondationadp.jpg') }}">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 confimg" target="_blank">
+                <a href="https://fondation.edf.com/fr">
+                    <img class="img-fluid imgtag tag2" alt="nuage de tags" src="{{ asset('build/img/fondationedf.jpg') }}">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 confimg">
+                <a href="http://projet4.julienf-oc.fr/" target="_blank">
+                    <img class="img-fluid imgtag tag3" alt="nuage de tags" src="{{ asset('build/img/louvre.jpg') }}">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 confimg">
+                <a href="http://etudiant.aujourdhui.fr/etudiant/" target="_blank">
+                    <img class="img-fluid imgtag tag4" alt="nuage de tags" src="{{ asset('build/img/parisienlogo.png') }}">
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
