@@ -3,7 +3,7 @@
 {% block title %} {{ parent() }}Contact / Devis{% endblock %}
 
 {% block stylesheets %}{{ parent() }}
-    {# {{ encore_entry_link_tags('contact') }} #}
+    {{ encore_entry_link_tags('contact') }}
 {% endblock %}
 
 {% block body %}
@@ -16,25 +16,112 @@
 
 
     <!-- Contact form-->
-    
-    {{ form_start(formContact) }}
 
-    {{ form_row(formContact.name) }}
+    <!-- Contact form-->
+    <div class="container contactcont" style="margin-top:4rem; padding-top: 3.125rem; padding-bottom:8.125rem">
+        <div class="row contactcontainer">
+            <div class="col-11 mx-auto contactzone">
+                <!-- Left column -->
+                <div class="col-md-6 col-sm-12 leftcolumn">
+                    <!-- Form title -->
+                    <h1 style="padding-top:2rem">Contact / Devis</h1>
+                    <div class="underlinetitle" style="margin-bottom: 1.3rem">
+                        <div class="col-6 livingline"></div>
+                        <div class="col-6 livingunder"></div>
+                    </div>
 
-    {{ form_row(formContact.lastName) }}
+                    <form>
+                    {{ form_start(formContact) }}
+                        <!-- Firstname and name inputs-->
+                        <div class="form-group row namerow">
+                            <div class="col-6">
+                                {# <input class="form-control" id="inputFirstName" placeholder="Votre prénom" type="text"></div> #}
+                                {{ form_row(formContact.name) }}
+                            <div class="col-6">
+                                {# <input class="form-control" id="inputName" placeholder="Votre nom" type="text"></div> #}
+                                {{ form_row(formContact.lastName) }}
 
-    {{ form_row(formContact.email) }}
+                        </div>
+                        <!-- Email input -->
+                        <div class="form-group row emailrow">
+                            <div class="col-12">
+                                {# <input class="form-control" id="inputEmail" placeholder="Votre email" type="email"></div>      #}
+                                {{ form_row(formContact.email) }}
+                        </div>
+                        <!-- Message subject -->
+                        <label for="selectcustom" class="col-form-label">Objet de votre message</label>
+                        {# <select class="custom-select" id="#selectcustom">
+                            <option selected>Choisissez le sujet approprié</option>
+                            <option value="1">Demande d'information</option>
+                            <option value="2">Demande de devis</option>
+                            <option value="3">Autre sujet</option>
+                        </select> #}
+                        {{ form_row(formContact.object) }}
+                        <!-- RGPD for big screens-->
+                        <div class="form-group row col-sm">
+                            <div class="col-sm checkpart d-none d-md-block d-lg-block d-xl-block">
+                                <div class="form-check">
+                                    {# <input class="form-check-input" id="gridCheck1" type="checkbox">
+                                    <label class="form-check-label" for="gridCheck1">
+                                        En soumettant ce formulaire, j'accepte que les informations saisies soient
+                                        exploitées dans le cadre de la demande de contact ou de devis, ainsi que de la
+                                        relation commerciale qui peut en découler.
+                                    </label> #}
+                                    {{ form_widget(formContact.rgpd) }}
+                                    {{ form_label(formContact.rgpd) }}
+                                </div>
+                                <hr class="underformcheck">
+                            </div>
+                        </div>
+                </div>
+                <!-- Right column -->
+                <div class="col-md-6 col-sm-12 rightcolumn">
+                    <!-- Message -->
+                    <hr class="underformcheck d-md-none d-lg-none d-xl-none" style="margin-top: 0; margin-bottom: 2rem">
+                    <div class="message">
+                        <div class="form-group messzone">
+                            {# <label for="comment">Message</label>
+                            <textarea class="form-control text" id="comment" placeholder="Ecrivez votre texte ici..."
+                                rows="14"></textarea> #}
+                                {{ form_row(formContact.message) }}
 
-    {{ form_row(formContact.object) }}
+                        </div>
+                    </div>
+                    <!-- RGPD for small screens-->
+                    {# <div class="col-sm d-md-none d-lg-none d-xl-none">
+                        <div class="form-check check2">
+                            <input class="form-check-input" id="gridCheck1" type="checkbox">
+                            <label class="form-check-label" for="gridCheck1">
+                                En soumettant ce formulaire, j'accepte que les informations saisies soient
+                                exploitées dans le cadre de la demande de contact ou de devis, ainsi que de la
+                                relation commerciale qui peut en découler.
+                            </label>
+                        </div>
+                    </div> #}
+                    <!-- Submit button-->
+                    <div class="form-group row submitline" style="margin-bottom: 0">
+                        <div class="col-12 submitbutton" style="padding-left: 1rem; padding-right: 0;">
+                            {# <button type="submit" class="btn btn-block text-uppercase" style="height: 3.125rem;">Envoyer votre message
+                            </button>                             #}
+                            <input type="submit">
+                            {{ form_end(formContact) }}
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    {{ form_row(formContact.message) }}
 
 
-    {{ form_widget(formContact.rgpd) }}
-    {{ form_label(formContact.rgpd) }}
 
-    <input type="submit">
-    {{ form_end(formContact) }}
+
+
+
+
+
+
 
 
 {% endblock %}
