@@ -1,4 +1,3 @@
-
 .mt-container-body {
     background: url("/build/img/delorean_fond.jpg") no-repeat center;
     background-size: cover;
@@ -6,7 +5,7 @@
     background-blend-mode: multiply;
     height: 100%;
     width: 100%;
-    margin-top: 0 !important;  
+    margin-top: 0 !important;
 }
 
 .contactcontainer {
@@ -48,7 +47,7 @@ h1 {
 }
 
 .form-control {
-    background: transparent; 
+    background: transparent;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -169,7 +168,6 @@ textarea.form-control {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
-
     .container,
     .contactzone {
         padding-left: 0;
@@ -208,8 +206,25 @@ textarea.form-control {
         margin-left: 0px;
     }
 
+
+
+    .leftcolumn {
+        margin-bottom: -6rem;
+    }
+
+    .rgpdrow {
+        position: relative;
+        bottom: -26rem;
+        padding-bottom: 1rem;
+        z-index: 100;
+    }
+
+    .submitline {
+        margin-top: 7rem !important;
+    }
+
     .submitbutton {
-        margin-bottom: 3.75rem;
+        margin-bottom: 3.3rem;
     }
 }
 
@@ -260,6 +275,25 @@ textarea.form-control {
 
     .submitbutton {
         margin-bottom: 3.75rem;
+    }
+
+
+    .leftcolumn {
+        margin-bottom: -1rem;
+    }
+
+    .rgpdrow {
+        position: relative;
+        bottom: -26rem;
+        z-index: 100;
+    }
+
+    .submitline {
+        margin-top: 7rem !important;
+    }
+
+    .submitbutton {
+        margin-bottom: 3.3rem;
     }
 }
 
