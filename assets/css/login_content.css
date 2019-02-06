@@ -1,24 +1,29 @@
 /* General */
 
 
-html,
-body {
+.mt-container-body {
+  background: url("/build/img/delorean_fond.jpg") no-repeat center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
   height: 100%;
+  width: 100%;
+  margin-top: 0 !important; 
+  padding-top: 100px; 
 }
 
-body {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #444444;
+.principalcontainer {
+  background: #b9473ede;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+.form-signin {
+  padding: 0.7rem 1.7rem 1.7rem 1.7rem;
+  background: #FA7268;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
 }
 
 hr {
@@ -28,7 +33,7 @@ hr {
 h1 {
   font-family: 'ethnocentricregular';
   font-size: 1.25rem;
-  color: #000000;
+  color: #ffffff;
 }
 
 a,
@@ -36,22 +41,17 @@ label {
   font-family: 'robotoregular', Arial, sans-serif;
   font-size: 1rem;
   margin-bottom: 0.2rem;
+  color: #ffffff;
 }
 
-.closebutton {
+/* .closebutton {
   font-size: 2.5rem;
-}
+  color: #ffffff;
+} */
 
 .form-control {
   border: none;
   border-radius: 0;
-}
-
-.form-signin {
-  padding: 1.7rem;
-  padding-top: 0.7rem;
-  margin: 0 auto;
-  background: #959595;
 }
 
 .form-signin .form-control {
@@ -94,16 +94,20 @@ input[type=radio] {
   padding-left: 0;
 }
 
+.input {
+  background: #ffffff;
+}
+
 .btn {
   border-radius: 0;
-  color: #000000;
-  background-color: #FA7268;
+  color: #ffffff;
+  background-color: #FA8a81;
   height: 3.125rem;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
 }
 
 .identiforgot a {
-  color: #000000;
+  color: #ffffff;
 }
 
 .lineleft,
@@ -126,6 +130,20 @@ input[type=radio] {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
+  .mt-container-body {
+    padding-top: 50px;
+    margin-bottom: 8rem;
+  }
+
+.connextext {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+  .form-signin {
+    margin-top: 0;
+  }
+
   .lineleft,
   .lineright {
     -ms-flex: 0 0 21%;
@@ -145,8 +163,13 @@ input[type=radio] {
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
 
+.mt-container-body {
+  padding-top: 55px;
+  margin-bottom: 6rem;
+}
+
   .form-signin {
-    padding-top: 10rem;
+    margin-top: 0;
     width: 80%;
   }
 
@@ -169,6 +192,14 @@ input[type=radio] {
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
+  .mt-container-body {
+    margin-bottom: 0;
+  }
+
+.principalcontainer {
+  margin-bottom: 5rem;
+}
+
   .lineleft,
   .lineright {
     -ms-flex: 0 0 18%;
@@ -188,6 +219,10 @@ input[type=radio] {
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
+  .mt-container-body {
+    margin-bottom: 13rem;
+  }
+
   .lineleft,
   .lineright {
     -ms-flex: 0 0 20%;
@@ -203,6 +238,3 @@ input[type=radio] {
     max-width: 60%;
   }
 }
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}

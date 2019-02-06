@@ -17,7 +17,7 @@ body {
     font-size: 15px;
     text-align: center;
     color: #fff;
-    background: rgba(250, 114, 104, 0.25);
+    background: #68faa5;
     z-index: 99999;
     transition: all ease-in 0.2s;
     position: fixed;
@@ -32,7 +32,7 @@ body {
 }
 
 .cRetour:hover {
-    background: rgba(250, 114, 104, 1);
+    background: #68faa5;
     transition: all ease-in 0.2s;
 }
 
@@ -76,7 +76,6 @@ body {
     background: rgba(250, 114, 104, 1);
     max-height: 2rem;
 }
-
 
 
 /* Header */
@@ -126,31 +125,32 @@ body {
     text-decoration: none;
 }
 
-.pwaimg,
-.actuimg,
-.formaimg,
-.confiancemg {
+.pwaimg {
+    background: url("/build/img/pwaillus.jpg");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.65);
     background-blend-mode: multiply;
 }
 
-.pwaimg {
-    background-image: url("/build/img/pwaillus.jpg") no-repeat center;
-    background: yellow;
-}
-
-
 .actuimg {
-    background-image: url("/build/img/blogpro.jpg") no-repeat center;
+    background: url("/build/img/blogpro.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
 }
 
 .formaimg {
-    background-image: url("/build/img/solution.jpg") no-repeat center;
+    background: url("/build/img/solution.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
 }
 
 .confiancemg {
-    background-image: url("/build/img/building.jpg") no-repeat center;
+    background: url("/build/img/building.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
 }
 
 .menutext {

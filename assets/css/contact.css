@@ -1,15 +1,20 @@
 
-body {
-    background: #444444;
+.mt-container-body {
+    background: url("/build/img/delorean_fond.jpg") no-repeat center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    height: 100%;
+    width: 100%;
+    margin-top: 0 !important;  
+}
+
+.contactcontainer {
+    margin-top: 2rem;
 }
 
 label {
     font-family: 'robotoregular', Arial, sans-serif;
-}
-
-
-.contactcontainer {
-    margin-bottom: 6.5rem;
 }
 
 .contactzone {
@@ -24,28 +29,32 @@ h1 {
 }
 
 .livingline {
-    border-top: rgb(173, 79, 72) 2px solid;
+    border-top: #68faa5 3px solid;
+}
+
+.underlinetitle {
+    margin-top: 1.5rem;
 }
 
 .contactzone,
 .text {
-    background: #6f6f6f;
+    background: #b9473ede;
 }
 
 .rightcolumn {
-    border-left: 1px #ffffff solid;
+    border-left: 2px #68faa5 solid;
     padding-left: 0;
     padding-right: 0;
 }
 
 .form-control {
-    background: #6f6f6f;
+    background: transparent; 
     border-top: none;
     border-left: none;
     border-right: none;
     border-radius: 0;
-    color: white;
-    border-bottom: 1px #c0c0c0 solid;
+    color: #ffffff;
+    border-bottom: 1px #ffffff solid;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -109,7 +118,7 @@ input[type=radio] {
 
 .form-check-label {
     margin-left: 0.625rem;
-    font-size: 0.97rem;
+    font-size: 0.7rem;
 }
 
 .check2 {
@@ -121,7 +130,7 @@ input[type=radio] {
 }
 
 .underformcheck {
-    background: rgb(173, 79, 72);
+    background: #68faa5;
     height: 2px;
     width: 90%;
     margin-top: 1.25rem;
@@ -148,6 +157,7 @@ textarea.form-control {
 
 .btn:hover {
     font-weight: bold;
+    color: #68faa5;
 }
 
 

@@ -35,7 +35,7 @@
                 <!-- Navbar and button -->
                 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
                     <div class="col-8 offset-2 brandpart d-flex justify-content-center">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="{{path('homepage')}} ">
                             <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:5.625rem">
                         </a>
                     </div>
@@ -55,7 +55,7 @@
                             <!-- Header part -->
                             <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
                                 <div class="col-8 offset-2 brandpart d-flex justify-content-center">
-                                    <a class="navbar-brand" href="index.html">
+                                    <a class="navbar-brand" href="{{path('homepage')}} ">
                                         <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:5.625rem">
                                     </a>
                                 </div>
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                                 <!-- Right column -->
-                                <div class="col-sm-2 d-none d-sm-block d-md-none around"></div>
+                                <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
                                 <div class="col-12 col-sm-8 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
                                     <div class="col-12 blocks groupblock d-flex flex-column justify-content-center">
                                         <ul class="navbar-nav navmenu justify-content-center text-uppercase text-right">
@@ -146,30 +146,14 @@
                 <div class="container-fluid footerzone">
                     <div class="d-flex flex-row align-items-center">
                         <!-- 1. Address -->
-                        {# <div class="col-2 addressblock d-flex align-items-center flex-column">
-                            <p class="text-left" style="margin-bottom: 0.5rem">
-                                Back to Mobile
-                                <br>
-                                BP 238 <img class="align-self-start arrowimage" alt="fleche" src="{{ asset('build/img/flechedroite.png') }}">
-                                <br>
-                                56130 Théhillac- Cedex 9
-                            </p>
-                            <p class="text-left bottomtext" style="margin-bottom: 0">
-                                Tél : +33 5 54 67 81 42
-                                <br>
-                                contact@backtomobile.fr
-                            </p>
-                        </div> #}
                         <address class="col-2 addressblock flex-column d-flex align-items-stretch">
                             <!-- <p class="text-left" style="margin-bottom: 0.5rem; color: #000000"> -->
                             <p class="agencename" style="margin-bottom: 0">Back to Mobile</p>
                             <p style="margin-bottom: 0"> BP 238</p>
                             <p style="margin-bottom: 0"> 56130 Théhillac- Cedex 9</p>
                             <a href="tel:+33 5 54 67 81 42" style="color: #000000">Tél : +33 5 54 67 81 42</a>
-                            <a href="mailto:http://www.cerbermail.com/?DPi8TdYNEU?Subject=Contact/Devis" style="color: #000000">contact@backtomobile.fr</a>
+                            <a href="mailto:contact@backtomobile.fr" style="color: #000000">contact@backtomobile.fr</a>
                         </address>
-
-
                         <!-- 2. Navigation -->
                         <div class="col-2 navigation d-flex align-content-stretch justify-content-center">
                             <ul class="navbar-nav text-uppercase nav navmenu" style="padding-left: 1rem">
@@ -189,9 +173,7 @@
                                     <a class="nav-link-footer" href="{{path('contact')}}">Contact/Devis</a>
                                 </li>
                             </ul>
-                        </div>
-
-                        
+                        </div>                       
                         <!-- 3. Legal part -->
                         <div class="col-4 legalpart d-flex flex-wrap align-content-around">
                             <div class="col-12 d-flex flex-wrap align-items-center" style="min-height: 80%; padding-top: 1.25rem; padding-left: 0; padding-right: 0">
@@ -202,25 +184,25 @@
                                     </a>
                                 </div>
                                 <div class="col-6 condiline d-flex justify-content-end">
-                                    <a href="index.html" style="color: #000000">
+                                    <a href="{{path('legalNotice')}} " style="color: #000000">
                                         <p class="conditions" style="margin-bottom: 0.5rem">Mentions légales</p>
                                     </a>
                                 </div>
                                 <div class="col-6 rgpdline d-flex" style="margin-bottom: 0.5rem;">
-                                    <a href="index.html" style="color: #000000">
+                                    <a href="{{path('legalNotice')}}#rgpdf" style="color: #000000">
                                         <p class="rg" style="margin-bottom: 0">RGPD</p>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-12 d-flex align-items-end text-center" style="padding-left:0; padding-right: 0; min-height: 20%">
-                                <p class="copyright text-center">&copy;2019 Copyright Back To
+                                <p class="copyright text-center">{{'&'}}copy;2019 Copyright Back To
                                     Mobile - Tous droits réservés</p>
                             </div>
                         </div>
                         <!-- 4. Call to action -->
                         <div class="col-2 d-flex align-items-center callblock">
                             <div class="cta-button">
-                                <a class="btn btn-lg btn-block text-uppercase ctbtn rounded-0" href="./Contact.html" style="background: #fa7268; font-size: 1rem">Contactez-nous</a>
+                                <a class="btn btn-lg btn-block text-uppercase ctbtn rounded-0" href="{{path('contact')}} " style="background: #fa7268; font-size: 1rem">Contactez-nous</a>
                             </div>
                         </div>
                         <!-- 5. Social icons -->
@@ -335,11 +317,11 @@
                         </div>
                         <!-- 3. Legal part -->
                         <div class="col-6 footercol">
-                            <a class="col-12 text-right rightcolu" href="index.html">
+                            <a class="col-12 text-right rightcolu" href="{{path('legalNotice')}}">
                                 <p class="conditions">Conditions générales
                                     d'utilisation</p>
                             </a>
-                            <a class="col-12 text-right rightcolu" href="index.html">
+                            <a class="col-12 text-right rightcolu" href="{{path('legalNotice')}}#rgpdf">
                                 <p style="margin-bottom: 0.5rem">RGPD</p>
                             </a>
                             <div class="col-12 text-right rightcolu">
@@ -355,12 +337,12 @@
         {% endblock %}
 
 
-            <!-- Cookie alert message changer le lien pour celui page légale -->
+            <!-- Cookie alert message VERIFIER QUE MARCHE -->
             <div class="alert alert-dismissible text-center cookiealert" role="alert">
                 <div class="cookiealert-container">
                     <b>Aimez vous les cookies ?</b> &#x1F36A; Nous utilisons des cookies pour vous assurer la meilleure
                     expérience sur notre site.
-                    <a href="https://www.google.fr" target="_blank">En savoir plus</a>
+                    <a href="{{path('legalNotice')}}#rgpdf" target="_blank">En savoir plus</a>
                     <button type="button" class="btn btn-sm acceptcookies" aria-label="Close">
                         J'accepte
                     </button>
@@ -378,7 +360,7 @@
             {{ encore_entry_script_tags('base') }}
             {{ encore_entry_script_tags('cookie') }} 
 
-            <!-- Up button script -->
+            <!-- Up button script VERIFIER QUE MARCHE-->
             {# <script>
                 jQuery(document).ready(function () {
                     var duration = 500;
