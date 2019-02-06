@@ -41,7 +41,7 @@ h1 {
 }
 
 .rightcolumn {
-    border-left: 2px #68faa5 solid;
+    border-left: 0.125rem #68faa5 solid;
     padding-left: 0;
     padding-right: 0;
 }
@@ -53,7 +53,7 @@ h1 {
     border-right: none;
     border-radius: 0;
     color: #ffffff;
-    border-bottom: 1px #ffffff solid;
+    border-bottom: 0.0625rem #ffffff solid;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -130,7 +130,7 @@ input[type=radio] {
 
 .underformcheck {
     background: #68faa5;
-    height: 2px;
+    height: 0.125rem;
     width: 90%;
     margin-top: 1.25rem;
     display: none !important;
@@ -203,7 +203,7 @@ textarea.form-control {
 
     .submitline {
         margin-right: 0.9375rem;
-        margin-left: 0px;
+        margin-left: 0;
     }
 
 
@@ -270,7 +270,7 @@ textarea.form-control {
 
     .submitline {
         margin-right: 0.9375rem;
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     .submitbutton {

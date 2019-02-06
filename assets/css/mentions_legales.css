@@ -41,7 +41,7 @@ a .actionbtn:hover {
 @media (max-width: 575.98px) {
     .mentionsleg {
         margin-bottom: 13.5rem;
-    } 
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -64,4 +64,3 @@ a .actionbtn:hover {
         margin-bottom: 17.125rem;
     }
 }
-

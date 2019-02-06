@@ -1,7 +1,7 @@
 /* margin bottom and top container base */
 .mt-container-body {
-    margin-top: 100px;
-    margin-bottom: 150px;
+    margin-top: 6.25rem;
+    margin-bottom: 9.375rem;
 }
 
 body {
@@ -12,9 +12,9 @@ body {
 /* Up button */
 
 .cRetour {
-    border-radius: 3px;
+    border-radius: 0.1875rem;
     padding: 10px 13px 7px 13px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     text-align: center;
     color: #fff;
     background: #68faa5;
@@ -23,7 +23,7 @@ body {
     position: fixed;
     cursor: pointer;
     bottom: 10em;
-    right: 20px;
+    right: 1.25rem;
     display: none;
 }
 
@@ -59,8 +59,8 @@ body {
     opacity: 1;
     transform: translateY(0%);
     transition-delay: 1000ms;
-    padding-bottom: 6px;
-    padding-top: 6px;
+    padding-bottom: 0.375rem;
+    padding-top: 0.375rem;
 }
 
 .cookiealert a {
@@ -68,7 +68,7 @@ body {
 }
 
 .cookiealert .acceptcookies {
-    margin-left: 10px;
+    margin-left: 0.625rem;
     vertical-align: baseline;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 .navbar-dark {
-    border-bottom: 3px #ffffff solid;
+    border-bottom: 0.1875rem #ffffff solid;
     background-color: #fa7268 !important;
 }
 
@@ -183,7 +183,7 @@ body {
 }
 
 .navmenu {
-    border-bottom: 4px solid rgb(250, 114, 104);
+    border-bottom: 0.25rem solid rgb(250, 114, 104);
 }
 
 .rightgroup.navpart ul {
@@ -216,7 +216,7 @@ body {
 }
 
 .navbar-nav {
-    border-left: #68faa5 2px solid;
+    border-left: #68faa5 0.125rem solid;
 }
 
 .nav-link:hover {
@@ -255,7 +255,7 @@ html {
     bottom: 0;
     width: 100%;
     background-color: #fa7268;
-    border-top: 3px #ffffff solid;
+    border-top: 0.1875rem #ffffff solid;
 }
 
 .footerzone {
@@ -345,7 +345,7 @@ html {
     -ms-flex: 0 0 19%;
     flex: 0 0 19%;
     max-width: 19%;
-    height: 180px;
+    height: 11.25rem;
 }
 
 .legalpart {
@@ -674,7 +674,7 @@ html {
     } */
 
     .bottomtext {
-        padding-left: 20px;
+        padding-left: 1.25rem;
     }
 
     .navigation {

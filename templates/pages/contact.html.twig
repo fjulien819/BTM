@@ -27,30 +27,36 @@
                     </div>
 
                     {{ form_start(formContact) }}
+                    {{ form_errors(formContact) }}
                         <!-- Firstname and name inputs-->
                         <div class="form-group row namerow">
                             <div class="col-6">
                                 {{ form_widget(formContact.name, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(formContact.name) }}
                             </div>
                             <div class="col-6">
                                 {{ form_widget(formContact.lastName, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(formContact.lastName) }}
                             </div>
                         </div>
                         <!-- Email input -->
                         <div class="form-group row emailrow">
                             <div class="col-12">
                                 {{ form_widget(formContact.email, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(formContact.email) }}
                             </div>
                         </div>
                         <!-- Message subject -->
                         <label for="selectcustom">Objet de votre message</label>
                         {{ form_widget(formContact.object, {'attr': {'class': 'custom-select'}}) }}
+                        {{ form_errors(formContact.object) }}
 
                         <!-- RGPD -->
                         <div class="form-group rgpdrow row col-sm" style="padding-right: 0">
                             <div class="col-sm checkpart">
                                 <div class="form-check">
                                     {{ form_widget(formContact.rgpd, {'attr': {'class': 'form-check-input'}}) }}
+                                    {{ form_errors(formContact.rgpd) }}
                                     <label class="form-check-label" for="gridCheck1">
                                         En soumettant ce formulaire, j'accepte que les informations saisies soient
                                         exploitées dans le cadre de la demande de contact ou de devis, ainsi que de la
@@ -68,6 +74,7 @@
                         <div class="form-group messzone">
                             <label for="comment">Message</label>
                             {{ form_widget(formContact.message, {'attr': {'class': 'form-control text', 'rows': '14'}}) }}
+                            {{ form_errors(formContact.message) }}
                         </div>
                     </div>
                     <!-- Submit button-->
