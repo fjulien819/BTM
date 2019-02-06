@@ -27,39 +27,37 @@
                         <div class="col-6 livingunder"></div>
                     </div>
                     <form>
+                    {{ form_start(formContact) }}
                         <!-- Firstname and name inputs-->
                         <div class="form-group row namerow">
                             <div class="col-6">
-                                <input class="form-control" id="inputFirstName" placeholder="Votre prénom" type="text"></div>
+                                {{ form_widget(formContact.name, {'attr': {'class': 'form-control'}}) }}
+                            </div>
                             <div class="col-6">
-                                <input class="form-control" id="inputName" placeholder="Votre nom" type="text"></div>
+                                {{ form_widget(formContact.lastName, {'attr': {'class': 'form-control'}}) }}
+                            </div>
                         </div>
                         <!-- Email input -->
                         <div class="form-group row emailrow">
                             <div class="col-12">
-                                <input class="form-control" id="inputEmail" placeholder="Votre email" type="email"></div>
+                                {{ form_widget(formContact.email, {'attr': {'class': 'form-control'}}) }}
+                            </div>
                         </div>
                         <!-- Message subject -->
-                        <label for="selectcustom" class="col-form-label">Objet de votre message</label>
-                        <select class="custom-select" id="#selectcustom">
-                            <option selected>Choisissez le sujet approprié</option>
-                            <option value="1">Demande d'information</option>
-                            <option value="2">Demande de devis</option>
-                            <option value="3">Autre sujet</option>
-                        </select>
+                        <label for="selectcustom">Objet de votre message</label>
+                        {{ form_widget(formContact.object, {'attr': {'class': 'custom-select'}}) }}
 
-                        <!-- RGPD for big screens-->
+                        <!-- RGPD -->
                         <div class="form-group rgpdrow row col-sm" style="padding-right: 0">
                             <div class="col-sm checkpart">
                                 <div class="form-check">
-                                    <input class="form-check-input" id="gridCheck1" type="checkbox">
+                                    {{ form_widget(formContact.rgpd, {'attr': {'class': 'form-check-input'}}) }}
                                     <label class="form-check-label" for="gridCheck1">
                                         En soumettant ce formulaire, j'accepte que les informations saisies soient
                                         exploitées dans le cadre de la demande de contact ou de devis, ainsi que de la
                                         relation commerciale qui peut en découler.
                                     </label>
                                 </div>
-                                {# <hr class="underformcheck"> #}
                             </div>
                         </div>
                 </div>
@@ -70,43 +68,20 @@
                     <div class="message">
                         <div class="form-group messzone">
                             <label for="comment">Message</label>
-                            <textarea class="form-control text" id="comment" placeholder="Ecrivez votre texte ici..."
-                                rows="14"></textarea>
+                            {{ form_widget(formContact.message, {'attr': {'class': 'form-control text', 'rows': '14'}}) }}
                         </div>
                     </div>
                     <!-- Submit button-->
                     <div class="form-group row submitline" style="margin-bottom: 0">
                         <div class="col-12 submitbutton" style="padding-left: 1rem; padding-right: 0;">
-                            <button type="submit" class="btn btn-block text-uppercase" style="height: 3.125rem;">Envoyer votre message
-                            </button>
+                            <input type="submit" class="btn btn-block text-uppercase" style="height: 3.125rem">
                         </div>
                     </div>
                 </div>
+                {{ form_end(formContact) }}
                 </form>
             </div>
         </div>
     </div>
-
-
-
-
-    {# Formulaire de contact #}
-    {# {{ form_start(formContact) }}
-
-        {{ form_row(formContact.name) }}
-
-        {{ form_row(formContact.lastName) }}
-
-        {{ form_row(formContact.email) }}
-
-        {{ form_row(formContact.object) }}
-
-        {{ form_row(formContact.message) }}
-
-        {{ form_widget(formContact.rgpd) }}
-        {{ form_label(formContact.rgpd) }}
-
-        <input type="submit">
-    {{ form_end(formContact) }} #}
 
 {% endblock %}
