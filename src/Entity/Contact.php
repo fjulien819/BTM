@@ -67,6 +67,29 @@ class Contact
      */
     private $rgpd;
 
+    /**
+     * @Assert\Type("string", message="La valeur {{ value }} n'est pas un {{ type }} valide")
+     */
+    private $offer;
+
+    /**
+     * @return mixed
+     */
+    public function getOffer()
+    {
+        return $this->offer;
+    }
+
+    /**
+     * @param mixed $offer
+     */
+    public function setOffer($offer): void
+    {
+        $this->offer = $offer;
+    }
+
+
+
 
     public function getName(): ?string
     {
@@ -139,4 +162,5 @@ class Contact
 
         return $this;
     }
+
 }
