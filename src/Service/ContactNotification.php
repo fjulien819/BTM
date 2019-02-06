@@ -48,8 +48,9 @@ class ContactNotification
             ->setBody($this->renderer->render('emails/contact_notification.html.twig', [
                 'message' => $contact->getMessage(),
                 'prenom' => $contact->getName(),
-                'nom' => $contact->getLastName()
-
+                'nom' => $contact->getLastName(),
+                'email' => $contact->getEmail(),
+                'offre' => $contact->getoffer()
             ]), 'text/html');
 
         return  $this->mailer->send($message);

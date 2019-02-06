@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -47,6 +48,8 @@ class ContactType extends AbstractType
             ->add('rgpd', CheckboxType::class, [
                 'label' => 'En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées dans le cadre de la demande de contact ou de devis, ainsi que de la relation commerciale qui peut en découler.'
             ])
+
+            ->add('offer', HiddenType::class);
         ;
     }
 

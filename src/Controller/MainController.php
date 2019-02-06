@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Category;
+use App\Entity\Contact;
 use App\Entity\Post;
 use App\Form\ContactType;
 use App\Repository\PostRepository;
@@ -112,7 +113,13 @@ class MainController extends AbstractController
      */
     public function contact(Request $request, ContactNotification $contactNotification)
     {
-        $form = $this->createForm(ContactType::class);
+
+        $contact = new Contact();
+
+        $contact->setOffer($request->query->get("offer"));
+
+        $form = $this->createForm(ContactType::class, $contact);
+
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid())
