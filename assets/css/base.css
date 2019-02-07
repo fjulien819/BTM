@@ -8,33 +8,34 @@ body {
     background-color: #F4F4F4;
 }
 
-
 /* Up button */
 
-.cRetour {
-    border-radius: 0.1875rem;
+#myBtn {
+    border-radius: 0;
     padding: 10px 13px 7px 13px;
     font-size: 0.9375rem;
     text-align: center;
     color: #fff;
-    background: #68faa5;
+    background: #68faa580;
     z-index: 99999;
-    transition: all ease-in 0.2s;
     position: fixed;
     cursor: pointer;
     bottom: 10em;
     right: 1.25rem;
-    display: none;
 }
 
-.cRetour:before {
+#myBtn:before {
     content: url("/build/img/chevron-bl-16.png");
 }
 
-.cRetour:hover {
-    background: #68faa5;
-    transition: all ease-in 0.2s;
+#myBtn:hover {
+    background: #68faa5 ;
 }
+#myBtn:focus {
+    border-color: #68faa5;
+    box-shadow: none;
+}
+
 
 
 /* Cookie alert
