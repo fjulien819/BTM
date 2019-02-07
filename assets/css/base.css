@@ -308,7 +308,6 @@ body {
 
 .footer-social a {
     margin-left: 20px;
-    /* color: #777; */
     border: 0;
 }
 
@@ -484,7 +483,6 @@ body {
     .footer-social a {
         margin: 0 10px;
     }
-
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -529,8 +527,6 @@ body {
     .fab {
         margin-bottom: 1rem;
     }
-
-
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -545,5 +541,4 @@ body {
     .footer-top {
         padding: 40px 0;
     }
-
 }

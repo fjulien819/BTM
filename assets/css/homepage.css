@@ -1,10 +1,22 @@
 .mt-container-body {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .home {
     padding: 3.4rem 1.875rem 5rem 1.875rem;
-    background: #828282;
+    background: #F4F4F4;
+}
+
+p,
+h1,
+h2 {
+    color: #000000;
+}
+
+.importanttext {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 section {
@@ -49,15 +61,15 @@ section .overlay {
 }
 
 .mobileh1 {
-    font-family: 'ethnocentricregular';
+    font-family: 'ethnocentricregular', Arial, sans-serif;
     font-size: 1.25rem;
     color: #000000;
     margin-bottom: 2.1875rem;
-    margin-top: 3.875rem;
+    margin-top: 1.875rem;
 }
 
 .videotitle {
-    font-family: 'ethnocentricregular';
+    font-family: 'ethnocentricregular', Arial, sans-serif;
     font-size: 3rem;
     color: #ffffff;
 }
@@ -68,7 +80,7 @@ section .overlay {
 
 .uppart,
 .bottompart {
-    font-family: 'robotoregular', Arial, sans-serif;
+    font-family: 'robotoregular', sans-serif;
     color: #000000;
 }
 
@@ -100,8 +112,8 @@ p.uppart {
 }
 
 .secondarytitle {
-    font-family: 'robotoregular', Arial, sans-serif;
-    font-size: 1.25rem;
+    font-family: 'ethnocentric', Arial, sans-serif;
+    font-size: 1rem;
     color: #000000;
     margin-bottom: 3rem;
 }
@@ -115,8 +127,7 @@ p.uppart {
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
-.actionbtn:hover,
-    {
+.actionbtn:hover {
     color: #F2F2F2;
 }
 
@@ -127,6 +138,10 @@ p.uppart {
 
 div.col-6.col-md-3.confimg {
     margin-bottom: 0;
+}
+
+.approchetext p {
+    padding-left: 5rem;
 }
 
 

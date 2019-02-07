@@ -1,6 +1,7 @@
 .mentionsleg {
     margin-top: 8.4rem;
-    margin-bottom: 12rem;
+    margin-bottom: 3rem;
+    background-color: #F4F4F4;
 }
 
 h1 {
@@ -40,27 +41,23 @@ a .actionbtn:hover {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .mentionsleg {
-        margin-bottom: 13.5rem;
+        margin-bottom: 2.5rem;
     }
 }
 
 /* Small devices (landscape phones, less than 768px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    /* .mentionsleg {
-        margin-bottom: 16.5rem;
-    } */
-}
+@media (min-width: 576px) and (max-width: 767.98px) {}
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .mentionsleg {
-        margin-bottom: 10rem;
+        margin-bottom: 3rem;
     }
 }
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .mentionsleg {
-        margin-bottom: 17.125rem;
+        margin-bottom: 3.2rem;
     }
 }

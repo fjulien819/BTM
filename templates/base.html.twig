@@ -147,18 +147,19 @@
                     <div class="row">
                         {# Info about the agency #}
                         <div class="col-md-4 col-lg-4 footer-about">
-                            <img class="logo-footer" src="{{ asset('build/img/logoblanc.png') }}" alt="Logo du footer sur fond blanc"
-                                data-at2x="assets/img/logo.png">
-                            <p>
+                            <a class="logo-footer" href="{{path('homepage')}} ">
+                                <img src="{{ asset('build/img/logoblanc.png') }}" alt="logo du footer sur fond blanc" style="max-height:4rem">
+                            </a>
+                            <p style="color: #ffffff">
                                 Nous aimons partager notre expertise afin de répondre au mieux aux attentes de nos clients
                                 et prospects.
                             </p>
-                            <p>Notre équipe<a href="{{path('expertise')}}#teampart" style="color: #fa7268"> ici</a></p>
+                            <p style="color: #ffffff">Notre équipe<a href="{{path('expertise')}}#teampart" style="color: #fa7268"> ici</a></p>
                         </div>
                         {# Contact zone #}
                         <div class="col-md-4 col-lg-3 offset-lg-1 d-flex justify-content-center flex-column footer-contact">
                             <h3>Contact</h3>
-                            <p><i class="fas fa-map-marker-alt"></i>BP 238 - Théhillac - Cedex</p>
+                            <p style="color: #ffffff"><i class="fas fa-map-marker-alt"></i>BP 238 - Théhillac - Cedex</p>
                             <p><i class="fas fa-phone"></i><a href="tel:+33 5 54 67 81 42" style="color: #ffffff">+33 5 54
                                     67 81 42</a></p>
                             <p><i class="fas fa-envelope"></i><a href="mailto:contact@backtomobile.fr" style="color: #ffffff">contact@backtomobile.fr</a></p>

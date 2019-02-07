@@ -6,6 +6,7 @@
     height: 100%;
     width: 100%;
     margin-top: 0 !important;
+    margin-bottom: 0;
 }
 
 .contactcontainer {
@@ -93,7 +94,7 @@ body>div>div>div>div:nth-child(1)>form>label {
     font-size: 0.97rem;
 }
 
-.custom-control-label::after {
+/* .custom-control-label::after {
     position: absolute;
     top: .25rem;
     left: -1.5rem;
@@ -105,7 +106,7 @@ body>div>div>div>div:nth-child(1)>form>label {
     background-position: center center;
     background-size: 50% 50%;
     border-radius: none;
-}
+} */
 
 input[type=checkbox],
 input[type=radio] {
