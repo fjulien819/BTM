@@ -1,386 +1,274 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <html lang="fr">
 
-        <!-- Title -->
-        <title>{% block title %}Back to Mobile - {% endblock %}</title>
+<head>
+    <meta charset="UTF-8">
+    <html lang="fr">
 
-        <!-- Meta -->
-        <meta name="description" content="{% block metaDescription %} Site vitrine de l'agence de communication web Back To Mobile {% endblock %}" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Bootstrap & Fontawesome CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+    <!-- Title -->
+    <title>{% block title %}Back to Mobile - {% endblock %}</title>
+
+    <!-- Meta -->
+    <meta name="description" content="{% block metaDescription %} Site vitrine de l'agence de communication web Back To Mobile {% endblock %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap & Fontawesome CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
         crossorigin="anonymous">
 
-        <!-- Favicon -->
-        <link rel="icon" href="{{ asset('build/img/favicon.png') }}" type="image/png">
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('build/img/favicon.png') }}" type="image/png">
 
-        <!-- Stylesheet -->
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('base') }}
-        {% endblock %}
+    <!-- Stylesheet -->
+    {% block stylesheets %}
+    {{ encore_entry_link_tags('base') }}
+    {% endblock %}
 
-        <!-- Chat script. Ne pas oublier mais il faut adresse site en ligne pour ça -->
-    </head>
+    <!-- Chat script. Ne pas oublier mais il faut adresse site en ligne pour ça -->
+</head>
 
 
-    <body>
+<body>
 
-        {% block header %}
-            <header>
-                <!-- Navbar and button -->
-                <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-                    <div class="col-8 offset-2 brandpart d-flex justify-content-center">
-                        <a class="navbar-brand" href="{{path('homepage')}} ">
-                            <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:5.625rem">
-                        </a>
-                    </div>
-                    <div class="col-2 d-flex flex-column aroundbrand">
-                        <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal' type='button'
-                            style="padding-bottom: 0; background: none;">
-                            <span class='sr-only'>Ouvre la navigation</span>
-                            <img src="{{ asset('build/img/menusquaresblanc50.png') }}" alt="logo" style="max-width:2.4rem">
-                        </button>
-                        <p class="menutext mx-auto">Menu</p>
-                    </div>
-                </nav>
-                <!-- Modal menu -->
-                <div class="modal" id="modalNavigation" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-full" role="document">
-                        <div class="modal-content">
-                            <!-- Header part -->
-                            <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-                                <div class="col-8 offset-2 brandpart d-flex justify-content-center">
-                                    <a class="navbar-brand" href="{{path('homepage')}} ">
-                                        <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:5.625rem">
-                                    </a>
-                                </div>
-                                <div class="col-2 d-flex flex-column aroundbrand">
-                                    <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal'
-                                        type='button' style="padding-bottom: 0; background: none;">
-                                        <span class='sr-only'>Ouvre la navigation</span>
-                                        <img src="{{ asset('build/img/xcloseblanc50.png') }}" alt="logo" style="max-width:1.6rem">
-                                    </button>
-                                    <p class="menutext mx-auto">Menu</p>
-                                </div>
-                            </div>
-                            <div class="modal-body d-flex flex-row">
-                                <!-- Left column -->
-                                <div class="col-lg-4 leftgroup d-flex flex-column">
-                                    <div class="col-12 blocks pwaimg d-flex justify-content-center" style="max-height: 50%">
-                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('expertise')}}#pwa">Les
-                                            pwa</a>
-                                    </div>
-                                    <div class="col-12 blocks actuimg d-flex justify-content-center" style="max-height: 50%;">
-                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('posts', {'url_page_post': 'blog'})}}">Dernières
-                                            <br>actualités</a>
-                                    </div>
-                                </div>
-                                <!-- Central column -->
-                                <div class="col-lg-4 middlegroup d-flex flex-column">
-                                    <div class="col-12 blocks formaimg d-flex justify-content-center" style="max-height: 50%">
-                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('service')}}#formation">Nos
-                                            <br>formations</a>
-                                    </div>
-                                    <div class="col-12 blocks confiancemg d-flex justify-content-center" style="max-height: 50%">
-                                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('homepage')}}#faitconfiance">Les
-                                            entreprises qui <br>nous font confiance</a>
-                                    </div>
-                                </div>
-                                <!-- Right column -->
-                                <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
-                                <div class="col-12 col-sm-8 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
-                                    <div class="col-12 blocks groupblock d-flex flex-column justify-content-center">
-                                        <ul class="navbar-nav navmenu justify-content-center text-uppercase text-right">
-                                            <li class="nav-item itemheader">
-                                                <a class="nav-link indexlink" href="{{path('homepage')}}">Accueil</a>
-                                            </li>
-                                            <li class="nav-item itemheader">
-                                                <a class="nav-link servicelink" href="{{path('service')}}">A votre service</a>
-                                            </li>
-                                            <li class="nav-item itemheader">
-                                                <a class="nav-link expertiseslink" href="{{path('expertise')}}">Notre expertise</a>
-                                            </li>
-                                            <li class="nav-item itemheader">
-                                                <a class="nav-link bloglink" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
-                                            </li>
-                                            <li class="nav-item itemheader">
-                                                <a class="nav-link contactlink" href="{{path('contact')}}">Contact / Devis</a>
-                                            </li>
-                                            <br>
-                                            <hr style="border:3px solid#68faa5; width: 80%">
-                                            <li class="navbar-nav navicons mx-auto d-flex flex-row align-items-center justify-content-between"
-                                                style="width: 80%">
-                                                <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
-                                                <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
-                                                <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
-                                                <a href="https://twitter.com/" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
-                            </div>
+    {% block header %}
+    <header>
+        <!-- Navbar and button -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="col-8 offset-2 brandpart d-flex justify-content-center">
+                <a class="navbar-brand" href="{{path('homepage')}} ">
+                    <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:5.625rem">
+                </a>
+            </div>
+            <div class="col-2 d-flex flex-column aroundbrand">
+                <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal' type='button'
+                    style="padding-bottom: 0; background: none;">
+                    <span class='sr-only'>Ouvre la navigation</span>
+                    <img src="{{ asset('build/img/menusquaresblanc50.png') }}" alt="logo" style="max-width:2.4rem">
+                </button>
+                <p class="menutext mx-auto">Menu</p>
+            </div>
+        </nav>
+        <!-- Modal menu -->
+        <div class="modal" id="modalNavigation" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-full" role="document">
+                <div class="modal-content">
+                    <!-- Header part -->
+                    <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                        <div class="col-8 offset-2 brandpart d-flex justify-content-center">
+                            <a class="navbar-brand" href="{{path('homepage')}} ">
+                                <img src="{{ asset('build/img/brandlogo.png') }}" alt="logo" style="max-width:5.625rem">
+                            </a>
+                        </div>
+                        <div class="col-2 d-flex flex-column aroundbrand">
+                            <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal'
+                                type='button' style="padding-bottom: 0; background: none;">
+                                <span class='sr-only'>Ouvre la navigation</span>
+                                <img src="{{ asset('build/img/xcloseblanc50.png') }}" alt="logo" style="max-width:1.6rem">
+                            </button>
+                            <p class="menutext mx-auto">Menu</p>
                         </div>
                     </div>
-                </div>
-            </header>
-        {% endblock %}
-
-
-        <div class="mt-container-body">
-
-            {% block body %}
-            {% endblock %}
-
-        </div>
-
-
-        {% block footer %}
-            <!-- Footer for large screens -->
-            <footer class="footer d-none d-md-block d-lg-block d-xl-block">
-                <div class="container-fluid footerzone">
-                    <div class="d-flex flex-row align-items-center">
-                        <!-- 1. Address -->
-                        <address class="col-2 addressblock flex-column d-flex align-items-stretch">
-                            <!-- <p class="text-left" style="margin-bottom: 0.5rem; color: #000000"> -->
-                            <p class="agencename" style="margin-bottom: 0">Back to Mobile</p>
-                            <p style="margin-bottom: 0"> BP 238</p>
-                            <p style="margin-bottom: 0"> 56130 Théhillac- Cedex 9</p>
-                            <a href="tel:+33 5 54 67 81 42" style="color: #000000">Tél : +33 5 54 67 81 42</a>
-                            <a href="mailto:contact@backtomobile.fr" style="color: #000000">contact@backtomobile.fr</a>
-                        </address>
-                        <!-- 2. Navigation -->
-                        <div class="col-2 navigation d-flex align-content-stretch justify-content-center">
-                            <ul class="navbar-nav text-uppercase nav navmenu" style="padding-left: 1rem">
-                                <li class="nav-item">
-                                    <a class="nav-link-footer" href="{{path('homepage')}}">Accueil</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link-footer" href="{{path('service')}}">A votre service</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link-footer" href="{{path('expertise')}}">Notre expertise</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link-footer" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link-footer" href="{{path('contact')}}">Contact/Devis</a>
-                                </li>
-                            </ul>
-                        </div>                       
-                        <!-- 3. Legal part -->
-                        <div class="col-4 legalpart d-flex flex-wrap align-content-around">
-                            <div class="col-12 d-flex flex-wrap align-items-center" style="min-height: 80%; padding-top: 1.25rem; padding-left: 0; padding-right: 0">
-                                <div class="col-12 text-center logoline" style="margin-bottom: 0.8rem">
-                                    <a class="navbar-brand" href="{{path('homepage')}} ">
-                                        <!-- <img src="img/delorean-time-machine.png" alt="logo" style="max-width:6.875rem"> -->
-                                        <img src="{{ asset('build/img/delorean-time-machine.png') }}" alt="Delorean" style="max-height:6.875rem">
-                                    </a>
-                                </div>
-                                <div class="col-6 condiline d-flex justify-content-end">
-                                    <a href="{{path('legalNotice')}} " style="color: #000000">
-                                        <p class="conditions" style="margin-bottom: 0.5rem">Mentions légales</p>
-                                    </a>
-                                </div>
-                                <div class="col-6 rgpdline d-flex" style="margin-bottom: 0.5rem;">
-                                    <a href="{{path('legalNotice')}}#rgpdf" style="color: #000000">
-                                        <p class="rg" style="margin-bottom: 0">RGPD</p>
-                                    </a>
-                                </div>
+                    <div class="modal-body d-flex flex-row">
+                        <!-- Left column -->
+                        <div class="col-lg-4 leftgroup d-flex flex-column">
+                            <div class="col-12 blocks pwaimg d-flex justify-content-center" style="max-height: 50%">
+                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('expertise')}}#pwa">Les
+                                    pwa</a>
                             </div>
-                            <div class="col-12 d-flex align-items-end text-center" style="padding-left:0; padding-right: 0; min-height: 20%">
-                                <p class="copyright text-center">{{'&'}}copy;2019 Copyright Back To
-                                    Mobile - Tous droits réservés</p>
+                            <div class="col-12 blocks actuimg d-flex justify-content-center" style="max-height: 50%;">
+                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('posts', {'url_page_post': 'blog'})}}">Dernières
+                                    <br>actualités</a>
                             </div>
                         </div>
-                        <!-- 4. Call to action -->
-                        <div class="col-2 d-flex align-items-center callblock">
-                            <div class="cta-button">
-                                <a class="btn btn-lg btn-block text-uppercase ctbtn rounded-0" href="{{path('contact')}} " style="background: #fa7268; font-size: 1rem">Contactez-nous</a>
+                        <!-- Central column -->
+                        <div class="col-lg-4 middlegroup d-flex flex-column">
+                            <div class="col-12 blocks formaimg d-flex justify-content-center" style="max-height: 50%">
+                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('service')}}#formation">Nos
+                                    <br>formations</a>
+                            </div>
+                            <div class="col-12 blocks confiancemg d-flex justify-content-center" style="max-height: 50%">
+                                <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('homepage')}}#faitconfiance">Les
+                                    entreprises qui <br>nous font confiance</a>
                             </div>
                         </div>
-                        <!-- 5. Social icons -->
-                        <div class="col-2 socialpart" style="align-self: center">
-                            <ul class="navbar-nav footernavico d-flex flex-row justify-content-center">
-                                <li class="col-4 navlines">
-                                    <a href="https://fr-fr.facebook.com/" target="_blank">
-                                        <i class="fab fa-facebook-square fa-lg"></i>
-                                    </a>
-                                </li>
-                                <li class="col-4 navlines">
-                                    <a href="https://www.instagram.com/?hl=fr" target="_blank">
-                                        <i class="fab fa-instagram fa-lg"></i>
-                                    </a>
-                                </li>
-                                <li class="col-4 navlines">
-                                    <a href="https://fr.linkedin.com/" target="_blank">
-                                        <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
-                                    </a>
-                                </li>
-                                <li class="col-4 navlines">
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="fab fa-twitter fa-lg"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer> 
-
-
-            <!-- Footer for small screens -->
-            <footer class="footer d-block d-sm-block d-md-none">
-                <div class="container-fluid">
-                    <!-- First row -->
-                    <div class="row firstrow">
-                        <!-- 1. Navigation -->
-                        <div class="col-6 footercol" style="margin-top: 0.5rem">
-                            <div class="d-flex">
-                                <ul class="navbar-nav text-uppercase nav navmenu" style="border:none">
-                                    <li class="nav-item">
-                                        <a class="nav-link-footer" href="{{path('homepage')}}">Accueil</a>
+                        <!-- Right column -->
+                        <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
+                        <div class="col-12 col-sm-8 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
+                            <div class="col-12 blocks groupblock d-flex flex-column justify-content-center">
+                                <ul class="navbar-nav navmenu justify-content-center text-uppercase text-right">
+                                    <li class="nav-item itemheader">
+                                        <a class="nav-link indexlink" href="{{path('homepage')}}">Accueil</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link-footer" href="{{path('service')}}">A votre service</a>
+                                    <li class="nav-item itemheader">
+                                        <a class="nav-link servicelink" href="{{path('service')}}">A votre service</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link-footer" href="{{path('expertise')}}">Notre expertise</a>
+                                    <li class="nav-item itemheader">
+                                        <a class="nav-link expertiseslink" href="{{path('expertise')}}">Notre expertise</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link-footer" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
+                                    <li class="nav-item itemheader">
+                                        <a class="nav-link bloglink" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link-footer" href="{{path('contact')}}">Contact/Devis</a>
+                                    <li class="nav-item itemheader">
+                                        <a class="nav-link contactlink" href="{{path('contact')}}">Contact / Devis</a>
+                                    </li>
+                                    <br>
+                                    <hr style="border:3px solid#68faa5; width: 80%">
+                                    <li class="navbar-nav navicons mx-auto d-flex flex-row align-items-center justify-content-between"
+                                        style="width: 80%">
+                                        <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
+                                        <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
+                                        <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
+                                        <a href="https://twitter.com/" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- 2. Call to action & social icons -->
-                        <div class="col-6 footercol d-flex align-items-center" style="flex-direction: column">
-                            <div class="col-9 offset-3 offpart d-flex align-items-center justify-content-center">
-                                <div>
-                                    <a class="btn ctbtn rounded-0" href="https://www.google.fr/" style="background: #666666">Contactez-nous</a>
-                                </div>
-                            </div>
-
-                            <div class="col-9 offset-3 navoff" style="align-self:center">
-                                <ul class="navbar-nav footernavico d-flex flex-row justify-content-center">
-                                    <li class="col-4 navlines">
-                                        <a href="https://fr-fr.facebook.com/" target="_blank">
-                                            <i class="fab fa-facebook-square fa-lg"></i>
-                                        </a>
-                                    </li>
-                                    <li class="col-4 navlines">
-                                        <a href="https://www.instagram.com/?hl=fr" target="_blank">
-                                            <i class="fab fa-instagram fa-lg"></i>
-                                        </a>
-                                    </li>
-                                    <li class="col-4 navlines">
-                                        <a href="https://fr.linkedin.com/" target="_blank">
-                                            <i class="fab fa-linkedin fa-lg"></i>
-                                        </a>
-                                    </li>
-                                    <li class="col-4 navlines">
-                                        <a href="https://twitter.com/" target="_blank">
-                                            <i class="fab fa-twitter fa-lg"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
                     </div>
-                    <hr class="separation" style="border:1px solid rgb(250, 114, 104); margin-bottom: 0.5rem; margin-top: 0.5rem">
-                    <!-- Second row -->
-                    <div class="row secondrow">
-                        <!-- 3. Address -->
-                        <div class="col-6 footercol">
-                            <div class="col-12 rightcolu">
-                                <p class="text-left" style="margin-bottom: 0.5rem">
-                                    Back to Mobile
-                                    <br>
-                                    BP 238
-                                    <br>
-                                    56130 Théhillac- Cedex 9
-                                    <br>
-                                    Tél : +33 5 54 67 81 42
-                                    <br>
-                                    contact@backtomobile.fr
-                                </p>
-                            </div>
-                        </div>
-                        <!-- 3. Legal part -->
-                        <div class="col-6 footercol">
-                            <a class="col-12 text-right rightcolu" href="{{path('legalNotice')}}">
-                                <p class="conditions">Conditions générales
-                                    d'utilisation</p>
-                            </a>
-                            <a class="col-12 text-right rightcolu" href="{{path('legalNotice')}}#rgpdf">
-                                <p style="margin-bottom: 0.5rem">RGPD</p>
-                            </a>
-                            <div class="col-12 text-right rightcolu">
-                                <p style="margin-bottom: 0.5rem"><strong>{{'&'}}copy;2019 Copyright Back To Mobile</strong>
-                                    <br>
-                                    Tous droits réservés
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        {% endblock %}
-
-
-            <!-- Cookie alert message VERIFIER QUE MARCHE -->
-            <div class="alert alert-dismissible text-center cookiealert" role="alert">
-                <div class="cookiealert-container">
-                    <b>Aimez vous les cookies ?</b> &#x1F36A; Nous utilisons des cookies pour vous assurer la meilleure
-                    expérience sur notre site.
-                    <a href="{{path('legalNotice')}}#rgpdf" target="_blank">En savoir plus</a>
-                    <button type="button" class="btn btn-sm acceptcookies" aria-label="Close">
-                        J'accepte
-                    </button>
                 </div>
             </div>
-            <!-- Up button -->
-            <div class="cRetour"></div>
+        </div>
+    </header>
+    {% endblock %}
 
 
-        <!-- JS block  -->
-        {% block javascripts %}
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            {{ encore_entry_script_tags('base') }}
-            {{ encore_entry_script_tags('cookie') }} 
-
-            <!-- Up button script VERIFIER QUE MARCHE-->
-            {# <script>
-                jQuery(document).ready(function () {
-                    var duration = 500;
-                    jQuery(window).scroll(function () {
-                        if (jQuery(this).scrollTop() > 100) {
-                            jQuery('.cRetour').fadeIn(duration);
-                        } else {
-                            jQuery('.cRetour').fadeOut(duration);
-                        }
-                    });
-                    jQuery('.cRetour').click(function (event) {
-                        event.preventDefault();
-                        jQuery('html, body').animate({
-                            scrollTop: 0
-                        }, duration);
-                        return false;
-                    })
-                });
-            </script> #}
+    <div class="mt-container-body">
+        {% block body %}
         {% endblock %}
+    </div>
 
-    </body>
+
+    {% block footer %}
+    <footer class="footerglobal">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    {# Info about the agency #}
+                    <div class="col-md-4 col-lg-4 footer-about">
+                        <img class="logo-footer" src="{{ asset('build/img/logoblanc.png') }}" alt="Logo du footer sur fond blanc"
+                            data-at2x="assets/img/logo.png">
+                        <p>
+                            Nous aimons partager notre expertise afin de répondre au mieux aux attentes de nos clients
+                            et prospects.
+                        </p>
+                        <p>Notre équipe<a href="{{path('expertise')}}#teampart" style="color: #fa7268"> ici</a></p>
+                    </div>
+                    {# Contact zone #}
+                    <div class="col-md-4 col-lg-3 offset-lg-1 d-flex justify-content-center flex-column footer-contact">
+                        <h3>Contact</h3>
+                        <p><i class="fas fa-map-marker-alt"></i>BP 238 - Théhillac - Cedex</p>
+                        <p><i class="fas fa-phone"></i><a href="tel:+33 5 54 67 81 42" style="color: #ffffff">+33 5 54
+                                67 81 42</a></p>
+                        <p><i class="fas fa-envelope"></i><a href="mailto:contact@backtomobile.fr" style="color: #ffffff">contact@backtomobile.fr</a></p>
+                    </div>
+                    {# Navigation links #}
+                    <div class="col-md-4 col-lg-3 offset-lg-1 d-flex justify-content-center footer-links">
+                        <ul class="navbar-nav justify-content-center" style="border: none">
+                            <li class="nav-item">
+                                <a href="{{path('homepage')}}">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{path('service')}}">A votre service</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="{{path('expertise')}}">Notre expertise</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{path('contact')}}">Contact / Devis</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Bottom part #}
+        <div class="footer-bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    {# Social links #}
+                    <div class="col-md-3 footer-social text-center">
+                        <a href="https://fr-fr.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-square fa-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/?hl=fr" target="_blank">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://fr.linkedin.com/" target="_blank">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                    </div>
+                    {# Legal informations #}
+                    <div class="col-md-6 footer-copyright text-center">
+                        <p>{{'&'}}copy;2019 Copyright Back To
+                            Mobile - Tous droits réservés</p>
+                    </div>
+                    <div class="col-md-3 footer-mentions text-center">
+                        <a href="{{path('legalNotice')}}">Mentions légales</a>
+                        <a style="padding-left: 2rem" href="{{path('legalNotice')}}#rgpdf">RPGD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+
+
+    <!-- Cookie alert message VERIFIER QUE MARCHE -->
+    <div class="alert alert-dismissible text-center cookiealert" role="alert">
+        <div class="cookiealert-container">
+            <b>Aimez vous les cookies ?</b> &#x1F36A; Nous utilisons des cookies pour vous assurer la meilleure
+            expérience sur notre site.
+            <a href="{{path('legalNotice')}}#rgpdf" target="_blank">En savoir plus</a>
+            <button type="button" class="btn btn-sm acceptcookies" aria-label="Close">
+                J'accepte
+            </button>
+        </div>
+    </div>
+    <!-- Up button -->
+    <div class="cRetour"></div>
+
+
+    <!-- JS block  -->
+    {% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    {{ encore_entry_script_tags('base') }}
+    {{ encore_entry_script_tags('cookie') }}
+
+    <!-- Up button script VERIFIER QUE MARCHE-->
+    {# <script>
+        jQuery(document).ready(function () {
+            var duration = 500;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > 100) {
+                    jQuery('.cRetour').fadeIn(duration);
+                } else {
+                    jQuery('.cRetour').fadeOut(duration);
+                }
+            });
+            jQuery('.cRetour').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({
+                    scrollTop: 0
+                }, duration);
+                return false;
+            })
+        });
+    </script> #}
+    {% endblock %}
+
+</body>
+
 </html>

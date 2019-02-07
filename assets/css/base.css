@@ -243,128 +243,111 @@ body {
 }
 
 
-/* Footer big screens */
+/* Footer */
 
-html {
-    position: relative;
-    min-height: 100%;
+.footerglobal {
+    background: url("/build/img/groupemarty.jpg") center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #fa7268;
-    border-top: 0.1875rem #ffffff solid;
+.footer-top {
+    padding: 60px 0;
+    text-align: left;
+    color: #fff;
 }
 
-.footerzone {
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-}
-
-.agencename {
-    font-size: 0.9rem;
-}
-
-.addressblock p {
-    margin-bottom: 0;
-}
-
-.addressblock {
-    color: #000000;
-}
-
-.addresstext {
+.footer-top h3 {
+    padding-bottom: 10px;
+    color: #fff;
+    font-family: 'Ethnocentric';
     font-size: 1rem;
-    color: #000000;
 }
 
-.copyright,
-.nav-link-footer {
-    font-size: 0.875rem;
-    color: #000000;
+.footer-about img.logo-footer {
+    max-width: 74px;
+    margin-top: 0;
+    margin-bottom: 18px;
 }
 
-.addressblock {
-    padding-left: 0;
-    padding-right: 0;
-    margin-bottom: 0;
+.footer-contact p {
+    word-wrap: break-word;
 }
 
-.addresstext {
-    margin-bottom: 0;
-}
-
-.arrowimage {
-    height: 1.4rem;
-}
-
-.nav-link-footer,
-.agencename {
-    font-family: 'ethnocentricregular', Arial, sans-serif;
-}
-
-.condiline {
-    padding-right: 0;
-}
-
-.cta-button {
-    width: 11.0625rem;
-    color: #000000;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
-}
-
-.cta-button a:hover {
-    color: #ffffff !important;
-}
-
-.ctbtn {
-    height: 3.3125rem;
-    line-height: 2rem;
+.footer-contact i {
+    padding-right: 10px;
+    font-size: 18px;
     color: #ffffff;
 }
 
-.navlines i {
+.footer-links a {
+    color: #fff;
+    border: 0;
+    font-family: 'Ethnocentric';
+    line-height: 2.5;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding: 2rem 0 2rem 0;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
+}
+
+.footer-social {
+    padding-top: 3px;
+    text-align: right;
+}
+
+.footer-social a {
+    margin-left: 20px;
+    /* color: #777; */
+    border: 0;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
     color: #ffffff;
-    font-size: 1.8125rem;
+    border: 0;
 }
 
-.footernavico {
-    width: 78%;
-    margin-left: 0.6875rem;
+.footer-social i {
+    font-size: 27px;
+    vertical-align: middle;
 }
 
-.addressblock {
-    -ms-flex: 0 0 15%;
-    flex: 0 0 15%;
-    max-width: 15%;
+.footer-copyright {
+    padding-top: 5px;
 }
 
-.navigation {
-    -ms-flex: 0 0 19%;
-    flex: 0 0 19%;
-    max-width: 19%;
-    height: 11.25rem;
+.footer-copyright p {
+    color: #fff;
+    border: 0;
+    margin-bottom: 0;
 }
 
-.legalpart {
-    -ms-flex: 0 0 32%;
-    flex: 0 0 32%;
-    max-width: 32%;
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+    color: #ffffff;
+    border: 0;
 }
 
-.callblock {
-    -ms-flex: 0 0 17.5%;
-    flex: 0 0 17.5%;
-    max-width: 17.5%;
+.footer-social a {
+    color: white;
 }
 
-.socialpart {
-    -ms-flex: 0 0 16.5%;
-    flex: 0 0 16.5%;
-    max-width: 16.5%;
-    padding-left: 1.875rem;
+.footer-mentions a {
+    color: #ffffff;
+}
+
+.navbar-nav {
+    text-align: left;
 }
 
 
@@ -411,45 +394,23 @@ html {
         padding-left: 2rem;
     }
 
+    /* Footer */
 
-    /* Footer for small screens */
-
-    .firstrow,
-    .secondrow {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        font-size: 0.625rem;
+    .footer-about {
+        margin-bottom: 1.3rem;
     }
 
-    .ctbtn {
-        width: 6.875rem;
-        height: 1.9375rem;
-        font-size: 0.625rem;
-        line-height: 1rem;
+    .footer-contact,
+    .footer-social {
+        margin-bottom: 1rem;
     }
 
-    .nav-link-footer {
-        font-size: 0.625rem;
+    .navbar-nav {
+        text-align: center;
     }
 
-    .footercol,
-    .rightcolu {
-        padding-left: 0;
-        padding-right: 0;
-        color: #000000;
-        margin-bottom: 0;
-    }
-
-    .navlines i {
-        font-size: 1.1875rem;
-    }
-
-    .footernavico {
-        margin-left: 0;
-    }
-
-    .conditions {
-        margin-bottom: 0;
+    .footer-copyright {
+        margin-bottom: 0.8rem;
     }
 }
 
@@ -483,58 +444,46 @@ html {
         margin-bottom: -0.625rem;
     }
 
-    /* Footer for small screens */
+    /* Footer */
 
-    .firstrow,
-    .secondrow {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        font-size: 0.625rem;
+    .footer-about {
+        margin-bottom: 1.3rem;
     }
 
-    .ctbtn {
-        width: 6.875rem;
-        height: 1.9375rem;
-        font-size: 0.625rem;
-        line-height: 1rem;
+    .footer-contact,
+    .footer-social {
+        margin-bottom: 1rem;
     }
 
-    .nav-link-footer {
-        font-size: 0.625rem;
+    .navbar-nav {
+        text-align: center;
     }
 
-    .navmenu {
-        margin-bottom: 0;
+    .footer-copyright {
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .footer-top {
+        padding: 40px 0;
+        text-align: center;
     }
 
-    .footercol,
-    .rightcolu {
-        padding-left: 0;
-        padding-right: 0;
-        color: #000000;
-        margin-bottom: 0;
+    .footer-contact i {
+        padding-right: 5px;
     }
 
-    .navlines i {
-        font-size: 1.1875rem;
+    .footer-bottom,
+    .footer-social {
+        text-align: center;
     }
 
-    .offpart {
-        justify-content: flex-end !important;
+    .footer-social a {
+        margin: 0 10px;
     }
 
-    .navoff {
-        padding-left: 29%;
-    }
-
-    .footernavico {
-        margin-left: 0;
-        justify-content: space-between !important;
-    }
-
-    .conditions {
-        margin-bottom: 0;
-    }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -566,135 +515,34 @@ html {
         font-size: 1.5rem;
     }
 
-    /* Footer for large screens */
-    .footerzone {
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
+    /* Footer */
+
+    .footer-top {
+        padding: 40px 0;
     }
 
-    .footer img {
-        display: none;
+    .footer-contact i {
+        padding-right: 5px;
     }
 
-    .addressblock,
-    .legalpart,
-    .copyright {
-        font-size: 0.8125rem;
+    .fab {
+        margin-bottom: 1rem;
     }
 
-    .conditions {
-        text-align: center;
-    }
 
-    .nav-link-footer {
-        font-size: 0.75rem;
-    }
-
-    .logoline {
-        display: none;
-    }
-
-    .footernavico {
-        margin-left: -1.2875rem;
-    }
-
-    .cta-button {
-        width: 10.0625rem;
-    }
-
-    .ctbtn {
-        font-size: 0.875rem !important;
-    }
-
-    .addressblock {
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-
-    .navigation {
-        -ms-flex: 0 0 26%;
-        flex: 0 0 26%;
-        max-width: 26%;
-        padding-left: 0;
-    }
-
-    .legalpart {
-        -ms-flex: 0 0 32%;
-        flex: 0 0 32%;
-        max-width: 32%;
-        padding-left: 0;
-        padding-right: 1.875rem;
-    }
-
-    .callblock {
-        -ms-flex: 0 0 13%;
-        flex: 0 0 13%;
-        max-width: 13%;
-        padding-left: 0.3125rem;
-        margin-top: -2.5rem;
-    }
-
-    .socialpart {
-        -ms-flex: 0 0 9%;
-        flex: 0 0 9%;
-        max-width: 9%;
-        padding-left: 0;
-        margin-left: -1.8rem;
-        margin-bottom: -4.6rem;
-    }
 }
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
-    /* header */
+    /* Header */
     .aroundbrand {
         padding-left: 2.875rem;
     }
 
-    /* Footer for large screens*/
-    .footerzone {
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
+    /* Footer */
+    .footer-top {
+        padding: 40px 0;
     }
 
-    .addresstext,
-    .copyright,
-    .conditions,
-    .rg {
-        font-size: 0.9rem;
-    }
-
-    /* .condiline,
-    .rgpdline {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    } */
-
-    .bottomtext {
-        padding-left: 1.25rem;
-    }
-
-    .navigation {
-        padding-left: 3rem;
-    }
-
-    .nav-link-footer {
-        font-size: 0.8rem;
-    }
-
-    .callblock {
-        padding-left: 0;
-    }
-
-    .footernavico {
-        width: 90%;
-        margin-left: 0;
-    }
-
-    .fabmenu {
-        font-size: 1.3rem;
-    }
 }
