@@ -8,6 +8,14 @@ body {
     background-color: #F4F4F4;
 }
 
+u,
+strong {
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 3px solid #68faa5;
+}
+
+
 /* Up button */
 
 #myBtn {
@@ -35,7 +43,6 @@ body {
     border-color: #68faa5;
     box-shadow: none;
 }
-
 
 
 /* Cookie alert

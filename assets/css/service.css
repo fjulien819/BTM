@@ -1,15 +1,25 @@
+.mt-container-body {
+    margin-bottom: 0;
+}
+
 .services {
-    padding: 7.4rem 1.875rem 0 1.875rem;
+    padding: 2.4rem 1.875rem 0 1.875rem;
 }
 
 h1 {
-    font-family: 'ethnocentricregular';
+    font-family: 'ethnocentricregular', sans-serif;
     font-size: 1.25rem;
-    color: #ffffff;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+    line-height: 1.6;
 }
 
 .secondarytitle {
-    font-family: 'robotoregular', Arial, sans-serif;
+    font-family: 'ethnocentric', Arial, sans-serif;
     font-size: 1.25rem;
     color: #000000;
 }
@@ -17,15 +27,23 @@ h1 {
 .servtext {
     font-family: 'robotoregular', Arial, sans-serif;
     font-size: 1rem;
-    color: #ffffff;
+    color: #000000;
 }
 
-.texttag,
+.methode {
+    margin-top: 3rem;
+}
+
+.formation {
+    margin-bottom: 5rem !important;
+}
+
+/* .texttag,
 .textform {
     -ms-flex: 0 0 60%;
     flex: 0 0 60%;
     max-width: 60%;
-}
+} */
 
 .imagetag {
     -ms-flex: 0 0 40%;
@@ -34,7 +52,8 @@ h1 {
 }
 
 .titleforma {
-    margin-bottom: 2.3125rem;
+    margin-top: 2rem;
+    margin-bottom: 3.3125rem;
 }
 
 .formatext {
@@ -46,8 +65,9 @@ h1 {
 .actionbtn {
     max-height: 3.3125rem;
     max-width: 13.3125rem;
-    color: #F2F2F2;
-    background: #828282;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    background: #fa8981;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -58,7 +78,7 @@ h1 {
 
 .btnform {
     color: #F2F2F2;
-    background: #828282;
+    background: #fa8981;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -68,6 +88,9 @@ h1 {
     margin-top: 4rem;
 }
 
+.formatext {
+    margin-bottom: 4rem;
+}
 
 
 /* MEDIA QUERIES
@@ -117,7 +140,6 @@ h1 {
     .actionbtn {
         margin-top: 1.4375rem;
         font-size: 0.9rem;
-        background: rgb(250, 114, 104);
         max-width: 100%;
         margin-bottom: 2rem;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -131,7 +153,6 @@ h1 {
 
     .btnform {
         font-size: 0.9rem;
-        background: rgb(250, 114, 104);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
@@ -142,12 +163,8 @@ h1 {
     }
 
     .titleforma {
-        margin-top: 1.4375rem;
+        margin-top: 3.4375rem;
         margin-bottom: 1.3125rem;
-    }
-
-    .formatext {
-        color: #ffffff;
     }
 
     .textform {
@@ -155,7 +172,11 @@ h1 {
     }
 
     .formation {
-        margin-bottom: 13rem !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .formatext {
+        margin-bottom: 1rem;
     }
 }
 
@@ -203,21 +224,19 @@ h1 {
     .actionbtn {
         margin-top: 1.4375rem;
         font-size: 0.9rem;
-        background: rgb(250, 114, 104);
-        max-width: 100%;
+        max-width: 70%;
         margin-bottom: 2rem;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .buttonforma {
         margin-top: 1.4375rem;
-        max-width: 100%;
+        max-width: 70%;
         margin-bottom: 2rem;
     }
 
     .btnform {
         font-size: 0.9rem;
-        background: rgb(250, 114, 104);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
@@ -232,23 +251,23 @@ h1 {
         margin-bottom: 1.3125rem;
     }
 
-    .formatext {
-        color: #ffffff;
-    }
-
     .textform {
         margin-top: 1.4375rem;
     }
 
     .formation {
-        margin-bottom: 13rem !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .formatext {
+        margin-bottom: 1rem;
     }
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .row.formation {
-        margin-bottom: 12rem !important;
+        margin-bottom: 2rem !important;
     }
 
     .servtext {
@@ -259,6 +278,6 @@ h1 {
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .row.formation {
-        margin-bottom: 17rem !important;
+        margin-bottom: 7rem !important;
     }
 }

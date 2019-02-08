@@ -1,6 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ parent() }} Notre expertise{% endblock %}
+{% block title %} {{ parent() }}Back to Mobile, votre exper en Progressive Web Apps
+(PWA)
+{% endblock %}
+
+{% block metaDescription %} {{ parent() }}
+    Back to Mobile propose ses compétences en webdesign, 
+    développement web et création de contenus rédactionnel, 
+    audiovisuel et photographique. Une équipe pluridisciplinaire
+    qui a fait des Progressive Web Apps (PWA), sa technologie de prédilection.
+{% endblock %}
 
 {% block stylesheets %}{{ parent() }}
     {{ encore_entry_link_tags('expertise') }} 
@@ -11,17 +20,15 @@
     <!-- Nos services -->
     <div class="container-fluid expertise">
 
-        <!-- manque le h1 -->
-
         <!-- Intro row -->
         <div class="row tags d-flex align-items-center" id="equipebtm"> 
             <div class="col-12 col-md-6 imagetag order-1 order-md-2">
-                <img class="img-fluid imgtag" alt="nuage de tags" src="img/tagcloud.png">
+                <img class="img-fluid imgtag" alt="nuage de tags" src="{{ asset('build/img/carre1.jpg') }}">
             </div>
             <div class="col-12 col-md-6 order-2 order-md-1 texttag">
-                <h2 class="secondarytitle text-left">Une équipe
-                    pluridisciplinaire de passionnés</h2>
-                <hr class="sepline" style="border:1px solid rgb(250, 114, 104)">
+                <h1 class="primarytitle text-left">Une équipe</h1>
+                <p>Qui conjuge ses talents pour répondre à l'ensemble de vos besoins</p>
+                <hr class="sepline" style="border:1px solid #68faa5">
                 <br>
                 <p class="conjug servtext uppserv text-left">Qui conjugue ses talents pour répondre à l’ensemble de vos
                     besoins</p>
@@ -35,10 +42,9 @@
             </div>
         </div>
 
-        <hr class="sepline2" style="border:2px solid rgb(250, 114, 104)">
-
         <!-- Specialities row -->
         <div class="row specialrow" id="teampart">
+        <h2 class="col-12 secondarytitle text-center">Une équipe pluridisciplinaire de passionnés</h2>
             <div class="col-12 col-md-8 row mx-auto">
                 <div class="col-12 mx-auto panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
@@ -405,22 +411,31 @@
             </div>
             <!-- Image -->
             <div class="col-md-4 d-flex justify-content-center align-items-center">
-                <img class="d-none d-md-block d-lg-block d-xl-block" src="img/carre1.jpg" alt="illustration">
+                <img class="d-none d-md-block d-lg-block d-xl-block" src="{{ asset('build/img/carre1.jpg') }}" alt="illustration">
             </div>
         </div>
 
-        <hr class="sepline2" style="border:2px solid rgb(250, 114, 104)">
+        {# Savoir plus button #}
+        <div class="col-12 col-sm-12 col-md-3 mx-auto d-flex btnligne justify-content-center">
+            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="{{path('contact')}}">EN SAVOIR PLUS</a>
+        </div>
+
+        <hr class="sepline2" style="border:2px solid #68faa5">
 
         <!-- PWA row -->
         <div class="row" id="pwa">
-            <h2 class="col-12 secondarytitle text-center">LES PWA
-                <br>
-                (Progressive Web Apps)
-            </h2>
-            <p style="margin-top: 1rem; margin-top: 1rem; color: white">La progressive web app (PWA) a vu le jour en 2015 à l’initiative de Google. Solution hybride entre le
-                site internet classique et l’application mobile, elle ofre aux mobinautes une meilleure expérience
-                de navigation tout en permetant à son propriétaire d’ateindre plus facilement ses objectifs
-                commerciaux.</p>
+            <h2 class="col-12 secondarytitle text-center">Les PWA <br>(Progressive Web App)</h2>
+            <img src="{{ asset('build/img/methododesk.png') }}" alt="Schéma PWA" style="margin-top: 3rem; margin-bottom: 3rem">
+            <h2 class="col-12 secondarytitle text-center">Pourquoi choisir une PWA ?</h2>
+            <p class="col-10 mx-auto" style="margin-top: 1rem; margin-top: 1rem">La progressive web app (PWA) a vu le jour en 2015 à l’initiative de Google. 
+                Solution hybride entre le site internet classique et l’application mobile, 
+                elle ofre aux mobinautes une meilleure expérience de navigation tout 
+                en permetant à son propriétaire d’ateindre plus facilement ses objectifs
+                commerciaux</p>
+        </div>
+        {# Savoir plus button #}
+        <div class="col-12 col-sm-12 col-md-3 mx-auto d-flex btnligne justify-content-center">
+            <a class="btn btn-lg actionbtn text-uppercase rounded-0" href="{{path('contact')}}">EN SAVOIR PLUS</a>
         </div>
     </div>
 

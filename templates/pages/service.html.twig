@@ -1,6 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ parent() }}Nos services{% endblock %}
+{% block title %} {{ parent() }}Votre formation sur internet avec Back to Mobile{% endblock %}
+
+{% block metaDescription %} {{ parent() }}
+    Back to Mobile accompagne les entreprises au plus près de leurs besoins. Pour
+    notre agence web, la proposition de service passe par une méthode de travail agile et
+    rigoureuse sans oublier de proposer à chacun de développer sa culture web grâce à des
+    formations sur-mesure
+{% endblock %}
 
 {% block stylesheets %}{{ parent() }}
     {{ encore_entry_link_tags('service') }}
@@ -22,15 +29,15 @@
                     Depuis l’avènement de la révolution numérique, le temps semble s’être accéléré.
                     <br>
                     Une innovation en chasse une autre avec chaque jour davantage de rapidité.
-                    <br>
+                    <br> <br>
                     Entreprendre à une époque faite de profonds bouleversements a de quoi dérouter, sinon dissuader.
                     <br> <br>
-                    Chez Back To Mobile, nous sommes convaincus qu’une méthodologie de travail agile et rigoureuse
+                    Chez Back To Mobile, nous sommes convaincus qu’<u>une <strong>méthodologie de travail agile</strong> et rigoureuse</u>
                     conjuguée à l’acquisition de clés de compréhension des principaux enjeux technologiques sont de
                     précieux atouts pour mener à bien vos projets.</p>
             </div>
         </div>
-        <hr class="d-block d-sm-block d-md-none sepline" style="border:2px solid rgb(250, 114, 104)">
+        <hr class="d-block d-sm-block d-md-none sepline" style="border:2px solid #68faa5">
 
         <!-- Méthode row -->
         <div class="row methode">
@@ -51,7 +58,7 @@
             </div>
         </div>
 
-        <hr class="sepline" style="border:2px solid rgb(250, 114, 104); margin-bottom: 2.5rem; margin-top: 2.5rem">
+        <hr class="sepline" style="border:2px solid #68faa5; margin-bottom: 2.5rem; margin-top: 2.5rem">
 
         <!-- Formation row -->
         <div class="row formation d-flex align-items-center" id="formation" style="margin-bottom: 16rem;">
@@ -59,20 +66,18 @@
                 <h2 class="secondarytitle text-center">FORMATION <br>
                     Vous former dans un monde en constante évolution</h2>
             </div>
-            <div class="col-12 col-md-8 mx-auto textform d-flex flex-column align-items-stretch">
-                <p class="col-12 formatext text-left">Notre époque, faite de profondes mutations, exige de sans cesse
+            <div class="col-12 col-md-12 col-lg-10 mx-auto textform d-flex flex-column align-items-stretch">
+                <p class="col-11 mx-auto formatext text-left">Notre époque, faite de profondes mutations, exige de sans cesse
                     s’adapter, de mettre régulièrement à
                     jour ses connaissances, d’acquérir de nouvelles compétences, d’apprendre à utiliser de nouveaux
                     outils.
                     <br> <br>
                     Pour répondre à cet enjeu capital qu’est l’apprentissage tout au long de la vie, nous élaborons
-                    pour vous des cours sur-mesure sur les fondamentaux de la communication numérique. </p>
-                <div class="col-12 col-sm-12 col-md-4 offset-md-4 btnligne d-flex justify-content-center buttonforma">
-                    <a class="btn btn-lg btnform act2 btn-block text-uppercase rounded-0" href="{{path('contact')}}">Je
-                        suis intéressé(e)</a>
+                    pour vous des <strong>cours sur-mesure</strong> sur les fondamentaux de la communication numérique. </p>
+                <div class="col-12 col-sm-12 col-md-6 mx-auto d-flex btnligne justify-content-center">
+                    <a class="btn btn-lg actionbtn btn-block text-uppercase rounded-0" href="{{path('contact')}}">Je suis intéressé(e)</a>
                 </div>
             </div>
         </div>
     </div>
-
 {% endblock %}

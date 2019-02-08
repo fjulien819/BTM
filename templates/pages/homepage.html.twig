@@ -1,6 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ parent() }}Accueil{% endblock %}
+{% block title %} {{ parent() }}Back to Mobile, l'agence web mobile{% endblock %}
+
+{% block metaDescription %} {{ parent() }}
+    Back to Mobile accompagne les entreprises dans leur volonté de créer ou développer leur activité dans une économie
+    numérique où le mobile s’impose comme le premier point d’accès au web. Expert en Progressive Web Apps (PWA), notre
+    agence web propose des expériences de navigation sur mobile innovantes.
+{% endblock %}
 
 {% block stylesheets %}{{ parent() }}
     {{ encore_entry_link_tags('homepage') }}
@@ -35,7 +41,7 @@
                 </h1>
                 <p>
                     Nous accompagnons les entreprises dans leur volonté de créer de la valeur dans une économie
-                    numérique où le mobile s’impose comme le premier point d’accès au web.
+                    numérique où <u class="utype1">le mobile s’impose comme le premier point d’accès au web</u>.
                 </p>
             </div>
             <div class="col-12 col-md-4 d-flex justify-content-center">
@@ -70,12 +76,11 @@
             </h2>
             <div class="col-12 col-md-6 approchetext order-1 order-md-1">
                 <p>
-                    Experts en Progressive Web Apps (PWA), nous aimons avant tout
+                    <u>Experts<strong> en Progressive Web</strong>Apps (PWA)</u>, nous aimons avant tout
                     créer des expériences de navigation
                     sur mobile innovantes qui font appel aux dernières avancées technologiques. 
                     <br> <br>
-                    Notre équipe vous
-                    accompagnera au quotidien dans l’élaboration d’outils de communication et de solutions adaptés à
+                    Notre équipe sera chaque jour à vos côtés pour <strong>créer votre site internet</strong> et élaborer des outils de communication adaptés à
                     vos besoins.
                 </p>
             </div>
@@ -100,23 +105,23 @@
                 Ils nous ont fait confiance
             </h2>
             <div class="col-6 col-md-3 confimg">
-                <a href="https://www.parisaeroport.fr/groupe/rse/fondation#" target="_blank">
-                    <img class="img-fluid imgtag tag1 border" alt="nuage de tags" src="{{ asset('build/img/fondationadp.jpg') }}">
+                <a href="https://www.francetvinfo.fr/" target="_blank">
+                    <img class="img-fluid imgtag tag1 border" alt="Site de FranceInfo" src="{{ asset('build/img/france-info.jpg') }}">
                 </a>
             </div>
             <div class="col-6 col-md-3 confimg">
                 <a href="http://projet4.julienf-oc.fr/" target="_blank">
-                    <img class="img-fluid imgtag tag3" alt="nuage de tags" src="{{ asset('build/img/louvre.jpg') }}">
+                    <img class="img-fluid imgtag tag3" alt="Site du Louvre" src="{{ asset('build/img/louvre.jpg') }}">
                 </a>
             </div>
             <div class="col-6 col-md-3 confimg">
                 <a href="http://etudiant.aujourdhui.fr/etudiant/" target="_blank">
-                    <img class="img-fluid imgtag tag4" alt="nuage de tags" src="{{ asset('build/img/parisienlogo.png') }}">
+                    <img class="img-fluid imgtag tag4" alt="Site du Parisien, section étudiant" src="{{ asset('build/img/parisienlogo.png') }}">
                 </a>
             </div>
             <div class="col-6 col-md-3 confimg" target="_blank">
                 <a href="https://fondation.edf.com/fr">
-                    <img class="img-fluid imgtag tag2 border" alt="nuage de tags" src="{{ asset('build/img/fondationedf.jpg') }}">
+                    <img class="img-fluid imgtag tag2 border" alt="Fondation EDF" src="{{ asset('build/img/fondationedf.jpg') }}">
                 </a>
             </div>
 

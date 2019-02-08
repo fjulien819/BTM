@@ -5,12 +5,14 @@
   background-blend-mode: multiply;
   height: 100%;
   width: 100%;
-  margin-top: 0 !important;
+  margin-top: 4rem;
+  margin-bottom: 0;
   padding-top: 6.25rem;
 }
 
 .principalcontainer {
-  background: #b9473ede;
+  /* background: #b9473ede; */
+  background: #FA7268;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 3rem;
@@ -20,7 +22,7 @@
 .form-signin {
   padding: 0.7rem 1.7rem 1.7rem 1.7rem;
   background: #FA7268;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+  /* box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2) */
 }
 
 hr {
@@ -124,7 +126,7 @@ input[type=radio] {
 
   .mt-container-body {
     padding-top: 3.125rem;
-    margin-bottom: 8rem;
+    margin-bottom: -3.75rem;
   }
 
   .connextext {
@@ -157,7 +159,7 @@ input[type=radio] {
 
   .mt-container-body {
     padding-top: 3.4375rem;
-    margin-bottom: 6rem;
+    margin-bottom: -3rem;
   }
 
   .form-signin {
@@ -184,14 +186,6 @@ input[type=radio] {
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-  .mt-container-body {
-    margin-bottom: 0;
-  }
-
-  .principalcontainer {
-    margin-bottom: 5rem;
-  }
-
   .lineleft,
   .lineright {
     -ms-flex: 0 0 18%;
@@ -212,7 +206,12 @@ input[type=radio] {
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
   .mt-container-body {
-    margin-bottom: 13rem;
+    /* padding-top: 3.4375rem;
+    padding-bottom: 6rem; */
+  }
+
+  .principalcontainer {
+    /* margin-bottom: 0; */
   }
 
   .lineleft,
