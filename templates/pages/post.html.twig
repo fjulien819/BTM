@@ -1,10 +1,20 @@
 {% extends 'base_blog.html.twig' %}
 
-{% block title %} {{ parent() }}{{ post.title }} {% endblock %}
-{% block metaDescription %}{{ post.metaDescription }}{% endblock %}
-{% block stylesheets %} {{ parent() }}  {% endblock %}
+{% block title %}
+    {{ parent() }}{{ post.title }} 
+{% endblock %}
 
-{% block header %}{{ parent() }}{% endblock %}
+{% block metaDescription %}
+    {{ post.metaDescription }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
 
 {% block body %}
     {{ parent() }}

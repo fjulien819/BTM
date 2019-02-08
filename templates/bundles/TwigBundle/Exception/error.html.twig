@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% block metaDescription %}
-        ATTENTE
+        Back to Mobile, page d'erreur 404 ou 500
     {% endblock %}
 
     <!-- Bootstrap CSS -->
@@ -15,19 +16,19 @@
 
     <title>BTM - Erreur {{ status_code }}</title>
 </head>
-<body>
-{% block body %}
-<div class="hero ">
 
-    <div class="inner-text">
-        <p class="p1"><span id="status_code">{{ status_code }}</span> :</p>
-        <p class="p2"></p>
-        <div class="col-12 col-sm-12 col-md-6 offset-md-3 d-flex btnligne justify-content-center">
-            <a class="btn actionbtn text-uppercase rounded-0" href="{{ path('homepage') }}">Back to Accueil</a>
+<body>
+    {% block body %}
+        <div class="hero ">
+            <div class="inner-text">
+                <p class="p1"><span id="status_code">{{ status_code }}</span> :</p>
+                <p class="p2"></p>
+                <div class="col-12 col-sm-12 col-md-6 offset-md-3 d-flex btnligne justify-content-center">
+                    <a class="btn actionbtn text-uppercase rounded-0" href="{{ path('homepage') }}">Back to Accueil</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-{% endblock %}
+    {% endblock %}
 <!---{{ status_code }} <div class="inner-text">
             <p class="p1">404:</p>
             <p class="p2">Error</p>

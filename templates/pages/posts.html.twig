@@ -1,25 +1,31 @@
 {% extends 'base_blog.html.twig' %}
 
-{% block title %} {{ parent() }} Le blog {% endblock %}
-
-{% block metaDescription %} {{ parent() }}
-    ATTENTE
+{% block title %}
+    {{ parent() }} Le blog 
 {% endblock %}
 
-{% block stylesheets %} {{ parent() }}  {% endblock %}
+{% block metaDescription %} {{ parent() }}
+    Back to Mobile, notre blog avec les articles de nos spécialistes
+{% endblock %}
 
-{% block header %}{{ parent() }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
 
 {% block body %}
     {{ parent() }}
 {% endblock %}
 
- {% block blog_content %}
-     <div class="row m-0 d-flex justify-content-center">
-         {% include "_list_posts.html.twig" %}
-         {% include "_sidebar.html.twig" %}
-     </div>
- {% endblock %}
+{% block blog_content %}
+    <div class="row m-0 d-flex justify-content-center">
+        {% include "_list_posts.html.twig" %}
+        {% include "_sidebar.html.twig" %}
+    </div>
+{% endblock %}
 
 {% block footer %}
     {{ parent() }}
