@@ -15,6 +15,11 @@ strong {
     border-bottom: 3px solid #68faa5;
 }
 
+u:hover,
+strong:hover {
+    background-color: #68faa5;
+}
+
 
 /* Up button */
 
@@ -254,9 +259,9 @@ strong {
 /* Footer */
 
 .footerglobal {
-    background: url("/build/img/groupemarty.jpg") center;
+    background: url("/build/img/prism.png") center;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.65);
+    /* background-color: rgba(0, 0, 0, 0.65); */
     background-blend-mode: multiply;
 }
 
@@ -365,6 +370,28 @@ strong {
 @media (max-width: 575.98px) {
 
     /* Header */
+
+    .rightgroup.navpart ul {
+        padding-bottom: 1rem;
+        box-shadow: none;
+        padding-top: 2rem;
+        background: #fa7268;
+        width: 100%;
+        /* background-image: linear-gradient(to top, #974741, #fa7268); */
+    }
+
+    .navpart {
+        background: #fa7268;
+    }
+
+        /* .itemheader {
+        padding-left: 2rem;
+    } */
+
+    .headerhr {
+        width: 100% !important;
+    }
+
     .brandpart {
         -ms-flex: 0 0 56%;
         flex: 0 0 56%;
@@ -395,10 +422,6 @@ strong {
 
     .navbar-nav .nav-link {
         text-align: left;
-    }
-
-    .itemheader {
-        padding-left: 2rem;
     }
 
     /* Footer */

@@ -170,7 +170,6 @@ div.col-6.col-md-3.confimg {
     .firstblock p,
     .approchetext p {
         margin-bottom: 0;
-        color: #ffffff;
     }
 
     .imgtag {
@@ -274,7 +273,6 @@ div.col-6.col-md-3.confimg {
     .firstblock p,
     .approchetext p {
         margin-bottom: 0;
-        color: #ffffff;
     }
 
     .imgtag {
@@ -399,7 +397,7 @@ div.col-6.col-md-3.confimg {
 
 @media (pointer: coarse) and (hover: none) {
     section {
-        background: url("/build/img/fondvideo.jpg") black no-repeat center center scroll;
+        background: url("/build/img/androidphone.jpg") black no-repeat center center scroll;
     }
 
     section video {

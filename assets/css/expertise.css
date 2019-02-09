@@ -175,6 +175,11 @@ a:focus {
     font-size: 1rem;
 }
 
+.panel-body i {
+    color: white;
+    font-size: 1.3rem;
+}
+
 .membertel,
 .membermail {
     font-size: 0.875rem;
@@ -186,6 +191,7 @@ a:focus {
 
 .nav2 {
     width: 70%;
+    border: none;
 }
 
 .navl2 i {
@@ -204,7 +210,7 @@ a:focus {
 .pricing-table {
     display: flex;
     flex-wrap: wrap;
-    height: 26.25rem;
+    /* height: 26.25rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,7 +253,7 @@ a:focus {
 
 .table.free,
 .table.premium {
-    height: 26.25rem !important;
+    height: 26.25rem;
 }
 
 .table ul {
@@ -275,7 +281,6 @@ ul>li.partir {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     margin-bottom: 0.4rem;
-
 }
 
 ul>li.beforelio {
@@ -314,7 +319,8 @@ ul>li.littleinfo {
     padding-left: 0;
 }
 
-.actionbtn {
+.actionbtn,
+.blackbtn {
     font-family: 'Roboto', sans-serif;
     margin-top: 1.4375rem;
     font-size: 0.8rem;
@@ -322,7 +328,14 @@ ul>li.littleinfo {
     background: rgb(250, 114, 104);
     max-width: 100%;
     margin-bottom: 2rem;
+}
+
+.actionbtn {
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.blackbtn {
+    box-shadow: 0 0.25rem 0.25rem rgba(255, 255, 255, 0.25);
 }
 
 .actionbtn:hover {
@@ -330,53 +343,12 @@ ul>li.littleinfo {
     font-weight: bold;
 }
 
-@media screen and (max-width: 710px) {
-
-    .table.active {
-        transform: scale(0.8);
-    }
-
-    .table.free {
-        transform: scale(0.7) translateX(5.625rem);
-    }
-
-    .table.premium {
-        transform: scale(0.7) translateX(-5.625rem);
-    }
-
-    .container .pricing-table {
-        flex-wrap: nowrap;
-    }
-
-    .table.premium {
-        z-index: 0;
-    }
-
-    .table.active {
-        z-index: 10;
-    }
+/* ajouts test responsive */
+.panel-collapse>div.panel-body.uppanel {
+    display: flex;
 }
 
-@media screen and (max-width: 530px) {
-    .table.free {
-        transform: scale(.8);
-    }
 
-    .table.active {
-        transform: scale(.9) translateY(-5rem);
-    }
-
-    .table.premium {
-        transform: scale(.8) translateY(-11.25rem);
-        z-index: -1;
-    }
-
-    .container .pricing-table {
-        flex-wrap: wrap;
-        height: 100%;
-        width: 14.375rem;
-    }
-}
 
 
 
@@ -392,14 +364,75 @@ ul>li.littleinfo {
     .expertise {
         padding: 4.4rem 1.0625rem 0 1.0625rem;
     }
-}
 
+    #collapse1>div.panel-body.uppanel,
+    #collapse2>div.panel-body.uppanel,
+    #collapse3>div.panel-body.uppanel {
+        flex-direction: column;
+    }
+
+    .membername {
+        margin-top: 1rem;
+    }
+
+    .table.free {
+        transform: scale(.9);
+    }
+
+    .table.active {
+        transform: scale(.9);
+    }
+
+    .table.premium {
+        z-index: 10;
+        transform: scale(.9);
+    }
+
+}
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .expertise {
         padding: 4.4rem 1.0625rem 0 1.0625rem;
     }
+
+    #collapse1>div.panel-body.uppanel,
+    #collapse2>div.panel-body.uppanel,
+    #collapse3>div.panel-body.uppanel {
+        flex-direction: column;
+    }
+
+    .membername {
+        margin-top: 1rem;
+    }
+
+    .table.active {
+        transform: scale(0.7);
+        z-index: 10;
+        margin-top: -6rem;
+        margin-bottom: -5rem;
+    }
+
+    .table.free {
+        transform: scale(0.7);
+    }
+
+    .table.premium {
+        transform: scale(0.7);
+    }
+
+    .container .pricing-table {
+        flex-wrap: nowrap;
+    }
+
+    .table.premium {
+        z-index: 10;
+    }
+
+    /* .table.active {
+        z-index: 10;
+    } */
+
 }
 
 /* Medium devices (tablets, less than 992px) */
