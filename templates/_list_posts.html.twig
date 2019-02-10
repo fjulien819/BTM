@@ -10,7 +10,7 @@
                     <h3 class="card-title">{{ post.title }}</h3>
                     <h6 class="card-subtitle pb-1 text-muted">Publié le {{ post.createdAt|localizeddate('none', 'none', null, null, 'd MMMM Y') }} par {{ post.author }} pour Back To Mobile{% for category in post.category %}, {{ category.name }}{% endfor %}</h6>
                     <p class="card-text">{{ post.content|striptags|trim|truncate(250, true, '...') }}</p>
-                   </div>
+                    </div>
                 <div>
                     <a class="btn btn-dark float-right rounded-0" href="{{ path('post',{'url_page_post': 'blog', 'slug': post.slug}) }}" role="button">Lire la suite...</a>
                 </div>
