@@ -98,12 +98,12 @@ strong:hover {
 }
 
 .navbar-dark {
-    border-bottom: 0.1875rem #ffffff solid;
-    background-color: #fa7268 !important;
+    background: url("/build/img/prism.png");
+    background-size: cover;
+    height: 102px;
 }
 
 .navbar-dark .navbar-toggler {
-    color: #fa7268;
     border: none;
 }
 
@@ -128,6 +128,7 @@ strong:hover {
 
 .aroundbrand {
     padding-left: 7.875rem;
+    padding-top: 0.5rem;
 }
 
 .formaimg>a:hover,
@@ -168,9 +169,10 @@ strong:hover {
 
 .menutext {
     font-family: 'ethnocentricregular';
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     color: #ffffff;
     margin-bottom: 0.5rem;
+    margin-top: 0.3rem;
 }
 
 .modal-open .modal {
@@ -261,8 +263,7 @@ strong:hover {
 .footerglobal {
     background: url("/build/img/prism.png") center;
     background-size: cover;
-    /* background-color: rgba(0, 0, 0, 0.65); */
-    background-blend-mode: multiply;
+    /* background-blend-mode: multiply; */
 }
 
 .footer-top {

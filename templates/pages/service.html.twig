@@ -20,10 +20,7 @@
 
         <!-- Intro row -->
         <div class="row tags d-flex align-items-center">
-            <div class="col-12 col-md-6 d-flex justify-content-center imagetag order-1 order-md-2">
-                <img class="img-fluid imgtag" alt="nuage de tags" src="{{ asset('build/img/carre1.jpg') }}">
-            </div>
-            <div class="col-12 col-md-6 order-2 order-md-1 texttag">
+            <div class="col-12 col-md-8 col-lg-8 texttag">
                 <h1 class="text-uppercase">Back to mobile vous accompagne au plus près de vos besoins</h1>
                 <p class="servtext text-left">
                     Depuis l’avènement de la révolution numérique, le temps semble s’être accéléré.
@@ -35,6 +32,9 @@
                     Chez Back To Mobile, nous sommes convaincus qu’<u>une <strong>méthodologie de travail agile</strong> et rigoureuse</u>
                     conjuguée à l’acquisition de clés de compréhension des principaux enjeux technologiques sont de
                     précieux atouts pour mener à bien vos projets.</p>
+            </div>
+            <div class="col-md-4 col-lg-4 d-flex justify-content-end imagetag" style="padding-right: 0; padding-left: 0">
+                <img class="img-fluid d-flex align-self-start carres2" alt="carrés colorés" src="{{ asset('build/img/carres_modele2.jpg') }}">
             </div>
         </div>
         <hr class="d-block d-sm-block d-md-none sepline" style="border:2px solid #68faa5">
@@ -66,16 +66,17 @@
                 <h2 class="secondarytitle text-center">FORMATION <br>
                     Vous former dans un monde en constante évolution</h2>
             </div>
-            <div class="col-12 col-md-12 col-lg-10 mx-auto textform d-flex flex-column align-items-stretch">
-                <p class="col-11 mx-auto formatext text-left">Notre époque, faite de profondes mutations, exige de sans cesse
+            <div class="col-12 col-md-12 col-lg-11 mx-auto textform d-flex flex-column align-items-stretch">
+                <p class="col-10 mx-auto formatext text-left">Notre époque, faite de profondes mutations, exige de sans cesse
                     s’adapter, de mettre régulièrement à
                     jour ses connaissances, d’acquérir de nouvelles compétences, d’apprendre à utiliser de nouveaux
                     outils.
                     <br> <br>
                     Pour répondre à cet enjeu capital qu’est l’apprentissage tout au long de la vie, nous élaborons
                     pour vous des <strong>cours sur-mesure</strong> sur les fondamentaux de la communication numérique. </p>
+                <img class="col-md-2 offset-md-10 img-fluid carresverticaux d-none d-sm-none d-md-block" src="{{ asset('build/img/carres_verticaux1.jpg') }}" alt="carrés verticaux">
                 <div class="col-12 col-sm-12 col-md-6 mx-auto d-flex btnligne justify-content-center">
-                    <a class="btn btn-lg actionbtn btn-block text-uppercase rounded-0" href="{{path('contact')}}">Je suis intéressé(e)</a>
+                    <a class="btn btn-lg actionbtn action2 btn-block rounded-0" href="{{path('contact')}}">Je suis intéressé(e)</a>
                 </div>
             </div>
         </div>
