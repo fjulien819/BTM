@@ -11,7 +11,7 @@ namespace App\Tests;
 use App\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class mainControllerTest extends WebTestCase
+class pageCodeStatusTest extends WebTestCase
 {
     /**
      *  @dataProvider urlProvider
