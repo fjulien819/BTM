@@ -34,102 +34,15 @@
 
     {% block header %}
         <header>
+
+
             <!-- Navbar and button -->
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-                <div class="col-8 offset-2 brandpart d-flex justify-content-center">
-                    <a class="navbar-brand" href="{{path('homepage')}} ">
-                        <img src="{{ asset('build/img/logoheader.png') }}" alt="logo" style="height: 92px">
-                    </a>
-                </div>
-                <div class="col-2 d-flex flex-column aroundbrand">
-                    <button class="btn navbar-btn burger d-flex justify-content-center" data-target='#modalNavigation' data-toggle='modal' type='button'
-                        style="padding-bottom: 0; background: none;">
-                        <span class='sr-only'>Ouvre la navigation</span>
-                        <img src="{{ asset('build/img/menusquaresblanc50.png') }}" alt="logo" style="height: 46px">
-                    </button>
-                    <p class="menutext mx-auto">Menu</p>
-                </div>
-            </nav>
+            {% set image_menu = 'menusquaresblanc50.png' %}
+            {% include "_header.html.twig"%}
             <!-- Modal menu -->
-            <div class="modal" id="modalNavigation" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-full" role="document">
-                    <div class="modal-content">
-                        <!-- Header part -->
-                        <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-                            <div class="col-8 offset-2 brandpart d-flex justify-content-center">
-                                <a class="navbar-brand" href="{{path('homepage')}} ">
-                                    <img src="{{ asset('build/img/logoheader.png') }}" alt="logo" style="height: 92px">
-                                </a>
-                            </div>
-                            <div class="col-2 d-flex flex-column aroundbrand">
-                                <button class="btn navbar-btn burger mx-auto" data-target='#modalNavigation' data-toggle='modal'
-                                    type='button' style="padding-bottom: 0; background: none;">
-                                    <span class='sr-only'>Ouvre la navigation</span>
-                                    <img src="{{ asset('build/img/xcloseblanc50.png') }}" alt="logo" style="height: 46px">
-                                </button>
-                                <p class="menutext mx-auto">Menu</p>
-                            </div>
-                        </div>
-                        <div class="modal-body d-flex flex-row">
-                            <!-- Left column -->
-                            <div class="col-lg-4 leftgroup d-flex flex-column">
-                                <div class="col-12 blocks pwaimg d-flex justify-content-center" style="max-height: 50%">
-                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('expertise')}}#pwa">Les
-                                        pwa</a>
-                                </div>
-                                <div class="col-12 blocks actuimg d-flex justify-content-center" style="max-height: 50%;">
-                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('posts', {'url_page_post': 'blog'})}}">Dernières
-                                        <br>actualités</a>
-                                </div>
-                            </div>
-                            <!-- Central column -->
-                            <div class="col-lg-4 middlegroup d-flex flex-column">
-                                <div class="col-12 blocks formaimg d-flex justify-content-center" style="max-height: 50%">
-                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('service')}}#formation">Nos
-                                        <br>formations</a>
-                                </div>
-                                <div class="col-12 blocks confiancemg d-flex justify-content-center" style="max-height: 50%">
-                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('homepage')}}#faitconfiance">Les
-                                        entreprises qui <br>nous font confiance</a>
-                                </div>
-                            </div>
-                            <!-- Right column -->
-                            <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
-                            <div class="col-12 col-sm-8 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
-                                <div class="col-12 blocks groupblock d-flex flex-column justify-content-center">
-                                    <ul class="navbar-nav navmenu justify-content-center text-uppercase text-right">
-                                        <li class="nav-item itemheader">
-                                            <a class="nav-link indexlink" href="{{path('homepage')}}">Accueil</a>
-                                        </li>
-                                        <li class="nav-item itemheader">
-                                            <a class="nav-link servicelink" href="{{path('service')}}">A votre service</a>
-                                        </li>
-                                        <li class="nav-item itemheader">
-                                            <a class="nav-link expertiseslink" href="{{path('expertise')}}">Notre expertise</a>
-                                        </li>
-                                        <li class="nav-item itemheader">
-                                            <a class="nav-link bloglink" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
-                                        </li>
-                                        <li class="nav-item itemheader">
-                                            <a class="nav-link contactlink" href="{{path('contact')}}">Contact / Devis</a>
-                                        </li>
-                                        <br>
-                                        <hr class="headerhr" style="border:3px solid#68faa5; width: 80%">
-                                        <li class="navbar-nav navicons mx-auto d-flex flex-row align-items-center justify-content-between"
-                                            style="width: 80%">
-                                            <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
-                                            <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
-                                            <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
-                                            <a href="https://twitter.com/" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-2 d-none d-sm-block d-md-none around" style="background: lightslategray"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% set image_menu = 'xcloseblanc50.png ' %}
+            {% include "_modal_menu.html.twig"%}
+
         </header>
     {% endblock %}
 
