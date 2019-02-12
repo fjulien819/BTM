@@ -138,3 +138,22 @@ h5 {
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* --- Pagination  --- */
+.pagination
+{
+    font-family: 'robotolight';
+    font-size: 1.25rem;
+}
+.pagination .current
+{
+    font-family: 'robotoregular';
+}
+.pagination a
+{
+    color: black;
+}
+.pagination .current, .page, .next
+{
+    margin-left: 50px;
+}
