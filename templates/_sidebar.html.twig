@@ -17,15 +17,13 @@
         <div class="card-body">
             <div class="row">
                     <ul class="list-unstyled mb-0">
-                        <li>
-                            <a class="blog-sidebar-categories-link text-dark" href="#">Web Design</a>
-                        </li>
-                        <li>
-                            <a class="blog-sidebar-categories-link text-dark" href="#">HTML</a>
-                        </li>
-                        <li>
-                            <a class="blog-sidebar-categories-link text-dark" href="#">Freebies</a>
-                        </li>
+                      {% for category in categories %}
+                          <li>
+                              <a class="blog-sidebar-categories-link text-dark d-flex align-items-center" href="{{ path('postsByCategory', {'url_page_post': 'blog', 'category_name': category.name }) }}">
+                              <img src="{{ asset('build/img/folder.png')}}">{{ category.name }}
+                              </a>
+                          </li>
+                        {% endfor %}
                     </ul>
             </div>
         </div>
@@ -75,15 +73,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-

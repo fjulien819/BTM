@@ -52,6 +52,11 @@
     font-size: 16px !important;
     text-decoration: none !important;
 }
+.blog-sidebar-categories-link  img{
+    width: 30px;
+    margin-left: 5px;
+    margin-right: 20px;
+}
 
 .blog-sidebar-newsletter-form {
     margin-top: 38px !important;
