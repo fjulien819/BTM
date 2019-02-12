@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="col-12 col-sm-8 offset-sm-4 d-flex justify-content-between">
+        <div class="col-6 d-flex justify-content-center">
+            <a class="navbar-brand" href="{{path('homepage')}} ">
+                <img src="{{ asset('build/img/logoheader.png')}}" alt="logo" style="height: 92px">
+            </a>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <button class="btn navbar-btn burger d-flex justify-content-center flex-column align-items-center" data-target='#modalNavigation' data-toggle='modal' type='button'
+                    style="padding-bottom: 0; background: none;">
+                <img src="{{ asset('build/img/')}}{{ image_menu }}" alt="logo" style="height: 46px">
+                <span class="menutext">Menu</span>
+            </button>
+        </div>
+
+    </div>
+
+
+<!---
+
+
+    <div class="col-8 offset-2 brandpart d-flex justify-content-center">
+        <a class="navbar-brand" href="{{path('homepage')}} ">
+            <img src="{{ asset('build/img/logoheader.png')}}" alt="logo" style="height: 92px">
+        </a>
+    </div>
+    <div class="col-2 d-flex flex-column aroundbrand">
+        <button class="btn navbar-btn burger d-flex justify-content-center" data-target='#modalNavigation' data-toggle='modal' type='button'
+                style="padding-bottom: 0; background: none;">
+            <span class='sr-only'>Ouvre la navigation</span>
+            <img src="{{ asset('build/img/')}}{{ image_menu }}" alt="logo" style="height: 46px">
+        </button>
+        <p class="menutext mx-auto">Menu</p>
+    </div>
+    -->
+</nav>
