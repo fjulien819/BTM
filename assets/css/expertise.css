@@ -504,6 +504,13 @@ div.col-6.col-md-3.confimg {
         transform: scale(.9);
     }
 
+    .carresbas,
+    .carreshaut,
+    .carresbas2,
+    .carreshaut2 {
+        display: none !important;
+    }
+
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -545,14 +552,26 @@ div.col-6.col-md-3.confimg {
         z-index: 10;
     }
 
-    /* .table.active {
-        z-index: 10;
-    } */
+    .carresbas,
+    .carreshaut,
+    .carresbas2,
+    .carreshaut2 {
+        display: none !important;
+    }
+
 
 }
 
 /* Medium devices (tablets, less than 992px) */
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .carresbas,
+    .carreshaut,
+    .carresbas2,
+    .carreshaut2 {
+        display: none !important;
+    }
+}
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {}

@@ -28,7 +28,7 @@ strong:hover {
     padding: 10px 13px 7px 13px;
     font-size: 0.9375rem;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     background: #68faa580;
     z-index: 1000;
     position: fixed;
@@ -42,8 +42,9 @@ strong:hover {
 }
 
 #myBtn:hover {
-    background: #68faa5 ;
+    background: #68faa5;
 }
+
 #myBtn:focus {
     border-color: #68faa5;
     box-shadow: none;
@@ -95,12 +96,8 @@ strong:hover {
 
 .navbar {
     width: 100%;
-    border-bottom: solid;
-    border-color: white;
-    border-width: 8px;
-    background-color: #000000;
+    border-bottom: 5px #ffffff solid;
     height: 120px;
-
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -176,8 +173,9 @@ strong:hover {
 }
 
 .modal-body {
-    margin-top: 3.74rem;
-    padding: 0;
+    /* margin-top: 3.74rem; */
+    margin-top: 6.74rem;
+    padding: 10px 0 0 0;
 }
 
 .navpart {
@@ -203,7 +201,8 @@ strong:hover {
     font-weight: bold;
 }
 
-.navbar-nav .nav-link {
+.navbar-nav .nav-link,
+.nav-link:hover {
     color: #ffffff;
     font-family: 'robotoregular', 'Times New Roman', sans-serif;
     font-size: 1.2rem;
@@ -214,18 +213,13 @@ strong:hover {
     border-left: #68faa5 0.125rem solid;
 }
 
-.nav-link:hover {
-    color: #68faa5 !important;
-    font-weight: bold;
-}
-
 .itemheader {
     width: 80%;
-    height: 56px;
+    height: 46px;
 }
 
 .navicons i {
-    color: white;
+    color: #ffffff;
 }
 
 .navicons {
@@ -247,14 +241,15 @@ strong:hover {
 }
 
 .footer-top {
-    padding: 60px 0;
+    padding: 3.75rem 0;
     text-align: left;
-    color: #fff;
+    color: #ffffff;
 }
 
 .footer-top h3 {
-    padding-bottom: 10px;
-    color: #fff;
+    padding-bottom: 0.625rem;
+    padding-top: 0.7rem;
+    color: #ffffff;
     font-family: 'ethnocentricregular';
     font-size: 1.25rem;
 }
@@ -265,10 +260,13 @@ strong:hover {
     margin-bottom: 18px;
 }
 
-.footer-about
-{
-  font-family: 'robotoregular', sans-serif;
-  font-size: 1rem;
+.logo-footer img {
+    max-height: 8.5rem;
+}
+
+.footer-about {
+    font-family: 'robotoregular', sans-serif;
+    font-size: 1rem;
 }
 
 .footer-contact p {
@@ -283,20 +281,26 @@ strong:hover {
     color: #ffffff;
 }
 
-.footer-links a {
-    color: #fff;
+.footer-contact {
+    margin-left: 5rem;
+}
+
+.footer-links {
+    padding-left: 0;
+}
+
+.footer-links a,
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #ffffff;
     border: 0;
     font-family: 'ethnocentricregular';
     line-height: 2;
     font-size: 1.25rem;
 }
+
 .footer-bottom a:hover {
     text-decoration: none;
-  }
-
-.footer-links a:hover,
-.footer-links a:focus {
-    color: #fff;
 }
 
 .footer-bottom {
@@ -334,7 +338,7 @@ strong:hover {
 }
 
 .footer-copyright p {
-    color: #fff;
+    color: #ffffff;
     border: 0;
     margin-bottom: 0;
 }
@@ -346,7 +350,7 @@ strong:hover {
 }
 
 .footer-social a {
-    color: white;
+    color: #ffffff;
 }
 
 .footer-mentions a {
@@ -355,6 +359,7 @@ strong:hover {
 
 .navbar-nav {
     text-align: left;
+    padding-top: 0.7rem;
 }
 
 
@@ -372,14 +377,13 @@ strong:hover {
         padding-top: 2rem;
         background: #fa7268;
         width: 100%;
-        /* background-image: linear-gradient(to top, #974741, #fa7268); */
     }
 
     .navpart {
         background: #fa7268;
     }
 
-        /* .itemheader {
+    /* .itemheader {
         padding-left: 2rem;
     } */
 
@@ -417,12 +421,22 @@ strong:hover {
 
     .navbar-nav .nav-link {
         text-align: left;
+        font-size: 1.5rem;
     }
 
     /* Footer */
 
     .footer-about {
         margin-bottom: 1.3rem;
+    }
+
+    .footer-about p {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .footer-contact {
+        margin-left: 0;
     }
 
     .footer-contact,
@@ -443,8 +457,26 @@ strong:hover {
 @media (min-width: 576px) and (max-width: 767.98px) {
 
     /* Header */
+    .modal-body {
+        margin-top: 4.74rem;
+    }
+
     .aroundbrand {
         padding-left: 0.875rem;
+    }
+
+    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-center>a>img,
+    body>header>nav>div>div.col-6.d-flex.justify-content-center>a>img {
+        height: 5rem !important;
+    }
+
+    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-end>button>img,
+    body>header>nav>div>div.col-6.d-flex.justify-content-end>button>img {
+        height: 2.3125rem !important;
+    }
+
+    .navbar {
+        height: 6.25rem;
     }
 
     .leftgroup,
@@ -475,6 +507,14 @@ strong:hover {
         margin-bottom: 1.3rem;
     }
 
+    .footer-contact {
+        margin-left: 0;
+    }
+
+    .logo-footer img {
+        max-height: 6.5rem;
+    }
+
     .footer-contact,
     .footer-social {
         margin-bottom: 1rem;
@@ -482,6 +522,10 @@ strong:hover {
 
     .navbar-nav {
         text-align: center;
+    }
+
+    .footer-links {
+        padding-left: 0.9375rem;
     }
 
     .footer-copyright {
@@ -545,8 +589,25 @@ strong:hover {
         padding: 40px 0;
     }
 
+    .footer-about {
+        font-size: 0.8rem;
+    }
+
     .footer-contact i {
         padding-right: 5px;
+    }
+
+    .footer-contact {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+    }
+
+    .footer-contact p {
+        font-size: 1rem;
     }
 
     .fab {
@@ -565,5 +626,18 @@ strong:hover {
     /* Footer */
     .footer-top {
         padding: 40px 0;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+        line-height: 2.3;
+    }
+
+    .footer-contact p {
+        font-size: 1rem;
+    }
+
+    .footer-contact {
+        margin-left: 3rem;
     }
 }

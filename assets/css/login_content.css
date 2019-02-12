@@ -163,6 +163,11 @@ input[type=radio] {
     flex: 0 0 58%;
     max-width: 58%;
   }
+
+  .carresbas,
+  .carreshaut {
+    display: none !important;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -192,6 +197,11 @@ input[type=radio] {
     flex: 0 0 54%;
     max-width: 54%;
   }
+
+  .carresbas,
+  .carreshaut {
+    display: none !important;
+  }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -210,6 +220,11 @@ input[type=radio] {
     -ms-flex: 0 0 64%;
     flex: 0 0 64%;
     max-width: 64%;
+  }
+
+  .carresbas,
+  .carreshaut {
+    display: none !important;
   }
 }
 

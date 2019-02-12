@@ -20,6 +20,9 @@
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('build/img/favicon.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('build/img/favicon.ico') }}" type="image/ico">
+    <link rel="apple-touch-icon" href="{{ asset('build/img/apple-icon.png') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ asset('build/img/apple-icon-57x57.png') }}" type="image/png">
 
     <!-- Stylesheet -->
     {% block stylesheets %}
@@ -34,16 +37,14 @@
 
     {% block header %}
         <header>
-
-
             <!-- Navbar and button -->
             {% set image_menu = 'menusquaresblanc50.png' %}
             {% include "_header.html.twig"%}
             <!-- Modal menu -->
             {% set image_menu = 'xcloseblanc50.png ' %}
             {% include "_modal_menu.html.twig"%}
-
         </header>
+
     {% endblock %}
 
 
@@ -59,9 +60,9 @@
                 <div class="container">
                     <div class="row">
                         {# Info about the agency #}
-                        <div class="col-md-4 col-lg-4 footer-about">
+                        <div class="col-md-4 col-lg-4 footer-about d-flex flex-column align-content-center">
                             <a class="logo-footer" href="{{path('homepage')}} ">
-                                <img src="{{ asset('build/img/logoblanc.png') }}" alt="logo du footer sur fond blanc" style="max-height:4rem">
+                                <img class="img-fluid" src="{{ asset('build/img/logoblanc.png') }}" alt="logo du footer sur fond blanc">
                             </a>
                             <p style="color: #ffffff">
                                 Back to Mobile accompagne les entreprises
@@ -70,7 +71,7 @@
                             <p style="color: #ffffff">Notre savoir-faire<a href="{{path('expertise')}}#teampart" style="color: #fa7268"> ici</a></p>
                         </div>
                         {# Contact zone #}
-                        <div class="col-md-4 col-lg-3 offset-lg-1 d-flex justify-content-center flex-column footer-contact">
+                        <div class="col-md-4 col-lg-3 offset-lg-1 d-flex justify-content-center flex-column align-content-center footer-contact">
                             <h3>Contact</h3>
                             <p style="color: #ffffff"><i class="fas fa-map-marker-alt"></i>BP 238 - Théhillac - Cedex 9</p>
                             <p><i class="fas fa-phone"></i><a href="tel:+33 5 54 67 81 42" style="color: #ffffff">+33 5 54
@@ -78,7 +79,7 @@
                             <p><i class="fas fa-envelope"></i><a href="mailto:contact@backtomobile.fr" style="color: #ffffff">contact@backtomobile.fr</a></p>
                         </div>
                         {# Navigation links #}
-                        <div class="col-md-4 col-lg-3 offset-lg-1 d-flex justify-content-center footer-links">
+                        <div class="col-md-4 col-lg-3 offset-lg-1 d-flex justify-content-center align-content-center footer-links">
                             <ul class="navbar-nav justify-content-center" style="border: none">
                                 <li class="nav-item">
                                     <a href="{{path('homepage')}}">Accueil</a>

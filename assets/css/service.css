@@ -188,6 +188,12 @@ h1 {
     .formatext {
         margin-bottom: 1rem;
     }
+
+    .carresbas,
+    .carreshaut,
+    .carresverticaux {
+        display: none !important;
+    }
 }
 
 
@@ -272,6 +278,12 @@ h1 {
     .formatext {
         margin-bottom: 1rem;
     }
+
+    .carresbas,
+    .carreshaut,
+    .carresverticaux {
+        display: none !important;
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -282,6 +294,11 @@ h1 {
 
     .servtext {
         margin-bottom: 1.4rem;
+    }
+    .carresbas,
+    .carreshaut,
+    .carresverticaux {
+        display: none !important;
     }
 }
 
