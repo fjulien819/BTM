@@ -243,6 +243,11 @@ textarea.form-control {
     .submitbutton {
         margin-bottom: 3.3rem;
     }
+
+    .carresbas,
+    .carreshaut {
+        display: none !important;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -312,6 +317,11 @@ textarea.form-control {
     .submitbutton {
         margin-bottom: 3.3rem;
     }
+
+    .carresbas,
+    .carreshaut {
+        display: none !important;
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -334,6 +344,11 @@ textarea.form-control {
 
     .text {
         margin-bottom: 3.6rem;
+    }
+
+    .carresbas,
+    .carreshaut {
+        display: none !important;
     }
 }
 

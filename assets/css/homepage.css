@@ -206,7 +206,6 @@ div.col-6.col-md-3.confimg {
     margin-top: -6rem;
     margin-right: -2.7rem;
     max-height: 2.8rem;
-    /* border: 1px black solid; */
     color: rgba(255, 255, 255, 0);
 }
 
@@ -284,8 +283,10 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 0.75rem;
     }
 
-    .imgtag2 {
-        margin-bottom: 0;
+    .carreshaut,
+    .carresbas,
+    .carresverticaux {
+        display: none !important;
     }
 
     .approchimg1 {
@@ -347,6 +348,12 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 0;
     }
 
+    .carreshaut,
+    .carresbas,
+    .carresverticaux {
+        display: none !important;
+    }
+
     .imgtag {
         margin-bottom: 0.5rem;
     }
@@ -385,10 +392,6 @@ div.col-6.col-md-3.confimg {
 
     .appro {
         margin-bottom: 0.75rem;
-    }
-
-    .imgtag2 {
-        margin-bottom: 0;
     }
 
     .approchimg1 {
@@ -456,6 +459,12 @@ div.col-6.col-md-3.confimg {
 
     .approchetext {
         margin-top: 2rem;
+    }
+
+    .carreshaut,
+    .carresbas,
+    .carresverticaux {
+        display: none !important;
     }
 }
 
