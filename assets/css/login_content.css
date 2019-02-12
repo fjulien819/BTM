@@ -1,22 +1,33 @@
 .mt-container-body {
-  background: url("/build/img/delorean_fond.jpg") no-repeat center;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  height: 100%;
-  width: 100%;
-  margin-top: 4rem;
+  padding-top: 2rem;
   margin-bottom: 0;
-  padding-top: 6.25rem;
 }
 
 .principalcontainer {
-  /* background: #b9473ede; */
   background: #FA7268;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-top: 3rem;
-  margin-bottom: 8rem;
+  margin-top: -6rem;
+  margin-bottom: -4rem;
+}
+
+.contner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.carreshaut {
+  padding-right: 0;
+  position: relative;
+  top: 0;
+  right: -1.5rem;
+  max-width: 14%;
+}
+
+.carresbas {
+  max-width: 15%;
+  position: relative;
+  top: -2rem;
 }
 
 .form-signin {
@@ -92,10 +103,10 @@ input[type=radio] {
   background: #ffffff;
 }
 
-.btn {
+.btn.btn-block {
   border-radius: 0;
   color: #ffffff;
-  background-color: #FA8a81;
+  background-color: #AD3F37;
   height: 3.125rem;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
 }

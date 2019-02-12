@@ -3,42 +3,46 @@
 }
 
 .expertise {
-    padding: 2.4rem 1.875rem 0 1.875rem;
-    /* padding: 2.4rem 3rem 0 3rem; */
-
-}
-
-h1,
-h2,
-p {
-    color: #000000;
+    padding: 2.4rem 3rem 0 3rem;
 }
 
 h1,
 h2 {
-    line-height: 1.6;
+    font-family: 'ethnocentricregular';
+    font-size: 1.25rem;
+    color: #000000;
 }
 
 h1 {
-    font-family: 'ethnocentricregular';
-    font-size: 1.25rem;
+    line-height: 40px
 }
 
-.texttag {
-    -ms-flex: 0 0 60%;
-    flex: 0 0 60%;
-    max-width: 60%;
+h2 {
+    line-height: 25px
 }
 
-.imagetag {
-    -ms-flex: 0 0 40%;
-    flex: 0 0 40%;
-    max-width: 40%;
+p {
+    font-family: 'robotoregular', Arial, sans-serif;
+    /* font-size: 1.25rem;
+    line-height: 30px; */
+}
+
+.carreshaut {
+    max-width: 55%;
+    margin-top: -2rem;
+    margin-left: -3rem;
+    padding-bottom: 1.5rem;
+}
+
+.carresbas {
+    max-width: 55%;
+    margin-left: 11rem;
 }
 
 .secondarytitle {
     font-family: 'Ethnocentric', Arial, sans-serif;
     font-size: 1.25rem;
+    line-height: 40px;
     color: #000000;
     margin-top: 1rem;
     margin-bottom: 0;
@@ -58,20 +62,30 @@ h1 {
 }
 
 .servtext {
-    font-family: 'robotoregular', Arial, sans-serif;
-    font-size: 1rem;
-    padding-right: 2rem;
+    padding-right: 3.8rem;
+    font-size: 1.25rem;
+    line-height: 30px;
+}
+
+.pwasubtext,
+.besoins {
+    font-size: 1.25rem;
+    line-height: 30px;
 }
 
 .specialrow {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
 }
 
 a:hover,
 a:focus {
     text-decoration: none !important;
     outline: none !important;
+}
+
+.collapse.show {
+    border: 3px#fa7268 solid;
 }
 
 .panel-group .panel {
@@ -92,8 +106,9 @@ a:focus {
     color: black !important;
     display: block;
     border: none;
+    text-align: center;
     padding: 1.25rem 2.1875rem 1.25rem;
-    font-size: 1.25rem;
+    font-size: 1.625rem;
     background-color: #fa7268;
     font-weight: 600;
     position: relative;
@@ -127,10 +142,10 @@ a:focus {
 }
 
 #accordion .panel-body {
-    background-color: #C4C4C4;
+    background-color: #f4f4f4;
     color: #000000;
     line-height: 1.5625rem;
-    padding: 0.625rem 1.875rem 1.25rem 1.875rem;
+    padding: 2.5rem 1.875rem 1.25rem 1.875rem;
     border-top: none;
     font-size: 0.875rem;
     position: relative;
@@ -158,48 +173,84 @@ a:focus {
     padding-top: 1.5625rem;
 }
 
-.membername,
 .memberjob,
 .membertel,
 .membermail {
     font-family: 'robotoregular', Arial, sans-serif;
     color: #000000;
-    text-align: center;
+    text-align: left;
+    font-size: 1.2rem;
 }
 
 .membername {
-    font-size: 1.25rem;
+    font-family: 'robotoregular', Arial, sans-serif;
+    color: #000000;
+    text-align: left;
+    font-size: 1.875rem;
+    margin-bottom: 0.5rem !important;
 }
 
-.memberjob {
-    font-size: 1rem;
+.membertext p {
+    margin-bottom: 0.2rem;
 }
 
 .panel-body i {
-    color: white;
+    color: #000000;
     font-size: 1.3rem;
 }
+
+.textpart i {
+    color: #000000;
+    font-size: 2.1875rem;
+}
+
 
 .panel-collapse>div.panel-body.uppanel {
     display: flex;
 }
 
-.membertel,
-.membermail {
-    font-size: 0.875rem;
-}
-
-.membermail {
-    margin-bottom: 1.75rem;
+.imglogo {
+    max-width: 13.3125rem;
 }
 
 .nav2 {
-    width: 70%;
     border: none;
+    margin-top: 1rem;
+    /* margin-bottom: 1rem; */
+    padding-bottom: 12px;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    background: #fa7268;
+    width: 80%;
 }
 
+
 .navl2 i {
-    font-size: 1.875rem !important;
+    font-size: 2.5rem !important;
+    color: #ffffff;
+}
+
+.navlines {
+    margin-left: -1rem;
+    margin-top: 0.7rem;
+}
+
+/* .navlines {
+    margin-left: -1rem;
+    margin-top: 0.7rem;
+    background: purple;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-radius: 10px;
+} */
+
+
+
+blockquote {
+    /* color: #ffffff; */
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .textpart {
@@ -229,18 +280,17 @@ a:focus {
 }
 
 .table.active {
-    background: linear-gradient(to bottom right, #9c9291 50%, #7a7070 50%);
+    background: linear-gradient(to bottom right, #BD665F 50%, #ad3f37 50%);
     transform: scale(1.06);
     box-shadow: 0 0 0.9375rem 0.3125rem rgba(0, 0, 0, 0.5);
 }
 
 .table.free {
-    background: linear-gradient(to bottom right, #4c4c4c 50%, #000000 50%);
+    background: linear-gradient(to bottom right, #51BD7E 50%, #25AD5E 50%);
 }
 
 .table.premium {
     background: linear-gradient(to bottom right, #fa8981 50%, #fa7268 50%);
-
 }
 
 .priceul li {
@@ -256,24 +306,31 @@ a:focus {
 
 .table.free,
 .table.premium {
-    height: 26.25rem;
+    height: 33.5rem;
+}
+
+.table.active {
+    height: 36.5rem;
 }
 
 .table ul {
     width: 80%;
 }
 
+.table.free>ul>li.littleinfo.text-right {
+    color: rgba(255, 255, 255, 0);
+}
+
 ul>li.titleli {
     font-family: 'ethnocentricregular';
-    margin: 0.9rem 0 1rem 0;
+    margin: 1.5rem 0 1rem 0;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 ul>li.pricecontent {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
-    border-bottom: 0.0625rem #ffffff solid;
+    font-size: 1.2rem;
     margin-bottom: 1.2rem;
     line-height: 0.8;
     padding-left: 0;
@@ -282,7 +339,7 @@ ul>li.pricecontent {
 
 ul>li.partir {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin-bottom: 0.4rem;
 }
 
@@ -292,7 +349,8 @@ ul>li.beforelio {
 
 ul>li.theprice {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-size: 2.2rem;
 }
 
 ul>li.littleinfo {
@@ -302,6 +360,10 @@ ul>li.littleinfo {
     line-height: 0.8;
     padding-left: 0;
     padding-right: 0;
+}
+
+.separinfodevis {
+    border: 1px #ffffff solid;
 }
 
 .princing-table,
@@ -323,12 +385,14 @@ ul>li.littleinfo {
 }
 
 .actionbtn,
-.blackbtn {
+.blackbtn,
+.actionbtn:hover,
+.blackbtn:hover {
     font-family: 'Roboto', sans-serif;
     margin-top: 1.4375rem;
-    font-size: 0.8rem;
+    font-size: 1.25rem;
     color: #ffffff;
-    background: rgb(250, 114, 104);
+    background: #ad4f48;
     max-width: 100%;
     margin-bottom: 2rem;
 }
@@ -337,18 +401,72 @@ ul>li.littleinfo {
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
-.blackbtn {
-    box-shadow: 0 0.25rem 0.25rem rgba(255, 255, 255, 0.25);
+.schemapwa {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
-.actionbtn:hover {
-    color: #ffffff;
-    font-weight: bold;
+.testbtn,
+.testbtn:hover {
+    box-shadow: none;
+    background: transparent;
+    margin-top: -11.2rem;
+    max-height: 7.2rem;
+    border: none;
+    color: rgba(255, 255, 255, 0);
 }
 
+.servtext2 {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 1.25rem;
+    line-height: 30px;
+    padding-left: 3rem;
+}
 
+.carreshaut2 {
+    max-width: 55%;
+    margin-top: -2rem;
+}
 
+.carresbas2 {
+    max-width: 55%;
+    margin-left: 13rem;
+    margin-top: -2rem;
+}
 
+li.pricecontent.tiny {
+    font-size: 1.1rem;
+}
+
+#collapse2>div:nth-child(3)>div>div.col-12.col-sm-9.col-md-4.table.premium.premiumdesign>ul {
+    width: 82% !important;
+}
+
+.table.freedesign {
+    height: 34rem;
+}
+
+.table.premiumdesign {
+    height: 35rem;
+}
+
+.table.freeredac {
+    height: 35.5rem;
+}
+
+.table.premiumredac {
+    height: 36rem;
+    padding-right: 0;
+}
+
+div.col-6.col-md-3.confimg {
+    margin-bottom: 0;
+}
+
+.imgtag {
+    margin-bottom: 2.2rem;
+}
 
 
 

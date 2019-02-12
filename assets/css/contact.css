@@ -1,16 +1,32 @@
 .mt-container-body {
-    background: url("/build/img/delorean_fond.jpg") no-repeat center;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: multiply;
-    height: 100%;
-    width: 100%;
-    margin-top: 0 !important;
+    padding-top: 2rem;
     margin-bottom: 0;
 }
 
 .contactcontainer {
-    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: -14rem;
+    margin-bottom: -13rem;
+}
+
+.contner {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.carreshaut {
+    padding-right: 0;
+    position: relative;
+    top: 0;
+    right: -1.5rem;
+    max-width: 14%;
+}
+
+.carresbas {
+    max-width: 15%;
+    position: relative;
+    top: -2rem;
 }
 
 label {
@@ -37,8 +53,9 @@ h1 {
 }
 
 .contactzone,
-.text {
-    background: #b9473ede;
+.text,
+option {
+    background: #FA7268;
 }
 
 .rightcolumn {
@@ -47,12 +64,14 @@ h1 {
     padding-right: 0;
 }
 
-.form-control {
+.form-control,
+.form-control:focus {
     background: transparent;
     border-top: none;
     border-left: none;
     border-right: none;
     border-radius: 0;
+    padding-left: 0;
     color: #ffffff;
     border-bottom: 0.0625rem #ffffff solid;
 }
@@ -82,19 +101,21 @@ label {
     margin-bottom: 1.5rem;
 }
 
-.custom-select {
+.custom-select,
+.custom-select:focus {
     margin-bottom: 1.875rem;
-}
-
-.form-control {
-    padding-left: 0;
+    background-color: rgba(250, 114, 104, 0.5);
+    border-radius: 0;
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 body>div>div>div>div:nth-child(1)>form>label {
     font-size: 0.97rem;
 }
 
-/* .custom-control-label::after {
+.custom-control-label::after {
     position: absolute;
     top: .25rem;
     left: -1.5rem;
@@ -106,7 +127,7 @@ body>div>div>div>div:nth-child(1)>form>label {
     background-position: center center;
     background-size: 50% 50%;
     border-radius: none;
-} */
+}
 
 input[type=checkbox],
 input[type=radio] {
@@ -146,20 +167,15 @@ textarea.form-control {
     height: auto;
     padding-left: 0.625rem;
     font-size: 0.97rem;
+    color: #ffffff;
 }
 
-.btn {
+.btn,
+.btn:hover {
     border-radius: 0;
     color: #ffffff;
-    background-color: #FA7268;
-    /* height: 3.125rem; */
+    background-color: #AD3F37;
 }
-
-.btn:hover {
-    font-weight: bold;
-    color: #68faa5;
-}
-
 
 
 

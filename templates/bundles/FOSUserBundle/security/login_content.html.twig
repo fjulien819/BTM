@@ -18,7 +18,13 @@
 <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<div class="col-12 col-lg-9 mx-auto principalcontainer">
+
+{# Top squares #}
+<div class="container-fluid contner">
+    <img class="carreshaut col-md-2 offset-md-10" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux2.jpg') }}">
+<div>
+
+<div class="col-12 col-md-9 mx-auto principalcontainer">
 
     <form action="{{ path("fos_user_security_check") }}" method="post" class="col-12 col-lg-8 mx-auto form-signin">
     {% if csrf_token %}
@@ -39,34 +45,25 @@
         </div>
 
         <!-- Username -->
-        <div class="form-group" style="margin-top: 3.125rem">
-                <label for="username">{{ 'security.login.username'|trans }}</label>
-                <input type="text" id="username" class="form-control" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
-            {# <label for="username">Nom d'utilisateur</label>
-            <input type="text" class="form-control" id="username" aria-describedby="username" required> #}
+        <div class="form-group" style="margin-top: 2rem; margin-bottom: 2rem">
+            <label for="username">{{ 'security.login.username'|trans }}</label>
+            <input type="text" id="username" class="form-control" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
         </div>
 
         <!-- Password -->
         <div class="form-group">
-                <label for="password">{{ 'security.login.password'|trans }}</label>
-                <input type="password" class="form-control" id="password" name="_password" required="required" autocomplete="current-password" />
-                
-            {# <label for="passwordinput">Mot de passe</label>
-            <input type="password" class="form-control" id="passwordinput" required> #}
+            <label for="password">{{ 'security.login.password'|trans }}</label>
+            <input type="password" class="form-control" id="password" name="_password" required="required" autocomplete="current-password" />
         </div>
 
         <!-- Submit button -->
         <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-lg btn-block text-uppercase" style="margin-top: 2.5rem; margin-bottom: 1.875rem"/>
-        {# <button class="btn btn-lg btn-block text-uppercase" type="submit" style="margin-top: 2.5rem; margin-bottom: 1.875rem">Se
-            connecter</button> #}
-        
 
         <!-- Remember me -->
         <div class="checkbox mb-3 form-check">
             <label class="d-flex align-items-center">
                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" style="margin-right: 0.625rem;"/>
                 <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-                {# <input type="checkbox" value="remember-me" style="margin-right: 0.625rem;"> Se souvenir de moi #}
             </label>
         </div>
 
@@ -74,8 +71,12 @@
         <div class="col-12 identiforgot" style="text-align: right">
             <a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a>
         </div>
-
     </form>
 </div>
+
+{# Bottom squares #}
+<div class="container-fluid contner">
+    <img class="img-fluid carresbas col-md-3" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux3.png') }}">
+<div>
 
 {% endblock %}
