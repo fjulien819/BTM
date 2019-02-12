@@ -5,9 +5,11 @@
 
 .home {
     padding: 3.4rem 3rem 5rem 3rem;
-    /* padding: 2.4rem 3rem 0 3rem; */
-
     background: #F4F4F4;
+}
+
+.navbar {
+    border-bottom: 5px #68faa5 solid;
 }
 
 p,
@@ -89,6 +91,19 @@ section .overlay {
     padding-right: 10px;
 }
 
+.carreshaut {
+    max-width: 55%;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    padding-bottom: 1.5rem;
+}
+
+.carresbas {
+    max-width: 55%;
+    margin-left: 11rem;
+    margin-top: 0rem;
+}
+
 .uppart,
 .bottompart {
     font-family: 'robotoregular', sans-serif;
@@ -101,7 +116,7 @@ p.uppart {
 }
 
 .carres2 {
-    margin-right: -2rem;
+    margin-right: -1rem;
     margin-top: 1rem;
 }
 
@@ -131,8 +146,8 @@ p.uppart {
 }
 
 .sepline {
-    margin-top: 2.1875rem;
-    margin-bottom: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .secondarytitle {
@@ -183,6 +198,23 @@ div.col-6.col-md-3.confimg {
 .breveexplic {
     max-width: 110%;
 }
+
+.testbtn,
+.testbtn:hover {
+    box-shadow: none;
+    background: transparent;
+    margin-top: -6rem;
+    margin-right: -2.7rem;
+    max-height: 2.8rem;
+    /* border: 1px black solid; */
+    color: rgba(255, 255, 255, 0);
+}
+
+.carresverticaux {
+    max-height: 187px;
+    margin: -6rem 0 2rem 61rem;
+}
+
 
 
 /* MEDIA QUERIES

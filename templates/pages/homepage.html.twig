@@ -44,10 +44,12 @@
                     numérique où <u class="utype1">le mobile s’impose comme le premier point d’accès au web</u>.
                 </p>
             </div>
-            <div class="col-md-4 col-lg-4 d-flex justify-content-end imagetag" style="padding-right: 0; padding-left: 0">
-                <img class="img-fluid d-flex align-self-end carres2" alt="carrés colorés" src="{{ asset('build/img/carres_modele2.jpg') }}">
+            <div class="col-md-4 col-md-4 d-flex flex-column imagetag" style="padding-right: 0; padding-left: 0">
+                <img class="img-fluid d-flex justify-content-start carreshaut" alt="carrés colorés" src="{{ asset('build/img/carres_modele2_haut.jpg') }}">
+                <img class="img-fluid d-flex justify-content-end carresbas" alt="carrés colorés" src="{{ asset('build/img/carres_modele2_bas.jpg') }}">
             </div>
 
+            <!-- Infographies -->
             <div class="col-12 col-md-6 order-1 d-flex justify-content-center">
                 <img class="img-fluid imgtag tel80fois" alt="Téléphone consulté 80 fois par jour" src="{{ asset('build/img/80fois.jpg') }}">
             </div>
@@ -67,7 +69,7 @@
                 <p class="bottompart text-center">Étude réalisée en 2016 aux États-Unis par Facebook</p>
             </div>
         </div>
-        <hr class="seplinehaute" style="border: 2px solid #68faa5">
+        <hr class="seplinehaute" style="border: 2px solid #48ad72">
 
         <!-- Approche row -->
         <div class="row approche">
@@ -88,16 +90,12 @@
             <div class="col-12 col-md-5 approchimg1 d-flex justify-content-center">
                 <img class="d-flex align-self-center breveexplic" alt="Brève explication sur les pwa" src="{{ asset('build/img/pwa_carre_corail.jpg') }}">
             </div>
-        </div>
-
-        <!-- Savoir plus row -->
-        {# <div class="row savoirplusbutton">
-            <div class="col-12 col-sm-12 col-md-4 offset-md-4 d-flex btnligne justify-content-center">
-                <a class="btn btn-lg actionbtn btn-block text-uppercase rounded-0" href="{{path('expertise')}}#pwa">En
+            <div class="col-md-2 offset-md-10 d-flex justify-content-center">
+                <a class="btn btn-lg actionbtn testbtn btn-block text-uppercase rounded-0" href="{{path('expertise')}}#pwa">En
                     savoir plus</a>
             </div>
-        </div> #}
-        <hr class="sepline" style="border: 2px solid #68faa5">
+        </div>
+        <hr class="sepline" style="border: 2px solid #48ad72">
 
 
         <!-- Confiance row -->
@@ -105,9 +103,10 @@
             <h2 class="col-12 secondarytitle confi">
                 Ils nous ont fait confiance
             </h2>
+            <img class="col-md-2 offset-md-10 img-fluid carresverticaux d-none d-sm-none d-md-block" src="{{ asset('build/img/carres_verticaux2.jpg') }}" alt="carrés verticaux">
             <div class="col-6 col-md-3 confimg">
                 <a href="https://www.francetvinfo.fr/" target="_blank">
-                    <img class="img-fluid imgtag tag1 border" alt="Site de FranceInfo" src="{{ asset('build/img/france-info.jpg') }}">
+                    <img class="img-fluid imgtag tag1" alt="Site de FranceInfo" src="{{ asset('build/img/france-info.jpg') }}">
                 </a>
             </div>
             <div class="col-6 col-md-3 confimg">
@@ -122,10 +121,9 @@
             </div>
             <div class="col-6 col-md-3 confimg" target="_blank">
                 <a href="https://fondation.edf.com/fr">
-                    <img class="img-fluid imgtag tag2 border" alt="Fondation EDF" src="{{ asset('build/img/fondationedf.jpg') }}">
+                    <img class="img-fluid imgtag tag2" alt="Fondation EDF" src="{{ asset('build/img/fondationedf.jpg') }}">
                 </a>
             </div>
-
         </div>
     </div>
 

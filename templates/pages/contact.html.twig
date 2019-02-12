@@ -17,6 +17,12 @@
             {{ message }}
     {% endfor %}
 
+
+{# Top squares #}
+<div class="container-fluid contner">
+    <img class="carreshaut col-md-2 offset-md-10" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux2.jpg') }}">
+<div>
+
     <!-- Contact form-->
     <div class="container contactcont" style="margin-top:4rem; padding-top: 3.125rem; padding-bottom:8.125rem">
         <div class="row contactcontainer">
@@ -93,6 +99,11 @@
             {{ form_end(formContact) }}
         </div>
     </div>
+
+    {# Bottom squares #}
+    <div class="container-fluid contner">
+        <img class="img-fluid carresbas col-md-3" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux3.png') }}">
+    <div>
 
 
 {% endblock %}
