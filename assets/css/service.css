@@ -308,3 +308,13 @@ h1 {
         margin-bottom: 7rem !important;
     }
 }
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .carresverticaux {
+        margin-top: -24rem;
+        margin-left: 66rem;
+    }
+}
+

@@ -3,6 +3,10 @@
     margin-bottom: 0;
 }
 
+.container.h-100 {
+    margin-top: 4rem !important;
+}
+
 .home {
     padding: 3.4rem 3rem 5rem 3rem;
     background: #F4F4F4;
@@ -180,15 +184,16 @@ div.col-6.col-md-3.confimg {
 }
 
 .approchetext p {
-    padding-left: 4rem;
+    padding-left: 3rem;
     padding-right: 1rem;
     font-size: 1.25rem;
     line-height: 30px;
 }
 
 .imgroue {
-    padding-left: 4rem;
-    max-width: 95%;
+    padding-left: 3rem;
+    padding-right: 1.5rem;
+    max-width: 85%;
 }
 
 .approchimg1 {
@@ -223,13 +228,28 @@ div.col-6.col-md-3.confimg {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
+    .navbar {
+        border: none;
+    }
+
     .home {
-        padding: 0 1rem 5rem 1rem;
+        padding: 0 1rem 1rem 1rem;
     }
 
     .mobileh1 {
         font-size: 1rem;
         margin-bottom: 1.25rem;
+    }
+
+    .approchetext p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .imgroue {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
     }
 
     .firstblock,
@@ -304,10 +324,11 @@ div.col-6.col-md-3.confimg {
     }
 
     .actionbtn {
-        font-size: 0.9rem;
+        /* font-size: 0.9rem;
         background: rgb(250, 114, 104);
         max-width: 100%;
-        box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25); */
+        display: none;
     }
 
     .appro,
@@ -324,12 +345,20 @@ div.col-6.col-md-3.confimg {
     .tag2 {
         margin-bottom: 2.375rem;
     }
+
+    .breveexplic {
+        max-width: 100%;
+    }
+
+    .approchimg1 {
+        padding: 0;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .home {
-        padding: 1rem 1rem 5rem 1rem;
+        padding: 1rem 1rem 2rem 1rem;
     }
 
     .mobileh1 {
@@ -434,6 +463,25 @@ div.col-6.col-md-3.confimg {
     .tag1,
     .tag2 {
         margin-bottom: 2.375rem;
+    }
+
+    .breveexplic {
+        max-width: 100%;
+    }
+
+    .approchimg1 {
+        padding: 0;
+    }
+
+    .approchetext p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .imgroue {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
     }
 }
 

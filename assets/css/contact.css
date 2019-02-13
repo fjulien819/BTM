@@ -10,6 +10,16 @@
     margin-bottom: -13rem;
 }
 
+.container.contactcont {
+    margin-top:4rem;
+    padding-top: 3.125rem; 
+    padding-bottom:8.125rem
+}
+
+.contactzone {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+}
+
 .contner {
     padding-left: 0;
     padding-right: 0;
@@ -41,7 +51,7 @@ label {
 h1 {
     font-family: 'ethnocentricregular';
     font-size: 1rem;
-    color: #ffffff;
+    color: #000000;
 }
 
 .livingline {
@@ -50,12 +60,6 @@ h1 {
 
 .underlinetitle {
     margin-top: 1.5rem;
-}
-
-.contactzone,
-.text,
-option {
-    background: #FA7268;
 }
 
 .rightcolumn {
@@ -72,28 +76,28 @@ option {
     border-right: none;
     border-radius: 0;
     padding-left: 0;
-    color: #ffffff;
-    border-bottom: 0.0625rem #ffffff solid;
+    color: #000000;
+    border-bottom: 0.0625rem #FA7268 solid;
 }
 
 .form-control::-webkit-input-placeholder {
-    color: #ffffff;
+    color: #000000;
 }
 
 input::-moz-placeholder {
-    color: #ffffff !important;
+    color: #000000 !important;
 }
 
 input:-moz-placeholder {
-    color: #ffffff !important;
+    color: #000000 !important;
 }
 
 input:-ms-input-placeholder {
-    color: #ffffff !important;
+    color: #000000 !important;
 }
 
 label {
-    color: #ffffff;
+    color: #000000;
 }
 
 .namerow,
@@ -101,13 +105,17 @@ label {
     margin-bottom: 1.5rem;
 }
 
+.custom-select option {
+    background: #f4f4f4f4;
+}
+
 .custom-select,
 .custom-select:focus {
     margin-bottom: 1.875rem;
-    background-color: rgba(250, 114, 104, 0.5);
+    background-color: transparent;
     border-radius: 0;
     border: none;
-    color: #ffffff;
+    color: #000000;
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
@@ -127,6 +135,10 @@ body>div>div>div>div:nth-child(1)>form>label {
     background-position: center center;
     background-size: 50% 50%;
     border-radius: none;
+}
+
+#contact_email {
+    width: 56%;
 }
 
 input[type=checkbox],
@@ -167,7 +179,7 @@ textarea.form-control {
     height: auto;
     padding-left: 0.625rem;
     font-size: 0.97rem;
-    color: #ffffff;
+    color: #000000;
 }
 
 .btn,
@@ -185,10 +197,10 @@ textarea.form-control {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
-    .container,
-    .contactzone {
-        padding-left: 0;
-        padding-right: 0;
+    .container.contactcont {
+        margin-top: 4rem;
+        padding-top: 10.125rem;
+        padding-bottom: 13.125rem;
     }
 
     .contactzone {
@@ -223,8 +235,6 @@ textarea.form-control {
         margin-left: 0;
     }
 
-
-
     .leftcolumn {
         margin-bottom: -6rem;
     }
@@ -257,6 +267,12 @@ textarea.form-control {
     .contactzone {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .container.contactcont {
+        margin-top: 4rem;
+        padding-top: 10.125rem;
+        padding-bottom: 13.125rem;
     }
 
     .contactzone {
@@ -326,6 +342,12 @@ textarea.form-control {
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+
+    .container.contactcont {
+        margin-top: 4rem;
+        padding-top: 10.125rem;
+        padding-bottom: 14.125rem;
+    }
 
     .livingline {
         -ms-flex: 0 0 79%;

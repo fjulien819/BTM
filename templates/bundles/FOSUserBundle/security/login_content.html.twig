@@ -24,13 +24,12 @@
     <img class="carreshaut col-md-2 offset-md-10" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux2.jpg') }}">
 <div>
 
+{# Login form #}
 <div class="col-12 col-md-9 mx-auto principalcontainer">
-
     <form action="{{ path("fos_user_security_check") }}" method="post" class="col-12 col-lg-8 mx-auto form-signin">
     {% if csrf_token %}
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}
-
         <!-- Title -->
         <div class="row" style="margin-top: 1.5rem">
             <div class="col-4 lineleft">
@@ -43,22 +42,18 @@
                 <hr style="border: 2px #68faa5 solid">
             </div>
         </div>
-
         <!-- Username -->
         <div class="form-group" style="margin-top: 2rem; margin-bottom: 2rem">
             <label for="username">{{ 'security.login.username'|trans }}</label>
             <input type="text" id="username" class="form-control" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
         </div>
-
         <!-- Password -->
         <div class="form-group">
             <label for="password">{{ 'security.login.password'|trans }}</label>
             <input type="password" class="form-control" id="password" name="_password" required="required" autocomplete="current-password" />
         </div>
-
         <!-- Submit button -->
         <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-lg btn-block text-uppercase" style="margin-top: 2.5rem; margin-bottom: 1.875rem"/>
-
         <!-- Remember me -->
         <div class="checkbox mb-3 form-check">
             <label class="d-flex align-items-center">
@@ -66,7 +61,6 @@
                 <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
             </label>
         </div>
-
         <!-- Forgotten password -->
         <div class="col-12 identiforgot" style="text-align: right">
             <a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a>

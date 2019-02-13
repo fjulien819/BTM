@@ -124,7 +124,6 @@ strong:hover {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.65);
     background-blend-mode: multiply;
-
 }
 
 .actuimg {
@@ -132,7 +131,6 @@ strong:hover {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.65);
     background-blend-mode: multiply;
-
 }
 
 .formaimg {
@@ -140,7 +138,6 @@ strong:hover {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.65);
     background-blend-mode: multiply;
-
 }
 
 .confiancemg {
@@ -148,11 +145,10 @@ strong:hover {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.65);
     background-blend-mode: multiply;
-
 }
 
 .menutext {
-    font-family: 'ethnocentricregular';
+    font-family: 'ethnocentricregular', sans-serif;
     font-size: 0.875rem;
     color: #ffffff;
     margin-bottom: 0.5rem;
@@ -173,7 +169,6 @@ strong:hover {
 }
 
 .modal-body {
-    /* margin-top: 3.74rem; */
     margin-top: 6.74rem;
     padding: 10px 0 0 0;
 }
@@ -250,7 +245,7 @@ strong:hover {
     padding-bottom: 0.625rem;
     padding-top: 0.7rem;
     color: #ffffff;
-    font-family: 'ethnocentricregular';
+    font-family: 'ethnocentricregular', sans-serif;
     font-size: 1.25rem;
 }
 
@@ -294,7 +289,7 @@ strong:hover {
 .footer-links a:focus {
     color: #ffffff;
     border: 0;
-    font-family: 'ethnocentricregular';
+    font-family: 'ethnocentricregular', sans-serif;
     line-height: 2;
     font-size: 1.25rem;
 }
@@ -370,25 +365,64 @@ strong:hover {
 @media (max-width: 575.98px) {
 
     /* Header */
-
-    .rightgroup.navpart ul {
-        padding-bottom: 1rem;
-        box-shadow: none;
-        padding-top: 2rem;
-        background: #fa7268;
+    .navbar,
+    #modalNavigation>div>div>nav {
         width: 100%;
+        border: none;
+        height: 95px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #modalNavigation>div>div>nav {
+        background-color: #3F1C1A !important;
+    }
+
+    body>header>nav>div>div.col-6.d-flex.justify-content-center>a>img,
+    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-center>a>img {
+        height: 4.125rem !important;
+    }
+
+    body>header>nav>div>div.col-6.d-flex.justify-content-center,
+    #modalNavigation>div>div>nav>div {
+        padding-left: 0;
+    }
+
+    body>header>nav>div>div.col-6.d-flex.justify-content-end,
+    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-end {
+        padding-right: 0;
+        padding-top: 0;
+    }
+
+    body>header>nav>div>div.col-6.d-flex.justify-content-end>button>img,
+    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-end>button>img {
+        height: 38px !important;
+    }
+
+    .modal-body {
+        padding: 0;
+        margin-top: 5.9rem;
+    }
+
+    .menutext {
+        display: none;
+        float: right !important;
+    }
+
+    .littlegroup {
+        background: #fa7268;
+        padding-left: 0;
     }
 
     .navpart {
-        background: #fa7268;
+        background: #D26057;
+        padding-right: 0;
+        padding-left: 5rem;
     }
-
-    /* .itemheader {
-        padding-left: 2rem;
-    } */
 
     .headerhr {
         width: 100% !important;
+        border-width: 2px !important;
     }
 
     .brandpart {
@@ -420,14 +454,32 @@ strong:hover {
     }
 
     .navbar-nav .nav-link {
+        font-family: 'ethnocentricregular', sans-serif;
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 1.125rem;
+    }
+
+    .itemheader {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
     }
 
     /* Footer */
 
     .footer-about {
-        margin-bottom: 1.3rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        text-align: left;
+    }
+
+    .footer-contact,
+    .footer-social {
+        margin-bottom: 1rem;
+    }
+
+    .footer-about,
+    .footer-contact {
+        border-bottom: 1px #ffffff solid;
     }
 
     .footer-about p {
@@ -437,19 +489,47 @@ strong:hover {
 
     .footer-contact {
         margin-left: 0;
+        padding-bottom: 1rem;
+        text-align: left;
     }
 
+    .footer-about,
     .footer-contact,
-    .footer-social {
-        margin-bottom: 1rem;
+    .footer-links {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
     }
 
     .navbar-nav {
-        text-align: center;
+        text-align: left;
+        margin-left: 1.2rem;
     }
 
-    .footer-copyright {
-        margin-bottom: 0.8rem;
+    .footer-mentions {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .logo-footer img {
+        max-height: 5.5rem;
+    }
+
+    .footer-social i {
+        font-size: 2.25rem;
+    }
+
+    .footer-copyright p,
+    .footer-mentions a {
+        font-size: 0.75rem;
+    }
+
+    .footer-bottom {
+        padding-bottom: 1rem;
+    }
+
+    .footer-links {
+        display: flex !important;
+        justify-content: flex-start !important;
     }
 }
 
@@ -457,26 +537,77 @@ strong:hover {
 @media (min-width: 576px) and (max-width: 767.98px) {
 
     /* Header */
+    .navbar,
+    #modalNavigation>div>div>nav {
+        width: 100%;
+        border: none;
+        height: 95px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #modalNavigation>div>div>nav {
+        background-color: #3F1C1A !important;
+    }
+
+    body>header>nav>div>div.col-6.d-flex.justify-content-center>a>img,
+    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-center>a>img {
+        height: 4.125rem !important;
+    }
+
+    body>header>nav>div>div.col-6.d-flex.justify-content-center,
+    #modalNavigation>div>div>nav>div {
+        padding-left: 0;
+    }
+
+    body>header>nav>div>div.col-6.d-flex.justify-content-end,
+    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-end {
+        padding-right: 0;
+        padding-top: 0;
+    }
+
+    body>header>nav>div>div.col-6.d-flex.justify-content-end>button>img,
+    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-end>button>img {
+        height: 38px !important;
+    }
+
     .modal-body {
-        margin-top: 4.74rem;
+        padding: 0;
+        margin-top: 5.9rem;
+    }
+
+    .menutext {
+        display: none;
+        float: right !important;
+    }
+
+    .littlegroup {
+        background: #fa7268;
+    }
+
+    .navpart {
+        background: #D26057;
+        padding-right: 0;
+        padding-left: 5rem;
+    }
+
+    .headerhr {
+        width: 100% !important;
+        border-width: 2px !important;
+    }
+
+    .brandpart {
+        -ms-flex: 0 0 56%;
+        flex: 0 0 56%;
+        max-width: 56%;
     }
 
     .aroundbrand {
-        padding-left: 0.875rem;
-    }
-
-    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-center>a>img,
-    body>header>nav>div>div.col-6.d-flex.justify-content-center>a>img {
-        height: 5rem !important;
-    }
-
-    #modalNavigation>div>div>nav>div>div.col-6.d-flex.justify-content-end>button>img,
-    body>header>nav>div>div.col-6.d-flex.justify-content-end>button>img {
-        height: 2.3125rem !important;
-    }
-
-    .navbar {
-        height: 6.25rem;
+        -ms-flex: 0 0 22%;
+        flex: 0 0 22%;
+        max-width: 22%;
+        padding-left: 0;
+        padding-right: 0.8rem;
     }
 
     .leftgroup,
@@ -485,34 +616,30 @@ strong:hover {
         width: 0%;
     }
 
-    #modalNavigation ul {
-        margin-top: 1rem;
+    .brandpart>a>img {
+        margin-left: -9rem;
+    }
+
+    #modalNavigation>div>div>div.modal-body.d-flex.flex-row>div.col-12.col-sm-8.col-md-4.col-lg-4.rightgroup.navpart.d-flex.flex-column>div.col-10.offset-1.blocks.d-flex.justify-content-between {
+        padding-left: 0;
     }
 
     .navbar-nav .nav-link {
-        line-height: 1.5rem;
+        font-family: 'ethnocentricregular', sans-serif;
+        text-align: left;
+        font-size: 1.125rem;
     }
 
-    .fabmenu {
-        font-size: 2rem;
-    }
-
-    .navmenu {
-        margin-bottom: -0.625rem;
+    .itemheader {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
     }
 
     /* Footer */
-
     .footer-about {
-        margin-bottom: 1.3rem;
-    }
-
-    .footer-contact {
-        margin-left: 0;
-    }
-
-    .logo-footer img {
-        max-height: 6.5rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        text-align: left;
     }
 
     .footer-contact,
@@ -520,39 +647,62 @@ strong:hover {
         margin-bottom: 1rem;
     }
 
-    .navbar-nav {
-        text-align: center;
+    .footer-about,
+    .footer-contact {
+        border-bottom: 1px #ffffff solid;
     }
 
-    .footer-links {
-        padding-left: 0.9375rem;
-    }
-
-    .footer-copyright {
-        margin-bottom: 0.8rem;
-    }
-}
-
-@media (max-width: 767px) {
-
-    .footer-top {
-        padding: 40px 0;
-        text-align: center;
-    }
-
-    .footer-contact i {
+    .footer-about p {
+        padding-left: 5px;
         padding-right: 5px;
     }
 
-    .footer-bottom,
-    .footer-social {
-        text-align: center;
+    .footer-contact {
+        margin-left: 0;
+        padding-bottom: 1rem;
+        text-align: left;
     }
 
-    .footer-social a {
-        margin: 0 10px;
+    .footer-about,
+    .footer-contact,
+    .footer-links {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+
+    .footer-links {
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+
+    .navbar-nav {
+        text-align: left;
+        margin-left: 1.2rem;
+    }
+
+    .footer-mentions {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .logo-footer img {
+        max-height: 5.5rem;
+    }
+
+    .footer-social i {
+        font-size: 2.25rem;
+    }
+
+    .footer-copyright p,
+    .footer-mentions a {
+        font-size: 0.75rem;
+    }
+
+    .footer-bottom {
+        padding-bottom: 1rem;
     }
 }
+
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -562,12 +712,17 @@ strong:hover {
         padding-left: 1.875rem;
     }
 
+    .logo-footer img {
+        max-height: 5.5rem;
+    }
+
     .blockslink {
         font-size: 1.1rem;
     }
 
     .navbar-nav .nav-link {
         line-height: 1.5rem;
+        text-align: left;
     }
 
     .navmenu {
@@ -582,6 +737,11 @@ strong:hover {
     .fabmenu {
         font-size: 1.5rem;
     }
+
+    .rightgroup.navpart ul {
+        margin-right: -2rem;
+    }
+
 
     /* Footer */
 
@@ -619,6 +779,11 @@ strong:hover {
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
     /* Header */
+
+    .modal-full .modal-content {
+        /* min-height: 118vh; */
+    }
+
     .aroundbrand {
         padding-left: 2.875rem;
     }
@@ -639,5 +804,6 @@ strong:hover {
 
     .footer-contact {
         margin-left: 3rem;
+        padding: 0;
     }
 }
