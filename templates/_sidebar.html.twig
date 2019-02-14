@@ -1,7 +1,7 @@
 {% set categories = categories_posts.getCategories %}
 
 <!-- Sidebar Widgets Column -->
-<div class="col-12 my-4 my-lg-0 p-0 pl-lg-2 col-md-12 col-lg-3">
+<div class="col-12 my-4 my-lg-0 p-0 pl-lg-2 col-md-12 col-lg-3 ml-4">
 
     <!-- Search Widget -->
     <div class="card card-sidebar-search rounded-0">
@@ -20,7 +20,7 @@
                       {% for category in categories %}
                           <li>
                               <a class="blog-sidebar-categories-link text-dark d-flex align-items-center" href="{{ path('postsByCategory', {'url_page_post': 'blog', 'category_name': category.name }) }}">
-                              <img src="{{ asset('build/img/folder.png')}}">{{ category.name }}
+                                  <i class="fas fa-folder-open"></i>{{ category.name }}
                               </a>
                           </li>
                         {% endfor %}
@@ -68,7 +68,7 @@
                 <a class="blog-sidebar-button-contact blog-button btn " href="{{ path('contact') }}" title="CONTACTEZ-NOUS" role="button">CONTACTEZ-NOUS</a>
             </p>
             <hr>
-            <h5 class="card-title text-center">Back to te newsletter</h5>
+            <h5 class="card-title text-center">Back to the newsletter</h5>
             {% include "form/_newsletter_form.html.twig" %}
         </div>
     </div>

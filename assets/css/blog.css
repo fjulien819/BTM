@@ -10,6 +10,8 @@
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%;*/
+    min-height: 250px;
+    max-height: 300px;
 }
 
 .articlextract {
@@ -41,11 +43,13 @@
     font-family: 'ethnocentricregular';
     font-size: 16px !important;
     text-decoration: none !important;
+    line-height: 2.7;
 }
-.blog-sidebar-categories-link  img{
-    width: 30px;
+.blog-sidebar-categories-link  i{
+    font-size: 30px;
     margin-left: 5px;
     margin-right: 20px;
+    color: #ad3f37;
 }
 
 .blog-sidebar-newsletter-form {
@@ -89,6 +93,7 @@ hr {
 /* title page */
 h1 {
     margin-bottom: 21px;
+    margin-top: 60px;
     font-family: 'ethnocentricregular';
     font-size: 20px;
 }
