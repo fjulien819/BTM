@@ -12,12 +12,6 @@ u,
 strong {
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 3px solid #68faa5;
-}
-
-u:hover,
-strong:hover {
-    background-color: #68faa5;
 }
 
 
@@ -94,9 +88,13 @@ strong:hover {
 
 /* Header */
 
+.bg-dark {
+    background:rgba(52, 58, 64, 0.8) !important;
+}
+
 .navbar {
     width: 100%;
-    border-bottom: 5px #ffffff solid;
+    border-bottom: 1px #ffffff solid;
     height: 120px;
 }
 

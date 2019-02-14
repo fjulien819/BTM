@@ -13,7 +13,7 @@
 }
 
 .navbar {
-    border-bottom: 5px #68faa5 solid;
+    border-bottom: 1px #68faa5 solid;
 }
 
 p,
@@ -130,6 +130,7 @@ p.uppart {
 
 .imgtag {
     margin-bottom: 2.2rem;
+    opacity: 0.5;
 }
 
 .tel80fois {
@@ -266,7 +267,7 @@ div.col-6.col-md-3.confimg {
     .imgtag {
         margin-bottom: 0.5rem;
     }
-
+    
     p.uppart {
         font-size: 0.75rem;
         line-height: 1;
