@@ -23,20 +23,30 @@ class PostFixtures extends Fixture
         $author->setEnabled(true);
         $manager->persist($author);
 
-        for ($i = 1; $i < 10; $i++)
+
+
+
+        $categories = ['Développement', 'Design', 'Marketing' ];
+        foreach ( $categories as $categoryName)
         {
+            $category = new Category();
+            $category->setName($categoryName);
+            $manager->persist($category);
+        }
+
+
+        for ($i = 0; $i < 6; $i++)
+        {
+
+
+
             $post = new Post();
             $post->setTitle($faker->sentence($nbWords = 6, $variableNbWords = true));
-            $post->setMetaDescription($faker->sentence($nbWords = 12, $variableNbWords = true));
+            $post->setMetaDescription($faker->sentence($nbWords = 300, $variableNbWords = true));
             $post->setContent($faker->paragraph($nbSentences = 10));
             $post->setCreatedAt($faker->dateTime($max = 'now', Post::DATE_TIME_ZONE));
             $post->setImage("test_img.jpg");
 
-            $category = new Category();
-            $category->setName($faker->word);
-            $manager->persist($category);
-
-            $post->addCategory($category);
 
             $author = new User();
             $author->setUsername($faker->firstName($gender = null));
