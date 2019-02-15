@@ -94,7 +94,6 @@ strong {
 
 .navbar {
     width: 100%;
-    border-bottom: 1px #ffffff solid;
     height: 120px;
 }
 
@@ -413,9 +412,8 @@ strong {
     }
 
     .navpart {
-        background: #D26057;
+        background: #fa7268;
         padding-right: 0;
-        padding-left: 5rem;
     }
 
     .headerhr {
