@@ -1,23 +1,14 @@
 .mt-container-body {
-    padding-top: 2rem;
-    margin-bottom: 0;
-}
-
-.contactcontainer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: -14rem;
-    margin-bottom: -13rem;
-}
-
-.container.contactcont {
-    margin-top:4rem;
-    padding-top: 3.125rem; 
-    padding-bottom:8.125rem
+    margin-top: 5rem;
+    margin-bottom: -5rem;
 }
 
 .contactzone {
+    margin-bottom: 4rem;
+    margin-top: -1rem;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: row;
 }
 
 .contner {
@@ -28,24 +19,20 @@
 .carreshaut {
     padding-right: 0;
     position: relative;
-    top: 0;
-    right: -1.5rem;
-    max-width: 14%;
+    top: 74px;
+    right: -5.5rem;
+    max-width: 54%;
 }
 
 .carresbas {
-    max-width: 15%;
+    max-width: 54%;
     position: relative;
-    top: -2rem;
+    top: -9rem;
+    left: -3.5rem;
 }
 
 label {
     font-family: 'robotoregular', Arial, sans-serif;
-}
-
-.contactzone {
-    display: flex;
-    flex-direction: row;
 }
 
 h1 {
@@ -55,7 +42,7 @@ h1 {
 }
 
 .livingline {
-    border-top: #68faa5 1px solid;
+    border-top: #48ad72 1px solid;
 }
 
 .underlinetitle {
@@ -63,7 +50,7 @@ h1 {
 }
 
 .rightcolumn {
-    border-left: 0.125rem #68faa5 solid;
+    border-left: 0.125rem #48ad72 solid;
     padding-left: 0;
     padding-right: 0;
 }
@@ -77,7 +64,7 @@ h1 {
     border-radius: 0;
     padding-left: 0;
     color: #000000;
-    border-bottom: 0.0625rem #FA7268 solid;
+    border-bottom: 0.0625rem #000000 solid;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -106,13 +93,17 @@ label {
 }
 
 .custom-select option {
-    background: #f4f4f4f4;
+    background: #ffffff;
 }
+
+/* #contact_object > option:nth-child(1) {
+    background: #FCB7B2;
+} */
 
 .custom-select,
 .custom-select:focus {
     margin-bottom: 1.875rem;
-    background-color: transparent;
+    background-color: rgba(252, 183, 178, 0.829);
     border-radius: 0;
     border: none;
     color: #000000;
@@ -144,6 +135,7 @@ body>div>div>div>div:nth-child(1)>form>label {
 input[type=checkbox],
 input[type=radio] {
     box-sizing: border-box;
+    border-radius: none;
     padding: 0;
     width: 1.5rem;
     height: 1.5rem;
@@ -152,6 +144,10 @@ input[type=radio] {
 .form-check-label {
     margin-left: 0.625rem;
     font-size: 0.7rem;
+}
+
+.form-check-input {
+    background: blue;
 }
 
 .check2 {
@@ -190,12 +186,15 @@ textarea.form-control {
 }
 
 
-
 /* MEDIA QUERIES
 ------------------------------------------------  */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+    .mt-container-body {
+        margin-top: 7rem;
+        margin-bottom: -4rem;
+    }
 
     .container.contactcont {
         margin-top: 4rem;
@@ -203,9 +202,46 @@ textarea.form-control {
         padding-bottom: 13.125rem;
     }
 
+    .contactcontainer {
+        margin-right: 0;
+    }
+
     .contactzone {
         display: flex;
         flex-direction: column;
+        box-shadow: none;
+        padding-right: 0;
+    }
+
+    .carresbas,
+    .carreshaut {
+        display: none !important;
+    }
+
+    .rgpdrow {
+        position: relative;
+        bottom: -26rem;
+        padding-bottom: 1rem;
+        z-index: 100;
+        margin-right: 0;
+        width: 108%;
+    }
+
+    .checkpart {
+        padding-right: 5px;
+        padding-left: 0;
+    }
+
+    .submitline {
+        margin-top: 7rem !important;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .submitbutton {
+        margin-bottom: 5rem;
+        margin-top: 2.5rem;
+        padding-right: 15px !important;
     }
 
     .livingline {
@@ -230,43 +266,16 @@ textarea.form-control {
         width: 96%;
     }
 
-    .submitline {
-        margin-right: 0.9375rem;
-        margin-left: 0;
-    }
-
     .leftcolumn {
         margin-bottom: -6rem;
-    }
-
-    .rgpdrow {
-        position: relative;
-        bottom: -26rem;
-        padding-bottom: 1rem;
-        z-index: 100;
-    }
-
-    .submitline {
-        margin-top: 7rem !important;
-    }
-
-    .submitbutton {
-        margin-bottom: 3.3rem;
-    }
-
-    .carresbas,
-    .carreshaut {
-        display: none !important;
     }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-
-    .container,
-    .contactzone {
-        padding-left: 0;
-        padding-right: 0;
+    .mt-container-body {
+        margin-top: 7rem;
+        margin-bottom: -4rem;
     }
 
     .container.contactcont {
@@ -275,23 +284,56 @@ textarea.form-control {
         padding-bottom: 13.125rem;
     }
 
+    .contactcontainer {
+        margin-right: 0;
+    }
+
     .contactzone {
         display: flex;
         flex-direction: column;
+        box-shadow: none;
+        padding-right: 0;
+    }
+
+    .carresbas,
+    .carreshaut {
+        display: none !important;
+    }
+
+    .rgpdrow {
+        position: relative;
+        bottom: -26rem;
+        padding-bottom: 1rem;
+        z-index: 100;
+        margin-right: 0;
+        width: 108%;
+    }
+
+    .checkpart {
+        padding-right: 5px;
+        padding-left: 0;
+    }
+
+    .submitline {
+        margin-top: 7rem !important;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .submitbutton {
+        margin-bottom: 5rem;
+        margin-top: 2.5rem;
+        padding-right: 15px !important;
     }
 
     .livingline {
-        -ms-flex: 0 0 48%;
-        flex: 0 0 48%;
-        max-width: 48%;
+        -ms-flex: 0 0 58%;
+        flex: 0 0 58%;
+        max-width: 58%;
     }
 
     .underformcheck {
         display: block !important;
-    }
-
-    .leftcolumn {
-        max-height: 22rem;
     }
 
     .rightcolumn {
@@ -306,42 +348,18 @@ textarea.form-control {
         width: 96%;
     }
 
-    .submitline {
-        margin-right: 0.9375rem;
-        margin-left: 0;
-    }
-
-    .submitbutton {
-        margin-bottom: 3.75rem;
-    }
-
-
     .leftcolumn {
-        margin-bottom: -1rem;
-    }
-
-    .rgpdrow {
-        position: relative;
-        bottom: -26rem;
-        z-index: 100;
-    }
-
-    .submitline {
-        margin-top: 7rem !important;
-    }
-
-    .submitbutton {
-        margin-bottom: 3.3rem;
-    }
-
-    .carresbas,
-    .carreshaut {
-        display: none !important;
+        margin-bottom: -6rem;
     }
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+
+    .mt-container-body {
+        margin-top: 16rem;
+        margin-bottom: 5rem;
+    }
 
     .container.contactcont {
         margin-top: 4rem;
@@ -376,6 +394,10 @@ textarea.form-control {
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .mt-container-body {
+        margin-top: 19rem;
+        margin-bottom: -2rem;
+    }
 
     .contactcontainer {
         margin-bottom: 8.5rem;
@@ -385,5 +407,10 @@ textarea.form-control {
         -ms-flex: 0 0 58%;
         flex: 0 0 58%;
         max-width: 58%;
+    }
+
+    .carresbas,
+    .carreshaut {
+        display: none !important;
     }
 }

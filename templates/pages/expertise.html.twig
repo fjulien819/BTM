@@ -27,10 +27,10 @@ qui a fait des Progressive Web Apps (PWA), sa technologie de prédilection.
             <hr class="sepline" style="border:1px solid #68faa5">
             <br>
             <p class="servtext text-left">
-                Nous avons tous des préférences, des afnités. Chez Back to Mobile, nous sommes convaincus
-que les Progressive Web Apps (PWA) répondent paraitement au développement du suppor
+                Nous avons tous des préférences, des affinités. Chez Back to Mobile, nous sommes convaincus
+que les Progressive Web Apps (PWA) répondent parfaitement au développement du support
 mobile. Nous croyons dans son potentiel et notre équipe, composée de passionnés, saura vous
-accompagner pour que cete technologie vous permetent de remplir vos objectifs commerciaux.</p>
+accompagner pour que cette technologie vous permettent de remplir vos objectifs commerciaux.</p>
         </div>
         <div class="col-md-4 col-md-4 d-flex flex-column imagetag" style="padding-right: 0; padding-left: 0">
             <img class="img-fluid d-flex justify-content-start carreshaut" alt="carrés colorés" src="{{ asset('build/img/carres_modele1_haut.png') }}">
@@ -285,7 +285,7 @@ accompagner pour que cete technologie vous permetent de remplir vos objectifs co
                                 recourir à votre ou vos services, votre interface doit être en mesure de lui
                                 procurer une expérience positive à même de susciter une réaction de confiance. Pour
                                 ce faire, j’aurai à cœur de concevoir des maquettes et visuels esthétiques et
-                                uniques qui vous différencieront de la concurrence</blockquote>
+                                uniques qui vous différencieront de la concurrence.</blockquote>
                             <i class="fas fa-quote-right d-flex justify-content-center"></i>
                         </div>
                         <!-- Prices -->
@@ -410,14 +410,14 @@ accompagner pour que cete technologie vous permetent de remplir vos objectifs co
                         </div>
                         <div class="panel-body textpart text-left">
                             <i class="fas fa-quote-left d-flex justify-content-center"></i>
-                            <blockquote class="col-md-10 mx-auto">Fasciné par l’efervescence créative qui s’exprime sur
+                            <blockquote class="col-md-10 mx-auto">Fasciné par l’effervescence créative qui s’exprime sur
                                 le web, je vous
                                 accompagne dans la
                                 création de vos contenus mobiles. Qu’ils soient de nature rédactionnelle,
                                 audiovisuelle ou
-                                photographique, je veillerai à élaborer une ofre éditoriale pertinente et engageante
+                                photographique, je veillerai à élaborer une offre éditoriale pertinente et engageante
                                 de façon à
-                                vous permetre d’ateindre vos objectifs commerciaux.</blockquote>
+                                vous permettre d’ateindre vos objectifs commerciaux.</blockquote>
                             <i class="fas fa-quote-right d-flex justify-content-center"></i>
                         </div>
                         <!-- Prices -->
@@ -499,7 +499,7 @@ accompagner pour que cete technologie vous permetent de remplir vos objectifs co
     <div class="row" id="pwa">
         <h2 class="col-12 secondarytitle text-center">Les PWA <br>(Progressive Web App)</h2>
 
-        <div class="row d-flex align-items-center" style="margin-top: 2rem">
+        {# <div class="row d-flex align-items-center" style="margin-top: 2rem">
             <div class="col-md-4 col-md-5 d-flex flex-column imagetag" style="padding-right: 0; padding-left">
                 <img class="img-fluid d-flex justify-content-start carreshaut2" alt="carrés colorés" src="{{ asset('build/img/carres_modele1_haut.png') }}">
                 <img class="img-fluid d-flex justify-content-end carresbas2" alt="carrés colorés" src="{{ asset('build/img/carres_modele1_bas.png') }}">
@@ -509,11 +509,12 @@ accompagner pour que cete technologie vous permetent de remplir vos objectifs co
                 Progressive Web Apps (PWA) répondent parfaitement au développement du support mobile.
                 <br> <br>
                 Nous croyons dans son potentiel et notre équipe, composée de passionnés, saura vous accompagner pour
-                que cette technologie vous permettent de remplir vos objectifs commerciaux.
-        </div>
+                que cette technologie vous permettent de remplir vos objectifs commerciaux.</p>
+        </div> #}
 
-        <img class="col-12 col-md-10 img-fluid mx-auto schemapwa" src="{{ asset('build/img/schema_pwa.png') }}" alt="Schéma PWA">
-        <a class="col-md-2 offset-md-5 btn btn-lg testbtn text-uppercase rounded-0" href="{{ asset('build/pdf/BTM_schema_pwa.pdf') }}">PDF</a>
+        <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-none d-md-block d-lg-block d-xl-block" src="{{ asset('build/img/PWA_desktop.svg') }}" alt="Schéma PWA">
+        <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-sm-block d-md-none" src="{{ asset('build/img/PWA_mobile.svg') }}" alt="Schéma PWA">
+        <a class="col-md-2 offset-md-5 btn btn-lg testbtn text-uppercase rounded-0" target="_blanck" href="{{ asset('build/pdf/BTM_schema_pwa.pdf') }}">PDF</a>
         <h2 class="col-12 secondarytitle text-center">Pourquoi choisir une PWA ?</h2>
         <p class="col-10 mx-auto pwasubtext" style="margin-top: 1rem; margin-bottom: 2rem">La progressive web app (PWA) a
             vu le jour en 2015 à l’initiative de Google.

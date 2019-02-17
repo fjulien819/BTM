@@ -20,8 +20,8 @@
 
         <!-- Intro row -->
         <div class="row tags d-flex align-items-center">
-            <div class="col-12 col-md-8 col-lg-8 texttag">
-                <h1 class="text-uppercase">Back to mobile vous accompagne au plus près de vos besoins</h1>
+            <div class="col-12 col-md-11 col-lg-10 col-xl-8 texttag">
+                <h1 class="text-uppercase bigtitle">Back to mobile vous accompagne au plus près de vos besoins</h1>
                 <p class="servtext text-left">
                     Depuis l’avènement de la révolution numérique, le temps semble s’être accéléré.
                     <br>
@@ -33,12 +33,12 @@
                     conjuguée à l’acquisition de clés de compréhension des principaux enjeux technologiques sont de
                     précieux atouts pour mener à bien vos projets.</p>
             </div>
-            <div class="col-md-4 col-md-4 d-flex flex-column imagetag" style="padding-right: 0; padding-left: 0">
+            <div class="col-xl-4 d-flex flex-column imagetag d-none d-xl-block" style="padding-right: 0; padding-left: 0">
                 <img class="img-fluid d-flex justify-content-start carreshaut" alt="carrés colorés" src="{{ asset('build/img/carres_modele2_haut.png') }}">
                 <img class="img-fluid d-flex justify-content-end carresbas" alt="carrés colorés" src="{{ asset('build/img/carres_modele2_bas.png') }}">
             </div>
         </div>
-        <hr class="d-block d-sm-block d-md-none sepline" style="border: 1px solid #68faa5">
+        <hr class="d-block d-sm-block d-md-none sepline" style="border: 1px solid #48ad72">
 
         <!-- Méthode row -->
         <div class="row methode">
@@ -48,7 +48,7 @@
                     travail</h2>
             </div>
             <div class="col-12 imgmethode">
-                <img class="img-fluid d-none d-md-block d-lg-block d-xl-block" style="max-height: 1074px; margin-bottom: 3.75rem"
+                <img class="img-fluid d-none d-md-block d-lg-block d-xl-block methododesk" style="max-height: 1074px; margin-bottom: 3.75rem"
                     alt="méthodologie" src="{{ asset('build/img/methododesk.png') }}">
                 <img class="img-fluid d-block d-sm-block d-md-none" style="margin-bottom: 3.9375rem" alt="méthodologie"
                     src="{{ asset('build/img/methodomobile.png') }}">
@@ -58,8 +58,7 @@
                     de BTM</a>
             </div>
         </div>
-
-        <hr class="sepline" style="border:1px solid #68faa5; margin-bottom: 2.5rem; margin-top: 2.5rem">
+        <hr class="sepline" style="border:1px solid #48ad72; margin-bottom: 2rem; margin-top: 1rem">
 
         <!-- Formation row -->
         <div class="row formation d-flex align-items-center" id="formation" style="margin-bottom: 16rem;">
@@ -68,16 +67,16 @@
                     Vous former dans un monde en constante évolution</h2>
             </div>
             <div class="col-12 col-md-12 col-lg-11 mx-auto textform d-flex flex-column align-items-stretch">
-                <p class="col-10 mx-auto formatext text-left">Notre époque, faite de profondes mutations, exige de sans cesse
+                <p class="col-12 col-md-11 col-xl-10 mx-auto formatext text-left">Notre époque, faite de profondes mutations, exige de sans cesse
                     s’adapter, de mettre régulièrement à
                     jour ses connaissances, d’acquérir de nouvelles compétences, d’apprendre à utiliser de nouveaux
                     outils.
                     <br> <br>
                     Pour répondre à cet enjeu capital qu’est l’apprentissage tout au long de la vie, nous élaborons
                     pour vous des <strong>cours sur-mesure</strong> sur les fondamentaux de la communication numérique. </p>
-                <img class="col-md-2 offset-md-10 img-fluid carresverticaux d-none d-sm-none d-md-block" src="{{ asset('build/img/carres_verticaux1.png') }}" alt="carrés verticaux">
+                <img class="col-md-2 offset-md-10 img-fluid carresverticaux d-none d-xl-block" src="{{ asset('build/img/carres_verticaux1.png') }}" alt="carrés verticaux">
                 <div class="col-12 col-sm-12 col-md-6 mx-auto d-flex btnligne justify-content-center">
-                    <a class="btn btn-lg actionbtn action2 btn-block rounded-0" href="{{path('contact')}}">Je suis intéressé(e)</a>
+                    <a class="btn btn-lg actionbtn action2 btn-block text-uppercase rounded-0" href="{{path('contact')}}">Je suis intéressé(e)</a>
                 </div>
             </div>
         </div>

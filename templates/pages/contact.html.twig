@@ -12,31 +12,35 @@
 
 
 {% block body %}
-        <!-- Message flash -->
+    <!-- Message flash -->
     {% for message in app.flashes('notice') %}
             {{ message }}
     {% endfor %}
 
 
-{# Top squares #}
-<div class="container-fluid contner">
-    <img class="carreshaut col-lg-2 offset-lg-10" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux2.png') }}">
-<div>
+    <div class="container bigone">
 
-    <!-- Contact form-->
-    <div class="container contactcont">
-        <div class="row contactcontainer">
-            {{ form_start(formContact) }}
-            <div class="col-12 col-lg-10 mx-auto contactzone">
-                <!-- Left column -->
-                <div class="col-md-6 col-sm-12 leftcolumn">
-                    <!-- Form title -->
-                    <h1 style="padding-top:2rem">Contact / Devis</h1>
-                    <div class="underlinetitle" style="margin-bottom: 1.5rem">
-                        <div class="col-6 livingline"></div>
-                        <div class="col-6 livingunder"></div>
-                    </div>
-                    {{ form_errors(formContact) }}
+        {# Top squares #}
+        <div class="row col-xl-12 contner">
+            <div class="col-xl-3 offset-xl-9">
+                <img class="carreshaut float-right" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux2.png') }}">
+            </div>
+        </div>
+
+        <!-- Contact form-->
+        <div class="row contactcont">
+            <div class="row contactcontainer">
+                {{ form_start(formContact) }}
+                <div class="col-12 col-lg-10 col-xl-10 mx-auto contactzone">
+                    <!-- Left column -->
+                    <div class="col-md-6 col-sm-12 leftcolumn">
+                        <!-- Form title -->
+                        <h1 style="padding-top:2rem">Contact / Devis</h1>
+                        <div class="underlinetitle" style="margin-bottom: 1.5rem">
+                            <div class="col-6 livingline"></div>
+                            <div class="col-6 livingunder"></div>
+                        </div>
+                        {{ form_errors(formContact) }}
                         <!-- Firstname and name inputs-->
                         <div class="form-group row namerow">
                             <div class="col-6">
@@ -59,7 +63,6 @@
                         <label for="selectcustom">Objet de votre message</label>
                         {{ form_widget(formContact.object, {'attr': {'class': 'custom-select'}}) }}
                         {{ form_errors(formContact.object) }}
-
                         <!-- RGPD -->
                         <div class="form-group rgpdrow row col-sm" style="padding-right: 0">
                             <div class="col-sm checkpart">
@@ -74,36 +77,37 @@
                                 </div>
                             </div>
                         </div>
-                </div>
-                <!-- Right column -->
-                <div class="col-md-6 col-sm-12 rightcolumn">
-                    <!-- Message -->
-                    <hr class="underformcheck d-md-none d-lg-none d-xl-none" style="margin-top: 0; margin-bottom: 2rem">
-                    <div class="message">
-                        <div class="form-group messzone">
-                            <label for="comment">Message</label>
-                            {{ form_widget(formContact.message, {'attr': {'class': 'form-control text', 'rows': '14'}}) }}
-                            {{ form_errors(formContact.message) }}
+                    </div>
+                    <!-- Right column -->
+                    <div class="col-md-6 col-sm-12 rightcolumn">
+                        <!-- Message -->
+                        <div class="message">
+                            <div class="form-group messzone">
+                                <label for="comment">Message</label>
+                                {{ form_widget(formContact.message, {'attr': {'class': 'form-control text', 'rows':
+                                '14'}}) }}
+                                {{ form_errors(formContact.message) }}
+                            </div>
+                        </div>
+                        <!-- Submit button-->
+                        <div class="form-group row submitline" style="margin-bottom: 0">
+                            <div class="col-12 submitbutton" style="padding-left: 1rem; padding-right: 0;">
+                                <input type="submit" name="contact" value="envoyer votre message" class="btn btn-block text-uppercase"
+                                    style="height: 3.125rem">
+                            </div>
                         </div>
                     </div>
-                    <!-- Submit button-->
-                    <div class="form-group row submitline" style="margin-bottom: 0">
-                        <div class="col-12 submitbutton" style="padding-left: 1rem; padding-right: 0;">
-                            <input type="submit" name="contact" value="envoyer votre message" class="btn btn-block text-uppercase" style="height: 3.125rem">
-                        </div>
-                    </div>
                 </div>
-
-
+                {{ form_end(formContact) }}
             </div>
-            {{ form_end(formContact) }}
         </div>
-    </div>
 
-    {# Bottom squares #}
-    <div class="container-fluid contner">
-        <img class="img-fluid carresbas col-lg-3" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux3.png') }}">
-    <div>
-
-
+        {# Bottom squares #}
+        <div class="row col-xl-12 contner">
+            <div class="col-xl-3">
+                <img class="img-fluid float-left carresbas" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux3.png') }}">
+            </div>
+            <div class="col-xl-9"></div>
+        </div>
+</div>
 {% endblock %}

@@ -4,7 +4,7 @@
 {% block title %} {{ parent() }}Connexion au blog de Back to Mobile{% endblock %}
 
 {% block metaDescription %} {{ parent() }}
-    Back to Mobile, page de connexion à l'administration du blog
+Back to Mobile, page de connexion à l'administration du blog
 {% endblock %}
 
 {% block stylesheets %}{{ parent() }}
@@ -14,63 +14,76 @@
 
 {% block body %}
 
-{% if error %}
-<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
-
-
-{# Top squares #}
-<div class="container-fluid contner">
-    <img class="carreshaut col-md-2 offset-md-10" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux2.png') }}">
-<div>
-
-{# Login form #}
-<div class="col-12 col-md-9 mx-auto principalcontainer">
-    <form action="{{ path("fos_user_security_check") }}" method="post" class="col-12 col-lg-8 mx-auto form-signin">
-    {% if csrf_token %}
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
-        <!-- Title -->
-        <div class="row" style="margin-top: 1.5rem">
-            <div class="col-4 lineleft">
-                <hr style="border: 1px #68faa5 solid">
-            </div>
-            <div class="col-4 connextext">
-                <h1 class="font-weight-normal text-center">Connexion</h1>
-            </div>
-            <div class="col-4 lineright">
-                <hr style="border: 1px #68faa5 solid">
-            </div>
-        </div>
-        <!-- Username -->
-        <div class="form-group" style="margin-top: 2rem; margin-bottom: 2rem">
-            <label for="username">{{ 'security.login.username'|trans }}</label>
-            <input type="text" id="username" class="form-control" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
-        </div>
-        <!-- Password -->
-        <div class="form-group">
-            <label for="password">{{ 'security.login.password'|trans }}</label>
-            <input type="password" class="form-control" id="password" name="_password" required="required" autocomplete="current-password" />
-        </div>
-        <!-- Submit button -->
-        <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-lg btn-block text-uppercase" style="margin-top: 2.5rem; margin-bottom: 1.875rem"/>
-        <!-- Remember me -->
-        <div class="checkbox mb-3 form-check">
-            <label class="d-flex align-items-center">
-                <input type="checkbox" id="remember_me" name="_remember_me" value="on" style="margin-right: 0.625rem;"/>
-                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-            </label>
-        </div>
-        <!-- Forgotten password -->
-        <div class="col-12 identiforgot" style="text-align: right">
-            <a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a>
-        </div>
-    </form>
-</div>
 
-{# Bottom squares #}
-<div class="container-fluid contner">
-    <img class="img-fluid carresbas col-md-3" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux3.png') }}">
-<div>
+
+    <div class="container-fluid bigone">
+
+        {# Top squares #}
+        <div class="row contner">
+            <div class="col-xl-3 offset-xl-9">
+                <img class="carreshaut float-right" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux2.png') }}">
+            </div>
+        </div>
+
+        <div class="row col-md-12 col-xl-12 rowcontactform">
+            {# Login form #}
+            <div class="col-12 col-md-12 col-xl-9 mx-auto principalcontainer">
+                <form action="{{ path("fos_user_security_check") }}" method="post" class="col-12 col-lg-8 mx-auto form-signin">
+                    {% if csrf_token %}
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                    {% endif %}
+                    <!-- Title -->
+                    <div class="row titlerowgroup">
+                        <div class="col-xl-4 lineleft">
+                            <hr style="border: 1px #68faa5 solid">
+                        </div>
+                        <div class="col-12 col-xl-4 connextext">
+                            <h1 class="font-weight-normal text-center">Connexion</h1>
+                        </div>
+                        <div class="col-xl-4 lineright">
+                            <hr style="border: 1px #68faa5 solid">
+                        </div>
+                    </div>
+                    <!-- Username -->
+                    <div class="form-group" style="margin-top: 2rem; margin-bottom: 2rem">
+                        <label for="username">{{ 'security.login.username'|trans }}</label>
+                        <input type="text" id="username" class="form-control" name="_username" value="{{ last_username }}"
+                            required="required" autocomplete="username" />
+                    </div>
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">{{ 'security.login.password'|trans }}</label>
+                        <input type="password" class="form-control" id="password" name="_password" required="required"
+                            autocomplete="current-password" />
+                    </div>
+                    <!-- Submit button -->
+                    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-lg btn-block text-uppercase"
+                        style="margin-top: 2.5rem; margin-bottom: 1.875rem" />
+                    <!-- Remember me -->
+                    <div class="checkbox mb-3 form-check">
+                        <label class="d-flex align-items-center">
+                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" style="margin-right: 0.625rem;" />
+                            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                        </label>
+                    </div>
+                    <!-- Forgotten password -->
+                    <div class="col-12 identiforgot" style="text-align: right">
+                        <a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        {# Bottom squares #}
+        <div class="row contner">
+            <div class="col-xl-3">
+                <img class="img-fluid float-left carresbas" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux3.png') }}">
+            </div>
+            <div class="col-xl-9"></div>
+        </div>
+    </div>
 
 {% endblock %}

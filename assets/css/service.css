@@ -4,6 +4,7 @@
 
 .services {
     padding: 2.4rem 3rem 0 3rem;
+    margin-bottom: -1rem;
 }
 
 h1 {
@@ -42,11 +43,11 @@ h1 {
 }
 
 .methode {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .formation {
-    margin-bottom: 5rem !important;
+    margin-bottom: 4rem !important;
 }
 
 .titleforma {
@@ -102,6 +103,10 @@ h1 {
     margin-left: 61rem;
 }
 
+.action2 {
+    margin-top: 1.5rem;
+}
+
 
 /* MEDIA QUERIES
 ------------------------------------------------  */
@@ -110,7 +115,23 @@ h1 {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .services {
-        padding: 4.4rem 1.0625rem 0 1.0625rem;
+        padding: 0 1.0625rem 0 1.0625rem;
+    }
+
+    .bigtitle,
+    .secondarytitle {
+        font-size: 1rem;
+        line-height: 1.5625rem;
+    }
+
+    .bigtitle {
+        margin-top: 0;
+    }
+
+    .servtext,
+    .formatext {
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
     }
 
     .texttag,
@@ -125,18 +146,9 @@ h1 {
         margin-top: 1.4375rem !important;
     }
 
-    .secondarytitle {
-        font-size: 1rem;
-    }
-
     .secondtit {
         margin-bottom: 1rem !important;
-        margin-top: 1rem !important;
-    }
-
-    .servtext,
-    .formatext {
-        font-size: 0.75rem;
+        margin-top: 0 !important;
     }
 
     .texttag {
@@ -151,7 +163,7 @@ h1 {
         margin-top: 1.4375rem;
         font-size: 0.9rem;
         max-width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 1.6rem;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
@@ -167,32 +179,38 @@ h1 {
     }
 
     .sepline {
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-        width: 80%;
+        margin-top: 1rem !important;
+        margin-bottom: 0 !important;
+        width: 90%;
     }
 
     .titleforma {
-        margin-top: 3.4375rem;
-        margin-bottom: 1.3125rem;
+        margin-top: 1.8em;
+        margin-bottom: 0rem;
     }
 
     .textform {
         margin-top: 1.4375rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .formation {
         margin-bottom: 3rem !important;
     }
 
-    .formatext {
+    .formatext,
+    .btnligne {
         margin-bottom: 1rem;
     }
 
     .carresbas,
-    .carreshaut,
-    .carresverticaux {
+    .carreshaut {
         display: none !important;
+    }
+
+    .action2 {
+        margin-top: 3rem;
     }
 }
 
@@ -200,7 +218,23 @@ h1 {
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .services {
-        padding: 4.4rem 1.0625rem 0 1.0625rem;
+        padding: 0 1.0625rem 0 1.0625rem;
+    }
+
+    .bigtitle,
+    .secondarytitle {
+        font-size: 1rem;
+        line-height: 1.5625rem;
+    }
+
+    .bigtitle {
+        margin-top: 0;
+    }
+
+    .servtext,
+    .formatext {
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
     }
 
     .texttag,
@@ -215,18 +249,9 @@ h1 {
         margin-top: 1.4375rem !important;
     }
 
-    .secondarytitle {
-        font-size: 1rem;
-    }
-
     .secondtit {
         margin-bottom: 1rem !important;
-        margin-top: 1rem !important;
-    }
-
-    .servtext,
-    .formatext {
-        font-size: 0.75rem;
+        margin-top: 0 !important;
     }
 
     .texttag {
@@ -240,14 +265,14 @@ h1 {
     .actionbtn {
         margin-top: 1.4375rem;
         font-size: 0.9rem;
-        max-width: 70%;
-        margin-bottom: 2rem;
+        max-width: 100%;
+        margin-bottom: 1.6rem;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .buttonforma {
         margin-top: 1.4375rem;
-        max-width: 70%;
+        max-width: 100%;
         margin-bottom: 2rem;
     }
 
@@ -257,64 +282,95 @@ h1 {
     }
 
     .sepline {
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-        width: 80%;
+        margin-top: 1rem !important;
+        margin-bottom: 0 !important;
+        width: 90%;
     }
 
     .titleforma {
-        margin-top: 1.4375rem;
-        margin-bottom: 1.3125rem;
+        margin-top: 1.8em;
+        margin-bottom: 0rem;
     }
 
     .textform {
         margin-top: 1.4375rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .formation {
         margin-bottom: 3rem !important;
     }
 
-    .formatext {
+    .formatext,
+    .btnligne {
         margin-bottom: 1rem;
     }
 
     .carresbas,
-    .carreshaut,
-    .carresverticaux {
+    .carreshaut {
         display: none !important;
+    }
+
+    .action2 {
+        margin-top: 3rem;
     }
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .row.formation {
-        margin-bottom: 2rem !important;
+    .services {
+        padding: 3rem 3rem 0 3rem;
     }
 
-    .servtext {
-        margin-bottom: 1.4rem;
+    .methode {
+        margin-top: 1rem;
     }
+
+    .row.formation {
+        margin-bottom: 4rem !important;
+    }
+
     .carresbas,
-    .carreshaut,
-    .carresverticaux {
+    .carreshaut {
         display: none !important;
+    }
+
+    .titleforma {
+        margin-top: 1rem;
+        margin-bottom: 1.3125rem;
+    }
+
+    .formatext {
+        margin-bottom: 1.5rem;
+    }
+
+    .imgmethode {
+        margin-bottom: 0;
     }
 }
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .services {
+        padding: 3rem 3rem 0 3rem;
+    }
+
     .row.formation {
-        margin-bottom: 7rem !important;
+        margin-bottom: 4rem !important;
+    }
+
+    .carresbas,
+    .carreshaut {
+        display: none !important;
+    }
+
+    .titleforma {
+        margin-top: 1rem;
+        margin-bottom: 1.3125rem;
+    }
+
+    .formatext {
+        margin-bottom: 1.5rem;
     }
 }
-
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    .carresverticaux {
-        margin-top: -24rem;
-        margin-left: 66rem;
-    }
-}
-

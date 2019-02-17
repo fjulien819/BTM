@@ -15,7 +15,7 @@
 {% block body %}
 
     <!-- Introduction video -->
-    <section>
+    <section class="d-none d-xl-block">
         <div class="overlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="{{ asset('build/video/mock.mp4') }}" type="video/mp4">
@@ -35,18 +35,18 @@
 
         <!-- Infography row -->
         <div class="row infography">
-            <div class="col-12 col-md-8 firstblock">
+            <div class="col-12 col-md-10 col-lg-8 firstblock">
                 <h1 class="text-uppercase mobileh1">
-                    Votre communication mobile avec Back to Mobile
+                    Votre communication avec Back to Mobile
                 </h1>
                 <p class="textpfirstblock">
                     Nous accompagnons les entreprises dans leur volonté de créer de la valeur dans une économie
                     numérique où <u class="utype1">le mobile s’impose comme le premier point d’accès au web</u>.
                 </p>
             </div>
-            <div class="col-md-4 col-md-4 d-flex flex-column imagetag" style="padding-right: 0; padding-left: 0">
-                <img class="img-fluid d-flex justify-content-start carreshaut" alt="carrés colorés" src="{{ asset('build/img/carres_modele2_haut.png') }}">
-                <img class="img-fluid d-flex justify-content-end carresbas" alt="carrés colorés" src="{{ asset('build/img/carres_modele2_bas.png') }}">
+            <div class="col-md-4 col-md-4 col-lg-4 d-flex flex-column imagetag" style="padding-right: 0; padding-left: 0">
+                <img class="img-fluid d-flex justify-content-start carreshaut d-none d-xl-block" alt="carrés colorés" src="{{ asset('build/img/carres_modele2_haut.png') }}">
+                <img class="img-fluid d-flex justify-content-end carresbas d-none d-xl-block" alt="carrés colorés" src="{{ asset('build/img/carres_modele2_bas.png') }}">
             </div>
 
             <!-- Infographies -->
@@ -76,22 +76,22 @@
             <h2 class="col-12 secondarytitle appro">
                 Notre approche
             </h2>
-            <div class="col-12 col-md-7 approchetext">
+            <div class="col-12 col-md-6 col-lg-7 approchetext">
                 <p>
                     <u>Experts<strong> en Progressive Web</strong>Apps (PWA)</u>, nous aimons avant tout
                     créer des expériences de navigation
                     sur mobile innovantes qui font appel aux dernières avancées technologiques. 
-                </p>
-                <p>
+                <br><br>
                     Notre équipe sera chaque jour à vos côtés pour <strong>créer votre site internet</strong> et élaborer des outils de communication adaptés à
                     vos besoins.
                 </p>
-                <img class="imgroue img-fluid float-right" alt="Roue crantée des pwa" src="{{ asset('build/img/pwaroue.jpg') }}">
+                <img class="imgroue img-fluid float-right d-none d-xl-block" alt="Roue crantée des pwa" src="{{ asset('build/img/pwaroue.jpg') }}">
             </div>
-            <div class="col-12 col-md-5 approchimg1 d-flex justify-content-center">
-                <img class="d-flex align-self-center breveexplic" alt="Brève explication sur les pwa" src="{{ asset('build/img/pwa_carre.jpg') }}">
+            <div class="col-12 col-md-6 col-lg-5 approchimg1 d-flex justify-content-center">           
+                <img class="col-12 img-fluid breveexplic mx-auto d-none d-md-block d-lg-block d-xl-block" src="{{ asset('build/img/PWA_accueil_desktop.svg') }}" alt="Schéma PWA accueil">
+                <img class="col-12 img-fluid breveexplic mx-auto d-sm-block d-md-none" src="{{ asset('build/img/PWA_accueil_mobile.svg') }}" alt="Schéma PWA accueil">   
             </div>
-            <div class="col-md-2 offset-md-10 d-flex justify-content-center">
+            <div class="col-12 col-md-2 offset-md-10 d-flex justify-content-center">
                 <a class="btn btn-lg actionbtn testbtn btn-block text-uppercase rounded-0" href="{{path('expertise')}}#pwa">En
                     savoir plus</a>
             </div>
@@ -104,25 +104,25 @@
             <h2 class="col-12 secondarytitle confi">
                 Ils nous ont fait confiance
             </h2>
-            <img class="col-md-2 offset-md-10 img-fluid carresverticaux" src="{{ asset('build/img/carres_verticaux2.png') }}" alt="carrés verticaux">
-            <div class="col-6 col-md-3 confimg">
+            <img class="col-md-2 offset-md-10 img-fluid carresverticaux d-none d-xl-block" src="{{ asset('build/img/carres_verticaux2.png') }}" alt="carrés verticaux">
+            <div class="col-8 col-sm-6 col-md-3 confimg mx-auto">
                 <a href="https://www.francetvinfo.fr/" target="_blank">
                     <img class="img-fluid imgtag tag1" alt="Site de FranceInfo" src="{{ asset('build/img/france-info.png') }}">
                 </a>
             </div>
-            <div class="col-6 col-md-3 confimg">
+            <div class="col-8 col-sm-6 col-md-3 confimg mx-auto">
                 <a href="http://projet4.julienf-oc.fr/" target="_blank">
-                    <img class="img-fluid imgtag tag3" alt="Site du Louvre" src="{{ asset('build/img/louvre.jpg') }}">
+                    <img class="img-fluid imgtag tag1" alt="Site du Louvre" src="{{ asset('build/img/louvre.jpg') }}">
                 </a>
             </div>
-            <div class="col-6 col-md-3 confimg">
+            <div class="col-8 col-sm-6 col-md-3 confimg mx-auto">
                 <a href="http://etudiant.aujourdhui.fr/etudiant/" target="_blank">
-                    <img class="img-fluid imgtag tag4" alt="Site du Parisien, section étudiant" src="{{ asset('build/img/parisienlogo.png') }}">
+                    <img class="img-fluid imgtag tag1" alt="Site du Parisien, section étudiant" src="{{ asset('build/img/parisienlogo.png') }}">
                 </a>
             </div>
-            <div class="col-6 col-md-3 confimg" target="_blank">
+            <div class="col-8 col-sm-6 col-md-3 confimg mx-auto" target="_blank">
                 <a href="https://fondation.edf.com/fr">
-                    <img class="img-fluid imgtag tag2" alt="Fondation EDF" src="{{ asset('build/img/fondationedf.png') }}">
+                    <img class="img-fluid imgtag tag1" alt="Fondation EDF" src="{{ asset('build/img/fondationedf.png') }}">
                 </a>
             </div>
         </div>

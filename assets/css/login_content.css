@@ -1,13 +1,10 @@
 .mt-container-body {
-  padding-top: 2rem;
-  margin-bottom: 0 !important;
+  margin-top: 5rem;
+  margin-bottom: -5rem;
 }
 
 .principalcontainer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-top: -6rem;
-  margin-bottom: -4rem;
+  margin-bottom: 4rem;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
 }
 
@@ -19,15 +16,15 @@
 .carreshaut {
   padding-right: 0;
   position: relative;
-  top: 0;
-  right: -1.5rem;
-  max-width: 14%;
+  top: 74px;
+  right: 0.5rem;
+  max-width: 54%;
 }
 
 .carresbas {
-  max-width: 15%;
+  max-width: 59%;
   position: relative;
-  top: -2rem;
+  top: -9rem;
 }
 
 .form-signin {
@@ -50,6 +47,10 @@ label {
   font-size: 1rem;
   margin-bottom: 0.2rem;
   color: #000000;
+}
+
+.titlerowgroup {
+  margin-top: 1.5rem;
 }
 
 .form-control {
@@ -85,8 +86,8 @@ input[type=checkbox],
 input[type=radio] {
   box-sizing: border-box;
   padding: 0;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .form-signin .checkbox {
@@ -132,53 +133,111 @@ input[type=radio] {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  body>div:nth-child(2)>header>nav>div>div.col-6.d-flex.justify-content-center>a>img {
+    height: 4.125rem !important;
+  }
 
   .mt-container-body {
     padding-top: 3.125rem;
     margin-bottom: -3.75rem;
   }
 
-  .principalcontainer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
-  }
-
-  .connextext {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .form-signin {
+  .titlerowgroup {
     margin-top: 0;
+  }
+
+  .rowcontactform {
+    width: 110%;
+  }
+
+  .principalcontainer {
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .lineleft,
   .lineright {
-    -ms-flex: 0 0 21%;
-    flex: 0 0 21%;
-    max-width: 21%;
-    padding-left: 0;
-    padding-right: 0;
+    display: none;
   }
 
   .connextext {
-    -ms-flex: 0 0 58%;
-    flex: 0 0 58%;
-    max-width: 58%;
+    text-align: center;
+  }
+
+  .form-signin {
+    margin-top: 0;
+    padding: 0.7rem 0.5rem 1.7rem 0.5rem;
+  }
+
+  .connextext > h1 {
+    font-size: 1rem;
   }
 
   .carresbas,
   .carreshaut {
     display: none !important;
   }
+
+  #_submit {
+    font-size: 0.9rem;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+  body>div:nth-child(2)>header>nav>div>div.col-6.d-flex.justify-content-center>a>img {
+    height: 4.125rem !important;
+  }
 
   .mt-container-body {
+    padding-top: 3.125rem;
+    margin-bottom: -3.75rem;
+  }
+
+  .titlerowgroup {
+    margin-top: 0;
+  }
+
+  .rowcontactform {
+    width: 105%;
+  }
+
+  .principalcontainer {
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .lineleft,
+  .lineright {
+    display: none;
+  }
+
+  .connextext {
+    text-align: center;
+  }
+
+  .form-signin {
+    margin-top: 0;
+    padding: 0.7rem 0.5rem 1.7rem 0.5rem;
+  }
+
+  .connextext > h1 {
+    font-size: 1rem;
+  }
+
+  .carresbas,
+  .carreshaut {
+    display: none !important;
+  }
+
+  #_submit {
+    font-size: 0.9rem;
+  }
+
+
+  /* .mt-container-body {
     padding-top: 3.4375rem;
     margin-bottom: -3rem;
   }
@@ -213,17 +272,19 @@ input[type=radio] {
   .carresbas,
   .carreshaut {
     display: none !important;
-  }
+  } */
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .mt-container-body {
+    margin-top: 11rem;
+    margin-bottom: 0rem;
+  }
 
   .principalcontainer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 8.3rem;
+    margin-top: 6rem;
   }
 
   .lineleft,
@@ -251,12 +312,18 @@ input[type=radio] {
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
   .mt-container-body {
-    /* padding-top: 3.4375rem;
-    padding-bottom: 6rem; */
+    margin-top: 11rem;
+    margin-bottom: 0rem;
   }
 
   .principalcontainer {
-    /* margin-bottom: 0; */
+    margin-bottom: 8.3rem;
+    margin-top: 6rem;
+  }
+
+  .carresbas,
+  .carreshaut {
+    display: none;
   }
 
   .lineleft,

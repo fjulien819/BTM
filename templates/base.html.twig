@@ -31,15 +31,15 @@
 
     <!-- Chat script -->
     <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/5c65a15ea6c3590a404d3e1a/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5c65a15ea6c3590a404d3e1a/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
     </script>
 
 </head>
@@ -139,7 +139,7 @@
                         </div>
                         <div class="col-md-3 footer-mentions text-center order-1 order-lg-2">
                             <a href="{{path('legalNotice')}}">Mentions légales</a>
-                            <a style="padding-left: 2rem" href="{{path('legalNotice')}}#rgpdf">RPGD</a>
+                            <a style="padding-left: 2rem" target="_blank" href="{{ asset('build/pdf/BTM_politique_confidentialite.pdf') }}">RPGD</a>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,6 @@
 
 .home {
     padding: 3.4rem 3rem 5rem 3rem;
-    background: #F4F4F4;
 }
 
 .navbar {
@@ -98,7 +97,7 @@ section .overlay {
 .carreshaut {
     max-width: 55%;
     margin-top: 0rem;
-    margin-left: 0rem;
+    margin-left: 1rem;
     padding-bottom: 1.5rem;
 }
 
@@ -197,7 +196,7 @@ div.col-6.col-md-3.confimg {
 
 .imgroue {
     padding-left: 3rem;
-    padding-right: 1.5rem;
+    padding-right: 3rem;
     max-width: 85%;
 }
 
@@ -206,7 +205,8 @@ div.col-6.col-md-3.confimg {
 }
 
 .breveexplic {
-    max-width: 110%;
+    border: 1px rgb(100, 92, 92) solid;
+    border-radius: 5px;
 }
 
 .testbtn,
@@ -214,7 +214,7 @@ div.col-6.col-md-3.confimg {
     box-shadow: none;
     background: transparent;
     margin-top: -6rem;
-    margin-right: -2.7rem;
+    margin-right: 0.3rem;
     max-height: 2.8rem;
     color: rgba(255, 255, 255, 0);
 }
@@ -238,7 +238,12 @@ div.col-6.col-md-3.confimg {
     }
 
     .home {
-        padding: 0 1rem 1rem 1rem;
+        padding: 6rem 1rem 1rem 1rem;
+    }
+
+    .carreshaut,
+    .carresbas {
+        display: none !important;
     }
 
     .mobileh1 {
@@ -246,21 +251,68 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 1.25rem;
     }
 
+    .textpfirstblock,
+    .importanttext,
+    p.uppart,
+    p.bottompart,
     .approchetext p {
-        padding-left: 0;
-        padding-right: 0;
+        font-size: 0.875rem;
+        line-height: 1.3;
     }
 
-    .imgroue {
-        padding-left: 0;
-        padding-right: 0;
+    div.row.infography>div.col-12.col-md-6.textin {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .imgta {
+        margin-bottom: 1.2rem;
+    }
+
+    .seplinehaute {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .breveexplic {
+        border: none;
+    }
+
+    .testbtn {
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+    }
+
+    .actionbtn {
+        background: #ad4f48;
+        color: white;
         max-width: 100%;
     }
 
-    .firstblock,
-    .approchetext {
-        font-size: 0.75rem;
-        margin-bottom: 1.625rem;
+    .confi {
+        text-align: center;
+        margin-bottom: 2.375rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sepline {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .appro,
+    .confi {
+        font-size: 1rem;
+    }
+
+    .tag1 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .approchetext p {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .firstblock p,
@@ -268,22 +320,17 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 0;
     }
 
+    .firstblock,
+    .approchetext {
+        margin-bottom: 1.625rem;
+    }
+
     .imgtag {
         margin-bottom: 0.5rem;
-    }
-    
-    p.uppart {
-        font-size: 0.75rem;
-        line-height: 1;
     }
 
     .bottompart {
         font-size: 0.625rem;
-    }
-
-    div.row.infography>div.col-12.col-md-6.textin {
-        padding-left: 3.8rem;
-        padding-right: 3.8rem;
     }
 
     .infography {
@@ -294,24 +341,8 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 1.8rem;
     }
 
-    .sepline,
-    .seplinehaute {
-        width: 75%;
-    }
-
-    .seplinehaute {
-        margin-top: 0.58rem;
-        margin-bottom: 1.1875rem;
-    }
-
     .appro {
         margin-bottom: 0.75rem;
-    }
-
-    .carreshaut,
-    .carresbas,
-    .carresverticaux {
-        display: none !important;
     }
 
     .approchimg1 {
@@ -322,48 +353,22 @@ div.col-6.col-md-3.confimg {
         margin-top: 2.4375rem;
         margin-bottom: 1.8125rem;
     }
-
-    .sepline {
-        margin-top: 0;
-        margin-bottom: 1.1875rem;
-    }
-
-    .actionbtn {
-        /* font-size: 0.9rem;
-        background: rgb(250, 114, 104);
-        max-width: 100%;
-        box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25); */
-        display: none;
-    }
-
-    .appro,
-    .confi {
-        font-size: 1rem;
-    }
-
-    .confi {
-        text-align: center;
-        margin-bottom: 2.375rem;
-    }
-
-    .tag1,
-    .tag2 {
-        margin-bottom: 2.375rem;
-    }
-
-    .breveexplic {
-        max-width: 100%;
-    }
-
-    .approchimg1 {
-        padding: 0;
-    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+
+    .navbar {
+        border: none;
+    }
+
     .home {
-        padding: 1rem 1rem 2rem 1rem;
+        padding: 7rem 1rem 1rem 1rem;
+    }
+
+    .carreshaut,
+    .carresbas {
+        display: none !important;
     }
 
     .mobileh1 {
@@ -371,10 +376,75 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 1.25rem;
     }
 
-    .firstblock,
-    .approchetext {
-        font-size: 0.75rem;
-        margin-bottom: 1.625rem;
+    .firstblock {
+        margin-bottom: 2rem;
+    }
+
+    .textpfirstblock,
+    .importanttext,
+    p.uppart,
+    p.bottompart,
+    .approchetext p {
+        font-size: 0.875rem;
+        line-height: 1.3;
+    }
+
+    div.row.infography>div.col-12.col-md-6.textin {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .imgta {
+        margin-bottom: 1.2rem;
+    }
+
+    .seplinehaute {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .breveexplic {
+        border: none;
+    }
+
+    .testbtn {
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+    }
+
+    .actionbtn {
+        background: #ad4f48;
+        color: white;
+        max-width: 100%;
+    }
+
+    .confi {
+        text-align: center;
+        margin-bottom: 2.375rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sepline {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .appro,
+    .confi {
+        font-size: 1rem;
+    }
+
+    .tag1 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .appro {
+        margin-bottom: 1rem;
+    }
+
+    .breveexplic {
+        margin-top: 1rem;
     }
 
     .firstblock p,
@@ -382,28 +452,12 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 0;
     }
 
-    .carreshaut,
-    .carresbas,
-    .carresverticaux {
-        display: none !important;
-    }
-
     .imgtag {
         margin-bottom: 0.5rem;
     }
 
-    p.uppart {
-        font-size: 0.75rem;
-        line-height: 1;
-    }
-
     .bottompart {
         font-size: 0.625rem;
-    }
-
-    div.row.infography>div.col-12.col-md-6.textin {
-        padding-left: 3.8rem;
-        padding-right: 3.8rem;
     }
 
     .infography {
@@ -412,20 +466,6 @@ div.col-6.col-md-3.confimg {
 
     .intop {
         margin-bottom: 1.8rem;
-    }
-
-    .sepline,
-    .seplinehaute {
-        width: 75%;
-    }
-
-    .seplinehaute {
-        margin-top: 0.58rem;
-        margin-bottom: 1.1875rem;
-    }
-
-    .appro {
-        margin-bottom: 0.75rem;
     }
 
     .approchimg1 {
@@ -443,18 +483,6 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 1.8125rem;
     }
 
-    .sepline {
-        margin-top: 0;
-        margin-bottom: 1.1875rem;
-    }
-
-    .actionbtn {
-        font-size: 0.9rem;
-        background: rgb(250, 114, 104);
-        max-width: 90%;
-        box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
-    }
-
     .appro,
     .confi {
         font-size: 1rem;
@@ -462,16 +490,7 @@ div.col-6.col-md-3.confimg {
 
     .confi {
         text-align: center;
-        margin-bottom: 2.375rem;
-    }
-
-    .tag1,
-    .tag2 {
-        margin-bottom: 2.375rem;
-    }
-
-    .breveexplic {
-        max-width: 100%;
+        margin-bottom: 2rem;
     }
 
     .approchimg1 {
@@ -482,59 +501,71 @@ div.col-6.col-md-3.confimg {
         padding-left: 0;
         padding-right: 0;
     }
-
-    .imgroue {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: 100%;
-    }
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .home {
-        padding: 2.4rem 1.875rem 2rem 1.875rem;
+        padding: 8rem 1.875rem 2rem 1.875rem;
     }
 
-    .firstblock,
-    div.col-12.col-md-4.approchetext.order-1.order-md-3 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
+    .carreshaut,
+    .carresbas,
+    .imagetag {
+        display: none !important;
     }
 
-    .approchimg1,
-    .approchimg2 {
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
+    .firstblock {
+        margin-bottom: 2rem;
+    }
+
+    .importanttext {
+        font-size: 1.25rem;
+    }
+
+    .appro {
+        margin-bottom: 0;
+    }
+
+    .approchetext p {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .approchetext {
         margin-top: 2rem;
     }
 
-    .carreshaut,
-    .carresbas,
-    .carresverticaux {
-        display: none !important;
+    .breveexplic {
+        border: none;
+        align-self: center;
+    }
+
+    .sepline {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .testbtn {
+        margin-top: -6rem;
+        margin-left: -2rem;
     }
 }
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .home {
-        padding: 2.4rem 1.875rem 7rem 1.875rem;
+        padding: 8.4rem 1.875rem 2rem 1.875rem;
+    }
+
+    .carreshaut,
+    .carresbas {
+        display: none !important;
+    }
+
+    .testbtn, .testbtn:hover {
+        margin-top: -7.5rem;
     }
 }
 
 
-@media (pointer: coarse) and (hover: none) {
-    section {
-        background: url("/build/img/androidphone.jpg") black no-repeat center center scroll;
-    }
-
-    section video {
-        display: none;
-    }
-}
