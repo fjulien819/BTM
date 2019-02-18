@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ parent() }}Back to Mobile, votre exper en Progressive Web Apps
+{% block title %} {{ parent() }}Back to Mobile, votre expert en Progressive Web Apps
 (PWA)
 {% endblock %}
 
@@ -22,15 +22,17 @@ qui a fait des Progressive Web Apps (PWA), sa technologie de prédilection.
 
     <!-- Intro row -->
     <div class="row tags d-flex align-items-center" id="equipebtm">
-        <div class="col-12 col-md-8 texttag">
+        <div class="col-12 col-md-11 col-lg-10 col-xl-8 texttag">
             <h1 class="primarytitle text-left">Back to Mobile, <br>des experts en Progressive Web Apps (PWA)</h1>
-            <hr class="sepline" style="border:1px solid #68faa5">
+            <hr class="sepline" style="border:1px solid #48ad72">
             <br>
             <p class="servtext text-left">
                 Nous avons tous des préférences, des affinités. Chez Back to Mobile, nous sommes convaincus
-que les Progressive Web Apps (PWA) répondent parfaitement au développement du support
-mobile. Nous croyons dans son potentiel et notre équipe, composée de passionnés, saura vous
-accompagner pour que cette technologie vous permettent de remplir vos objectifs commerciaux.</p>
+                que les Progressive Web Apps (PWA) répondent parfaitement au développement du support
+                mobile. 
+                <br><br>
+                Nous croyons dans son potentiel et notre équipe, composée de passionnés, saura vous
+                accompagner pour que cette technologie vous permettent de remplir vos objectifs commerciaux.</p>
         </div>
         <div class="col-md-4 col-md-4 d-flex flex-column imagetag" style="padding-right: 0; padding-left: 0">
             <img class="img-fluid d-flex justify-content-start carreshaut" alt="carrés colorés" src="{{ asset('build/img/carres_modele1_haut.png') }}">
@@ -41,7 +43,7 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
     <!-- Specialities row -->
     <div class="row specialrow" id="teampart">
         <h2 class="col-12 secondarytitle text-center">Une équipe pluridisciplinaire de passionnés</h2>
-        <div class="col-12 col-md-11 row mx-auto">
+        <div class="col-12 col-md-12 col-lg-12 col-xl-11 row mx-auto">
             <div class="col-12 mx-auto panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <!-- Développement accordion-->
                 <div class="panel panel-default">
@@ -49,24 +51,55 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1"
                                 aria-expanded="false" aria-controls="collapse1">
-                                Développement
-                                <span> </span>
+                                <span style="font-weight: 400">Développement</span>
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse1" class="panel-collapse collapse" role="tabpanel" data-parent="#accordion" aria-labelledby="heading2">
+                    <div id="collapse1" class="panel-collapse collapse" role="tabpanel" data-parent="#accordion"
+                        aria-labelledby="heading2">
                         <!-- Céline -->
                         <div class="panel-body uppanel">
-                            <div class="col-12 col-md-3 memberphoto d-flex justify-content-center">
+                            <div class="col-4 col-md-3 memberphoto d-flex justify-content-center">
                                 <img src="{{ asset('build/img/celine.jpg') }}" alt="Céline Ollagnier" style="max-height: 230px">
                             </div>
-                            <div class="col-12 col-md-4 membertext">
+                            <div class="col-8 col-md-6 col-lg-5 col-xl-4 membertext">
                                 <p class="membername font-weight-bold">Céline OLLAGNIER</p>
                                 <p class="memberjob">Chef de projet</p>
                                 <p class="memberjob">Développeur front-office</p>
                                 <br>
                                 <p class="membertel">06 24 38 37 54</p>
                                 <p class="membermail">celine@backtomobile.fr</p>
+                                <!-- Social icons for big screens -->
+                                <ul class="bignavicons navbar-nav nav2 d-flex flex-row justify-content-between">
+                                    <li class="col-3 navlines navl2 d-flex justify-content-between">
+                                        <a href="https://fr-fr.facebook.com/" target="_blank">
+                                            <i class="fab fabmenu fa-facebook-square fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://www.instagram.com/?hl=fr" target="_blank">
+                                            <i class="fab fa-instagram fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://fr.linkedin.com/" target="_blank">
+                                            <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i class="fab fa-twitter fa-lg"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>                           
+                            <div class="col-md-3 col-lg-3 offset-lg-1 col-xl-3 offset-xl-2 imglogo">
+                                <img class="img-fluid" src="{{ asset('build/img/brandlogo.png') }}" alt="Logo BTM"
+                                    style="max-height: 230px">
+                            </div>
+                        </div>
+                            <!-- Social icons for small screens -->
+                            <div class="mininavicons col-11 col-sm-6 offset-sm-3 d-block d-sm-block d-md-none d-flex flex-row mx-auto justify-content-between">
                                 <ul class="navbar-nav nav2 d-flex flex-row justify-content-between">
                                     <li class="col-3 navlines navl2 d-flex justify-content-between">
                                         <a href="https://fr-fr.facebook.com/" target="_blank">
@@ -90,33 +123,58 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-3 offset-md-2 imglogo">
-                                <img class="img-fluid" src="{{ asset('build/img/brandlogo.png') }}" alt="Logo BTM"
-                                    style="max-height: 230px">
-                            </div>
-                        </div>
                         <div class="panel-body textpart text-left">
-                            <i class="fas fa-quote-left d-flex justify-content-center"></i>
-                            <blockquote class="col-md-10 mx-auto">Passer du dessin au pixel et surtout rendre chacune
-                                des pages de votre site
-                                facilement utilisable. Voici comment je pourrais résumer mon intervention à vos
-                                côtés. En étroite collaboration avec chacun des membres de Back to Mobile, et plus
-                                particulièrement Julien, notre développeur back end, je vais donner son apparence
-                                finale à votre outil de communication.</blockquote>
                             <i class="fas fa-quote-right d-flex justify-content-center"></i>
+                            <blockquote class="col-12 col-md-10 mx-auto">Passer du dessin au pixel et surtout rendre chacune
+                                des pages de votre site facilement utilisable. Voici comment je pourrais résumer mon 
+                                intervention à vos côtés. En étroite collaboration avec chacun des membres de Back to
+                                Mobile, et plus particulièrement Julien, notre développeur back end, je vais donner 
+                                son apparence finale à votre outil de communication.</blockquote>
+                            <i class="fas fa-quote-left d-flex justify-content-center"></i>
                         </div>
 
                         <!-- Julien -->
-                        <div class="panel-body uppanel">
-                            <div class="col-12 col-md-3 memberphoto d-flex justify-content-center">
+                        <div class="panel-body uppanel" style="padding-top: 6rem">
+                            <div class="col-4 col-md-3 memberphoto d-flex justify-content-center">
                                 <img src="{{ asset('build/img/julien.jpg') }}" alt="Julien Fracchiolla" style="max-height: 230px">
                             </div>
-                            <div class="col-12 col-md-4 membertext">
+                            <div class="col-8 col-md-6 col-lg-5 col-xl-4 membertext">
                                 <p class="membername font-weight-bold">Julien FRACCHIOLLA</p>
                                 <p class="memberjob">Développeur BackOffice</p>
                                 <br>
                                 <p class="membertel">06 12 22 67 76</p>
                                 <p class="membermail">julien@backtomobile.fr</p>
+                                                                <!-- Social icons for big screens -->
+                                <ul class="bignavicons navbar-nav nav2 d-flex flex-row justify-content-between">
+                                    <li class="col-3 navlines navl2 d-flex justify-content-between">
+                                        <a href="https://fr-fr.facebook.com/" target="_blank">
+                                            <i class="fab fabmenu fa-facebook-square fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://www.instagram.com/?hl=fr" target="_blank">
+                                            <i class="fab fa-instagram fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://fr.linkedin.com/" target="_blank">
+                                            <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i class="fab fa-twitter fa-lg"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>                           
+                            <div class="col-md-3 col-lg-3 offset-lg-1 col-xl-3 offset-xl-2 imglogo">
+                                <img class="img-fluid" src="{{ asset('build/img/brandlogo.png') }}" alt="Logo BTM"
+                                    style="max-height: 230px">
+                            </div>
+                        </div>
+                            <!-- Social icons for small screens -->
+                            <div class="mininavicons col-11 col-sm-6 offset-sm-3 d-block d-sm-block d-md-none d-flex flex-row mx-auto justify-content-between">
                                 <ul class="navbar-nav nav2 d-flex flex-row justify-content-between">
                                     <li class="col-3 navlines navl2 d-flex justify-content-between">
                                         <a href="https://fr-fr.facebook.com/" target="_blank">
@@ -140,25 +198,19 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-3 offset-md-2 imglogo">
-                                <img class="img-fluid" src="{{ asset('build/img/brandlogo.png') }}" alt="Logo BTM"
-                                    style="max-height: 230px">
-                            </div>
-                        </div>
                         <div class="panel-body textpart text-left">
-                            <i class="fas fa-quote-left d-flex justify-content-center"></i>
-                            <blockquote class="col-md-10 mx-auto">Chargé de faire en sorte que la mécanique de votre
-                                site soit fluide et
-                                qu’aucun
-                                grain de sable ne vienne l’enrayer, je suis en quelque sorte un horloger du web.
-                                J’élabore toute son architecture informatique et créé l’ensemble de ses fonctions
-                                de façon à offrir aux utilisateurs de votre outil une navigation optimale.</blockquote>
                             <i class="fas fa-quote-right d-flex justify-content-center"></i>
+                            <blockquote class="col-12 col-md-10 mx-auto">Chargé de faire en sorte que la mécanique de votre
+                                site soit fluide et qu’aucun grain de sable ne vienne l’enrayer, je suis en quelque 
+                                sorte un horloger du web. J’élabore toute son architecture informatique et créé 
+                                l’ensemble de ses fonctions de façon à offrir aux utilisateurs de votre outil une
+                                navigation optimale.</blockquote>
+                            <i class="fas fa-quote-left d-flex justify-content-center"></i>
                         </div>
                         <!-- Prices -->
-                        <div class="panel-body" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
+                        <div class="panel-body pricebody" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
                             <div class="pricing-table" style="margin-top: 1rem; margin-bottom: 1rem">
-                                <div class="col-12 col-sm-9 col-md-4 table free" style="padding-left: 5px">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table free" style="padding-left: 5px">
                                     <ul class="priceul mx-auto" style="width: 90%">
                                         <li class="titleli" style="margin-bottom: 3rem">Site<br> vitrine</li>
                                         <li class="pricecontent">Création/refonte de site</li>
@@ -179,7 +231,7 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                             Demander un devis</a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-9 col-md-4 table active">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table active">
                                     <ul class="priceul mx-auto" style="width: 95%">
                                         <li class="titleli" style="margin-bottom: 2rem">Site<br> e-commerce</li>
                                         <li class="pricecontent" style="margin-top: 3rem">Création/refonte de site</li>
@@ -201,7 +253,7 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                             Demander un devis</a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-9 col-md-4 table premium" style="padding-right: 0">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table premium" style="padding-right: 0">
                                     <ul class="priceul mx-auto" style="width: 93%; padding-left: 5px; padding-right: 5px">
                                         <li class="titleli" style="margin-bottom: 3rem">Site<br> sur mesure</li>
                                         <li class="pricecontent">Création/refonte de site</li>
@@ -233,22 +285,54 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2"
                                 aria-expanded="false" aria-controls="collapse2">
-                                Webdesign
+                                <span style="font-weight: 400">Webdesign</span>
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" data-parent="#accordion" aria-labelledby="heading2">
+                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" data-parent="#accordion"
+                        aria-labelledby="heading2">
                         <div class="panel-body uppanel">
-                            <div class="col-12 col-md-3 memberphoto d-flex justify-content-center">
+                            <div class="col-4 col-md-3 memberphoto d-flex justify-content-center">
                                 <img src="{{ asset('build/img/andy.jpg') }}" alt="Andy Lau Tak Wing" style="max-height: 230px">
                             </div>
-                            <div class="col-12 col-md-4 membertext">
+                            <div class="col-8 col-md-6 col-lg-5 col-xl-4 membertext">
                                 <p class="membername font-weight-bold">Andy LAU TAK WING</p>
                                 <p class="memberjob">Graphiste</p>
                                 <p class="memberjob">UX designer</p>
                                 <br>
                                 <p class="membertel">06 47 13 24 99</p>
                                 <p class="membermail">andy@backtomobile.fr</p>
+                                                                <!-- Social icons for big screens -->
+                                <ul class="bignavicons navbar-nav nav2 d-flex flex-row justify-content-between">
+                                    <li class="col-3 navlines navl2 d-flex justify-content-between">
+                                        <a href="https://fr-fr.facebook.com/" target="_blank">
+                                            <i class="fab fabmenu fa-facebook-square fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://www.instagram.com/?hl=fr" target="_blank">
+                                            <i class="fab fa-instagram fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://fr.linkedin.com/" target="_blank">
+                                            <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i class="fab fa-twitter fa-lg"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>                           
+                            <div class="col-md-3 col-lg-3 offset-lg-1 col-xl-3 offset-xl-2 imglogo">
+                                <img class="img-fluid" src="{{ asset('build/img/brandlogo.png') }}" alt="Logo BTM"
+                                    style="max-height: 230px">
+                            </div>
+                        </div>
+                            <!-- Social icons for small screens -->
+                            <div class="mininavicons col-11 col-sm-6 offset-sm-3 d-block d-sm-block d-md-none d-flex flex-row mx-auto justify-content-between">
                                 <ul class="navbar-nav nav2 d-flex flex-row justify-content-between">
                                     <li class="col-3 navlines navl2 d-flex justify-content-between">
                                         <a href="https://fr-fr.facebook.com/" target="_blank">
@@ -272,26 +356,19 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-3 offset-md-2 imglogo">
-                                <img class="img-fluid" src="{{ asset('build/img/brandlogo.png') }}" alt="Logo BTM"
-                                    style="max-height: 230px">
-                            </div>
-                        </div>
                         <div class="panel-body textpart text-left">
-                            <i class="fas fa-quote-left d-flex justify-content-center"></i>
-                            <blockquote class="col-md-10 mx-auto">Un site est un vecteur d’émotions. Pour être efficace
-                                et amener un
-                                utilisateur à
-                                recourir à votre ou vos services, votre interface doit être en mesure de lui
-                                procurer une expérience positive à même de susciter une réaction de confiance. Pour
-                                ce faire, j’aurai à cœur de concevoir des maquettes et visuels esthétiques et
-                                uniques qui vous différencieront de la concurrence.</blockquote>
                             <i class="fas fa-quote-right d-flex justify-content-center"></i>
+                            <blockquote class="col-12 col-md-10 mx-auto">Un site est un vecteur d’émotions. Pour être efficace
+                                et amener un utilisateur à recourir à votre ou vos services, votre interface doit être 
+                                en mesure de lui procurer une expérience positive à même de susciter une réaction de 
+                                confiance. Pour ce faire, j’aurai à cœur de concevoir des maquettes et visuels esthétiques
+                                et uniques qui vous différencieront de la concurrence.</blockquote>
+                            <i class="fas fa-quote-left d-flex justify-content-center"></i>
                         </div>
                         <!-- Prices -->
-                        <div class="panel-body" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
+                        <div class="pricebody panel-body" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
                             <div class="pricing-table" style="margin-bottom: 1rem">
-                                <div class="col-12 col-sm-9 col-md-4 table free freedesign">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table free freedesign">
                                     <ul class="priceul mx-auto">
                                         <li class="titleli" style="margin-bottom: 3rem">UX design conception</li>
                                         <li class="pricecontent">Scénarios utilisateurs</li>
@@ -311,7 +388,7 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                             Demander un devis</a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-9 col-md-4 table active activedesign">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table active activedesign">
                                     <ul class="priceul mx-auto">
                                         <li class="titleli" style="margin-bottom: 3rem">Identité visuelle</li>
                                         <li class="pricecontent tiny">UX design conception (1 choix)</li>
@@ -332,7 +409,7 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                             Demander un devis</a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-9 col-md-4 table premium premiumdesign">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table premium premiumdesign">
                                     <ul class="priceul mx-auto">
                                         <li class="titleli" style="margin-bottom: 3rem">UI<br> design</li>
                                         <li class="pricecontent tiny">UX design conception (au choix)</li>
@@ -364,22 +441,53 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3"
                                 aria-expanded="false" aria-controls="collapseTwo">
-                                Webmarketing
-                                <span> </span>
+                                <span style="font-weight: 400">Webmarketing</span>
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" data-parent="#accordion" aria-labelledby="heading2">
+                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" data-parent="#accordion"
+                        aria-labelledby="heading2">
                         <div class="panel-body uppanel">
-                            <div class="col-12 col-md-3 memberphoto d-flex justify-content-center">
+                            <div class="col-4 col-md-3 memberphoto d-flex justify-content-center">
                                 <img src="{{ asset('build/img/maxime.jpg') }}" alt="Maxime Letertre" style="max-height: 230px">
                             </div>
-                            <div class="col-12 col-md-4 membertext">
+                            <div class="col-8 col-md-6 col-lg-5 col-xl-4 membertext">
                                 <p class="membername font-weight-bold">Maxime LETERTRE</p>
                                 <p class="memberjob">Rédacteur web</p>
                                 <br>
                                 <p class="membertel">06 08 12 19 37</p>
                                 <p class="membermail">maxime@backtomobile.fr</p>
+                                                                <!-- Social icons for big screens -->
+                                <ul class="bignavicons navbar-nav nav2 d-flex flex-row justify-content-between">
+                                    <li class="col-3 navlines navl2 d-flex justify-content-between">
+                                        <a href="https://fr-fr.facebook.com/" target="_blank">
+                                            <i class="fab fabmenu fa-facebook-square fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://www.instagram.com/?hl=fr" target="_blank">
+                                            <i class="fab fa-instagram fa-lg"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://fr.linkedin.com/" target="_blank">
+                                            <i class="fab fa-linkedin fa-lg" style="width: 2.1875rem"></i>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 navlines navl2 d-flex justify-content-center">
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i class="fab fa-twitter fa-lg"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>                           
+                            <div class="col-md-3 col-lg-3 offset-lg-1 col-xl-3 offset-xl-2 imglogo">
+                                <img class="img-fluid" src="{{ asset('build/img/brandlogo.png') }}" alt="Logo BTM"
+                                    style="max-height: 230px">
+                            </div>
+                        </div>
+                            <!-- Social icons for small screens -->
+                            <div class="mininavicons col-11 col-sm-6 offset-sm-3 d-block d-sm-block d-md-none d-flex flex-row mx-auto justify-content-between">
                                 <ul class="navbar-nav nav2 d-flex flex-row justify-content-between">
                                     <li class="col-3 navlines navl2 d-flex justify-content-between">
                                         <a href="https://fr-fr.facebook.com/" target="_blank">
@@ -403,27 +511,19 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-3 offset-md-2 imglogo">
-                                <img class="img-fluid" src="{{ asset('build/img/brandlogo.png') }}" alt="Logo BTM"
-                                    style="max-height: 230px">
-                            </div>
-                        </div>
                         <div class="panel-body textpart text-left">
-                            <i class="fas fa-quote-left d-flex justify-content-center"></i>
-                            <blockquote class="col-md-10 mx-auto">Fasciné par l’effervescence créative qui s’exprime sur
-                                le web, je vous
-                                accompagne dans la
-                                création de vos contenus mobiles. Qu’ils soient de nature rédactionnelle,
-                                audiovisuelle ou
-                                photographique, je veillerai à élaborer une offre éditoriale pertinente et engageante
-                                de façon à
-                                vous permettre d’ateindre vos objectifs commerciaux.</blockquote>
                             <i class="fas fa-quote-right d-flex justify-content-center"></i>
+                            <blockquote class="col-12 col-md-10 mx-auto">Fasciné par l’effervescence créative qui s’exprime
+                                sur le web, je vous accompagne dans la création de vos contenus mobiles. Qu’ils soient
+                                de nature rédactionnelle, audiovisuelle ou photographique, je veillerai à élaborer une
+                                offre éditoriale pertinente et engageante de façon à vous permettre d’ateindre vos 
+                                objectifs commerciaux.</blockquote>
+                            <i class="fas fa-quote-left d-flex justify-content-center"></i>
                         </div>
                         <!-- Prices -->
-                        <div class="panel-body" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
-                            <div class="pricing-table" style="margin-bottom: 1rem">                                                                
-                                <div class="col-12 col-sm-9 col-md-4 table free freeredac">
+                        <div class="pricebody panel-body" style="padding-left: 0.3125rem; padding-right: 0.3125rem">
+                            <div class="pricing-table" style="margin-bottom: 1rem">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table free freeredac">
                                     <ul class="priceul mx-auto" style="width: 90%">
                                         <li class="titleli" style="margin-bottom: 1.5rem">Blog</li>
                                         <li class="pricecontent text-left" style="line-height: 1.65; border: none">Vous
@@ -432,7 +532,8 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                             proposons de vous accompagner dans cette activité qui vous permettra
                                             d’accroître votre visibilité
                                             web tout en soulignant votre expertise dans un domaine précis.</li>
-                                        <li class="text-center partir" style="margin-bottom: 0; margin-top: 20rem">A partir de</li>
+                                        <li class="text-center partir" style="margin-bottom: 0; margin-top: 20rem">A
+                                            partir de</li>
                                         <li class="text-center font-weight-bold theprice">60 €</li>
                                     </ul>
                                     <div class="d-flex btnligne justify-content-center">
@@ -441,15 +542,15 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                             Demander un devis</a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-9 col-md-4 table active activeredac">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table active activeredac">
                                     <ul class="priceul mx-auto" style="width: 90%">
                                         <li class="titleli" style="margin-bottom : 3rem">Rédaction de page de site</li>
                                         <li class="pricecontent text-left" style="line-height: 1.75; border: none">Un
                                             contenu rédactionnel qualitatif et pertinent est capital pour votre
                                             communication et la visibilité de votre site web.
-                                            <br><br> Nous
-                                            vous proposons de nous confier l’écriture de chacune des pages de cet outil
-                                            essentiel.
+                                            <br><br> 
+                                            Nous vous proposons de nous confier l’écriture de chacune des pages de
+                                            cet outil essentiel.
                                         </li>
                                         <li class="text-center partir" style="margin-bottom: 0; margin-top: 18rem">A
                                             partir de</li>
@@ -461,14 +562,14 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
                                             Demander un devis</a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-9 col-md-4 table premium premiumredac">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-4 table premium premiumredac">
                                     <ul class="priceul mx-auto" style="width: 81%">
                                         <li class="titleli" style="margin-bottom : 2.5rem">Réalisation de vidéo mobile</li>
                                         <li class="pricecontent text-left" style="line-height: 1.7; border: none">Les
                                             contenus audiovisuels sont les plus appréciés sur le web. En témoigne le
-                                            succès de YouTube
-                                            ou des Stories d’Instagram. <br><br>Nous vous proposons de réaliser de
-                                            coures vidéos informatives pour
+                                            succès de YouTube ou des Stories d’Instagram. 
+                                            <br><br>
+                                            Nous vous proposons de réaliser de courtes vidéos informatives pour
                                             alimenter vos plateformes sociales.
                                         </li>
                                         <li class="text-center partir" style="margin-bottom: 0; margin-top: 20rem">A
@@ -490,59 +591,45 @@ accompagner pour que cette technologie vous permettent de remplir vos objectifs 
     </div>
 
     <!-- Savoir plus button -->
-    <div class="col-12 col-sm-12 col-md-3 mx-auto d-flex btnligne justify-content-center">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-3 mx-auto d-flex btnligne justify-content-center">
         <a class="btn btn-lg btn-block actionbtn text-uppercase rounded-0" href="{{path('contact')}}">EN SAVOIR PLUS</a>
     </div>
-    <hr class="sepline2" style="border:1px solid #68faa5">
+    <hr class="sepline2" style="border:1px solid #48ad72">
 
     <!-- PWA row -->
     <div class="row" id="pwa">
         <h2 class="col-12 secondarytitle text-center">Les PWA <br>(Progressive Web App)</h2>
-
-        {# <div class="row d-flex align-items-center" style="margin-top: 2rem">
-            <div class="col-md-4 col-md-5 d-flex flex-column imagetag" style="padding-right: 0; padding-left">
-                <img class="img-fluid d-flex justify-content-start carreshaut2" alt="carrés colorés" src="{{ asset('build/img/carres_modele1_haut.png') }}">
-                <img class="img-fluid d-flex justify-content-end carresbas2" alt="carrés colorés" src="{{ asset('build/img/carres_modele1_bas.png') }}">
-            </div>
-            <p class="col-12 col-md-7 servtext2 text-left">
-                Nous avons tous des préférences, des affinités. Chez Back to Mobile, nous commes convaincus que les
-                Progressive Web Apps (PWA) répondent parfaitement au développement du support mobile.
-                <br> <br>
-                Nous croyons dans son potentiel et notre équipe, composée de passionnés, saura vous accompagner pour
-                que cette technologie vous permettent de remplir vos objectifs commerciaux.</p>
-        </div> #}
-
-        <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-none d-md-block d-lg-block d-xl-block" src="{{ asset('build/img/PWA_desktop.svg') }}" alt="Schéma PWA">
-        <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-sm-block d-md-none" src="{{ asset('build/img/PWA_mobile.svg') }}" alt="Schéma PWA">
+        <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-none d-md-block d-lg-block d-xl-block" src="{{ asset('build/img/PWA_desktop.svg') }}"
+            alt="Schéma PWA">
+        <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-sm-block d-md-none" src="{{ asset('build/img/PWA_mobile.svg') }}"
+            alt="Schéma PWA">
         <a class="col-md-2 offset-md-5 btn btn-lg testbtn text-uppercase rounded-0" target="_blanck" href="{{ asset('build/pdf/BTM_schema_pwa.pdf') }}">PDF</a>
+        <hr class="col-12 sepline3 d-none d-sm-none d-md-block">
         <h2 class="col-12 secondarytitle text-center">Pourquoi choisir une PWA ?</h2>
-        <p class="col-10 mx-auto pwasubtext" style="margin-top: 1rem; margin-bottom: 2rem">La progressive web app (PWA) a
-            vu le jour en 2015 à l’initiative de Google.
+        <p class="col-12 col-md-10 mx-auto pwasubtext">La progressive web app (PWA)
+            a vu le jour en 2015 à l’initiative de Google.
             <u>Solution hybride entre le site internet classique et l’application mobile</u>,
             elle offre aux mobinautes une meilleure expérience de navigation tout
             en permetant à son propriétaire d’atteindre plus facilement ses objectifs
-            commerciaux.
-            <br><br>
-            Quelques exemples de PWA :</p>
-    </div>
-
+            commerciaux.</p>
+    </div>   
     <div class="row confiance">
-        <div class="col-6 col-md-3 confimg">
+        <div class="col-8 col-sm-6 col-md-3 confimg mx-auto">
             <a href="https://m.aliexpress.com/" target="_blank">
                 <img class="img-fluid imgtag tag1" alt="Pwa d'Aliexpress" src="{{ asset('build/img/ali_logo.png') }}">
             </a>
         </div>
-        <div class="col-6 col-md-3 confimg">
+        <div class="col-8 col-sm-6 col-md-3 confimg mx-auto">
             <a href="https://www.lancome-usa.com/" target="_blank">
                 <img class="img-fluid imgtag tag3" alt="Pwa de Lancome USA" src="{{ asset('build/img/lancomelogo.png') }}">
             </a>
         </div>
-        <div class="col-6 col-md-3 confimg">
+        <div class="col-8 col-sm-6 col-md-3 confimg mx-auto">
             <a href="https://bulletin.app" target="_blank">
                 <img class="img-fluid imgtag tag4" alt="Pwa de Google Bulletin" src="{{ asset('build/img/bulletinlogo2.png') }}">
             </a>
         </div>
-        <div class="col-6 col-md-3 confimg">
+        <div class="col-8 col-sm-6 col-md-3 confimg mx-auto">
             <a href="https://www.lequipe.fr/" target="_blank">
                 <img class="img-fluid imgtag tag4" alt="Pwa de l'Equipe" src="{{ asset('build/img/lequipelogo.png') }}">
             </a>

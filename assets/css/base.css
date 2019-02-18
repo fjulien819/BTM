@@ -28,7 +28,7 @@ strong {
     position: fixed;
     cursor: pointer;
     bottom: 10em;
-    right: 1.25rem;
+    right: 2rem;
 }
 
 #myBtn:before {
@@ -377,6 +377,11 @@ body>header>nav>div>div.col-6.d-flex.justify-content-end>button {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
+    /* Bouton up */
+    #myBtn {
+        right: 2.5rem;
+    }
+    
     /* Header */
     .navbar,
     #modalNavigation>div>div>nav {
@@ -720,6 +725,11 @@ body>header>nav>div>div.col-6.d-flex.justify-content-end>button {
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Bouton up */
+    #myBtn {
+        right: 2.4rem;
+    }
 
     /* Header */
     .aroundbrand {
