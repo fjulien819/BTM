@@ -37,14 +37,14 @@ Back to Mobile, page de connexion à l'administration du blog
                     {% endif %}
                     <!-- Title -->
                     <div class="row titlerowgroup">
-                        <div class="col-xl-4 lineleft">
-                            <hr style="border: 1px #68faa5 solid">
+                        <div class="col-0 col-xl-4 lineleft">
+                            <hr style="border: 1px #48ad72 solid">
                         </div>
                         <div class="col-12 col-xl-4 connextext">
                             <h1 class="font-weight-normal text-center">Connexion</h1>
                         </div>
-                        <div class="col-xl-4 lineright">
-                            <hr style="border: 1px #68faa5 solid">
+                        <div class="col-0 col-xl-4 lineright">
+                            <hr style="border: 1px #48ad72 solid">
                         </div>
                     </div>
                     <!-- Username -->
@@ -62,16 +62,18 @@ Back to Mobile, page de connexion à l'administration du blog
                     <!-- Submit button -->
                     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-lg btn-block text-uppercase"
                         style="margin-top: 2.5rem; margin-bottom: 1.875rem" />
-                    <!-- Remember me -->
-                    <div class="checkbox mb-3 form-check">
-                        <label class="d-flex align-items-center">
-                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" style="margin-right: 0.625rem;" />
-                            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-                        </label>
-                    </div>
-                    <!-- Forgotten password -->
-                    <div class="col-12 identiforgot" style="text-align: right">
-                        <a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a>
+                    
+                    <!-- Remember me & forgotten password -->
+                    <div class="rememberforgotten">
+                        <div class="col-12 col-md-6 checkbox mb-3 form-check">
+                            <label class="d-flex align-items-center">
+                                <input type="checkbox" id="remember_me" name="_remember_me" value="on" style="margin-right: 0.625rem;" />
+                                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                            </label>
+                        </div>
+                        <div class="col-12 col-md-6 identiforgot">
+                            <a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a>
+                        </div>
                     </div>
                 </form>
             </div>

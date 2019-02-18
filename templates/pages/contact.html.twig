@@ -31,7 +31,7 @@
         <div class="row contactcont">
             <div class="row contactcontainer">
                 {{ form_start(formContact) }}
-                <div class="col-12 col-lg-10 col-xl-10 mx-auto contactzone">
+                <div class="col-12 col-md-11 col-lg-10 col-xl-10 mx-auto contactzone">
                     <!-- Left column -->
                     <div class="col-md-6 col-sm-12 leftcolumn">
                         <!-- Form title -->
@@ -43,11 +43,11 @@
                         {{ form_errors(formContact) }}
                         <!-- Firstname and name inputs-->
                         <div class="form-group row namerow">
-                            <div class="col-6">
+                            <div class="col-12 col-lg-6">
                                 {{ form_widget(formContact.name, {'attr': {'class': 'form-control'}}) }}
                                 {{ form_errors(formContact.name) }}
                             </div>
-                            <div class="col-6">
+                            <div class="col-12 col-lg-6">
                                 {{ form_widget(formContact.lastName, {'attr': {'class': 'form-control'}}) }}
                                 {{ form_errors(formContact.lastName) }}
                             </div>

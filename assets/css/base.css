@@ -89,7 +89,12 @@ strong {
 /* Header */
 
 .bg-dark {
-    background:rgba(52, 58, 64, 0.8) !important;
+    background: rgba(52, 58, 64, 0.8) !important;
+}
+
+#modalNavigation>div>div>nav {
+    background: rgba(52, 58, 64, 1) !important;
+
 }
 
 .navbar {
@@ -101,6 +106,12 @@ strong {
     font-family: 'ethnocentricregular', sans-serif;
     font-size: 0.9rem;
     color: #000000;
+}
+
+
+body>header>nav>div>div.col-6.d-flex.justify-content-end>button {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .aroundbrand {
@@ -253,7 +264,8 @@ strong {
 }
 
 .logo-footer img {
-    max-height: 8.5rem;
+    max-height: 3.6rem;
+    margin-bottom: 1rem;
 }
 
 .footer-about {
@@ -347,6 +359,10 @@ strong {
 
 .footer-mentions a {
     color: #ffffff;
+}
+
+.footer-mentions {
+    padding-left: 0;
 }
 
 .navbar-nav {
@@ -504,10 +520,11 @@ strong {
     .footer-mentions {
         margin-bottom: 1rem;
         margin-top: 1rem;
+        text-align: center;
     }
 
     .logo-footer img {
-        max-height: 5.5rem;
+        max-height: 4.5rem;
     }
 
     .footer-social i {
@@ -679,10 +696,11 @@ strong {
     .footer-mentions {
         margin-bottom: 1rem;
         margin-top: 1rem;
+        text-align: center;
     }
 
     .logo-footer img {
-        max-height: 5.5rem;
+        max-height: 4rem;
     }
 
     .footer-social i {
@@ -709,7 +727,7 @@ strong {
     }
 
     .logo-footer img {
-        max-height: 5.5rem;
+        max-height: 4rem;
     }
 
     .blockslink {
@@ -769,17 +787,31 @@ strong {
     .fab {
         margin-bottom: 1rem;
     }
+
+    .footer-social,
+    .footer-copyright {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-copyright {
+        padding-left: 2rem;
+    }
+
+    .footer-mentions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-right: 0;
+        padding-left: 2rem;
+    }
 }
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
     /* Header */
-
-    .modal-full .modal-content {
-        /* min-height: 118vh; */
-    }
-
     .aroundbrand {
         padding-left: 2.875rem;
     }
@@ -801,5 +833,19 @@ strong {
     .footer-contact {
         margin-left: 3rem;
         padding: 0;
+    }
+
+    .footer-social,
+    .footer-copyright {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-mentions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        margin-left: -4rem;
     }
 }

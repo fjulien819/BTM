@@ -200,20 +200,17 @@ div.col-6.col-md-3.confimg {
     max-width: 85%;
 }
 
+.breveexplic,
 .approchimg1 {
+    padding-left: 0;
     padding-right: 0;
-}
-
-.breveexplic {
-    border: 1px rgb(100, 92, 92) solid;
-    border-radius: 5px;
 }
 
 .testbtn,
 .testbtn:hover {
     box-shadow: none;
     background: transparent;
-    margin-top: -6rem;
+    margin-top: -4.6rem;
     margin-right: 0.3rem;
     max-height: 2.8rem;
     color: rgba(255, 255, 255, 0);
@@ -225,20 +222,18 @@ div.col-6.col-md-3.confimg {
 }
 
 
-
 /* MEDIA QUERIES
 ------------------------------------------------  */
 
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-
     .navbar {
         border: none;
     }
 
     .home {
-        padding: 6rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
     }
 
     .carreshaut,
@@ -357,13 +352,12 @@ div.col-6.col-md-3.confimg {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-
     .navbar {
         border: none;
     }
 
     .home {
-        padding: 7rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
     }
 
     .carreshaut,
@@ -506,7 +500,7 @@ div.col-6.col-md-3.confimg {
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .home {
-        padding: 8rem 1.875rem 2rem 1.875rem;
+        padding: 2rem 1.875rem 2rem 1.875rem;
     }
 
     .carreshaut,
@@ -555,7 +549,7 @@ div.col-6.col-md-3.confimg {
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .home {
-        padding: 8.4rem 1.875rem 2rem 1.875rem;
+        padding: 2.4rem 1.875rem 2rem 1.875rem;
     }
 
     .carreshaut,
@@ -563,9 +557,35 @@ div.col-6.col-md-3.confimg {
         display: none !important;
     }
 
-    .testbtn, .testbtn:hover {
-        margin-top: -7.5rem;
+    .testbtn,
+    .testbtn:hover {
+        margin-top: -6.5rem;
     }
 }
 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .approchetext {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 54.333333%;
+        flex: 0 0 54.333333%;
+        max-width: 54.333333%;
+    }
 
+    .approchimg1 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 45.666667%;
+        flex: 0 0 45.666667%;
+        max-width: 45.666667%;
+    }
+}
+
+@media (pointer: coarse) and (hover: none) {
+    section {
+        background: url("/build/img/androidphone.jpg") black no-repeat center center scroll;
+    }
+
+    section video {
+        display: none;
+    }
+}

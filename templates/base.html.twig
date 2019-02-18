@@ -41,7 +41,6 @@
         s0.parentNode.insertBefore(s1,s0);
         })();
     </script>
-
 </head>
 
 
@@ -50,7 +49,7 @@
     {% block header %}
         <header>
             <!-- Navbar and button -->
-            {% set image_menu = 'menusquaresblanc50.png' %}
+            {% set image_menu = 'burger.png' %}
             {% include "_header.html.twig"%}
             <!-- Modal menu -->
             {% set image_menu = 'xcloseblanc50.png ' %}
@@ -135,15 +134,19 @@
                         {# Legal informations #}
                         <div class="col-md-6 footer-copyright text-center order-2 order-lg-1">
                             <p>{{'&'}}copy;2019 Copyright Back To
-                                Mobile - Tous droits réservés</p>
+                                Mobile - <br class="d-none d-sm-none d-md-block d-lg-none d-xl-none">Tous droits réservés</p>
                         </div>
-                        <div class="col-md-3 footer-mentions text-center order-1 order-lg-2">
+                        <div class="col-md-3 footer-mentions order-1 order-lg-2">
                             <a href="{{path('legalNotice')}}">Mentions légales</a>
-                            <a style="padding-left: 2rem" target="_blank" href="{{ asset('build/pdf/BTM_politique_confidentialite.pdf') }}">RPGD</a>
+                            <a style="padding-left: 0.875rem" target="_blank" href="{{ asset('build/pdf/BTM_politique_confidentialite.pdf') }}">RPGD</a>
+                            <a href="{{path('easyadmin')}}" target="_blank">
+                                <img class="img-fluid" style="padding-left: 0.875rem; max-height: 0.875rem" src="{{ asset('build/img/lock.png') }}" alt="Image de cadenas blanc">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </footer>
     {% endblock %}
 

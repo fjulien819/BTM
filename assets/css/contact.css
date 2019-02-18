@@ -4,11 +4,12 @@
 }
 
 .contactzone {
-    margin-bottom: 4rem;
-    margin-top: -1rem;
+    background: #F4F4F4;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
     display: flex;
     flex-direction: row;
+    margin-bottom: 4rem;
+    margin-top: -1rem;
 }
 
 .contner {
@@ -42,11 +43,11 @@ h1 {
 }
 
 .livingline {
-    border-top: #48ad72 1px solid;
+    border-top: #48ad72 0.1rem solid;
 }
 
 .underlinetitle {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .rightcolumn {
@@ -269,6 +270,24 @@ textarea.form-control {
     .leftcolumn {
         margin-bottom: -6rem;
     }
+
+    #contact_name,
+    #contact_lastName,
+    #contact_email {
+        width: 70%;
+    }
+
+    #contact_name {
+        margin-top: 1rem;
+    }
+
+    #contact_lastName {
+        margin-top: 1.4rem;
+    }
+
+    #contact_email {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -351,6 +370,24 @@ textarea.form-control {
     .leftcolumn {
         margin-bottom: -6rem;
     }
+
+    #contact_name,
+    #contact_lastName,
+    #contact_email {
+        width: 70%;
+    }
+
+    #contact_name {
+        margin-top: 1rem;
+    }
+
+    #contact_lastName {
+        margin-top: 1.4rem;
+    }
+
+    #contact_email {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -359,6 +396,13 @@ textarea.form-control {
     .mt-container-body {
         margin-top: 16rem;
         margin-bottom: 5rem;
+    }
+
+    .contactzone {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 94.666667%;
+        flex: 0 0 94.666667%;
+        max-width: 94.666667%;
     }
 
     .container.contactcont {
@@ -390,6 +434,24 @@ textarea.form-control {
     .carreshaut {
         display: none !important;
     }
+
+    #contact_name,
+    #contact_lastName,
+    #contact_email {
+        width: 70%;
+    }
+
+    #contact_name {
+        margin-top: 0.7rem;
+    }
+
+    #contact_lastName {
+        margin-top: 1.4rem;
+    }
+
+    #contact_email {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -400,7 +462,7 @@ textarea.form-control {
     }
 
     .contactcontainer {
-        margin-bottom: 8.5rem;
+        margin-bottom: 9.6rem;
     }
 
     .livingline {

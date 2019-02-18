@@ -5,6 +5,7 @@
 
 .principalcontainer {
   margin-bottom: 4rem;
+  background: #f4f4f4;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
 }
 
@@ -114,6 +115,10 @@ input[type=radio] {
   color: #000000;
 }
 
+.identiforgot {
+  text-align: right;
+}
+
 .lineleft,
 .lineright {
   -ms-flex: 0 0 28%;
@@ -127,12 +132,21 @@ input[type=radio] {
   max-width: 44%;
 }
 
+.rememberforgotten {
+  display: flex;
+  flex-direction: row;
+}
+
 
 /* MEDIA QUERIES
 ------------------------------------------------  */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  body {
+    background: #f4f4f4;
+  }
+  
   body>div:nth-child(2)>header>nav>div>div.col-6.d-flex.justify-content-center>a>img {
     height: 4.125rem !important;
   }
@@ -140,14 +154,11 @@ input[type=radio] {
   .mt-container-body {
     padding-top: 3.125rem;
     margin-bottom: -3.75rem;
+    background: #f4f4f4;
   }
 
   .titlerowgroup {
     margin-top: 0;
-  }
-
-  .rowcontactform {
-    width: 110%;
   }
 
   .principalcontainer {
@@ -161,17 +172,13 @@ input[type=radio] {
     display: none;
   }
 
-  .connextext {
-    text-align: center;
-  }
-
   .form-signin {
     margin-top: 0;
     padding: 0.7rem 0.5rem 1.7rem 0.5rem;
   }
 
-  .connextext > h1 {
-    font-size: 1rem;
+  .connextext>h1 {
+    font-size: 1.2rem;
   }
 
   .carresbas,
@@ -181,11 +188,34 @@ input[type=radio] {
 
   #_submit {
     font-size: 0.9rem;
+  }
+
+  .connextext {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .rowcontactform {
+    width: 109%;
+  }
+
+  .rememberforgotten {
+    flex-direction: column;
+  }
+
+  .identiforgot {
+    text-align: left;
+    margin-top: 1rem;
   }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    background: #f4f4f4;
+  }
+  
   body>div:nth-child(2)>header>nav>div>div.col-6.d-flex.justify-content-center>a>img {
     height: 4.125rem !important;
   }
@@ -193,6 +223,7 @@ input[type=radio] {
   .mt-container-body {
     padding-top: 3.125rem;
     margin-bottom: -3.75rem;
+    background: #f4f4f4;
   }
 
   .titlerowgroup {
@@ -200,7 +231,7 @@ input[type=radio] {
   }
 
   .rowcontactform {
-    width: 105%;
+    width: 104%;
   }
 
   .principalcontainer {
@@ -214,17 +245,13 @@ input[type=radio] {
     display: none;
   }
 
-  .connextext {
-    text-align: center;
-  }
-
   .form-signin {
     margin-top: 0;
     padding: 0.7rem 0.5rem 1.7rem 0.5rem;
   }
 
-  .connextext > h1 {
-    font-size: 1rem;
+  .connextext>h1 {
+    font-size: 1.2rem;
   }
 
   .carresbas,
@@ -236,43 +263,20 @@ input[type=radio] {
     font-size: 0.9rem;
   }
 
-
-  /* .mt-container-body {
-    padding-top: 3.4375rem;
-    margin-bottom: -3rem;
-  }
-
-  .principalcontainer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: -1rem;
-    margin-bottom: 2rem;
-  }
-
-  .form-signin {
-    margin-top: 0;
-    width: 80%;
-  }
-
-  .lineleft,
-  .lineright {
-    -ms-flex: 0 0 23%;
-    flex: 0 0 23%;
-    max-width: 23%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .connextext {
-    -ms-flex: 0 0 54%;
-    flex: 0 0 54%;
-    max-width: 54%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
   }
 
-  .carresbas,
-  .carreshaut {
-    display: none !important;
-  } */
+  .rememberforgotten {
+    flex-direction: column;
+  }
+
+  .identiforgot {
+    text-align: left;
+    margin-top: 1rem;
+  }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -306,6 +310,11 @@ input[type=radio] {
   .carreshaut {
     display: none !important;
   }
+
+  body>div:nth-child(2)>div.mt-container-body>div>div.row.col-md-12.col-xl-12.rowcontactform {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -317,8 +326,8 @@ input[type=radio] {
   }
 
   .principalcontainer {
-    margin-bottom: 8.3rem;
-    margin-top: 6rem;
+    margin-bottom: 9.3rem;
+    margin-top: 7rem;
   }
 
   .carresbas,
@@ -339,5 +348,10 @@ input[type=radio] {
     -ms-flex: 0 0 60%;
     flex: 0 0 60%;
     max-width: 60%;
+  }
+
+  body>div:nth-child(2)>div.mt-container-body>div>div.row.col-md-12.col-xl-12.rowcontactform {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
