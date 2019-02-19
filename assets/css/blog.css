@@ -12,7 +12,6 @@
     max-width: 33.333333%;*/
     min-height: 250px;
     max-height: 250px;
-
 }
 
 .articlextract {
@@ -26,8 +25,7 @@
     margin-bottom: 0.5rem;
 }
 
-.border-light
-{
+.border-light {
     border-color: #f4f4f4 !important;
 }
 
@@ -36,13 +34,12 @@
 .blog-sidebar-social-network {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
-    background-color: #ad3f37 ;
+    background-color: #ad3f37;
     border-radius: 10px;
-
 }
-.blog-sidebar-social-network .fab::before {
-   color: #FFFFFF;
 
+.blog-sidebar-social-network .fab::before {
+    color: #FFFFFF;
 }
 
 .blog-sidebar-button-contact {
@@ -57,7 +54,8 @@
     text-decoration: none !important;
     line-height: 2.7;
 }
-.blog-sidebar-categories-link  i{
+
+.blog-sidebar-categories-link i {
     font-size: 30px;
     margin-left: 5px;
     margin-right: 20px;
@@ -68,41 +66,48 @@
     margin-top: 38px !important;
 }
 
-.blog-button, .blog-button:hover{
+.blog-button,
+.blog-button:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background: #AD3F37;
     border: none;
     color: white;
 }
-.card
-{
+
+.card {
     background-color: #f4f4f4;
 }
-.card-post
-{
+
+.card-post {
     box-shadow: 1px 2px 4px 1px rgba(250, 114, 104, 0.80)
 }
 
-.post-container
-{
+.post-container {
     background-color: #f4f4f4;
 }
 
-
-.sidebar-newsletter-input::placeholder
-{
+.sidebar-newsletter-input::placeholder {
     color: #fff;
     opacity: 1;
     background-color: #ad3f37;
 }
-.sidebar-newsletter-input
-{
+
+.sidebar-newsletter-input {
     background-color: #ad3f37;
 }
+
 hr {
-    border: 1px solid #68faa5;
+    border: 1px solid #48ad72;
     width: 80%;
     margin-bottom: 2rem;
+}
+
+body>div.mt-container-body>div>div>div.p-0.pl-lg-3.col-12.col-lg-4.col-xl-3>div:nth-child(3)>div>h5:nth-child(6) {
+    margin-bottom: 0;
+}
+
+.input-group-prepend {
+    background: #FFFFFF;
 }
 
 /* title page */
@@ -113,6 +118,9 @@ h1 {
     font-size: 1.2rem;
 }
 
+.cubeline {
+    margin-bottom: -6rem;
+}
 
 /* title list posts */
 h2 {
@@ -131,7 +139,9 @@ h5 {
     font-size: 16px !important;
 }
 
-
+.post-container {
+    padding-bottom: 1rem;
+}
 
 
 /* MEDIA QUERIES
@@ -140,47 +150,89 @@ h5 {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-
-
-
     .blog-sidebar-categories-link {
         padding-left: 22px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+        margin-top: 1.875rem;
+    }
+
+    h2 {
+        font-size: 1rem !important;
+    }
+
+    .lead {
+        font-size: 0.9rem !important;
+    }
+
+    .card-post,
+    .post-container {
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+    h1 {
+        font-size: 1.1rem;
+        margin-top: 1.875rem;
+    }
 
+    h2 {
+        font-size: 1rem !important;
+    }
+
+    .lead {
+        font-size: 0.9rem !important;
+    }
+
+    .card-post,
+    .post-container {
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
 
-/* Large devices (desktops, less than 1200px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {}
-
-/* --- Pagination  --- */
-.pagination
-{
-    font-family: 'robotolight';
-    font-size: 1.25rem;
-}
-.pagination .current
-{
-    font-family: 'robotoregular';
-}
-.pagination a
-{
-    color: black;
-}
-.pagination .page, .next
-{
-    margin-left: 50px;
-}
-
-@media (min-width: 992px) {
-    .pagination .current, .page, .next
-    {
-        margin-left: 50px;
+    .fab {
+        margin-bottom: 0;
     }
 }
+
+    /* --- Pagination  --- */
+    .pagination {
+        font-family: 'robotolight';
+        font-size: 1.25rem;
+    }
+
+    .pagination .current {
+        font-family: 'robotoregular';
+    }
+
+    .pagination a {
+        color: black;
+    }
+
+    .pagination .page,
+    .next {
+        margin-left: 50px;
+    }
+
+    @media (min-width: 992px) {
+        .pagination .current,
+        .page,
+        .next {
+            margin-left: 50px;
+        }
+    }
