@@ -1,64 +1,64 @@
 <div class="modal p-0" id="modalNavigation" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-full" role="document">
-                    <div class="modal-content">
+    <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content">
 
-                        {% include "_header.html.twig" %}
+            {% include "_header.html.twig" %}
 
-                        <div class="modal-body d-flex flex-row">
-                            <!-- Left column -->
-                            <div class="col-lg-4 leftgroup d-flex flex-column">
-                                <div class="col-12 blocks pwaimg d-flex justify-content-center border-right border-bottom" style="max-height: 50%">
-                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('expertise')}}#pwa">Les
-                                        pwa</a>
-                                </div>
-                                <div class="col-12 blocks actuimg d-flex justify-content-center border-right" style="max-height: 50%;">
-                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('posts', {'url_page_post': 'blog'})}}">Dernières
-                                        <br>actualités</a>
-                                </div>
-                            </div>
-                            <!-- Central column -->
-                            <div class="col-lg-4 middlegroup d-flex flex-column">
-                                <div class="col-12 blocks formaimg d-flex justify-content-center border-right border-bottom" style="max-height: 50%">
-                                    <a class="d-flex align-self-center blockslink text-center text-uppercase " href="{{path('service')}}#formation">Nos
-                                        <br>formations</a>
-                                </div>
-                                <div class="col-12 blocks confiancemg d-flex justify-content-center border-right" style="max-height: 50%">
-                                    <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('homepage')}}#faitconfiance">Les
-                                        entreprises qui <br>nous font confiance</a>
-                                </div>
-                            </div>
-                            <!-- Right column -->
-                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
-                                <div class="col-12 d-flex flex-column justify-content-center littlegroup">
-                                    <ul class="navbar-nav navmenu justify-content-center text-uppercase">
-                                        <li class="nav-item itemheader mt-3 mb-1 text-left text-md-right">
-                                            <a class="nav-link indexlink" href="{{path('homepage')}}">Accueil</a>
-                                        </li>
-                                        <li class="nav-item itemheader mb-1 text-left text-md-right">
-                                            <a class="nav-link servicelink" href="{{path('service')}}">A votre service</a>
-                                        </li>
-                                        <li class="nav-item itemheader mb-1 text-left text-md-right">
-                                            <a class="nav-link expertiseslink" href="{{path('expertise')}}">Notre expertise</a>
-                                        </li>
-                                        <li class="nav-item itemheader mb-1 text-left text-md-right">
-                                            <a class="nav-link bloglink" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
-                                        </li>
-                                        <li class="nav-item itemheader mb-1 text-left text-md-right">
-                                            <a class="nav-link contactlink" href="{{path('contact')}}">Contact / Devis</a>
-                                        </li>
-                                        <br>
-                                        <hr class="headerhr" style="border: 1px solid #68faa5; width: 80%">
-                                        <li class="navbar-nav navicons mx-auto d-flex flex-row align-items-center justify-content-between"
-                                            style="width: 80%">
-                                            <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
-                                            <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
-                                            <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
-                                            <a href="https://twitter.com/" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+            <div class="modal-body d-flex flex-row">
+                <!-- Left column -->
+                <div class="col-lg-4 leftgroup d-flex flex-column">
+                    <div class="col-12 blocks pwaimg d-flex justify-content-center border-right border-bottom" style="max-height: 50%">
+                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('expertise')}}#pwa">Les
+                            pwa</a>
+                    </div>
+                    <div class="col-12 blocks actuimg d-flex justify-content-center border-right" style="max-height: 50%;">
+                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('posts', {'url_page_post': 'blog'})}}">Dernières
+                            <br>actualités</a>
+                    </div>
+                </div>
+                <!-- Central column -->
+                <div class="col-lg-4 middlegroup d-flex flex-column">
+                    <div class="col-12 blocks formaimg d-flex justify-content-center border-right border-bottom" style="max-height: 50%">
+                        <a class="d-flex align-self-center blockslink text-center text-uppercase " href="{{path('service')}}#formation">
+                        Nos<br>formations</a>
+                    </div>
+                    <div class="col-12 blocks confiancemg d-flex justify-content-center border-right" style="max-height: 50%">
+                        <a class="d-flex align-self-center blockslink text-center text-uppercase" href="{{path('homepage')}}#faitconfiance">
+                        Les entreprises qui <br>nous font confiance</a>
+                    </div>
+                </div>
+                <!-- Right column -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 rightgroup navpart d-flex flex-column">
+                    <div class="col-12 d-flex flex-column justify-content-center littlegroup">
+                        <ul class="navbar-nav navmenu justify-content-center text-uppercase">
+                            <li class="nav-item itemheader mt-3 mb-1 text-left text-md-right">
+                                <a class="nav-link indexlink" href="{{path('homepage')}}">Accueil</a>
+                            </li>
+                            <li class="nav-item itemheader mb-1 text-left text-md-right">
+                                <a class="nav-link servicelink" href="{{path('service')}}">A votre service</a>
+                            </li>
+                            <li class="nav-item itemheader mb-1 text-left text-md-right">
+                                <a class="nav-link expertiseslink" href="{{path('expertise')}}">Notre expertise</a>
+                            </li>
+                            <li class="nav-item itemheader mb-1 text-left text-md-right">
+                                <a class="nav-link bloglink" href="{{path('posts', {'url_page_post': 'blog'})}}">Blog</a>
+                            </li>
+                            <li class="nav-item itemheader mb-1 text-left text-md-right">
+                                <a class="nav-link contactlink" href="{{path('contact')}}">Contact / Devis</a>
+                            </li>
+                            <br>
+                            <hr class="headerhr" style="border: 1px solid #68faa5; width: 80%">
+                            <li class="navbar-nav navicons mx-auto d-flex flex-row align-items-center justify-content-between"
+                                style="width: 80%">
+                                <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fabmenu fa-facebook-square fa-lg"></i></a>
+                                <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fab fabmenu fa-instagram fa-lg"></i></a>
+                                <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fabmenu fa-linkedin fa-lg"></i></a>
+                                <a href="https://twitter.com/" target="_blank"><i class="fab fabmenu fa-twitter fa-lg"></i></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,7 @@
     <title>{% block title %}BTM . {% endblock %}</title>
 
     <!-- Meta -->
-    <meta name="description" content="{% block metaDescription %} {% endblock %}" />    
+    <meta name="description" content="{% block metaDescription %} {% endblock %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap & Fontawesome CDN -->
@@ -31,14 +31,16 @@
 
     <!-- Chat script -->
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/5c65a15ea6c3590a404d3e1a/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5c65a15ea6c3590a404d3e1a/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
 </head>
@@ -46,6 +48,7 @@
 
 <body>
 
+    {# Navigation #}
     {% block header %}
         <header>
             <!-- Navbar and button -->
@@ -55,16 +58,15 @@
             {% set image_menu = 'xcloseblanc50.png ' %}
             {% include "_modal_menu.html.twig"%}
         </header>
-
     {% endblock %}
 
-
+    {# Content of each page #}
     <div class="mt-container-body">
         {% block body %}
         {% endblock %}
     </div>
 
-
+    {# Footer #}
     {% block footer %}
         <footer class="footerglobal">
             <div class="footer-top">
@@ -79,14 +81,13 @@
                                 Back to Mobile accompagne les entreprises
                                 dans leur volonté de proposer des expériences de navigation sur mobile innovantes.
                             </p>
-                            <p style="color: #ffffff">Notre savoir-faire<a href="{{path('expertise')}}#teampart" style="color: #fa7268"> ici</a></p>
+                            <p style="color: #ffffff">Notre savoir-faire<a href="{{path('expertise')}}#teampart" style="color: #fa7268">ici</a></p>
                         </div>
                         {# Contact zone #}
                         <div class="col-md-4 col-lg-3 offset-lg-1 d-flex justify-content-center flex-column align-content-center footer-contact">
                             <h3>Contact</h3>
                             <p style="color: #ffffff"><i class="fas fa-map-marker-alt"></i>BP 238 - Théhillac - Cedex 9</p>
-                            <p><i class="fas fa-phone"></i><a href="tel:+33 5 54 67 81 42" style="color: #ffffff">+33 5 54
-                                    67 81 42</a></p>
+                            <p><i class="fas fa-phone"></i><a href="tel:+33 5 54 67 81 42" style="color: #ffffff">+33 5 54 67 81 42</a></p>
                             <p><i class="fas fa-envelope"></i><a href="mailto:contact@backtomobile.fr" style="color: #ffffff">contact@backtomobile.fr</a></p>
                         </div>
                         {# Navigation links #}
@@ -133,20 +134,19 @@
                         </div>
                         {# Legal informations #}
                         <div class="col-md-6 footer-copyright text-center order-2 order-lg-1">
-                            <p>{{'&'}}copy;2019 Copyright Back To
-                                Mobile - <br class="d-none d-sm-none d-md-block d-lg-none d-xl-none">Tous droits réservés</p>
+                            <p>{{'&'}}copy;2019 Copyright Back To Mobile - <br class="d-none d-sm-none d-md-block d-lg-none d-xl-none">Tous droits réservés</p>
                         </div>
                         <div class="col-md-3 footer-mentions order-1 order-lg-2">
                             <a href="{{path('legalNotice')}}">Mentions légales</a>
                             <a style="padding-left: 0.875rem" target="_blank" href="{{ asset('build/pdf/BTM_politique_confidentialite.pdf') }}">RPGD</a>
                             <a href="{{path('easyadmin')}}" target="_blank">
-                                <img class="img-fluid" style="padding-left: 0.875rem; max-height: 0.875rem" src="{{ asset('build/img/lock.png') }}" alt="Image de cadenas blanc">
+                                <img class="img-fluid" style="padding-left: 0.875rem; max-height: 0.875rem" src="{{ asset('build/img/lock.png') }}"
+                                    alt="Image de cadenas blanc">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </footer>
     {% endblock %}
 
@@ -170,14 +170,14 @@
 
     <!-- JS block  -->
     {% block javascripts %}
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        {{ encore_entry_script_tags('base') }}
-        {{ encore_entry_script_tags('cookie') }}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    {{ encore_entry_script_tags('base') }}
+    {{ encore_entry_script_tags('cookie') }}
     {% endblock %}
 
 </body>

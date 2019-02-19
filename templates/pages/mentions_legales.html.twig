@@ -3,12 +3,14 @@
 {% block title %} {{ parent() }}Mentions légales{% endblock %}
 
 {% block metaDescription %} {{ parent() }}
-    Back to Mobile, page des documents légaux : mentions légales, conditions générales d'utilisation et politique de confidentialité
+    Back to Mobile, page des documents légaux : mentions légales, conditions générales d'utilisation et politique de
+    confidentialité
 {% endblock %}
 
 {% block stylesheets %}{{ parent() }}
     {{ encore_entry_link_tags('mentions_legales') }}
 {% endblock %}
+
 
 {% block body %}
 
@@ -16,11 +18,10 @@
     <div class="container mentionsleg">
         <div class="col-12 col-sm-11 col-md-10 mx-auto">
             <h1 class="text-left">Informations légales</h1>
-
+            
             <h3>1. Présentation du site.</h3>
             <p class="legal text-justify">En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la
-                confiance dans l'économie numérique,
-                il
+                confiance dans l'économie numérique, il
                 est précisé aux utilisateurs du site <a href="http://www.backtomobile.fr/">www.backtomobile.fr</a>
                 l'identité
                 des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
@@ -69,8 +70,7 @@
                 inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers
                 partenaires
                 qui lui fournissent ces informations.</p>
-            <p class="legal text-justify" style="padding-bottom: 1rem">Tous les informations indiquées sur le site <a
-                    href="http://www.backtomobile.fr/">www.backtomobile.fr</a>
+            <p class="legal text-justify" style="padding-bottom: 1rem">Tous les informations indiquées sur le site <a href="http://www.backtomobile.fr/">www.backtomobile.fr</a>
                 sont
                 données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant
                 sur le
@@ -199,10 +199,12 @@
                 L’utilisateur
                 peut toutefois configurer son ordinateur de la manière suivante, pour refuser l’installation des
                 cookies :</p>
-            <p class="legal text-justify">Sous Internet Explorer : onglet outil (pictogramme en forme de rouage en haut a droite) / options
+            <p class="legal text-justify">Sous Internet Explorer : onglet outil (pictogramme en forme de rouage en haut a
+                droite) / options
                 internet.
                 Cliquez sur Confidentialité et choisissez Bloquer tous les cookies. Validez sur Ok.</p>
-            <p class="legal text-justify">Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le bouton Firefox, puis aller dans
+            <p class="legal text-justify">Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le bouton
+                Firefox, puis aller dans
                 l'onglet
                 Options. Cliquer sur l'onglet Vie privée.
                 Paramétrez les Règles de conservation sur : utiliser les paramètres personnalisés pour l'historique.
@@ -230,7 +232,8 @@
             <p class="legal text-justify">Loi n° 78-17 du 6 janvier 1978, notamment modifiée par la loi n° 2004-801 du
                 6 août 2004 relative à
                 l'informatique, aux fichiers et aux libertés.</p>
-            <p class="legal text-justify" style="padding-bottom: 1rem"> Loi n° 2004-575 du 21 juin 2004 pour la confiance dans
+            <p class="legal text-justify" style="padding-bottom: 1rem"> Loi n° 2004-575 du 21 juin 2004 pour la confiance
+                dans
                 l'économie numérique.</p>
 
             <h3>11. Lexique.</h3>
@@ -245,19 +248,19 @@
             <br>
             <br>
         </div>
-        
+
         {# Buttons row #}
         <div class="row col-12 col-sm-11 col-md-10 mx-auto pdfdownload d-flex flex-row" id="rgpdf">
             <div class="col-12 col-sm-11 col-md-10 mx-auto col-lg-6 d-flex justify-content-center" style="margin-bottom: 2rem">
-                <a class="btn btn-lg actionbtn rounded-0" target="_blank" href="{{ asset('build/pdf/BTM_CGU.pdf') }}" style="background: #ad4f48">Conditions générales d'utilisation</a>
+                <a class="btn btn-lg actionbtn rounded-0" target="_blank" href="{{ asset('build/pdf/BTM_CGU.pdf') }}" style="background: #ad4f48">Conditions
+                    générales d'utilisation</a>
             </div>
             <div class="col-12 col-sm-11 col-md-10 mx-auto col-lg-6 d-flex justify-content-center">
-                <a class="btn btn-lg actionbtn rounded-0" target="_blank" href="{{ asset('build/pdf/BTM_politique_confidentialite.pdf') }}" style="margin-bottom: 2rem; background: #ad4f48">Politique
+                <a class="btn btn-lg actionbtn rounded-0" target="_blank" href="{{ asset('build/pdf/BTM_politique_confidentialite.pdf') }}"
+                    style="margin-bottom: 2rem; background: #ad4f48">Politique
                     de confidentialité</a>
             </div>
         </div>
     </div>
 
 {% endblock %}
-
-

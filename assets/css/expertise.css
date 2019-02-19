@@ -565,7 +565,7 @@ div.col-6.col-md-3.confimg {
         transform: scale(.9);
     }
 
-    ul>li.pricecontent    {
+    ul>li.pricecontent {
         line-height: 0.9;
     }
 
@@ -765,7 +765,7 @@ div.col-6.col-md-3.confimg {
         transform: scale(.9);
     }
 
-    ul>li.pricecontent    {
+    ul>li.pricecontent {
         line-height: 0.9;
     }
 
@@ -872,7 +872,6 @@ div.col-6.col-md-3.confimg {
     .mininavicons>ul {
         margin-top: 0;
     }
-
 }
 
 /* Medium devices (tablets, less than 992px) */

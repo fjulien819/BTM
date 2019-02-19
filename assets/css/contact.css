@@ -97,10 +97,6 @@ label {
     background: #ffffff;
 }
 
-/* #contact_object > option:nth-child(1) {
-    background: #FCB7B2;
-} */
-
 .custom-select,
 .custom-select:focus {
     margin-bottom: 1.875rem;
@@ -145,10 +141,7 @@ input[type=radio] {
 .form-check-label {
     margin-left: 0.625rem;
     font-size: 0.7rem;
-}
-
-.form-check-input {
-    background: blue;
+    color: #414141;
 }
 
 .check2 {

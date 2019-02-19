@@ -12,6 +12,7 @@
 
 
 {% block body %}
+
     <!-- Message flash -->
     {% for message in app.flashes('notice') %}
             {{ message }}
@@ -109,5 +110,5 @@
             </div>
             <div class="col-xl-9"></div>
         </div>
-</div>
+    </div>
 {% endblock %}

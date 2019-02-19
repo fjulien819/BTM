@@ -108,7 +108,6 @@ strong {
     color: #000000;
 }
 
-
 body>header>nav>div>div.col-6.d-flex.justify-content-end>button {
     padding-top: 0;
     padding-bottom: 0;
@@ -240,7 +239,6 @@ body>header>nav>div>div.col-6.d-flex.justify-content-end>button {
 .footerglobal {
     background: url("/build/img/prism.png") center;
     background-size: cover;
-    /* background-blend-mode: multiply; */
 }
 
 .footer-top {
@@ -381,7 +379,7 @@ body>header>nav>div>div.col-6.d-flex.justify-content-end>button {
     #myBtn {
         right: 2.5rem;
     }
-    
+
     /* Header */
     .navbar,
     #modalNavigation>div>div>nav {
@@ -765,7 +763,6 @@ body>header>nav>div>div.col-6.d-flex.justify-content-end>button {
     .rightgroup.navpart ul {
         margin-right: -2rem;
     }
-
 
     /* Footer */
 

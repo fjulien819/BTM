@@ -23,6 +23,10 @@ h1 {
     line-height: 40px;
 }
 
+p {
+    color: #414141;
+}
+
 .carreshaut {
     max-width: 55%;
     margin-top: 2rem;
@@ -39,7 +43,6 @@ h1 {
     font-family: 'robotoregular', Arial, sans-serif;
     font-size: 1.25rem;
     line-height: 25px;
-    color: #000000;
 }
 
 .methode {
@@ -47,7 +50,7 @@ h1 {
 }
 
 .formation {
-    margin-bottom: 4rem !important;
+    margin-bottom: 7rem !important;
 }
 
 .titleforma {
@@ -58,7 +61,6 @@ h1 {
 .formatext {
     font-family: 'robotoregular', Arial, sans-serif;
     font-size: 1.25rem;
-    color: #000000;
 }
 
 .actionbtn {

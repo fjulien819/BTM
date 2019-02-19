@@ -4,11 +4,11 @@
 {% block title %} {{ parent() }}Connexion au blog de Back to Mobile{% endblock %}
 
 {% block metaDescription %} {{ parent() }}
-Back to Mobile, page de connexion à l'administration du blog
+    Back to Mobile, page de connexion à l'administration du blog
 {% endblock %}
 
 {% block stylesheets %}{{ parent() }}
-{{ encore_entry_link_tags('login_content') }}
+    {{ encore_entry_link_tags('login_content') }}
 {% endblock %}
 
 
@@ -28,8 +28,8 @@ Back to Mobile, page de connexion à l'administration du blog
             </div>
         </div>
 
+        {# Login form #}
         <div class="row col-md-12 col-xl-12 rowcontactform">
-            {# Login form #}
             <div class="col-12 col-md-12 col-xl-9 mx-auto principalcontainer">
                 <form action="{{ path("fos_user_security_check") }}" method="post" class="col-12 col-lg-8 mx-auto form-signin">
                     {% if csrf_token %}
@@ -62,7 +62,6 @@ Back to Mobile, page de connexion à l'administration du blog
                     <!-- Submit button -->
                     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-lg btn-block text-uppercase"
                         style="margin-top: 2.5rem; margin-bottom: 1.875rem" />
-                    
                     <!-- Remember me & forgotten password -->
                     <div class="rememberforgotten">
                         <div class="col-12 col-md-6 checkbox mb-3 form-check">
