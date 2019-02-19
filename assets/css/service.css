@@ -13,14 +13,14 @@ h1 {
     color: #000000;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    line-height: 35px;
+    line-height: 2.1875rem;
 }
 
 .secondarytitle {
     font-family: 'ethnocentric', Arial, sans-serif;
     font-size: 1.25rem;
     color: #000000;
-    line-height: 40px;
+    line-height: 2.5rem;
 }
 
 p {
@@ -42,7 +42,7 @@ p {
 .servtext {
     font-family: 'robotoregular', Arial, sans-serif;
     font-size: 1.25rem;
-    line-height: 25px;
+    line-height: 1.5625rem;
 }
 
 .methode {
@@ -70,7 +70,7 @@ p {
     color: #ffffff;
     font-size: 1.25rem;
     background: #ad4f48;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 .actionbtn:hover,
@@ -81,7 +81,7 @@ p {
 .btnform {
     color: #F2F2F2;
     background: #ad4f48;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 .action2 {
@@ -166,7 +166,7 @@ p {
         font-size: 0.9rem;
         max-width: 100%;
         margin-bottom: 1.6rem;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     }
 
     .buttonforma {
@@ -177,7 +177,7 @@ p {
 
     .btnform {
         font-size: 0.9rem;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     }
 
     .sepline {
@@ -273,7 +273,7 @@ p {
         font-size: 0.9rem;
         max-width: 100%;
         margin-bottom: 1.6rem;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     }
 
     .buttonforma {
@@ -284,7 +284,7 @@ p {
 
     .btnform {
         font-size: 0.9rem;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     }
 
     .sepline {

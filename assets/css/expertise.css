@@ -14,11 +14,11 @@ h2 {
 }
 
 h1 {
-    line-height: 40px;
+    line-height: 2.5rem;
 }
 
 h2 {
-    line-height: 25px;
+    line-height: 1.5625rem;
 }
 
 p {
@@ -41,7 +41,7 @@ p {
 .secondarytitle {
     font-family: 'Ethnocentric', Arial, sans-serif;
     font-size: 1.25rem;
-    line-height: 40px;
+    line-height: 2.5rem;
     color: #000000;
     margin-top: 1rem;
     margin-bottom: 0;
@@ -64,18 +64,18 @@ p {
     max-width: 95% !important;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    border-top: 1px solid #48ad72;
+    border-top: 0.0625rem solid #48ad72;
 }
 
 .servtext {
     padding-right: 7rem;
     font-size: 1rem;
-    line-height: 30px;
+    line-height: 1.875rem;
 }
 
 .pwasubtext {
     font-size: 1.25rem;
-    line-height: 30px;
+    line-height: 1.875rem;
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
@@ -363,7 +363,7 @@ ul>li.littleinfo {
 }
 
 .separinfodevis {
-    border: 1px #ffffff solid;
+    border: 0.0625rem #ffffff solid;
 }
 
 .princing-table,
@@ -420,7 +420,7 @@ ul>li.littleinfo {
     margin-top: 3rem;
     margin-bottom: 4rem;
     font-size: 1rem;
-    line-height: 30px;
+    line-height: 1.875rem;
     padding-left: 3rem;
 }
 

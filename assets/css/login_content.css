@@ -6,7 +6,7 @@
 .principalcontainer {
   margin-bottom: 4rem;
   background: #f4f4f4;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+  box-shadow: 0 0.375rem 0.625rem 0 rgba(0, 0, 0, .14), 0 0.0625rem 1.125rem 0 rgba(0, 0, 0, .12), 0 0.1875rem 0.3125rem -0.0625rem rgba(0, 0, 0, .2);
 }
 
 .contner {
@@ -17,7 +17,7 @@
 .carreshaut {
   padding-right: 0;
   position: relative;
-  top: 74px;
+  top: 4.625rem;
   right: 0.5rem;
   max-width: 54%;
 }
@@ -108,7 +108,7 @@ input[type=radio] {
   color: #ffffff;
   background-color: #AD3F37;
   height: 3.125rem;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+  box-shadow: 0 0.375rem 0.625rem 0 rgba(0, 0, 0, .14), 0 0.0625rem 1.125rem 0 rgba(0, 0, 0, .12), 0 0.1875rem 0.3125rem -0.0625rem rgba(0, 0, 0, .2);
 }
 
 .identiforgot a {

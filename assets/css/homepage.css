@@ -12,7 +12,7 @@
 }
 
 .navbar {
-    border-bottom: 1px #68faa5 solid;
+    border-bottom: 0.0625rem #68faa5 solid;
 }
 
 h1,
@@ -79,7 +79,7 @@ section .overlay {
 .textpfirstblock {
     font-family: 'robotoregular', sans-serif;
     font-size: 1.25rem;
-    line-height: 25px;
+    line-height: 1.5625rem;
 }
 
 .videotitle {
@@ -90,8 +90,8 @@ section .overlay {
 
 .firstblock {
     margin-bottom: 4rem;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
 }
 
 .carreshaut {
@@ -193,7 +193,7 @@ div.col-6.col-md-3.confimg {
     padding-left: 3rem;
     padding-right: 1rem;
     font-size: 1.25rem;
-    line-height: 30px;
+    line-height: 1.875rem;
 }
 
 .imgroue {
@@ -219,7 +219,7 @@ div.col-6.col-md-3.confimg {
 }
 
 .carresverticaux {
-    max-height: 187px;
+    max-height: 11.6875rem;
     margin: -6rem 0 2rem 61rem;
 }
 

@@ -5,7 +5,7 @@
 
 .contactzone {
     background: #F4F4F4;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+    box-shadow: 0 0.375rem 0.625rem 0 rgba(0, 0, 0, .14), 0 0.0625rem 1.125rem 0 rgba(0, 0, 0, .12), 0 0.1875rem 0.3125rem -0.0625rem rgba(0, 0, 0, .2);
     display: flex;
     flex-direction: row;
     margin-bottom: 4rem;
@@ -20,7 +20,7 @@
 .carreshaut {
     padding-right: 0;
     position: relative;
-    top: 74px;
+    top: 4.625rem;
     right: -5.5rem;
     max-width: 54%;
 }
@@ -222,7 +222,7 @@ textarea.form-control {
     }
 
     .checkpart {
-        padding-right: 5px;
+        padding-right: 0.3125rem;
         padding-left: 0;
     }
 
@@ -235,7 +235,7 @@ textarea.form-control {
     .submitbutton {
         margin-bottom: 5rem;
         margin-top: 2.5rem;
-        padding-right: 15px !important;
+        padding-right: 0.9375rem !important;
     }
 
     .livingline {
@@ -322,7 +322,7 @@ textarea.form-control {
     }
 
     .checkpart {
-        padding-right: 5px;
+        padding-right: 0.3125rem;
         padding-left: 0;
     }
 
@@ -335,7 +335,7 @@ textarea.form-control {
     .submitbutton {
         margin-bottom: 5rem;
         margin-top: 2.5rem;
-        padding-right: 15px !important;
+        padding-right: 0.9375rem !important;
     }
 
     .livingline {
