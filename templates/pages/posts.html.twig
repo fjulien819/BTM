@@ -22,9 +22,16 @@
 
 {% block blog_content %}
 
-    <div class="row m-0 d-flex">
-        <div class="col-12">
+    <div class="row p-0 m-0 col-12 mx-auto d-flex">
+        <div class="p-0 col-12">
             <h1>Le blog Back To Mobile</h1>
+            <!-- Search Widget -->
+            <div class="card mb-3 d-flex d-lg-none rounded-0">
+                <div class="card-body p-0">
+                    <!--- Formulaire de recherche ---->
+                    {% include "form/_search_form.html.twig" %}
+                </div>
+            </div>
         </div>
         {% include "_list_posts.html.twig" %}
         {% include "_sidebar.html.twig" %}

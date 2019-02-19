@@ -1,10 +1,10 @@
 {% set categories = categories_posts.getCategories %}
 
 <!-- Sidebar Widgets Column -->
-<div class="col-12 col-lg-4">
+<div class="p-0 pl-lg-3 col-12 col-lg-4 col-xl-3">
 
     <!-- Search Widget -->
-    <div class="card card-sidebar-search rounded-0">
+    <div class="d-none d-lg-flex card rounded-0 ">
         <div class="card-body p-0">
             <!--- Formulaire de recherche ---->
             {% include "form/_search_form.html.twig" %}
@@ -12,8 +12,8 @@
     </div>
 
     <!-- Categories Widget -->
-    <div class="card card-sidebar rounded-0 my-4">
-        <h4 class="card-header border-0 bg-white text-center">Categories</h4>
+    <div class="d-none d-lg-flex card  rounded-0 my-4">
+        <h4 class="card-header bg-transparent border-0 text-center">Categories</h4>
         <div class="card-body">
             <div class="row">
                     <ul class="list-unstyled mb-0">
@@ -30,13 +30,12 @@
     </div>
 
     <!-- Abonnement widget -->
-    <div class="card card-sidebar rounded-0 my-4">
+    <div class="card  rounded-0 my-4">
         <div class="card-body">
             <h5 class="card-title text-center">Abonnez-vous</h5>
             <p class="card-text">
 
-
-            <ul class="blog-sidebar-social-network list-unstyled d-flex justify-content-center">
+            <ul class="blog-sidebar-social-network list-unstyled d-flex justify-content-between pt-1 pb-1 pl-3 pr-3">
                 <li class="p-1">
                     <a href="" title="Facebook" target="_blank">
                         <i class="text-dark fab fa-facebook-square fa-2x"></i>
@@ -63,7 +62,7 @@
             <hr>
             <h5 class="card-title text-center">Vous avez un projet?</h5>
             <p class="card-text text-center">
-                <a class="blog-sidebar-button-contact blog-button btn " href="{{ path('contact') }}" title="CONTACTEZ-NOUS" role="button">CONTACTEZ-NOUS</a>
+                <a class="col-12 blog-sidebar-button-contact blog-button btn " href="{{ path('contact') }}" title="CONTACTEZ-NOUS" role="button">CONTACTEZ-NOUS</a>
             </p>
             <hr>
             <h5 class="card-title text-center">Back to the newsletter</h5>

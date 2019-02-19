@@ -1,21 +1,49 @@
 <!-- {% do posts.setTemplate('pagination/pagination_list_post.html.twig') %} -->
-<div class=" col-12 col-lg-8">
+<div class="p-0 col-12 col-lg-8 col-xl-9">
 
     {% if posts.getTotalItemCount %}
 
         {% for post in posts %}
 
-            <div class="card card-post mb-4 rounded-0 bg-transparent d-flex flex-xl-row " style="height: auto;">
-                <img class="blog-img-list img-fluid" src="https://picsum.photos/500/500/?random" alt="{{ post.title }}">
+            <div class="card card-post mb-4 rounded-0 d-flex flex-row " style="height: auto;">
+                <img class="d-none d-md-flex blog-img-list img-fluid" src="https://picsum.photos/500/500/?random" alt="Illustration {{ post.title }}">
                 <div class="card-body p-3">
                     <div>
-                        <h2 class="card-title">{{ post.title }}</h2>
-                        <h6 class="card-subtitle pb-1 text-muted">Publié
+                        <h2 class="card-title text-center text-lg-left">{{ post.title }}</h2>
+                        <h6 class="card-subtitle text-center text-lg-left pb-1 text-muted">Publié
                             le {{ post.createdAt|localizeddate('none', 'none', null, null, 'd MMMM Y') }}
                             par {{ post.author }} pour Back To
                             Mobile{% for category in post.category %}, {{ category.name }}{% endfor %}</h6>
                     </div>
-                    <div class="bg-white p-3">
+
+
+                    <!---- mobile version -->
+                    <div class="d-flex d-md-none justify-content-center flex-column">
+                        <img class="blog-img-list img-fluid" src="https://picsum.photos/500/500/?random" alt="Illustration {{ post.title }}">
+                        <p class="mt-3 card-text">
+                            {% if post.metaDescription %}
+                                {{ post.metaDescription|striptags|trim|truncate(250, true, '...') }}
+                            {% else %}
+                                {{ post.content|striptags|trim|truncate(250, true, '...') }}
+                            {% endif %}
+
+                        </p>
+                        <div>
+                            <a class="col-12 btn blog-button rounded-0"
+                               href="{{ path('post',{'url_page_post': 'blog', 'slug': post.slug}) }}" role="button">
+                                {% if post.metaDescription %}
+                                    Lire l'article
+                                {% else %}
+                                    Lire la suite...
+                                {% endif %}
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="d-none flex-column d-md-flex bg-white p-3">
                         <p class="card-text">
                             {% if post.metaDescription %}
                                 {{ post.metaDescription|striptags|trim|truncate(250, true, '...') }}
@@ -50,7 +78,7 @@
     {% endif %}
 
     <!--- Pagination -->
-    <div class="d-flex justify-content-end">
+    <div class="d-flex justify-content-center m-0 justify-content-lg-end">
         {{ knp_pagination_render(posts) }}
     </div>
 
