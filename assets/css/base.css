@@ -764,6 +764,10 @@ body>header>nav>div>div.col-6.d-flex.justify-content-end>button {
         margin-right: -2rem;
     }
 
+    .itemheader {
+        padding-left: 1rem;
+    }
+
     /* Footer */
 
     .footer-top {

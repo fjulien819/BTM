@@ -19,7 +19,7 @@
 
                     <!-- mobile version -->
                     <div class="d-flex d-md-none justify-content-center flex-column">
-                        <img class="blog-img-list img-fluid" src="/uploads/images/post{{ asset(post.image) }}" alt="Illustration {{ post.title }}">
+                        <img class="blog-img-list mx-auto img-fluid" src="/uploads/images/post{{ asset(post.image) }}" alt="Illustration {{ post.title }}">
                         <p class="mt-3 card-text">
                             {% if post.metaDescription %}
                                 {{ post.metaDescription|striptags|trim|truncate(250, true, '...') }}
