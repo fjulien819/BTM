@@ -6,7 +6,7 @@
         {% for post in posts %}
 
             <div class="card card-post mb-4 rounded-0 d-flex flex-row " style="height: auto;">
-                <img class="d-none d-md-flex blog-img-list img-fluid" src="https://picsum.photos/500/500/?random" alt="Illustration {{ post.title }}">
+                <img class="d-none d-md-flex blog-img-list img-fluid" src="/uploads/images/post{{ asset(post.image) }}" alt="Illustration {{ post.title }}">
                 <div class="card-body p-3">
                     <div>
                         <h2 class="card-title text-center text-lg-left">{{ post.title }}</h2>
@@ -19,7 +19,7 @@
 
                     <!-- mobile version -->
                     <div class="d-flex d-md-none justify-content-center flex-column">
-                        <img class="blog-img-list img-fluid" src="https://picsum.photos/500/500/?random" alt="Illustration {{ post.title }}">
+                        <img class="blog-img-list img-fluid" src="/uploads/images/post{{ asset(post.image) }}" alt="Illustration {{ post.title }}">
                         <p class="mt-3 card-text">
                             {% if post.metaDescription %}
                                 {{ post.metaDescription|striptags|trim|truncate(250, true, '...') }}

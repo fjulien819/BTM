@@ -8,4 +8,4 @@ fos_ck_editor:
     configs:
         my_config:
             language: fr
-            toolbar: standard
+            toolbar: full
