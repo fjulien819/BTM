@@ -250,16 +250,8 @@ h5 {
     color: black;
 }
 
-.pagination .page,
+.pagination, .page, .current,
 .next {
     margin-left: 50px;
 }
 
-@media (min-width: 992px) {
-
-    .pagination .current,
-    .page,
-    .next {
-        margin-left: 50px;
-    }
-}
