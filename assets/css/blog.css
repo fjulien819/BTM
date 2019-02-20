@@ -13,6 +13,14 @@
     min-height: 250px;
     max-height: 250px;
 }
+@media (min-width: 768px) {
+    .blog-img-list
+    {
+        height: 250px;
+        max-width: 250px;
+    }
+}
+
 
 .articlextract {
     -webkit-box-flex: 0;
