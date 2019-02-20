@@ -18,10 +18,19 @@
     {
         height: 250px;
         max-width: 250px;
+        min-height: 250px;
     }
 }
-
-
+.blog-img-post
+{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .blog-img-post
+    {
+        width: 250px
+    }
+}
 .articlextract {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 66.666667%;
