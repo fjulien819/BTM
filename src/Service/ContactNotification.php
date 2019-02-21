@@ -15,7 +15,7 @@ use Twig\Environment;
 class ContactNotification
 {
 
-    const NOTIFICATION_EMAIL_DELIVERY = "fjulien819@gmail.com";
+    const NOTIFICATION_EMAIL_DELIVERY = "btm@julienf-oc.fr";
 
     private $mailer;
 
