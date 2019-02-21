@@ -28,7 +28,6 @@
         "symfony/twig-bundle": "4.2.*",
         "symfony/validator": "4.2.*",
         "symfony/web-link": "4.2.*",
-        "symfony/web-profiler-bundle": "4.2.*",
         "symfony/webpack-encore-bundle": "^1.0",
         "symfony/yaml": "4.2.*",
         "twig/extensions": "^1.5",
@@ -39,13 +38,14 @@
         "fzaninotto/faker": "^1.8",
         "symfony/browser-kit": "4.2.*",
         "symfony/css-selector": "4.2.*",
+        "symfony/debug-bundle": "4.2.*",
         "symfony/debug-pack": "*",
         "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "4.2.*",
         "symfony/profiler-pack": "*",
         "symfony/test-pack": "*",
+        "symfony/web-profiler-bundle": "4.2.*",
         "symfony/web-server-bundle": "4.2.*"
-
     },
     "config": {
         "preferred-install": {
