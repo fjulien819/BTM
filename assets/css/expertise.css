@@ -8,7 +8,7 @@
 
 h1,
 h2 {
-    font-family: 'ethnocentricregular';
+    font-family: 'ethnocentricregular', Arial, sans-serif;
     font-size: 1.25rem;
     color: #000000;
 }
@@ -39,7 +39,7 @@ p {
 }
 
 .secondarytitle {
-    font-family: 'Ethnocentric', Arial, sans-serif;
+    font-family: 'ethnocentricregular', Arial, sans-serif;
     font-size: 1.25rem;
     line-height: 2.5rem;
     color: #000000;
@@ -295,7 +295,7 @@ blockquote {
 
 .priceul li {
     color: #FFF;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'robotoregular', sans-serif;
     font-size: 0.8125rem;
     width: 100%;
     height: 1.4375rem;
@@ -329,7 +329,7 @@ ul>li.titleli {
 }
 
 ul>li.pricecontent {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'robotoregular', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
     line-height: 0.8;
@@ -338,7 +338,7 @@ ul>li.pricecontent {
 }
 
 ul>li.partir {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'robotoregular', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 0.4rem;
 }
@@ -348,13 +348,13 @@ ul>li.beforelio {
 }
 
 ul>li.theprice {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'robotoegular', sans-serif;
     margin-top: 1rem;
     font-size: 2.2rem;
 }
 
 ul>li.littleinfo {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'robotoregular', sans-serif;
     font-size: 0.7rem;
     margin-bottom: 1rem;
     line-height: 0.8;
@@ -388,7 +388,7 @@ ul>li.littleinfo {
 .blackbtn,
 .actionbtn:hover,
 .blackbtn:hover {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'robotoregular', sans-serif;
     margin-top: 1.4375rem;
     font-size: 1.25rem;
     color: #ffffff;
