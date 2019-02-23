@@ -20,13 +20,13 @@ h1 {
 }
 
 h3 {
-    font-family: 'Roboto', 'Times New Roman', sans-serif;
+    font-family: 'robotoregular','Times New Roman', sans-serif;
     font-size: 1.2rem;
     color: #000000;
 }
 
 .legal p {
-    font-family: 'Roboto', 'Times New Roman', sans-serif;
+    font-family: 'robotoregular', 'Times New Roman', sans-serif;
     font-size: 1rem;
     color: #414141;
 }
