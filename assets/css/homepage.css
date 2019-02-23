@@ -161,7 +161,7 @@ p.uppart {
 }
 
 .secondarytitle {
-    font-family: 'ethnocentric', Arial, sans-serif;
+    font-family: 'ethnocentricregular', Arial, sans-serif;
     font-size: 1.25rem;
     color: #000000;
     margin-bottom: 2.5rem;
@@ -230,6 +230,10 @@ div.col-6.col-md-3.confimg {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+    .w-100 {
+        margin-top: -4rem;
+    }
+    
     .navbar {
         border: none;
     }
@@ -354,6 +358,10 @@ div.col-6.col-md-3.confimg {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .w-100 {
+        margin-top: -4rem;
+    }
+    
     .navbar {
         border: none;
     }

@@ -354,6 +354,10 @@ p {
     .imgmethode {
         margin-bottom: 0;
     }
+
+    .action2 {
+        max-width: 15.3125rem;
+    }
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -378,5 +382,9 @@ p {
 
     .formatext {
         margin-bottom: 1.5rem;
+    }
+
+    .action2 {
+        max-width: 15.3125rem;
     }
 }
