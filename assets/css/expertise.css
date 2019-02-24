@@ -926,8 +926,8 @@ div.col-6.col-md-3.confimg {
         height: 34rem;
     }
 
-    #collapse3>div:nth-child(3)>div>div.col-12.col-sm-9.col-md-8.col-lg-4.table.premium.premiumredac>ul>li.text-center.partir {
-        margin-top: 17rem !important;
+    #collapse3>div.pricebody.panel-body>div>div.col-12.col-sm-9.col-md-8.col-lg-4.table.premium.premiumredac>ul>li.text-center.partir {
+        margin-top: 18rem !important;
     }
 
     .specialrow {
@@ -971,10 +971,6 @@ div.col-6.col-md-3.confimg {
         height: 38.5rem;
     }
 
-    #collapse3>div:nth-child(3)>div>div.col-12.col-sm-9.col-md-4.table.active.activeredac>ul>li.text-center.partir {
-        margin-top: 21rem !important;
-    }
-
     .table.premiumredac {
         height: 39.5rem;
         padding-right: 0;
@@ -984,7 +980,15 @@ div.col-6.col-md-3.confimg {
         margin-bottom: 3.5rem !important;
     }
 
-    #collapse3>div:nth-child(3)>div>div.col-12.col-sm-9.col-md-4.table.premium.premiumredac>ul>li.text-center.partir {
-        margin-top: 22rem !important;
+    #collapse3>div.pricebody.panel-body>div>div.col-12.col-sm-9.col-md-8.col-lg-4.table.active.activeredac>ul>li.text-center.partir {
+        margin-top: 21rem !important;
+    }
+
+    #collapse3>div.pricebody.panel-body>div>div.col-12.col-sm-9.col-md-8.col-lg-4.table.free.freeredac>ul>li.text-center.partir {
+        margin-top: 23rem !important;
+    }
+
+    #collapse3>div.pricebody.panel-body>div>div.col-12.col-sm-9.col-md-8.col-lg-4.table.premium.premiumredac>ul>li.text-center.partir {
+        margin-top: 23rem !important;
     }
 }
