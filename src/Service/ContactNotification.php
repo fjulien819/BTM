@@ -42,7 +42,7 @@ class ContactNotification
     public function notify(Contact $contact)
     {
         $message = (new \Swift_Message($contact->getObject()))
-            ->setFrom("noreply@BackToMobile.fr")
+            ->setFrom("noreply@julienf-oc.fr")
             ->setTo(ContactNotification::NOTIFICATION_EMAIL_DELIVERY)
             ->setReplyTo($contact->getEmail())
             ->setBody($this->renderer->render('emails/contact_notification.html.twig', [
@@ -52,7 +52,8 @@ class ContactNotification
                 'email' => $contact->getEmail(),
                 'offre' => $contact->getoffer()
             ]), 'text/html');
+        
+        return $this->mailer->send($message);
 
-        return  $this->mailer->send($message);
     }
 }
