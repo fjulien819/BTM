@@ -11,13 +11,13 @@
 
       .cls-3 {
         font-size: 30px;
-        font-family: robotobold, Roboto;
+        font-family: robotobold;
         font-weight: 700;
       }
 
       .cls-4 {
         font-size: 16px;
-        font-family: robotoregular, Roboto;
+        font-family: robotoregular;
       }
 
       .cls-5 {
@@ -26,7 +26,7 @@
 
       .cls-6 {
         font-size: 11px;
-        font-family: ethnocentricregular, Ethnocentric;
+        font-family: ethnocentricregular;
       }
     </style>
     <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 320 512">
