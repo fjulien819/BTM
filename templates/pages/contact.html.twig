@@ -13,12 +13,6 @@
 
 {% block body %}
 
-    <!-- Message flash -->
-    {% for message in app.flashes('notice') %}
-            {{ message }}
-    {% endfor %}
-
-
     <div class="container bigone">
 
         {# Top squares #}
@@ -27,10 +21,10 @@
                 <img class="carreshaut float-right" alt="carrés colorés" src="{{ asset('build/img/carres_verticaux2.png') }}">
             </div>
         </div>
-
         <!-- Contact form-->
         <div class="row contactcont">
             <div class="row contactcontainer">
+
                 {{ form_start(formContact) }}
                 <div class="col-12 col-md-11 col-lg-10 col-xl-10 mx-auto contactzone">
                     <!-- Left column -->
@@ -41,6 +35,19 @@
                             <div class="col-6 livingline"></div>
                             <div class="col-6 livingunder"></div>
                         </div>
+
+                        <!-- message flash -->
+                        {% for message in app.flashes('success') %}
+                            <div class="alert alert-success rounded-0" role="alert">
+                               {{ message }}
+                            </div>
+                        {% endfor %}
+                        {% for message in app.flashes('failure') %}
+                            <div class="alert alert-danger rounded-0" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+
                         {{ form_errors(formContact) }}
                         <!-- Firstname and name inputs-->
                         <div class="form-group row namerow">
@@ -90,6 +97,7 @@
                                 {{ form_errors(formContact.message) }}
                             </div>
                         </div>
+
                         <!-- Submit button-->
                         <div class="form-group row submitline" style="margin-bottom: 0">
                             <div class="col-12 submitbutton" style="padding-left: 1rem; padding-right: 0;">

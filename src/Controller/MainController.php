@@ -126,12 +126,12 @@ class MainController extends AbstractController
         {
             if ($contactNotification->notify($form->getData()))
             {
-                $this->addFlash("notice", "Votre message a bien été envoyé");
+                $this->addFlash("success", "Votre message a bien été envoyé");
                 return $this->redirectToRoute('contact');
 
             }
 
-            $this->addFlash("notice", "Votre message n'a pas pu être envoyé");
+            $this->addFlash("failure", "Votre message n'a pas pu être envoyé");
             return $this->redirectToRoute('contact');
 
         }
