@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1376" height="1080" viewBox="0 0 1376 1080">
   <defs>
-    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 239 17">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Roboto');
+    </style>
+      <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 239 17">
       <image width="239" height="17" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO8AAAARCAYAAAA16PvQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADKSURBVHhe7dqxDcMgEEDRS6ZwywYexSt4BCZgBY/ABrRs4NIewyO4c0JElDSJEprzSf9JJ4T7L5DM5bgTAOZc6wrAGOIFjCJewCjiBRRs2yb7vtddG+IFFOScxTkn0zQ1R0y8gJJy+nrvmyMmXkBZc8QhhPKfl2GYk0zXdcc8z+UJxlc80gAUxBhlHMe6exmGoRyo0vd9/fIZ12bgBEq0y7JISumncAviBRS1RPvEtRlQsK7rY/032HfECxjFtRkwingBo4gXMEnkBlXCTfK43tNNAAAAAElFTkSuQmCC"/>
     </pattern>
     <filter id="Ellipse_1" x="617" y="72" width="91" height="91" filterUnits="userSpaceOnUse">
@@ -68,20 +71,20 @@
     <rect width="1376" height="1080" fill="#fff"/>
     <path id="Tracé_1" data-name="Tracé 1" d="M6,20" transform="translate(479.5 692.5)" fill="none" stroke="#000" stroke-width="1"/>
     <text id="Recueil_de_vos_besoins_Objectif_s_de_votre_projet_budget_délai_disponibilité..." data-name="Recueil de vos besoins
-Objectif(s) de votre projet, budget, délai, disponibilité..." transform="translate(776 110)" font-size="23" font-family="robotobold" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Recueil de vos besoins</tspan></tspan><tspan font-family="robotoregular" font-weight="400"><tspan x="0" y="28">Objectif(s) de votre projet, budget, délai, disponibilité...</tspan></tspan></text>
+Objectif(s) de votre projet, budget, délai, disponibilité..." transform="translate(776 110)" font-size="23" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Recueil de vos besoins</tspan></tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="0" y="28">Objectif(s) de votre projet, budget, délai, disponibilité...</tspan></tspan></text>
     <text id="Cadrage_de_votre_projet_Analyse_des_informations_recueillies_rédaction_du_cahier_des_charges." data-name="Cadrage de votre projet
 Analyse des informations recueillies, rédaction du 
-cahier des charges." transform="translate(778 257)" font-size="23" font-family="robotobold" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Cadrage de votre projet</tspan></tspan><tspan font-family="robotoregular" font-weight="400"><tspan x="0" y="28">Analyse des informations recueillies, rédaction du </tspan><tspan x="0" y="56">cahier des charges.</tspan></tspan></text>
+cahier des charges." transform="translate(778 257)" font-size="23" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Cadrage de votre projet</tspan></tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="0" y="28">Analyse des informations recueillies, rédaction du </tspan><tspan x="0" y="56">cahier des charges.</tspan></tspan></text>
     <text id="Elaboration_et_conception_d_une_solution_Lors_d_un_atelier_chaque_métier_mobilisé_réfléchit_à_sa_propre_solution_avant_de_passer_à_l_étape_de_conception." data-name="Elaboration et conception d&apos;une solution
 Lors d&apos;un atelier, chaque métier mobilisé réfléchit à
 sa propre solution avant de passer à l&apos;étape de 
-conception." transform="translate(778 428)" font-size="23" font-family="robotobold" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Elaboration et conception d&apos;une solution</tspan></tspan><tspan font-family="robotoregular" font-weight="400"><tspan x="0" y="28">Lors d&apos;un atelier, chaque métier mobilisé réfléchit à</tspan><tspan x="0" y="56">sa propre solution avant de passer à l&apos;étape de </tspan><tspan x="0" y="84">conception.</tspan></tspan></text>
+conception." transform="translate(778 428)" font-size="23" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Elaboration et conception d&apos;une solution</tspan></tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="0" y="28">Lors d&apos;un atelier, chaque métier mobilisé réfléchit à</tspan><tspan x="0" y="56">sa propre solution avant de passer à l&apos;étape de </tspan><tspan x="0" y="84">conception.</tspan></tspan></text>
     <text id="Présentation_de_la_solution_Maquettes_contenus_pages..." data-name="Présentation de la solution
-Maquettes, contenus, pages..." transform="translate(940 659)" font-size="23" font-family="robotobold" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Présentation de la solution</tspan></tspan><tspan font-family="robotoregular" font-weight="400"><tspan x="0" y="28">Maquettes, contenus, pages...</tspan></tspan></text>
+Maquettes, contenus, pages..." transform="translate(940 659)" font-size="23" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Présentation de la solution</tspan></tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="0" y="28">Maquettes, contenus, pages...</tspan></tspan></text>
     <text id="Mesure_de_la_satisfaction_Recueil_des_avis_remarques_et_suggestions." data-name="Mesure de la satisfaction
-Recueil des avis, remarques et suggestions." transform="translate(732 879)" font-size="23" font-family="robotobold" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Mesure de la satisfaction</tspan></tspan><tspan font-family="robotoregular" font-weight="400"><tspan x="0" y="28">Recueil des avis, remarques et suggestions.</tspan></tspan></text>
+Recueil des avis, remarques et suggestions." transform="translate(732 879)" font-size="23" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan text-decoration="underline"><tspan x="0" y="0">Mesure de la satisfaction</tspan></tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="0" y="28">Recueil des avis, remarques et suggestions.</tspan></tspan></text>
     <text id="Prise_en_compte_des_retours_Amélioration_de_l_existant" data-name="Prise en compte des retours
-Amélioration de l&apos;existant" transform="translate(369 659)" font-size="23" font-family="robotobold" font-weight="700"><tspan text-decoration="underline"><tspan x="-291.217" y="0">Prise en compte des retours</tspan></tspan><tspan font-family="robotoregular" font-weight="400"><tspan x="-257.099" y="28">Amélioration de l&apos;existant</tspan></tspan></text>
+Amélioration de l&apos;existant" transform="translate(369 659)" font-size="23" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan text-decoration="underline"><tspan x="-291.217" y="0">Prise en compte des retours</tspan></tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="-257.099" y="28">Amélioration de l&apos;existant</tspan></tspan></text>
     <rect id="Image_1" data-name="Image 1" width="227" height="17" transform="translate(457.99 642.989) rotate(-45)" fill="url(#pattern)"/>
     <rect id="Image_2" data-name="Image 2" width="281" height="19" transform="translate(673 146) rotate(90)" fill="url(#pattern)"/>
     <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_1)">
