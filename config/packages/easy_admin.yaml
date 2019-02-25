@@ -8,9 +8,7 @@ easy_admin:
     design:
         assets:
             css:
-                - '/build/admin.css'
-            js:
-                - '/build/admin.js'
+                - '/build/admin/admin.css'
 
             favicon: '/build/img/favicon.png'
 
