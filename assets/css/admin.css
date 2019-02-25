@@ -1,0 +1,76 @@
+
+.main-header #header-logo img, .main-header #header-logo svg {
+    max-width: 100%;
+    width: 150px;
+}
+body
+{
+    background-color: #404040;
+
+}
+.datagrid thead th {
+    background-color: #404040;
+}
+.datagrid thead a {
+    color: white;
+}
+.datagrid thead span
+{
+    color: white;
+}
+.sidebar-menu a  {
+    color: white;
+}
+.sidebar-menu .fa {
+    color: white;
+}
+.sidebar-menu a:hover {
+    color: white;
+}
+.sidebar-menu .fa:hover {
+    color: white;
+}
+.navbar-custom-menu .user {
+    color: white;
+}
+a {
+    color: #fa7268;
+}
+.btn-link {
+
+    color: #fa7268;
+
+}
+.btn-link:hover {
+
+    color: #a65353;
+
+}
+.datagrid td.actions a {
+
+   color: #48ad72;
+
+}
+.datagrid td.actions a:hover {
+
+    color: #68faa5;
+
+}
+a {
+
+    color: #fa7268;
+
+}
+a:hover {
+
+    color: #fa7268;
+
+}
+:root {
+    --color-primary: #fa7268;
+    --link-color: #fa7268;
+    --link-hover-color: rgba(255, 132, 132, 0.74);
+    --border-radius: 0px;
+    --body-bg: #404040;
+}
+
