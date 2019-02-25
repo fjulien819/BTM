@@ -12,6 +12,8 @@ easy_admin:
             js:
                 - '/build/admin.js'
 
+            favicon: '/build/img/favicon.png'
+
 
         menu:
             - { entity: 'Post', icon: 'file' }
