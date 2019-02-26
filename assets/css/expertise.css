@@ -475,6 +475,10 @@ div.col-6.col-md-3.confimg {
     margin-bottom: 2rem;
 }
 
+#collapse2 > div.pricebody.panel-body > div > div.col-12.col-sm-9.col-md-8.col-lg-4.table.premium.premiumdesign > ul > li.pricecontent.tiny {
+    line-height: 1;
+}
+
 
 /* MEDIA QUERIES
 ------------------------------------------------  */
