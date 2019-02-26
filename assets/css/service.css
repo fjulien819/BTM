@@ -389,11 +389,44 @@ p {
     }
 }
 
-/* Extra large devices (desktops, more than 1200px) */
-@media (min-width: 1932px) {
-
+@media (min-width: 1300px) {
     .carresverticaux {
-        margin-top: -24rem;
-        margin-left: 91.5rem;
+        margin-left: 63rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .carresverticaux {
+        margin-left: 68rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .carresverticaux {
+        margin-left: 73rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .carresverticaux {
+        margin-left: 78rem;
+    }
+}
+
+@media (min-width: 1700px) {
+    .carresverticaux {
+        margin-left: 83rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .carresverticaux {
+        margin-left: 88rem;
+    }
+}
+
+@media (min-width: 1900px) {
+    .carresverticaux {
+        margin-left: 91rem;
     }
 }
