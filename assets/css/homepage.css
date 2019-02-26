@@ -580,6 +580,15 @@ div.col-6.col-md-3.confimg {
     }
 }
 
+/* Extra large devices (desktops, more than 1932px) */
+@media (min-width: 1932px) {
+
+    .carresverticaux {
+        margin-left: 91rem;
+    }
+}
+
+
 @media (pointer: coarse) and (hover: none) {
     section {
         background: url("/build/img/androidphone.jpg") black no-repeat center center scroll;
