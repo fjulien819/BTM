@@ -277,6 +277,7 @@ div.col-6.col-md-3.confimg {
 
     .breveexplic {
         border: none;
+        max-width: 85%;
     }
 
     .testbtn {
