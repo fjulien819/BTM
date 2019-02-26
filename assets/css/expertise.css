@@ -686,6 +686,7 @@ div.col-6.col-md-3.confimg {
     .pwalittleschema {
         margin-top: 1rem;
         margin-bottom: 1rem;
+        max-width: 90%;
     }
 }
 
