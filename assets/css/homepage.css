@@ -409,6 +409,8 @@ div.col-6.col-md-3.confimg {
 
     .breveexplic {
         border: none;
+        margin-top: 1rem;
+        max-width: 52%;
     }
 
     .testbtn {
@@ -445,10 +447,6 @@ div.col-6.col-md-3.confimg {
 
     .appro {
         margin-bottom: 1rem;
-    }
-
-    .breveexplic {
-        margin-top: 1rem;
     }
 
     .firstblock p,

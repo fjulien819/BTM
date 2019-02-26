@@ -1,71 +1,72 @@
-
-.main-header #header-logo img, .main-header #header-logo svg {
+.main-header #header-logo img,
+.main-header #header-logo svg {
     max-width: 100%;
     width: 150px;
 }
-body
-{
-    background-color: #404040;
 
+body {
+    background-color: #404040;
 }
+
 .datagrid thead th {
     background-color: #404040;
 }
+
 .datagrid thead a {
-    color: white;
+    color: #ffffff;
 }
-.datagrid thead span
-{
-    color: white;
+
+.datagrid thead span {
+    color: #ffffff;
 }
-.sidebar-menu a  {
-    color: white;
+
+.sidebar-menu a {
+    color: #ffffff;
 }
+
 .sidebar-menu .fa {
-    color: white;
+    color: #ffffff;
 }
+
 .sidebar-menu a:hover {
-    color: white;
+    color: #ffffff;
 }
+
 .sidebar-menu .fa:hover {
-    color: white;
+    color: #ffffff;
 }
+
 .navbar-custom-menu .user {
-    color: white;
+    color: #ffffff;
 }
+
 a {
     color: #fa7268;
 }
+
 .btn-link {
-
     color: #fa7268;
-
 }
+
 .btn-link:hover {
-
     color: #a65353;
-
 }
 .datagrid td.actions a {
-
     color: #48ad72;
-
 }
+
 .datagrid td.actions a:hover {
-
     color: #68faa5;
-
 }
+
 a {
-
     color: #fa7268;
-
 }
+
 a:hover {
-
     color: #fa7268;
-
 }
+
 :root {
     --color-primary: #fa7268;
     --link-color: #fa7268;

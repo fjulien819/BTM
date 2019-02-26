@@ -603,12 +603,12 @@
         <!-- PWA row -->
         <div class="row" id="pwa">
             <h2 class="col-12 secondarytitle text-center">Les PWA <br>(Progressive Web App)</h2>
-            <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-none d-sm-none d-md-none d-lg-none d-xl-block" src="{{ asset('build/img/PWA_desktop.svg') }}"
-                alt="Schéma PWA">
-            <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-none d-sm-none d-md-block d-lg-block d-xl-none" src="{{ asset('build/img/PWA_tablette.svg') }}"
-                alt="Schéma PWA">
-            <img class="col-12 col-md-10 img-fluid mx-auto schemapwa d-block d-sm-block d-md-none" src="{{ asset('build/img/PWA_mobile.svg') }}"
-                alt="Schéma PWA">
+
+            <div class="col-12">
+                <img class="img-fluid mx-auto d-none d-md-block d-lg-block d-xl-block pwabigschema" 
+                    alt="Schéma PWA" src="{{ asset('build/img/PWA_desktop.png') }}">
+                <img class="img-fluid mx-auto d-block d-sm-block d-md-none pwalittleschema" alt="Schéma PWA" src="{{ asset('build/img/PWA_mobile.png') }}">
+            </div>
             <a class="col-md-2 offset-md-5 btn btn-lg testbtn text-uppercase rounded-0" target="_blanck" href="{{ asset('build/pdf/BTM_schema_pwa.pdf') }}">PDF</a>
             <hr class="col-12 sepline3 d-none d-sm-none d-md-block">
             <h2 class="col-12 secondarytitle text-center">Pourquoi choisir une PWA ?</h2>
