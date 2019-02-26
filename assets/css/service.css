@@ -388,3 +388,12 @@ p {
         max-width: 15.3125rem;
     }
 }
+
+/* Extra large devices (desktops, more than 1200px) */
+@media (min-width: 1932px) {
+
+    .carresverticaux {
+        margin-top: -24rem;
+        margin-left: 91.5rem;
+    }
+}
