@@ -147,8 +147,12 @@ input[type=radio] {
     background: #f4f4f4;
   }
 
-  body>div:nth-child(2)>header>nav>div>div.col-6.d-flex.justify-content-center>a>img {
+  body > div:nth-child(1) > header > nav > div > div.col-6.d-flex.justify-content-center > a > img {
     height: 4.125rem !important;
+  }
+
+  body > div:nth-child(1) > header > nav > div > div.col-6.d-flex.justify-content-end > button > img {
+    height: 2.375rem !important;
   }
 
   .mt-container-body {

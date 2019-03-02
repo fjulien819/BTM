@@ -4,7 +4,7 @@ import Typed from 'typed.js';
 
 //https://github.com/mattboldt/typed.js/
 
- status = document.getElementById("status_code").textContent;
+status = document.getElementById("status_code").textContent;
 
 function getTexte()
 {
@@ -31,5 +31,5 @@ var text = getTexte();
     };
 
 
- var typed = new Typed(".p2", options);
+var typed = new Typed(".p2", options);
 
