@@ -31,7 +31,6 @@ Encore
     //.addEntry('page2', './assets/js/page2.js')
 
     .copyFiles({from: './assets/admin', to: 'admin/[path][name].[ext]'})
-
     .copyFiles({from: './assets/img', to: 'img/[path][name].[ext]'})
     .copyFiles({from: './assets/pdf', to: 'pdf/[path][name].[ext]'})
     .copyFiles({from: './assets/video', to: 'video/[path][name].[ext]'})

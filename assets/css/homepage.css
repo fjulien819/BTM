@@ -623,15 +623,6 @@ div.col-6.col-md-3.confimg {
 }
 
 
-
-
-
-
-
-
-
-
-
 @media (pointer: coarse) and (hover: none) {
     section {
         background: url("/build/img/androidphone.jpg") black no-repeat center center scroll;

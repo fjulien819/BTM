@@ -2,7 +2,8 @@ require('../css/error.css');
 
 import Typed from 'typed.js';
 
-//https://github.com/mattboldt/typed.js/
+// Modified from: https://codepen.io/cluzier/pen/yZNyab
+// Needs typed.js: https://github.com/mattboldt/typed.js/
 
 status = document.getElementById("status_code").textContent;
 
@@ -20,7 +21,6 @@ function getTexte()
 
 var text = getTexte();
 
-
     var options = {
         strings: text,
         typeSpeed: 50,
@@ -29,7 +29,6 @@ var text = getTexte();
         showCursor: true,
         loop: true
     };
-
 
 var typed = new Typed(".p2", options);
 
